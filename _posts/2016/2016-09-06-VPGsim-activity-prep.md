@@ -5,9 +5,11 @@ layout: post
 categories:
   - science ed vpgsim
 ---
-Setting up for the VPGsim activity in Paul Wolf's Genetics lab:
+Setting up for the VPGsim activity in Paul Wolf's Genetics lab BIOL3065:
 
-  * Emailed Paul to find out when we start (his email says Sept 7/8 but the schedule says Sept 14/15). We start on the 14/15th.
+  * We start on Wed 14th/ Thurs 15th.
+  * 12 and 19 students = 4 and 7 regions (groups of 3 or 2).
+  * Marley Haupt is the TA.
   * Emailed Martin Schilling about minimizing restarts on the workstation.
     * He says the workstation may be having problems but he will avoid restarts. It feels sluggish and he says it acts like it is out of RAM when it clearly is not.
   * Emailed Max Longhurst about borrowing a box of laptops from the DRK12 project.
