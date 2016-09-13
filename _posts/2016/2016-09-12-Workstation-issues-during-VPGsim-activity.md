@@ -70,7 +70,7 @@ Googling suggests this may be due to an incompatible kernel and mono version.
 
 # Solution: ???
 
-At this point, VPGsim is dead. Options for the future:
+At this point, VPGsim is dead. I talked to Paul Wolf and Marley Haupt about it. I'm going to continue to look for a solution, but they are looking for another activity to use in BIOL3065 now.  Options for the future:
 
   1. Let it die. Accept that it was an interesting experiment that has run its course... and move on.
   2. Try to determine what about the environment changed. I'm not sure what else to check, and the old drive is increasingly difficult to mount.
