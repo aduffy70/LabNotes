@@ -22,8 +22,9 @@ After the re-install, simulations fail (core dump)
   * Sometimes immediately after I login to the Region
   * Sometimes when planting new plants
   * Sometimes about 10 minutes after planting when they start to reproduce.
+  * A region even crashed when no simulation had been run and no one had logged in for hours.
 
-Two types of crashes:
+Three types of crashes:
   * Clean with a stack trace
     ~~~
     Region (VPGsim1) # Stacktrace:
@@ -57,6 +58,20 @@ Two types of crashes:
     Native stacktrace:
     Segmentation fault (core dumped)
     ~~~
+
+  * Throwing a single error and terminating OpenSimulator (this was after 8 hours on a region with no simulation):
+    ~~~
+    19:53:08 - [APPLICATION]:
+    APPLICATION EXCEPTION DETECTED: System.UnhandledExceptionEventArgs
+    Exception: System.NullReferenceException: Object reference not set to an instance of an object
+      at System.Threading.Timer+Scheduler.SchedulerThread () [0x00000] in <filename unknown>:0
+      at System.Threading.Thread.StartInternal () [0x00000] in <filename unknown>:0
+    Application is terminating: True
+    Region (VPGsim) # [ERROR] FATAL UNHANDLED EXCEPTION: System.NullReferenceException: Object reference not set to an instance of an object
+      at System.Threading.Timer+Scheduler.SchedulerThread () [0x00000] in <filename unknown>:0
+      at System.Threading.Thread.StartInternal () [0x00000] in <filename unknown>:0
+    ~~~
+
 
 Googling suggests this may be due to an incompatible kernel and mono version.
   * The mono version is the latest from Ubuntu: 3.2.8. This is the same one installed on the old disk (I checked)
