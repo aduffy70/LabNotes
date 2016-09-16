@@ -5,8 +5,6 @@ layout: post
 categories:
   - gsta cbc weight
 ---
-  * Continuing clustering Crepidomanes GBS
-      * Time per run is decreasing but not consistently. I don't understand why some runs take longer than others. Tracking cpu time per run in my clustering analysis to see if I can figure out the pattern.
   * Added turkey weight into CBC-LiverProfile analyses and reran 2-way anovas. For the Type and Variety analyses and the pairwise comparisons I rewrote the code to generate plots so it only generates the interaction plot if the difference in responses to the treatment (the interaction effect in the model) is statistically significant.
       * Some of the within-Type comparisons have significant differences, which we would hope not to see if we want to use just one Variety to represent each Type.
       * The between type comparisons vary in the number of measurements with significant differences and in which measurements have significant differences, which also isn't great if we want to just focus on a single Variety for each Type.
