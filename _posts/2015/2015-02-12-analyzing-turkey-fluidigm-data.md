@@ -1,5 +1,5 @@
 ---
-title: Thursday
+title: Analyzing turkey Fluidigm data
 date: 2015-02-12T14:37:05+00:00
 layout: post
 categories:
