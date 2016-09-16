@@ -1,11 +1,9 @@
 ---
-title: Thursday
+title: Lung Affymetrix update
 date: 2015-03-19T15:00:05+00:00
 layout: post
 categories:
   - pm2.5
-  - gsta expression
-  - gsta mirna
 ---
   * Jake Weston has updated Lung Affymetrix data for C1, C2, C3, and P1-1.
       * The new P1-1 clusters even further from the rest of the data than the old
@@ -14,7 +12,3 @@ categories:
       * Running the analysis with just the new C2 and C3 chips gives more significantly up/down regulated genes than using just the old C2/C3 or both sets (not surprising since there is less variation between the two new chips so finding significance is easier).
       * We decided to drop both P1-1s, both C1s, and the old C2 and C3 and keep everything else as the final dataset.
       * Arrayanalysis.org has been updated in the last few weeks and no longer supports the same qc analyses we were using for our particular chip. So we weren't able to run the exact set of qc plots but we compared what we could using the Affymetrix provided software.
-  * Lab meeting
-      * Shared plan for final Lung Affymetrix dataset
-      * Roger Coulombe needs a short summary to share with collaborators. Worked with Deepika Gaddam to create powerpoint slides of her expression bargraphs (which I still think are misleading and should be left out), the ANOVA interaction effects summary, and interaction plots (for Type and Variety) for Nrf2 and GSTA3 (as representative of all GSTAs).
-      * Since I have a good mRNA sequence for GSTA4, I should go ahead with miRNA target analysis on that one gene. That way I can produce something potentially useful now rather than waiting til I've put together good mRNA sequences for the other GSTAs (which have a lot of variation in the sequences from different sources).
