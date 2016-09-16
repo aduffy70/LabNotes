@@ -1,5 +1,5 @@
 ---
-title: Friday
+title: Quail prototype assay
 date: 2015-11-06T23:59:41+00:00
 layout: post
 categories:
