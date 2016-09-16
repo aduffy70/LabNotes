@@ -196,8 +196,8 @@ Same as previous mRNA-Seq datasets:
   * Domestic AFB > Wild AFB: 41 miRNAs @p<0.1 (22 @p<0.05)
   * Overlap between those two: 9 miRNAs @ p<0.1 (6 p<0.05)
 
-| miRNA name | sequence | precursor |
-| ---------- | -------- | --------- |
+| mirna_id | miRNA name | sequence | precursor |
+| -------- | ---------- | -------- | --------- |
 | mirna_002\* | ENSMGAG00000000187-5p | AAAAGUGCUUACAGUGCAGGUA | ENSMGAG00000000187 |
 | mirna_036\* | URS646108-5p/ENSMGAG154-5p | AAGUGCUCAUAGUGCAGGUAGC | ENSMGAG00000000154/URS0000646108 |
 | mirna_146\* | ENSMGAG00000000048-3p_mod | CAGUGCAAUAAUGAAAGGGCGU | ENSMGAG00000000048 |
