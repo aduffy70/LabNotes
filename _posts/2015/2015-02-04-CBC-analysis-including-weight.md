@@ -1,9 +1,8 @@
 ---
-title: Wednesday
+title: CBC analysis- including weight
 date: 2015-02-04T23:59:33+00:00
 layout: post
 categories:
-  - t. intricatum gbs
   - gsta cbc weight
 ---
   * Continuing clustering Crepidomanes GBS
