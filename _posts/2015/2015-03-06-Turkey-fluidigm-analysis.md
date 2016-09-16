@@ -1,5 +1,5 @@
 ---
-title: Friday
+title: Turkey Fluidigm analysis
 date: 2015-03-06T23:59:44+00:00
 layout: post
 categories:
