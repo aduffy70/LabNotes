@@ -1,11 +1,9 @@
 ---
-title: Wednesday
+title: Analyzing turkey Fluidigm data
 date: 2015-02-25T15:06:06+00:00
 layout: post
 categories:
-
   - gsta expression
-  - t. intricatum gbs
 ---
   * Ran fluidigm reformatting scripts on "average Nicholas" normalized data for Deepika Gaddam. I have a better understanding of the fluidigm data after our discussion:
       * Values are the inverse of what I was thinking. A high value does not represent higher expression - it means it took longer (more PCR cycles) for expression to be detected so it is lower expression.
@@ -14,4 +12,3 @@ categories:
       * ANOVA based on fold changes is probably not appropriate since the group's values are now based on another group so they aren't all independent anymore.
       * ANOVA based on ct values makes more sense, and our apparent result that there aren't significant interactions between treatment and variety or type fits with what we suspect: mRNAs are present in wild and domestic birds, but they aren't being translated to functional proteins in the domestic birds.
   * Ran ANOVAs removing outliers. To find outliers, I ran the ANOVA, looked at the Variety boxplots and removed anything labeled as outlier, then reran and checked for new outliers, repeating til none were left. Then I looked at samples that had more than one outlier deleted to see if the remaining values were within the range of the rest of the samples in their Variety\*Treatment and if not, completely removed the sample. (I first tried removing all outliers marked in the Type and Treatment boxplots as well, but that resulted in deleting ALL measurements from some Variety\*Treatments!)
-  * Crepidomanes GBS - instead of plotting proportion of reads with the most common unique sequence against read count or unique sequence count, try just making a histogram of the proportions. This should expose all the data that is currently mashed up at the lower end of the Y-axis in the plots.
