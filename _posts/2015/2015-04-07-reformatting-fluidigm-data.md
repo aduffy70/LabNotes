@@ -3,7 +3,7 @@ title: Reformatting Fluidigm data
 date: 2015-04-07T15:00:13+00:00
 layout: post
 categories:
-  - gsta mirna
+  - gsta expression
 ---
   * Ran scripts (after modifying them) to reformat the new Fluidigm data for Deepika Gaddam:
       * There are more genes, and for some there are 8 instead of 4 replicates. Deepika wants to keep the replicates separate this time so we can look at variation between replicates.
