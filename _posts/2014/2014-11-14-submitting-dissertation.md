@@ -1,9 +1,8 @@
 ---
-title: Friday
+title: Submitting dissertation
 date: 2014-11-14T23:59:12+00:00
 layout: post
 categories:
-  - gsta cbc weight
 ---
   * Got Zach Gompert's signature on Plans-For-Publication form - that form is now done and can be submitted with the final dissertation
   * Made final updates and formatting tweaks to dissertation, converted the 8 separate odf files to pdf and printed them on the color copier in the Biology Dept.
@@ -14,7 +13,3 @@ categories:
     * A printout of my dissertation for format review
     * Almost immediately got an email saying the dissertation is missing a Public Abstract and they no longer accept dissertations without one (even though none of their example tables of contents include one and all the other items that aren't included in the sample table of contents are optional). Wrote a public abstract, updated the table of contents (since it shifted everything in the fore-matter by 2 pages) and updated the page count on the abstract (since it added 2 pages to the dissertation length), printed new copies of the fore-matter pages and ran them over to the Asst Dean's office. Luckily the separate page numbering in the fore-matter pages means that I didn't have to repaginate and reprint all 141 pages. Dropped off the new pages ~3:00pm.
   * Made a copy of this version in a separate folder of my Dropbox/Dissertation folder and also put a copy in ~/Backups
-  * Walked through the Turkey CBC & Weight data with Jake Weston. They've (Deepika Gaddam & Jake) already run a bunch of statistical tests looking for differences between the domestic vs wild birds with control feed or AFB feed. I need to take a closer look at what comparisons and tests they've done:
-      * Are the types of tests (t-tests and ANOVAs) appropriate for the experimental design?
-      * Are the assumptions of the tests met?
-      * Are there other things we can pull from the data?
