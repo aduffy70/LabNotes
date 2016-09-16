@@ -1,5 +1,5 @@
 ---
-title: Thursday
+title: Reformat quail prototype assay data
 date: 2015-09-10T11:33:33+00:00
 layout: post
 categories:
