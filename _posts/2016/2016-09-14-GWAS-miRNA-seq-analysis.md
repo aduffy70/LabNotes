@@ -17,19 +17,26 @@ The miRNA-seq analysis has been very GSTA focused, but the dataset contains info
   * How do the differentially expressed miRNAs relate to miRNAs in other taxa?
   * What mRNA interactions are known for the expressed miRNAs in other taxa and what processes are those mRNAs involved in?
   * How are the differentially expressed miRNAs distributed in the genome? Are they randomly distributed or clustered on particular chromosomes?
+  * What are the most highly expressed miRNAs? Are they the same in each type-treatment? What processes are they associated with in other taxa?
 
 # Process
 
 ## Generate a cleaned expression table
 
-  * Start with raw data from mirdeep_run1 (from before the 5,2,2 filtering step)
-  * Add in the expression data from mirexpress for the novel miRNAs
-  * Normalize the read counts
-  * Filter out readcounts below minimum cutoff of ???
-  * This is the "base" dataset for subsequent analyses
+  * Started with the data from mirdeep_run1
+    * Rather than starting over at the raw data, I used the data that had already:
+      * been 5,2,2 filtered (I checked to make sure that filter didn't remove anything that would have passed a "10 reads in at least one sample" filter)
+      * had the novel miRNA expression from miRExpress included
+      * had the expression for miRNAs "not found by mirdeep" checked and corrected.
+  * Filtered out miRNAs with readcounts below 10 in all samples. This is the "base" dataset.
+    * 387 miRNAs (341 unique)
 
 ## Presence/Absence Venn
 
-  * From the base dataset, generate a presence/absence table of each miRNA in each type-treatment
-    * An miRNA is present in a type-treatment if it is expressed in at least one sample
-  * Generate 4-way Venn showing counts of miRNAs present in each type-treatment 
+  * From the base dataset, generate a presence/absence table of each miRNA in each type-treatment.
+    * An miRNA is present in a type-treatment if it is has at least 10 reads in at least one sample
+  * Generate 4-way Venn showing counts of miRNAs present in each type-treatment
+
+## Differential expression
+
+  *
