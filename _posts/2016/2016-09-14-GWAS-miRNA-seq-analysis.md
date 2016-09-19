@@ -35,7 +35,8 @@ The miRNA-seq analysis has been very GSTA focused, but the dataset contains info
 
   * From the base dataset, generate a presence/absence table of each miRNA in each type-treatment.
     * An miRNA is present in a type-treatment if it is has at least 10 reads in at least one sample
-  * Generate 4-way Venn showing counts of miRNAs present in each type-treatment
+  * Generate 4-way Venn showing counts of miRNAs present in each type-treatment:
+    ![miRNA Presence-Absence venn plot]({{ site.image_path }}presence-absence_vennplot_2016-09-19.jpg)
 
 ## Differential expression
 
