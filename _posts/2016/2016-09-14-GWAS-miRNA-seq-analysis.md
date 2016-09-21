@@ -49,4 +49,4 @@ The miRNA-seq analysis has been very GSTA focused, but the dataset contains info
     *
 
 
-[image1]: ({{ site.image_path }}presence-absence_vennplot_2016-09-19.jpg)
+[image1]: {{ site.image_path }}presence-absence_vennplot_2016-09-19.jpg
