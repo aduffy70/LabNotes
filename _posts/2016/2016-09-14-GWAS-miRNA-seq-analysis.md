@@ -23,8 +23,8 @@ The miRNA-seq analysis has been very GSTA focused, but the dataset contains info
 
 ## Generate a cleaned expression table
 
-  * Started with the data from mirdeep_run1
-    * Rather than starting over at the raw data, I used the data that had already:
+  * Started with the expression data from mirdeep_run1
+    * Rather than starting over at the raw expression data, I used the data that had already:
       * been 5,2,2 filtered (I checked to make sure that filter didn't remove anything that would have passed a "10 reads in at least one sample" filter)
       * had the novel miRNA expression from miRExpress included
       * had the expression for miRNAs "not found by mirdeep" checked and corrected.
@@ -36,8 +36,17 @@ The miRNA-seq analysis has been very GSTA focused, but the dataset contains info
   * From the base dataset, generate a presence/absence table of each miRNA in each type-treatment.
     * An miRNA is present in a type-treatment if it is has at least 10 reads in at least one sample
   * Generate 4-way Venn showing counts of miRNAs present in each type-treatment:
-    ![miRNA Presence-Absence venn plot]({{ site.image_path }}presence-absence_vennplot_2016-09-19.jpg)
+    ![miRNA Presence-Absence venn plot][image1]
 
 ## Differential expression
 
-  *
+  * From the base dataset, generate a tab-delimited input file for DESeq2
+    * Using non-normalized data since DESeq2 normalizes for us.
+  * Run DESeq2 using settings for 2-way ANOVA at adjusted p<0.1:
+    * 0 miRNAs with significant interaction effects
+    * 60 miRNAs significantly DE in Domestic vs Wild (22 up-regulated, 38 down)
+    * 28 miRNAs significantly DE in AFB vs Control (28 up, 10 down)
+    *
+
+
+[image1]: ({{ site.image_path }}presence-absence_vennplot_2016-09-19.jpg)
