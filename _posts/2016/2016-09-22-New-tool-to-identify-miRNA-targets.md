@@ -9,8 +9,9 @@ categories:
 
 They compared it to miRanda, TargetScan, and Mirmap (but not StarMir) and it predicted true sites that none of the other tools could identify.
 
-It is distributed as a python module.
+It is [distributed as a python module][2].
 
 Will it work with my list of miRNAs and the GSTA mRNA sequences? How does the output compare with StarMir?
 
 [1]: http://doi.org/10.1093/bioinformatics/btw318
+[2]: http://hulab.ucf.edu/research/projects/miRNA/TarPmiR/
