@@ -18,6 +18,7 @@ The miRNA-seq analysis has been very GSTA focused, but the dataset contains info
   * What mRNA interactions are known for the expressed miRNAs in other taxa and what processes are those mRNAs involved in?
   * How are the differentially expressed miRNAs distributed in the genome? Are they randomly distributed or clustered on particular chromosomes?
   * What are the most highly expressed miRNAs? Are they the same in each type-treatment? What processes are they associated with in other taxa?
+  * Distribution of readcounts by miRNA (or histogram of read counts?)
 
 # Process
 
