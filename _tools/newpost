@@ -3,6 +3,7 @@
 # Creates a new elab post with today's date, a given title, and a list of all
 # categories so I can just delete unneeded ones (should help avoid typos).
 
+# Generate the new post file
 CATEGORIES=$(cat $HOME/.labnotes/_tools/categories.txt)
 POSTFOLDER="$HOME/.labnotes/_posts/"
 CURRENTDATE=$(date +%Y-%m-%d)
@@ -18,3 +19,6 @@ echo "layout: post" >> $FILENAME
 echo "categories:" >> $FILENAME
 echo -e "$CATEGORIES" >> $FILENAME
 echo "---" >> $FILENAME
+
+# Open the new post file for editing
+atom $FILENAME
