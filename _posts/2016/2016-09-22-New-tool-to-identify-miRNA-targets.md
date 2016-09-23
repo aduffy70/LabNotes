@@ -16,7 +16,8 @@ Will it work with my list of miRNAs and the GSTA mRNA sequences? How does the ou
 # Installation on crozier
 
   * installed dependent packages:
-    * tkinter, scikit-learn, and scipy from ubuntu repos
+    * tkinter and scipy from ubuntu repos
+    * installed scikit-learn (version 0.17.1) from pip - the old version 0.14 in the ubuntu repos doesn't work with TarPmiR (The program dies with a stack trace about cint having the wrong number of positional arguments)
     * numpy was already installed
     * installed viennaRNA from the viennaRNA developers' repository
   * The developers' setup script doesn't actually install TarPmiR, it just checks for the dependent packages and installs them if needed.
@@ -24,13 +25,18 @@ Will it work with my list of miRNAs and the GSTA mRNA sequences? How does the ou
 
 # Running TarPmiR
 
- * It requires:
-   * mature miRNA sequences in fasta format
-   * mRNA sequences in fasta format
-   * A model (they've only developed the one so far /usr/bin/local/TarPmiR/Human.pkl)
-   * A probability cutoff (I used 0.7 with StarMir, which is one of the values they suggest here)
- * The output is very similar to StarMir... a list of potential sites for each miRNA with values for each predictor in the model, and a probablility score
- * Unlike StarMir, it doesn't take into consideration where in the mRNA the location is (5'UTR, cds, or 3'UTR)
+  * It requires:
+    * mature miRNA sequences in fasta format
+     * mRNA sequences in fasta format
+     * A model (they've only developed the one so far /usr/local/bin/TarPmiR_Linux/Human.pkl)
+     * A probability cutoff (I used 0.7 with StarMir, which is one of the values they suggest here)
+  * The output is very similar to StarMir... a list of potential sites for each miRNA with values for each predictor in the model, and a probablility score
+  * Unlike StarMir, it doesn't take into consideration where in the mRNA the location is (5'UTR, cds, or 3'UTR)
+  * TarPmiR-test run
+    ~~~
+    TarPmiR.py -a DA_expressed.fasta -b Estimated_mRNAs.fasta -m Human.pkl -p 0
+    ~~~
+
 
 [1]: http://doi.org/10.1093/bioinformatics/btw318
 [2]: http://hulab.ucf.edu/research/projects/miRNA/TarPmiR/
