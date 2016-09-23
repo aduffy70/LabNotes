@@ -32,16 +32,15 @@ Will it work with my list of miRNAs and the GSTA mRNA sequences? How does the ou
      * A probability cutoff (I used 0.7 with StarMir, which is one of the values they suggest here)
   * The output is very similar to StarMir... a list of potential sites for each miRNA with values for each predictor in the model, and a probablility score
   * Unlike StarMir, it doesn't take into consideration where in the mRNA the location is (5'UTR, cds, or 3'UTR)
-  * TarPmiR-test run
+  * TarPmiR-test run:
     ~~~
     TarPmiR.py -a DA_expressed.fasta -b Estimated_mRNAs.fasta -m Human.pkl -p 0
     ~~~
-
   * output column headings from the TarPmiR manual:
     ~~~
     miRNA	mRNA	binding_site	binding_probability	energy	seed	accessibility	AU_content	PhyloP_Stem	PyloP_Flanking	m/e	number_of_pairings	binding_region_length	longest_consecutive_pairings	position_of_longest_consecutive_pairings	pairings_in_3prime_end	difference_of_pairings_between_seed_and_3prime_end
     ~~~
-    
+
 
 [1]: http://doi.org/10.1093/bioinformatics/btw318
 [2]: http://hulab.ucf.edu/research/projects/miRNA/TarPmiR/
