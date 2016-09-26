@@ -38,7 +38,7 @@ Will it work with my list of miRNAs and the GSTA mRNA sequences? How does the ou
     ~~~
   * output column headings from the TarPmiR manual:
     ~~~
-    miRNA mRNA binding_site binding_probability energy seed accessibility AU_content PhyloP_Stem	 PyloP_Flanking m/e number_of_pairings binding_region_length longest_consecutive_pairings position_of_longest_consecutive_pairings pairings_in_3prime_end difference_of_pairings_between_seed_and_3prime_end
+    miRNA  mRNA  binding_site  binding_probability  energy  seed  accessibility  AU_content   PhyloP_Stem  PyloP_Flanking  m/e  number_of_pairings  binding_region_length  longest_consecutive_pairings  position_of_longest_consecutive_pairings  pairings_in_3prime_end  difference_of_pairings_between_seed_and_3prime_end
     ~~~
 
 
