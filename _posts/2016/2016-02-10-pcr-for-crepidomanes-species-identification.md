@@ -76,8 +76,15 @@ categories:
   * PCR0206 results:
       * trnLF-e & trnLF-f failed on all D. petersii and the mystery S26. Only the C. intricatum and V. boschianum worked and I already knew they would.
       * I have to get SOMETHING to amplify in D. petersii!
-
-&nbsp;
+  * PCR0207:
+    * Try rps4-trnS on all three taxa. D. petersii and S26 aren't amplifying for other markers so ANY marker that will amplify in all taxa would be helpful.
+  * PCR0207 results:
+    * Total failure- even the positive control. Operator error? Retry...
+  * PCR0211:
+    * Retrying rps4-trnS on all three taxa. Exact rerun of PCR0207.
+  * PCR0211 results:
+    * C.int and positive control worked. V.bos may have a weak band. D.pet gametophytes, D.pet sporophyte, and S26 mystery gametophyte all failed.
+    * Time to try re-extracting D.pet gametophytes and sporophyte to see if I can get better DNA that will amplify with some marker.
 
 Here is a quick reference for the GBS sample names to original sample names to suspected species for everything I've included on these PCR runs or have sequenced in the past:
 
