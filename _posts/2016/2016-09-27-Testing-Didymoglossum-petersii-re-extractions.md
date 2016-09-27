@@ -6,7 +6,7 @@ categories:
   - t. intricatum gbs
 ---
 
-I re-extracted DNA from suspected D. petersii gametophytes, S26 mystery gametophyte and my one D. petersii sporophyte sample.
+I have the re-extracted DNA (from 2016-04-06) from suspected D. petersii gametophytes, S26 mystery gametophyte and my one D. petersii sporophyte sample.
 
 The sporophyte re-extraction has reasonable concentration (41ng/uL). One D.pet gametophyte extraction failed, but the other has at least some DNA (6ng/uL). The S26 mystery gametophyte has very low DNA (2ng/uL). See if we can get anything to amplify from these three.
 
@@ -18,7 +18,7 @@ The sporophyte re-extraction has reasonable concentration (41ng/uL). One D.pet g
   * atpB-rbcL: Visualized in the Coulombe Lab so I can crank the exposure way up. Expected bands on D.pet gametophyte, D.pet sporophyte, and positive control. The D.pet sporo seems to have the shorter length fragment (like V.bosch) but the D.pet gamet has the longer fragment (like C. int)? There is also a brighter unexpected 150bp band on the D.pet sporo?
 
 Next steps:
-  * Retry the samples from PCR0221 with F26-F1379R. If we can get an rbcL for D.pet and the mystery gametophyte we can sequence them and the V.bos sporophyte that worked with F26-F1379R and at least have those sequences. 
+  * Retry the samples from PCR0221 with F26-F1379R. If we can get an rbcL for D.pet and the mystery gametophyte we can sequence them and the V.bos sporophyte that worked with F26-F1379R and at least have those sequences.
   * Run a couple C.int and V.bos samples that have worked with atpB-rbcL in an annealing temperature gradient to optimize the temperature for that reaction.
   * With the optimized settings:
     * try all suspected "C.int to V.bos" samples with atpB-rbcL and see if they have short bands as expected.
