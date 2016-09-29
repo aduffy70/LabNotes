@@ -46,7 +46,7 @@ Tools to assist:
   * To build and serve locally (doesn't require being within the repo):
 
 ~~~
-alias eserve='jekyll serve --source ~/Dropbox/LabNotes --destination ~/Dropbox/LabNotes_site'
+alias eserve='jekyll serve --source ~/Dropbox/LabNotes --destination ~/Dropbox/LabNotes/_site'
 ~~~
 
   * Shell script newpost.sh to create new posts with the yaml header and full list of categories (the latest version of this is in the \_tools folder of the jekyll repo):
