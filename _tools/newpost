@@ -4,8 +4,8 @@
 # categories so I can just delete unneeded ones (should help avoid typos).
 
 # Generate the new post file
-CATEGORIES=$(cat $HOME/.labnotes/_tools/categories.txt)
-POSTFOLDER="$HOME/.labnotes/_posts/"
+CATEGORIES=$(cat $HOME/Dropbox/LabNotes/_tools/categories.txt)
+POSTFOLDER="$HOME/Dropbox/LabNotes/_posts/"
 CURRENTDATE=$(date +%Y-%m-%d)
 CURRENTYEAR=$(date +%Y)
 TITLE=$@

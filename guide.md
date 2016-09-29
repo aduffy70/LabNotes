@@ -20,12 +20,12 @@ permalink: /guide/
   * Use Pages for things that aren't project-specific and that will be referenced often
 
 # Adding a new project/category:
-  * Create a new page for the category in ~/.labnotes/projects/
+  * Create a new page for the category in ~/Dropbox/LabNotes/projects/
   * Add a link to the new page on the Projects page:
     ~~~
-    atom ~/.labnotes/projects/index.md
+    atom ~/Dropbox/LabNotes/projects/index.md
     ~~~
   * Add the category to the categories file:
     ~~~
-    atom ~/.labnotes/_tools/categories.txt
+    atom ~/Dropbox/LabNotes/_tools/categories.txt
     ~~~
