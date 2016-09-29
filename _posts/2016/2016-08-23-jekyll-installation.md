@@ -54,9 +54,8 @@ For jekyll 3.2.1 and its dependencies, we need ruby >2.2 so we need to upgrade f
     jekyll serve
     ~~~
 
-  * To clone the lab notebook to a new machine:
+  * To make a new clone of the lab notebook:
 
     ~~~
-    git clone ssh://YOUKNOWTHEUSERNAME@YOUKNOWWHICHIP:YOUKNOWWHICHPORT/~/elab_git_repo .labnotes
-    ln -s .labnotes/_posts Posts
+    git clone ssh://YOUKNOWTHEUSERNAME@YOUKNOWWHICHIP:YOUKNOWWHICHPORT/~/elab_git_repo LabNotes
     ~~~
