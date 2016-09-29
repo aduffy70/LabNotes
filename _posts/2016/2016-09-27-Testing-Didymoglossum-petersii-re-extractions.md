@@ -22,7 +22,7 @@ Next steps:
   * PCR0228:
     * Retrying the samples from PCR0221 with F26-F1379R. If we can get an rbcL for D.pet and the mystery gametophyte we can sequence them and the V.bos sporophyte that worked with F26-F1379R and see where they fall on the filmy fern phylogeny.
   * PCR0228 results:
-    * a
+    * Everything failed but the positive control.
   * Run a couple C.int and V.bos samples that have worked with atpB-rbcL in an annealing temperature gradient to optimize the temperature for that reaction.
   * With the optimized settings:
     * try all suspected "C.int to V.bos" samples with atpB-rbcL and see if they have short bands as expected.

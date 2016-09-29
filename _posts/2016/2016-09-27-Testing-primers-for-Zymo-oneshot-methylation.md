@@ -30,3 +30,13 @@ Testing those primers:
       * 1-F to 2-R: expected length ~800bp
       * 2-F to 2-R: expected length ~400bp
       * 2-F to 1-R: shouldn't amplify. Might have lots of primer dimers since these 2 primers are exactly complementary. Though at low annealing temps they may amplify unexpected fragments.
+  * PCR0230 results:
+    * 1-F to 1-R = ~800bp
+    * 1-F to 2-R = ~400bp
+    * 2-F to 2-R = weak multiple bands. One is ~400bp but it is no brighter than others.
+    * 2-F to 1-R = no amplification and a brighter primer dimer cloud than the other reactions
+    * I think the primers are labeled correctly but are just not annealing where expected.
+      * This is what we got with the old dilutions too, so mislabeled dilutions are not the problem.
+      * The primer names and sequences on the order were correct.
+      * It is unlikely that IDT mislabeled the stocks and these results don't match what would be expected for any possible combination of swapped stock labels.
+    * These are GC rich fragments which are expected to be challenging to amplify, and the GSTA region is repetitive so perhaps the primers also partially match in less GC rich sequence which gets preferentially amplified even though the primers aren't an exact match?
