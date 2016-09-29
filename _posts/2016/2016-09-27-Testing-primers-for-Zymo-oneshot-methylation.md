@@ -40,3 +40,9 @@ Testing those primers:
       * The primer names and sequences on the order were correct.
       * It is unlikely that IDT mislabeled the stocks and these results don't match what would be expected for any possible combination of swapped stock labels.
     * These are GC rich fragments which are expected to be challenging to amplify, and the GSTA region is repetitive so perhaps the primers also partially match in less GC rich sequence which gets preferentially amplified even though the primers aren't an exact match?
+
+# Where else do the primers potentially anneal in the Turkey genome?
+
+Ensembl's turkey blast tool is broken for short sequences (runs out of memory) but I can specify the turkey genome assembly as the Search Database in NCBI blast.
+
+Each of our primers has multiple long matches at the 3' end and 3 even have full length matches in Chromosome 1 and 10. The only one without other full length matches is 2-R, which is the one with the low Tm that is forcing us to use a low annealing temperature in the first place!

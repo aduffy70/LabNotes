@@ -47,7 +47,7 @@ The miRNA-seq analysis has been very GSTA focused, but the dataset contains info
     * 0 miRNAs with significant interaction effects
     * 60 miRNAs significantly DE in Domestic vs Wild (22 up-regulated, 38 down)
     * 28 miRNAs significantly DE in AFB vs Control (28 up, 10 down)
-    *
+    
 
 
 [image1]: {{ site.image_path }}presence-absence_vennplot_2016-09-19.jpg
