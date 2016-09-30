@@ -25,6 +25,7 @@ While designing primers for Zymo OneShot methylation I noticed some strange thin
   * The positions of CpG islands are different in Turkey5.0 but don't make any more sense than in the BAC.
     * GSTA3 still has no upstream CpG islands
     * There is an extra island upstream of GSTA2.
+    * Under this scenario, The first part of the GSTA4 promoter in the BAC is part of the ICK promoter in Turkey5, while the second part of the GSTA4 promoter is still the 3' end of the GSTA4 promoter in Turkey5. 
 
 ![CPG islands in Turkey5.0 TMEM14A to ICK][image1]
 
