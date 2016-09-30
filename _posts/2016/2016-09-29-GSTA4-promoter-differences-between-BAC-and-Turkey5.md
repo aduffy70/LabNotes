@@ -12,12 +12,12 @@ While designing primers for Zymo OneShot methylation I noticed some strange thin
   * The Turkey5.0 assembly differs from the BAC sequence in this region
     * In T5.0 the first 1009bp of the BAC GSTA4 promoter sequence are 32000bp downstream of the last 474bp. The bases from 1010 to 1111 don't have any close hits in Turkey5.0.
 
-    | bp in 1585 fragment | bp in T5.0 Chr 2 |
-    | ------------------- | ---------------- |
-    | 1    | 86973164 |
-    | 1009 | 86974172 |
-    | 1112 | 86940465 |
-    | 1585 | 86940938 |
+    | bp in 1585 fragment | bp in BAC 37H15 | bp in Turkey5.0 Chromosome 2 |
+    | ------------------- | --------------- | ---------------------------- |
+    | 1    | 143637 | 86973164 |
+    | 1009 | 144645 | 86974172 |
+    | 1112 | 144748 | 86940465 |
+    | 1585 | 145221 | 86940938 |
 
   * The way this is split fits our PCR results in some ways:
     * primers 1-f to 1-r should amplify (though the length doesn't make sense)
