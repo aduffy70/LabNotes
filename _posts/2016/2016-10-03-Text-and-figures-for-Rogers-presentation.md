@@ -6,7 +6,7 @@ categories:
   - gsta methylation
 ---
 
-# Methylation
+# Methylation update for Roger Coulombe's presentation
 
 Changes in methylation, particularly at CpG sites clustered in the promoter region of a gene, can lead to changes in expression. To identify whether there are methylation differences that may be responsible for differences in GSTA activity between Domestic and Wild turkeys, we searched for CpG islands "upstream" of the 5' end GSTA genes. CpG sites in the GSTA region occur less frequently than expected by chance, with apparent CpG islands near the 5' ends of most of the GSTA genes, but not GSTA3--the one we are most interested in.
 The SNPs that have been identified in this region between Wild and Domestic turkeys do not affect the number of CpG sites, so it doesn't appear that a CpG island which was present in Wild turkeys has been lost in Domestic turkeys.  
