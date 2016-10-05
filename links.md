@@ -3,13 +3,13 @@ layout: page
 title: Data Links
 permalink: /links/
 ---
-  * [Collection Records][1]
-  * [DNA Templates (Wolf Lab)][2]
-  * [Primers (Wolf Lab)][3]
-  * [Primers (Coulombe Lab)][4]
-  * [PCR Setup Sheets and Gel Images][5]
-  * [PCR Purifications][6]
-  * [Protocols][7]
+* ## [Collection Records][1]
+* ## [DNA Templates (Wolf Lab)][2]
+* ## [My Primers (Wolf Lab)][3]
+* ## [My Primers (Coulombe Lab)][4]
+* ## [PCR Records and Gel Images][5]
+* ## [PCR Purifications (Wolf Lab)][6]
+* ## [Protocols][7]
 
 [1]: https://docs.google.com/spreadsheets/d/1SwwyyLw9wluSJUBs2seKnixyT9U5qkcc61VwliV7JX4/edit?usp=sharing&authkey=CN2j18cC
 [2]: https://docs.google.com/spreadsheets/d/12NzroVVs-sRnzfzU-n2REAfayO7QIf1pH9BYnu3logA/edit?usp=sharing&authkey=CNulnCY
