@@ -38,4 +38,12 @@ Trying all combinations of the new forward primers with the old and new reverse 
     * All 4 of the Domestic Control templates failed. Everything else looks beautiful.
     * Let's rule out operator error... the most likely possibility is I added those 4 templates to reactions 5-8 instead of 13-16 since they were side by side in strip tubes. Run those 8 reactions again."							
   * PCR0234:
-    * Rerun the EW control and Domestic control templates using the same primers as before (3-F to 4-R). 
+    * Rerun the EW control and Domestic control templates using the same primers as before (3-F to 4-R).
+  * PCR0234 results:
+    * All samples worked. It was operator error.
+
+Our templates are good.
+
+Our primers work.
+
+We are ready to try the Zymo OneStep qMethyl kit. 
