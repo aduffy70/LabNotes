@@ -18,3 +18,7 @@ I included the figure showing CpG islands in the GSTA region--ICK to TMEM14A in 
 
   * I cheated the base positions for outside ends of ICK and TMEM14A to keep their labels visible within the plot area. We only show the CpG counts between them (not including them) so they are just there as reference points at the end of the plot.
   * Added additional info to the legend (manually) at Roger's request and tried to improve readability of the figure.
+
+[Final figure: CpG Islands ICK-TMEM14A][image1]
+
+[image1]: {{site.image_path}}CpG_islands_ICK-TMEM14A_2016-10-04.png
