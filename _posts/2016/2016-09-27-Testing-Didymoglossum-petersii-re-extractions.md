@@ -29,7 +29,8 @@ Next steps:
     * Primer Tm's are 54.6 and 59.7. I've been running at 46. Try annealing temps between 46 and 60.
     * The Wolf Lab BioRad cycler's gradient feature isn't activated, so I set the reactions up in that lab but ran it on the BioRad cycler in the Coulombe Lab.
   * PCR0235 results:
-    * a
+    * For things that amplify well we could use any temperature--and lower temperatures are best, but for things that are going to struggle to amplify we want to be 55-57C.
+    * Note- The MassRuler ladder I used is better for visualizing these than the Hyperladder since it has more bands around the length of the bands of interest.
   * ... Then with the optimized settings:
     * try all suspected "C.int to V.bos" samples with atpB-rbcL and see if they have short bands as expected.
     * Try "V.bos to C.int" samples and see if they have long bands as suspected.
