@@ -1,12 +1,12 @@
 ---
-title: Monday
+title: Scape and VPCsim development environments
 date: 2013-02-11T12:41:21+00:00
 layout: post
 categories:
   - science ed drk12
   - science ed vpcsim
+  - ideas
 ---
-  * Talked to Paul about setting up a committee meeting.  We need to look at my proposal so everyone knows what is going on (I need to write one!) and schedule a defense.
   * Setup a Grails development environment on crozier to check out Dave Manoa's work on the S'cape database backend.
       * Installing from the PPA's worked smoothly except that I had to manually set the JAVA\_HOME environment setting in my .bashrc: export JAVA\_HOME="/usr/lib/jvm/java-6-openjdk-i386"
       * I cloned the projecttracker repo from bitbucket and was able to start it using grails run-app (after upgrading it from v2.1.2 to v2.1.1)
