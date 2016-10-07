@@ -22,4 +22,6 @@ It is about model building or explaining natural phenomena rather than inquiry.
  * "reforesting" or post-fire regrowth (with or without reseeding)
  * Interactions of all of these with each other
 
+Try to come up with a couple of these that I can recommend he try.
+
 Could lead to a practitioners' article. It would be nice to point people back to VPCsim as a tool they can use for another type of activity.
