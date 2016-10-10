@@ -1,13 +1,11 @@
 ---
-title: Friday
+title: Presentation slides for Roger Coulombe
 date: 2015-05-15T14:52:52+00:00
 layout: post
 categories:
-
   - gsta expression
   - gsta mirna
 ---
-  * Copy Roger Coulombe's recovered files from the Window's formatted backup drive to a HFS+ formatted drive he can use on his mac. Ubuntu won't write to HFS+ in the default journaled format so I turned off journaling on the drive. For some reason (naming convention issues from windows? sheer volume?) the copy wouldn't work through nautilus but I was able to do it at the command line.
   * Put together slides for Roger.
       * For the miRNA, use the images showing the 3 possible ways miRNA interactions could be different between wild and domestic birds
       * For the Fluidigm data, show the baseline differences in expression (non-treated wild vs domestic) and the effects of treatment (interaction plots)

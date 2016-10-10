@@ -1,14 +1,10 @@
 ---
-title: Thursday
+title: Draft abstract for PAG2016
 date: 2015-10-29T13:19:00+00:00
 layout: post
 categories:
   - gsta mirna
 ---
-  * Lab meeting:
-      * New lab member: Erica Crowton, recently graduated and will be working in the lab
-      * Presented my new data on alternative splicing and possibly different endpoints for GSTA3 UTR5 and UTR3.
-      * Deepika, Sean, and Jake each have datasets needing my statistical input
   * Submitted draft of abstract to Roger and asked his opinion on co-authors:
 
     > # Predicting miRNAs potentially involved in domesticated turkey AFB<sub>1</sub>-susceptibility

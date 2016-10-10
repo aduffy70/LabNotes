@@ -1,5 +1,5 @@
 ---
-title: Monday
+title: GSTA miRNA targetting- SNPs in UTRs
 date: 2015-05-04T14:38:39+00:00
 layout: post
 categories:

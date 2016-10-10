@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: Filtering and validating miRNA blast output
 date: 2015-09-01T14:42:14+00:00
 layout: post
 categories:

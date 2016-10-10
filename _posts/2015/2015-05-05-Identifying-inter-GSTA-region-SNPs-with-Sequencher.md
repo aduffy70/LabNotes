@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: Identifying inter-GSTA region SNPs with Sequencher
 date: 2015-05-05T12:57:48+00:00
 layout: post
 categories:
