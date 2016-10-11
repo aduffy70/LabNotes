@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: Lung Affymetrix data exploration
 date: 2015-02-10T15:00:36+00:00
 layout: post
 categories:
