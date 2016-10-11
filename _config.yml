@@ -22,7 +22,7 @@ image_path: https://dl.dropboxusercontent.com/u/9110565/elab/
 
 # Build settings
 markdown: kramdown
-permalink: /:year/:month/:title/
+permalink: /:year/:month/:day/:title/
 
 # Files to be ignored by jekyll but still kept in the repo for version control
 exclude:
