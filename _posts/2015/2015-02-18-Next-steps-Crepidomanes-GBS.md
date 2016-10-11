@@ -1,15 +1,10 @@
 ---
-title: Wednesday
+title: Next steps Crepidomanes GBS
 date: 2015-02-18T15:01:43+00:00
 layout: post
 categories:
-  - gsta mirna
   - t. intricatum gbs
 ---
-  * miRNA data exploration:
-      * Pull the list of putative turkey miRNAs
-      * Identify where the 3' UTR and coding regions are for turkey GSTAs
-      * try to identify potential seed sites using multiple methods and narrow down the list of miRNAs
   * Next steps GBS - pull reads for a couple of Don Hauber's most common samples and look for peaks in most common read proportions at 0.5, 0.67 or 0.75 that would suggest ploidy level. (This is the test to see if this method of finding ploidy will work). (Output from steps marked with ** were moved into Don's folder since he will likely want to perform these steps anyway.)
       * His cutadaptOUT.fastq still has the problem in the header barcodes/stickyend so:
           * I reran trimbarcodes.py using the fixed script**

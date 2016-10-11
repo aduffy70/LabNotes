@@ -1,5 +1,5 @@
 ---
-title: Friday
+title: Clustering Crepidomanes GBS
 date: 2015-02-13T17:10:02+00:00
 layout: post
 categories:
