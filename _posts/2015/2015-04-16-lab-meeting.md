@@ -4,6 +4,7 @@ date: 2015-04-16T15:02:46+00:00
 layout: post
 categories:
   - gsta expression
+  - gsta other
 ---
 Lab meeting
   * Nicholas seems to be an outlier variety in terms of gene expression levels and is not as commonly produced as BB White. It is unfortunate that the genomic tools were developed using Nich, since it may be atypical. Rerun Fluidigm 2way Anova with just EW and BB and generate a summary report for Kent Reed's group.

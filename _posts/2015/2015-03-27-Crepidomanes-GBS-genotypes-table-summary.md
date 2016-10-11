@@ -1,5 +1,5 @@
 ---
-title: Friday
+title: Grepidomanes GBS- genotypes table summary
 date: 2015-03-27T23:59:22+00:00
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: Crepidomanes GBS- Structure vs fastStructure
 date: 2015-03-31T23:59:56+00:00
 layout: post
 categories:

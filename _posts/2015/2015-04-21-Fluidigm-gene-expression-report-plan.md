@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: Fluidigm gene expression report plan
 date: 2015-04-21T15:05:22+00:00
 layout: post
 categories:

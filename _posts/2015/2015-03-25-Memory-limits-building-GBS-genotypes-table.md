@@ -1,5 +1,5 @@
 ---
-title: Wednesday
+title: Memory limits building GBS genotypes table
 date: 2015-03-25T23:59:34+00:00
 layout: post
 categories:
