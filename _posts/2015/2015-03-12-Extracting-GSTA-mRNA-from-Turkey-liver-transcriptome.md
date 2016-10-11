@@ -1,5 +1,5 @@
 ---
-title: Thursday
+title: Extracting GSTA mRNA from Turkey liver transcriptome
 date: 2015-03-12T12:58:45+00:00
 layout: post
 categories:

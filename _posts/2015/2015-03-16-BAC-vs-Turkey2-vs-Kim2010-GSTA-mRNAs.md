@@ -1,5 +1,5 @@
 ---
-title: Monday
+title: BAC vs Turkey2 vs Kim2010 GSTA mRNAs
 date: 2015-03-16T15:00:58+00:00
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: Turkey-liver-transcriptome-assembly-questions
 date: 2015-03-17T15:03:06+00:00
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: Ploidy levels from GBS data
 date: 2015-03-03T23:59:39+00:00
 layout: post
 categories:
