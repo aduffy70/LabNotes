@@ -42,5 +42,11 @@ categories:
   * Trying bot section at a higher annealing temperature (59C instead of 54C) to reduce non-specific binding
   * We are almost out of the control standards so we just ran the non-methylated control since it tells us if the restriction enzyme is working.
   * No issues with the setup
+* QMETH003 results:
+  * Control reactions didn't amplify. The higher temp is just too high for them.
+  * The turkey reactions amplified but there are still multiple bands all shorter than 400bp and we are expecting 540bp. So any Ct values have nothing to do with the GSTA4 promoter.
+    ![QMETH003 minigel image][image2]
+  * Higher annealing temperature does not solve our problem.
 
 [image1]: {{site.image_path}}QMETH002-edit.jpg
+[image2]: {{site.image_path}}QMETH003-edit.jpg
