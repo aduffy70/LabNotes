@@ -37,7 +37,9 @@ categories:
     | N1  | 1.8% | 26.5% |
 
   * But... I ran a minigel to confirm that we are amplifying the expected length of fragments. The top fragment looks good but the bot fragment has many non-specific bands that could be driving the Ct values. It looks like the band we are interested in might differ between the test and reference reactions, but because it makes up such a small part of the brightness of all the bands that difference might not be showing up in the Ct scores. It is possible that the methylation level of the bot section might be much lower that it appears. We need to reduce this non-specific binding.
+
     ![QMETH002 minigel image][image1]
+
 * QMETH003:
   * Trying bot section at a higher annealing temperature (59C instead of 54C) to reduce non-specific binding
   * We are almost out of the control standards so we just ran the non-methylated control since it tells us if the restriction enzyme is working.
@@ -45,7 +47,9 @@ categories:
 * QMETH003 results:
   * Control reactions didn't amplify. The higher temp is just too high for them.
   * The turkey reactions amplified but there are still multiple bands all shorter than 400bp and we are expecting 540bp. So any Ct values have nothing to do with the GSTA4 promoter.
+
     ![QMETH003 minigel image][image2]
+
   * Higher annealing temperature does not solve our problem.
 
 [image1]: {{site.image_path}}QMETH002-edit.jpg
