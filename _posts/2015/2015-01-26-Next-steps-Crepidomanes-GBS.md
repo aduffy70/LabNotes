@@ -1,16 +1,10 @@
 ---
-title: Monday
+title: Next steps Crepidomanes GBS
 date: 2015-01-26T14:57:35+00:00
 layout: post
 categories:
   - t. intricatum gbs
-  - science ed vpgsim
 ---
-  * WordPress upgrades - Upgraded cyberlearning.usu.edu and elab.aduffy70.org sites to latest wordpress 4.1
-    * Not thrilled about the changes to the WYSIWYG editor. Font feels huge and window expands as I type. Ugh. I'll try it for a few days and look for solutions if it still bugs me (I tried the visual-editor-font-size plugin but it is awkward - there are ways to permanently change this by customizing the theme.
-    * Had to redo the mod to functions.php I described on Dec. 19, 2014 to keep the favicon on admin pages.
-    * Had to create a new empty menu, because the top navigation bar now INSISTS on having a menu assigned to it so it was always showing my Data Links menu, even if I told it not to.
-  * Moved some older project files from Dropbox to crozier
   * Next steps Crepidomanes GBS
     * Didn't end up needing to split the fasta file to sort it by length. The sort.pl script worked on the second try without crashing when it was the only job running on the workstation (the output file size exactly matches the input file size and it appears to be sorted by decreasing read length).
     * After all that messing around with file formats and sorting, the usearch -cluster_smallmem won't work because the file size is too big for the 32 bit version. Switching to cd-hit!
@@ -20,4 +14,4 @@ categories:
     ~~~
     * Started at 11:45am.  It looks like it compares sequences in batches. The first batch took just a few minutes but the second has taken 2 hours to get to the 50% mark. There is a flag to store some things on disk rather than in memory, which they recommend for "huge" files. I should try that on the next run and see if it makes a difference. Also, I'm maxing out the cpus on the cluster. Limiting it to 20 of the 24 cpus on future runs would be more considerate if others are using the workstation too.
     * Checking out dDocent as another analysis option
-  * Installing software on OSX Yosemite... Imprudence crashes when it tries to connect. It also complains about some missing sky texture files, but I found a way to fix that. The crashing is a bigger issue and may mean I can no longer rely on Imprudence for VPGsim.
+  
