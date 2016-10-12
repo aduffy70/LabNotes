@@ -1,5 +1,5 @@
 ---
-title: Monday
+title: Possible issues with Lung Affymetrix data
 date: 2015-02-09T15:00:44+00:00
 layout: post
 categories:
