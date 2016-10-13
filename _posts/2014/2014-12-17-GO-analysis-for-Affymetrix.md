@@ -1,11 +1,10 @@
 ---
-title: Wednesday
+title: GO analysis for Lung Affymetrix
 date: 2014-12-17T15:01:36+00:00
 layout: post
 categories:
   - pm2.5
 ---
-  * Corrected and trimmed Don Hauber's GBS data. We ran cutadapt first but because it cut at least one of the reads shorter than the barcode (indicating that it found the 2nd adapter sequence in error!) my barcode correcting script wouldn't run on the cutadapt output file. So I ran my scripts on the original fastq file and then ran cutadapt after (the "normal" process).
-  * Found tool to return descriptions for a list of GO designators for Jake Weston
+  * Found tool to return descriptions for a list of GO (Gene Ontology) designators for Jake Weston
       * The output file from GoStat already contained the info he needed. I just re-formatted to make it easier to read
       * He has lists of genes that are upregulated in each of his 4 treatments and wants to compare to see which genes are just in one list and which genes are in more than one list. I wrote a script (comparelists.py) to do that. It gives data in a format that should be easily used to generate venn diagrams too.
