@@ -1,5 +1,5 @@
 ---
-title: Wednesday
+title: Next steps on Crepidomanes GBS analysis
 date: 2015-01-14T13:51:27+00:00
 layout: post
 categories:

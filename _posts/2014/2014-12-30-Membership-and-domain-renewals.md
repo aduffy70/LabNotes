@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: Membership and domain renewals
 date: 2014-12-30T16:58:34+00:00
 layout: post
 categories:

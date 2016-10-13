@@ -1,5 +1,5 @@
 ---
-title: Thursday
+title: Next steps Crepidomanes GBS
 date: 2015-01-15T14:39:35+00:00
 layout: post
 categories:
