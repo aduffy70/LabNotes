@@ -1,5 +1,5 @@
 ---
-title: Wednesday
+title: Revising figures for H. wrightii manuscript
 date: 2014-06-25T14:25:10+00:00
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Thursday
+title: H. wrightii updates
 date: 2014-05-08T09:58:05+00:00
 layout: post
 categories:
