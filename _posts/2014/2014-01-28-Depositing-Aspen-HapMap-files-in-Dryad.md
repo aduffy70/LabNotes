@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: Depositing Aspen HapMap files in Dryad
 date: 2014-01-28T11:33:30+00:00
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Wednesday
+title: Summary of Trichomanes intricatum DNA extractions for GBS
 date: 2014-01-15T10:33:38+00:00
 layout: post
 categories:

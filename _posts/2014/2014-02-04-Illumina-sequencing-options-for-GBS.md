@@ -1,12 +1,11 @@
 ---
-title: Tuesday
+title: Illumina sequencing options for GBS
 date: 2014-02-04T09:54:57+00:00
 layout: post
 categories:
   - t. intricatum gbs
 ---
   * Emailed Hardeep Rai asking about a protocol for GBS library prep since I will be using the same process, primers, labels, etc as he did with the aspen and the first 2 of my Trichomanes intricatum samples.
-  * Checked Pteridium aquilinum spores for signs of germination - none.  A little mold growth on some of the spores and debris. May need to sow spores more thickly as they are quite old.
   * Sequencing options for GBS.  I want Illumina HiSeq 2000 using 100bp single-end indexing runs like we did for the aspen manuscript:
     * University of Utah <http://bioserver.hci.utah.edu/BioInfo/index.php/Sequencing>
       * Illumina HiSeq 2000 Sequencing 101 cycle Single End Read Sequencing
