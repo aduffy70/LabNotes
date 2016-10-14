@@ -1,18 +1,16 @@
 ---
-title: Tuesday
+title: Dissertation hoop jumping
 date: 2014-11-11T15:00:09+00:00
 layout: post
 categories:
 
 ---
-  * <span style="line-height: 13px;">Completed Graduation Information Checklist at https://jfe.qualtrics.com/form/SV_afNTHsCYkEkEWxL</span>
-      * Emailed jeannie.maughan@usu.edu to have diploma fee assessed to my student account - waiting for it to post to the account so I can pay it
-      * Completed the graduating student online survey.
+  * Completed Graduation Information Checklist at https://jfe.qualtrics.com/form/SV_afNTHsCYkEkEWxL</span>
+      * Had diploma fee assessed to my student account
+      * Completed the graduating student online survey
       * Took the Survey of Earned Doctorates (saved receipt to Dissertation folder on Dropbox
-  * Checked with Annette Rindlisbacher on EPAF and employment paperwork status. The EPAF is started but likely won't go through before the my usu.edu email was scheduled for deletion, so she contacted IT directly and had me taken off the list of emails to be deleted. Confirmed that other employment paperwork is proceeding normally.
-  * Met Charles Delaney (sys admin). He stopped by the office and helped me get attached to the toxicology shares folder. Connection info is in altids on Google Drive. He recommended setting up an account on box.usu.edu since the shares folders will be moving there soon. There is no linux client (grrr) but I found instructions to set it up using webdav and unison.
   * Added AFJ permission letter to dissertation appendix. Still waiting on official letter from Science Scope. I'll follow up w/an email Wed morning if I haven't heard.
-  * Emailed Paul to ask about what funding sources (other than  the DRK-12 grant, NSF #1020086) I need to acknowledge in my dissertation. Also need to mention NSF DEB-0228432
+  * Emailed Paul to ask about what funding sources (other than  the DRK-12 grantI need to acknowledge in my dissertation.
   * Started the Thesis/Dissertation Format and Style Form. Saved electronic form in Dissertation folder of Dropbox. Need signature from the "Department Style Reviewer".  Is that Kami? Emailed to find out.
   * Need to fill out Rights To Publication Form with Paul and get committee signatures.
   * Completed the Exempt Research Status report in the IRB forms (We had Exempt certification 09/23/2011 for protocol #4034). I don't need the 2nd IRB form (IRB Protocol Status Report) because we did not have Expedite Approval.

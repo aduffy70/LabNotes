@@ -11,7 +11,7 @@ Preparing a new library for the same 54 Trichomanes intricatum samples I ran bef
   * Adapters had already been annealed and PCR primer working solutions made so we started at step 3 of the protocol.
   * The protocol recommends 20ng/uL dilutions but after discussing with Zach I used my 10ng/uL dilutions from my previous library prep.  Some of my extractions are less than 20ng/uL anyway so I could not have used that concentration for all of them and having similar concentrations is important - the 20ng/uL was an arbitrary recommendation, not based on testing or actual comparisons.
   * The setup for the restriction digest would have gone much faster if I had diluted my extractions into a tray or striptubes instead of using individual tubes. This protocol uses trays efficiently.
-  * Used protocol [ version 2.6b October 2014 of Amplified restriction fragments for genomic enrichment ]( https://drive.google.com/file/d/0B0DnkQIRAeIIUWRQbjUxVlZDenlLZG51TVZ4NEdySVFCRXhj/view?usp=sharing ).
+  * Used protocol [ version 2.6b October 2014 of Amplified restriction fragments for genomic enrichment ][1].
   * Adjusted volumes of master mixes since they are designed for 96 samples:
 
 
@@ -63,16 +63,23 @@ For barcodes, I used the first 6 columns and part of a 7th column of the Gompert
 
 
   * In the PCR step I combined 2 samples in each reaction (1.5uL of each sample for a total of 3uL template) and ran 2 replicates of each reaction. Running 2 replicates of every reaction should help balance out any stochastic variation in the library due to differential amplification early on in the PCR reactions.  Combining 2 samples in each PCR keeps from doubling the number of reactions that have to be run, and the assumption is that any stochastic variation leading to one of the 2 samples being overrepresented at the end of the PCR will also be minimized because we ran it twice.  It doesn't really matter which 2 were combined in each reaction since they are all barcoded by that point and are pooled after PCR anyway, but just in case I am curious later.... I combined them by flipping the multipipetter\* for each column of the tray so I combined 1&8, 2&7, 3&6, 4&5 and so on.  \*Draw template, dispense into PCR plate, change tips, draw template, flip micropipetter 180 degrees, dispense into PCR plate, change tips, repeat for each column in the plate, only use 6 of 8 tips on the last column.
-  * We ran 15uL of the pooled PCR products on an EtBr gel to check for amplification. The well partially collapsed in the gel because we pulled the comb a bit soon so my lane (4) is not as well defined as the others but there is DNA in the expected lengths. It appears that restriction digest, ligation, and pcr were successful. [ Original gel image in google docs ]( https://drive.google.com/?usp=chrome_app#folders/0B0DnkQIRAeIIOXVzanRnY2ZSN1k )
+  * We ran 15uL of the pooled PCR products on an EtBr gel to check for amplification. The well partially collapsed in the gel because we pulled the comb a bit soon so my lane (4) is not as well defined as the others but there is DNA in the expected lengths. It appears that restriction digest, ligation, and pcr were successful. [ Original gel image in google docs ][2]
 
-    ![Gel image Screen shot 2014-10-09 at 9.39.34 AM ]( {{site.image_path}}wp-content/uploads/2014/10/Screen-shot-2014-10-09-at-9.39.34-AM.png )
+    ![Gel image Screen shot 2014-10-09 at 9.39.34 AM ][image1]
 
   * Used the BluePippin in the CIB (working with Aaron Thomas) to size select fragments from 250-350bp long. We used 3 lanes of the BluePippin with 25uL of pooled PCR product in each lane and combined the eluted DNA for a total of 75uL in the final library.
-  * About 5uL of the library was used for the BioAnalyzer (also in the CIB with Aaron Thomas). [ Bioanalyzer results (in google docs) ]( https://drive.google.com/file/d/0B0DnkQIRAeIIMk40Vzd6U1V2Wlk/view?usp=sharing ) look ok. My sample (lane D1) has about half the concentration of Zach's but has a much cleaner peak at the desired fragment lengths than the library I made using the Elshire/Buckler protocol.
+  * About 5uL of the library was used for the BioAnalyzer (also in the CIB with Aaron Thomas). [ Bioanalyzer results (in google docs) ][3] look ok. My sample (lane D1) has about half the concentration of Zach's but has a much cleaner peak at the desired fragment lengths than the library I made using the Elshire/Buckler protocol.
 
-    ![ Bioanalyzer_B_10-10-14 results part B ]( {{site.image_path}}wp-content/uploads/2014/10/Bioanalyzer_B_10-10-14.png )
+    ![ Bioanalyzer_B_10-10-14 results part B ][image2]
 
-    ![ Biolanalyzer_A_10-10-14 results part A ]( {{site.image_path}}wp-content/uploads/2014/10/Biolanalyzer_A_10-10-14.png )
+    ![ Biolanalyzer_A_10-10-14 results part A ][image3]
 
   * Labeled and wrapped (to avoid evaporation) the tube with the remaining 70uL of library and stored it in the -20 freezer along with the remaining ~450uL of pooled pcr product, the 10uL of each pcr product still in the 96 well plate and the ~190uL of each Restriction/Ligation product in their 96 well plate.
   * This library is ready for sequencing.
+
+[1]: https://drive.google.com/file/d/0B0DnkQIRAeIIUWRQbjUxVlZDenlLZG51TVZ4NEdySVFCRXhj/view?usp=sharing
+[2]: https://drive.google.com/?usp=chrome_app#folders/0B0DnkQIRAeIIOXVzanRnY2ZSN1k
+[3]: https://drive.google.com/file/d/0B0DnkQIRAeIIMk40Vzd6U1V2Wlk/view?usp=sharing
+[image1]: {{site.image_path}}wp-content/uploads/2014/10/Screen-shot-2014-10-09-at-9.39.34-AM.png
+[image2]: {{site.image_path}}wp-content/uploads/2014/10/Bioanalyzer_B_10-10-14.png
+[image3]: {{site.image_path}}wp-content/uploads/2014/10/Bioanalyzer_A_10-10-14.png
