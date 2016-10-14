@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: Lab maintenance
 date: 2011-11-01T16:33:04+00:00
 layout: post
 categories:

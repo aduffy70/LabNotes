@@ -1,5 +1,5 @@
 ---
-title: Thursday
+title: CPGsim activity
 date: 2011-10-20T16:20:58+00:00
 layout: post
 categories:
@@ -8,4 +8,3 @@ categories:
   * Babysitting VPGsim regions
       * issues further aggravated by some big assembly jobs (by brichard) running on transcriptome this morning
       * Setup VPGsimDemo1 on cordate and offered it to Colton if his region crashes again. (It worked and he finished his experiment)
-  * Made new SYBRsafe gel from new 1X TAE from 50X TAE from 7/7/08 AD

@@ -1,5 +1,5 @@
 ---
-title: Thursday
+title: Stacks reading
 date: 2011-12-08T16:14:51+00:00
 layout: post
 categories:

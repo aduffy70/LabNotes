@@ -1,5 +1,5 @@
 ---
-title: Thursday
+title: ISIT Google sites vs. Google Docs
 date: 2011-11-10T23:59:44+00:00
 layout: post
 categories:

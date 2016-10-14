@@ -1,12 +1,9 @@
 ---
-title: Monday
+title: VPGsim activity
 date: 2011-10-24T15:24:14+00:00
 layout: post
 categories:
   - science ed vpgsim
 ---
-  * Prepared fern DNA samples to ship to Ken Karol for 454 sequencing and gave them to Paul Wolf.
-  * Transferred or shutdown everything on my aduffy70.org domain (I let it expire and cancelled it with GoDaddy).
-  * Talked to Michael Orr about PCR and showed him where to get the reagents and equipment for the BIOL3065 class.
   * Deleted plants on region 13 for their bottleneck test
   * Talked to students on VPGsim5 about ways to control their population size.  They were on the Mt Logan terrain and it was getting big. It ended up crashing but they got the data they needed out of it

@@ -1,5 +1,5 @@
 ---
-title: Thursday
+title: PCR for Plant Physiology lab
 date: 2011-12-01T14:30:04+00:00
 layout: post
 categories:
