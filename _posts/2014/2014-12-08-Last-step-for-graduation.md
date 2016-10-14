@@ -1,5 +1,5 @@
 ---
-title: Monday
+title: Last step for graduation
 date: 2014-12-08T14:26:51+00:00
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Wednesday
+title: GBS data quality note
 date: 2014-12-10T13:56:01+00:00
 layout: post
 categories:

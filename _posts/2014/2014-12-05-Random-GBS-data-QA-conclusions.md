@@ -1,5 +1,5 @@
 ---
-title: Friday
+title: Random GBS data QA- conclusions
 date: 2014-12-05T13:25:54+00:00
 layout: post
 categories:

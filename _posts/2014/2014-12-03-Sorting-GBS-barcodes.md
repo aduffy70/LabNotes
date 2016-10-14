@@ -1,5 +1,5 @@
 ---
-title: Wednesday
+title: Sorting GBS barcodes
 date: 2014-12-03T14:47:05+00:00
 layout: post
 categories:

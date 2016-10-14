@@ -1,13 +1,12 @@
 ---
-title: Saturday, Sunday
+title: Starting GBS analysis
 date: 2014-12-14T23:59:43+00:00
 layout: post
 categories:
   - t. intricatum gbs
 ---
-<span style="line-height: 13px;">Working on GBS data analysis with Don Hauber, Karen Mock, Carol Rowe, and Paul Wolf:</span>
-
-  * <span style="line-height: 13px;">Setup accounts on the workstation for Carol, Karen, and Don. Note- use adduser when setting up new accounts, not useradd. The latter does not automatically create home folders.</span>
+Working on GBS data analysis with Don Hauber, Karen Mock, Carol Rowe, and Paul Wolf:
+  * Setup accounts on the workstation for Carol, Karen, and Don. Note- use adduser when setting up new accounts, not useradd. The latter does not automatically create home folders.
   * Installed Fastx-tools on the workstation so it is accessible to all users
   * Installed Ugene (similar to Genious?) on my macbook, crozier, and fiddlehead. It is crossplatform with versions for 32 and 64 bit machines, though it looks like the 64 bit version has more features.
   * Ran out of space on the /home drive but Paul had some people who are no longer using the system remove their files and I cleared several gigabytes by removing things I no longer need:
@@ -19,5 +18,3 @@ categories:
       * Question: Based on the info Illumina has online and from the documentation for the tool I'm trying to use (cutadapt), the adapter sequence should start with GATCGGAAGAGC or AGATCGGAAGAGC. The perl script you sent me for parsing barcodes looks for a similar sequence, but with additional bases at the start: TTACAGATCGGAAGAG. Are those starting bases something to do with the MseI cutsite
       * Answer: Yes, the TTA should match the MseI cut site and the C should be the protector base added to prevent recreating the cut-site (we used to cut and ligate in a single reaction).
       * So the adapter to search for is TTACAGATCGGAAGAG. The actual adapter is longer than that, but when it finds the adapter it cuts off everything after it too, so just the starting part is enough as long as it is long enough not to occur frequently by chance (this is one in 4 billion). Re-running cutadapt using this new adapter sequence (cutadaptOUT2.fastq)
-
-&nbsp;
