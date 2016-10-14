@@ -1,5 +1,5 @@
 ---
-title: Friday
+title: Module 3 and 4 images
 date: 2013-02-08T12:02:03+00:00
 layout: post
 categories:

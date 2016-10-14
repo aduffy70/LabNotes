@@ -1,5 +1,5 @@
 ---
-title: Thursday
+title: Updating crozier
 date: 2013-02-07T12:40:59+00:00
 layout: post
 categories:

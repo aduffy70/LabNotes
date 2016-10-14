@@ -1,5 +1,5 @@
 ---
-title: Monday
+title: More extractions for GBS
 date: 2013-11-18T13:25:26+00:00
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: P. aquilinum DNA for whole genome sequencing
 date: 2013-10-01T14:54:32+00:00
 layout: post
 categories:
@@ -9,6 +9,3 @@ categories:
       * In Josh's bracken stocks we have many different extractions but it looks like there are several tubes of Wolf 921.
       * I was hoping to find S48, since I think that is what we used for the chloroplast gene order work and so it should be vouchered.  The stocks I was working from for that project are gone, but I did find two tubes of S48 in the Fern DNA on EtOH box.  I could finish the EtOH cleaning on those and quantify if we want to use those.
   * Paul wants me to go ahead and finish the EtOH cleaning on the S48 when I do other extractions
-  * Talked to Martin about starting extractions next week.  I need to extract Trichomanes intricatum samples (mine and Don's) for my GBS run.
-  * Cleaned the lab in preparation for extractions.  The ice machine has been shut off by facilities because the leak was flooding the floor beneath the benches.  I mopped up the excess water, however, I suspect there is actually an unrelated leak under the benches or inside the wall.  We will see if it stays dry.
-  * Put Plastid on an UPS (Paul's old one).  I really want it for Cordate so VPCsim stays up in a power outage but I don't trust the UPS yet, so I am going to leave it with just Plastid for a few days to test.  Plastid has nothing critical running on it... just frivolous osgrid regions.

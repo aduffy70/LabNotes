@@ -1,5 +1,5 @@
 ---
-title: Friday
+title: Ice machine update
 date: 2013-10-25T23:59:47+00:00
 layout: post
 categories:

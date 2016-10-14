@@ -1,10 +1,8 @@
 ---
-title: Friday
+title: Aspen GBS analysis thoughts
 date: 2013-03-01T11:21:50+00:00
 layout: post
 categories:
-  - t. intricatum gbs
 ---
-  * Monthly backups - added cyberlearning.usu.edu database and files to the list of things to backup on crozier.  Had to change the way I backup Google Docs: there is no longer a button to download items because they now have a Google Drive app that syncs the files on your computer like Dropbox does, so I now backup Google Drive and Dropbox the same way.
   * Had another idea about potential ways to sort heterozygotes from homozygotes in the gbs data:  We can think of this like drawing black and white beads from a jar.  If the contents of the jar are 50% black:50% white we would expect to draw beads out in equal numbers, but we don't because of sampling error.  However, if we were drawing beads from a jar we couldn't see, we could use the counts of beads we sampled and the sample size to statistically test the hypothesis that the jar is 50:50.  Drawing more beads would give us more power in this test, and we could also calculate the minimum size of the sample we could draw and still have confidence.  In our gbs data, heterozygotes had 50:50 alleles.  Our DNA extraction, PCR, and sequencing are all essentially a sampling process resulting in our reads which are the sample.  We know the sample size (the number of sequences at the locus in that individual) so we can statistically test the hypothesis that the ratio of alleles in the original pool was 50:50.  We can also calculate when our sample size is too small to give us the power to distinguish homozygotes from heterozygotes.
   * It seems strange to me that in the scatter plot of the count of alleles at one locus and the count of alleles at the other locus that we don't have 2 lighter bands running diagonally out from the 0,0 point.  If we had no sampling error and no PCR error, the data would all be along the two axes and along the y=x diagonal.  But sampling error in heterozygotes causes those points to scatter about the diagonal and pcr error in homozygotes causes them to scatter away from the axes.  But the fact that we can't see 3 'wedges' of points suggests that those two error sources are so large the three sets of points completely overlap each other.  That is kind of scary.

@@ -1,5 +1,5 @@
 ---
-title: Wednesday
+title: Converting module 3 images
 date: 2013-02-06T23:59:27+00:00
 layout: post
 categories:
