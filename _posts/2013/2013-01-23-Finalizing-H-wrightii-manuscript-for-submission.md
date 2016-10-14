@@ -1,5 +1,5 @@
 ---
-title: Wednesday
+title: Finalizing H. wrightii manuscript for submission
 date: 2013-01-23T23:59:50+00:00
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Monday
+title: Haida Gwaii travel notes
 date: 2013-01-28T13:13:15+00:00
 layout: post
 categories:

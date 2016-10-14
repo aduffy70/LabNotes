@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: H. wrightii manuscript updates
 date: 2013-01-22T13:25:13+00:00
 layout: post
 categories:
@@ -13,4 +13,4 @@ categories:
       * Updated the title - Don's
       * Incorporated Mary's wording changes and grammatical improvements - Mary's
       * Included info from UBC herbarium on additional collections after the first H. wrightii reports (including a map of the gametophyte collections in Haida Gwaii and around Prince Rupert - Mary's
-  * Reviewed Davey et al paper on RAD-seq sources of bias in preparation for today's GBS meeting
+  

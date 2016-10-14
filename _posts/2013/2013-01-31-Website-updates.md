@@ -1,5 +1,5 @@
 ---
-title: Thursday
+title: Website updates
 date: 2013-01-31T19:52:52+00:00
 layout: post
 categories:
