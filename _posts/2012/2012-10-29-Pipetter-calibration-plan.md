@@ -1,5 +1,5 @@
 ---
-title: Monday
+title: Pipetter calibration plan
 date: 2012-10-29T13:58:39+00:00
 layout: post
 categories:
@@ -16,5 +16,3 @@ categories:
       * I suggest just 3 of each (15 total, none of the 100 uL) so we have a Pre-PCR, Post-PCR, and RNA set of pipetters for $345.
       * At Paul's instruction, I talked to Stephanie White to get the order placed for just the 15 on the Buckwheat grant.
       * Need to check them and see which 15 seem worst so we get the worst one fixed and the backups are the ones that already seem to be adjusted correctly.
-  * Finalized H. wrightii draft and emailed it to Don Farrar and Mary Stensvold
-  * Emailed Brett Shelton and Ethan White to schedule time this week to discuss my projects and hopefully get them signed on to my committee

@@ -1,5 +1,5 @@
 ---
-title: Monday
+title: PCR kit for Plant Physiology Lab
 date: 2012-11-05T12:58:14+00:00
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Friday
+title: GBS sample cleaning and discussion
 date: 2012-11-16T23:59:30+00:00
 layout: post
 categories:

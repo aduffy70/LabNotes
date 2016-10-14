@@ -1,5 +1,5 @@
 ---
-title: Wednesday
+title: Stacks setup on workstation
 date: 2012-02-01T14:18:31+00:00
 layout: post
 categories:

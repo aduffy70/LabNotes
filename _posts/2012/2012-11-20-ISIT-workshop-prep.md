@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: ISIT workshop prep
 date: 2012-11-20T19:02:54+00:00
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: Wednesday
+title: VPGsim activity
 date: 2012-09-19T13:40:55+00:00
 layout: post
 categories:
