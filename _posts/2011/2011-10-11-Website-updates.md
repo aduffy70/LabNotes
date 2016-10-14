@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: Website updates
 date: 2011-10-11T14:16:17+00:00
 layout: post
 categories:
@@ -10,5 +10,3 @@ categories:
       * public_html4 - owncloud - cloud.aduffy70.org
       * public_html5 - aduffy70.org - www.aduffy70.org
       * public_html6 - privatewp - log.aduffy70.org
-  * 'Idiot-proofing' Sierpinski-Tree module
-  * Investigating opensim sun module

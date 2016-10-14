@@ -1,5 +1,5 @@
 ---
-title: Friday
+title: VPGsim activity- content questions
 date: 2011-09-23T17:02:00+00:00
 layout: post
 categories:

@@ -1,5 +1,5 @@
 ---
-title: CPGsim activity
+title: VPGsim activity
 date: 2011-10-20T16:20:58+00:00
 layout: post
 categories:

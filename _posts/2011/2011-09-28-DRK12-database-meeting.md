@@ -1,5 +1,5 @@
 ---
-title: Wednesday
+title: DRK12 database meeting
 date: 2011-09-28T16:48:18+00:00
 layout: post
 categories:
