@@ -5,6 +5,8 @@ layout: post
 categories:
   - science ed vpgsim
 ---
+eTOC reading:
+
   * [doi:10.1371/journal.pone.0026597][1] Fay-Wei's study looking at matK as a barcode locus in ferns.
   * [doi:10.1002/sce.10024][2] Reference from Todd Campbell relevant to analyzing the VPGsim activity reports.
   * [doi:10.1023/A:1024450509847][3] And another...
