@@ -3,7 +3,6 @@ title: Meeting with Paul Wolf
 date: 2011-08-15T10:29:53+00:00
 layout: post
 categories:
-  - h. wrightii
   - science ed vpgsim
 ---
 He is back from his arctic river trip

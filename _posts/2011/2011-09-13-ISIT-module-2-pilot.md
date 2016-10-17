@@ -1,5 +1,5 @@
 ---
-title: Tuesday
+title: ISIT module 2 pilot
 date: 2011-09-13T23:59:19+00:00
 layout: post
 categories:

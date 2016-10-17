@@ -1,5 +1,5 @@
 ---
-title: Monday
+title: H. wrightii manuscript update
 date: 2011-08-15T22:14:26+00:00
 layout: post
 categories:
