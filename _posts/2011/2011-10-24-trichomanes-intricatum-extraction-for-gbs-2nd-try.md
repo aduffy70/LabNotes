@@ -38,7 +38,7 @@ Continuing on 10/26/11
       * 5: F82-1-6-3 (D)
       * 6: ladder
 
-    [<img class="alignnone size-full wp-image-1082" title="Gel2011-10-24_Extractions" src="{{site.image_path}}wp-content/uploads/2011/10/Gel2011-10-24_Extractions.jpg" alt="" width="356" height="565" />]({{site.image_path}}wp-content/uploads/2011/10/Gel2011-10-24_Extractions.jpg)</li>
+        ![Extractions gel image][image1]
 
       * Quantified with Qubit:
           * F82-1-6-3 (A) 38.5 ng/uL
@@ -47,3 +47,5 @@ Continuing on 10/26/11
           * F82-1-6-3 (D) 24.3 ng/uL
 
         * This one alone provides everything I need for GBS: at least 50 ng/uL and 150ng DNA total.</li> </ul>
+
+[image1]: {{site.image_path}}wp-content/uploads/2011/10/Gel2011-10-24_Extractions.jpg
