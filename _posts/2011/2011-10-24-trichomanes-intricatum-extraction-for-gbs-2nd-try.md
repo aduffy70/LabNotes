@@ -46,6 +46,6 @@ Continuing on 10/26/11
           * F82-1-6-3 (C) 18.0 ng/uL
           * F82-1-6-3 (D) 24.3 ng/uL
 
-        * This one alone provides everything I need for GBS: at least 50 ng/uL and 150ng DNA total.</li> </ul>
+        * This one alone provides everything I need for GBS: at least 50 ng/uL and 150ng DNA total.
 
 [image1]: {{site.image_path}}wp-content/uploads/2011/10/Gel2011-10-24_Extractions.jpg
