@@ -21,5 +21,3 @@ Notes:
   * Robin's rubrics are not published so we need to acknowledge that it is a tool just being developed and cite the material it is based on (the same things Robin cites in the rubric description.
   * Include citations from Duncan & Tseng's work on the layers of student understanding
   * Include citations on benefits of learning with simulations and interactive visualizations, and of 3D immersive environments
-
-&nbsp;
