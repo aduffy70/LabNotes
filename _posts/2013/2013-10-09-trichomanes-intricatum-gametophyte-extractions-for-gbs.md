@@ -50,7 +50,3 @@ Continued 10/11/13
   * Resuspended in 50uL TE buffer from 10/31/12 overnight in the refrigerator
 
 Better pellets this time.  A couple really large.
-
-&nbsp;
-
-&nbsp;
