@@ -12,11 +12,11 @@ categories:
     * Testing on a Domestic (N1) and Wild (EW1) sample.
     * Expected lengths (assuming the NNNNs in the Turkey5.0 assembly accurately represent the size of the missing section):
 
-| primers | length (bp) |
-| ------- | ----------- |
-| 1-F to 1-R | 1333 |
-| 1-F to 2-R | 1279 |
-| 2-F to 1-R | 1327 |
-| 2-F to 2-R | 1273 |
+| primer pair | length (bp) |
+| ----------- | ----------- |
+| NRF2_promoter1-F to 1-R | 1333 |
+| NRF2_promoter1-F to 2-R | 1279 |
+| NRF2_promoter2-F to 1-R | 1327 |
+| NRF2_promoter2-F to 2-R | 1273 |
 
 * PCR0237 results:
