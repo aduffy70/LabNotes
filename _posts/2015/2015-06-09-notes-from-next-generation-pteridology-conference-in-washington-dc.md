@@ -30,7 +30,3 @@ June 1-6 2015 at the Smithsonian Natural History Museum
   * I may not be able to get enough high-quality DNA for GBS but I can get rbcL and rps4 from herbarium samples. So I need to make a request to do some destructive sampling of Hymenophyllum wrightii sporophytes from the collections at University of British Columbia. Melanie Link-Perez does sampling from even 80 year old herbarium samples. She recommends using a method that includes TBT-PAR for dealing with recalcitrant DNA. <a href="http://doi.org/ http://dx.doi.org/10.3732/apps.1200236">doi: http://dx.doi.org/10.3732/apps.1200236</a>
   * Joel Nitta is interested in seeing my DNA extraction protocol for filamentous gametophytes and pictures of my grinding rig.
   * One of the talks had an interesting way of presenting anova interactions that could be useful on our turkey GSTA data. There are only so many possible patterns of expression change between two groups with 2 treatments so they counted up how many genes had each pattern.
-
-&nbsp;
-
-&nbsp;
