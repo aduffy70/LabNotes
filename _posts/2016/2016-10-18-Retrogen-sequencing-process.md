@@ -18,9 +18,9 @@ Enter order [online][2]
 Ship Fedex overnight to:
 
 >Retrogen, Inc.
-Sequencing Department
-6645 Nancy Ridge Dr.
-San Diego, CA 92121
+>Sequencing Department
+>6645 Nancy Ridge Dr.
+>San Diego, CA 92121
 
 [1]: https://docs.google.com/spreadsheets/d/19hSRidBUdqwhi9UYkcB23_dI-l5YArFiabIIQsuWbvs/edit?usp=sharing
 [2]: http://sequencing.retrogen.com/cgi-bin/dna/seqreq2N.cgi?username=52212413,7198
