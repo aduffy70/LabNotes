@@ -35,7 +35,7 @@ Can I use the sequences that are available to design primers that will amplify a
       * V. davalliodes
       * V. liukiuensis
       * V. collariata
-      * V. speciosa
+      * V. speciosa (very different from others)
       * V. cyrtotheca
       * V. gigantea
       * T. maximum
@@ -43,6 +43,15 @@ Can I use the sequences that are available to design primers that will amplify a
       * T. johnstonense
       * T. radicans
 
+How do the rbcL primers align to each of these two groups?
 
+~~~
+>F1F
+ATGTCACCACAAACAGAAACTAAAGCAAGT
+>1379R
+TCACAAGCAGCAGCTAGTTCAGGACTC
+>26F
+???????
+~~~
 
 [1]: http://dx.doi.org/10.3767/000651906X622210
