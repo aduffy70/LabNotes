@@ -28,5 +28,7 @@ categories:
 
     ![CpGs detectable with Zymo kit in N1 sequence][image2]
 
+We need to design/test primers to amplify <350bp sections for the Zymo kit.
+
 [image1]: {{site.image_path}}All_EW1_Consensus_CpGs.png
 [image2]: {{site.image_path}}All_N1_Consensus_Zymo_CpGs.png
