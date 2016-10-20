@@ -18,16 +18,15 @@ categories:
     * identical to EW1 but I didn't have to trim as much off the 3' end. (One EW1 sequence went out that far but I only kept sequence with 2X coverage.)
     * Same blast results as EW1 (with a larger match downstream of the NNNs since the sequence is longer)
 
-## CpG island
+## Are the NNNs upstream of NRF2 in Turkey5.0 CpG rich?
 
-  * This sequence is CpG rich:
-    * Over 100 CpGs:
+  * Yes, over 100 CpGs:
 
-      ![CpGs in EW1 sequence][image1]
+    ![CpGs in EW1 sequence][image1]
 
-    * 25 of the CpG sites detectable by the Zymo qMethyl kit:
+  * 25 of the CpG sites detectable by the Zymo qMethyl kit:
 
-      ![CpGs detectable with Zymo kit in N1 sequence][image2]
+    ![CpGs detectable with Zymo kit in N1 sequence][image2]
 
 [image1]: {{site.image_path}}All_EW1_Consensus_CpGs.png
 [image2]: {{site.image_path}}All_N1_Consensus_Zymo_CpGs.png
