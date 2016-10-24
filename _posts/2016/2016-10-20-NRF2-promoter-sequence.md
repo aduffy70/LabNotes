@@ -3,7 +3,7 @@ title:  NRF2 promoter sequence
 date:  2016-10-20
 layout: post
 categories:
-  - gsta mirna
+  - gsta methylation
 ---
 # Retrogen sequencing order 2016-10-18
 
