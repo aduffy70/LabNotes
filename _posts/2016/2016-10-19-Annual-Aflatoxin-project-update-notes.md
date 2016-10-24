@@ -20,5 +20,5 @@ categories:
     * bisulfite sequencing plan for GSTA4/GSTA3.
     * include NRF2 plans? (justified by the fluidigm data showing NRF2 with significant expression differences between types)
   * Splicing variant status... what can we say from the results so far?
+  * Update sequence variant section with latest from Kent Reed on SNPs in 3'UTR.
   * Any update on the GSTA3/4 antibodies? Data we can show?
-  
