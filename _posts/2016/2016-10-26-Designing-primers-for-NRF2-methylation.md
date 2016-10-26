@@ -7,7 +7,7 @@ categories:
 ---
 Now that we know the sequence upstream of NRF2 (NFE2L2) and can see there is a CpG island in this region, we can design primers to look at methylation levels with the Zymo OneStep qMethyl kit.
 
-We designed 3 sets of primers to capture most (31/37) of the CpGs the Zymo kit can detect, and which cover the most dense part of the CpG island upstream of and extending into the NRF2 mRNA:
+We designed 3 sets of primers to capture most (31/38) of the CpGs the Zymo kit can detect, and which cover the most dense part of the CpG island upstream of and extending into the NRF2 mRNA:
 ~~~
 >NRF2_Promoter3-F
 CTCTCCTGACAGAAAATCCCGC
@@ -23,7 +23,7 @@ CTAGTCCGGTTCCTTCTTGAGAG
 TTTCCACAACAGCTCTAACAGAAAC
 ~~~
 
-All expected fragment sizes are under Zymo's recommended maximum of 35 bp:
+All expected fragment sizes are under Zymo's recommended maximum of 350 bp:
 
 | primer pair | length |
 | ----------- | ------ |
