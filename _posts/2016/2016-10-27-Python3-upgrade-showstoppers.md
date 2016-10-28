@@ -6,6 +6,9 @@ categories:
 ---
 What stands in the way of switching entirely to python3?
   * HTseq [won't work on python3 yet][1] - 2016-10-27
+  * What other python modules do I rely on and are they available for python3?
+  * What is up with the tab key when running python3 in interactive mode? It is a controversial autocomplete feature. Two ways to override it [here][2] but it will go away on its own in future versions (I'm on 3.4.3 now and it is still there)
 
 
 [1]: http://www-huber.embl.de/HTSeq/doc/install.html#install
+[2]: http://stackoverflow.com/questions/19737454/cant-use-tab-in-python-shell
