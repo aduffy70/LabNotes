@@ -42,6 +42,29 @@ Can I use the sequences that are available to design primers that will amplify a
       * C. birmanicum
       * T. johnstonense
       * T. radicans
+    * C. intricatum is in Crepidomanes subgenus Crepidomanes section Crepidomanes. Others w/rbcL in genbank:
+      * C. schmidianum (schmidtianum)
+      * C. makinoi
+      * C. latealatum
+      * C. kurzii
+      * C. bipunctatum
+      * C. acuto-obtusum
+      * C. mettenii
+      * C. africanum
+      * C. melanotrichum
+      * C. inopinatum (inopinata)
+      * C. fallax
+      * C. intramarginale
+      * C. frappieri
+      * C. clarenceanum
+      * C. chevalieri
+      * C. melanotrichum
+      * C. christii
+      * C. vitiense
+      * C. latealatum
+      * C. latemarginale
+      * T. walleri
+
 
 How do the rbcL primers align to each of these two groups?
 
@@ -51,7 +74,15 @@ ATGTCACCACAAACAGAAACTAAAGCAAGT
 >1379R
 TCACAAGCAGCAGCTAGTTCAGGACTC
 >26F
-???????
+ATGTCACCACAAACAGAGACTAAAGC
+>H1F1
+TCTCAACCATTCATGCGTTGG
+>H1R1
+CTTCACATGTACCTGCAGTAGC
+>rbcL-TKT-F1
+ACCCAWGTCACCACAAACRGAG
+>rbcL-TKT-R3N-3
+CAAGCGGCAGCCRAYTCAG
 ~~~
 
 [1]: http://dx.doi.org/10.3767/000651906X622210
