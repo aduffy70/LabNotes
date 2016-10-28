@@ -15,4 +15,7 @@ PCR0238
   * Not mixing and matching forward and reverse primers since we aren't going to try for larger fragments if the small ones don't work--the Zymo kit seems to strongly select against amplification of fragments \>350bp.
 
 PCR0238 results:
-  * a
+  * The bottom section primers work
+  * Top and middle sections only have faint unexpected bands, all longer than the expected 250-350bp length (500 to 3000bp!)
+    * Is it a GC content problem? Top=78% GC, Middle=80% GC, Bottom=66% GC, so there is a pretty big difference between the one that worked and the two that didn't.
+    * Maybe more GC enhancer or a longer denaturing step? If the correct band amplifies at all with the Zymo kit the long bands shouldn't be an issue since it selects strongly for short bands, but on this reaction I see no evidence of the correct size bands.
