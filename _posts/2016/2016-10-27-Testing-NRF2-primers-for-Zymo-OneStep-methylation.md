@@ -19,3 +19,8 @@ PCR0238 results:
   * Top and middle sections only have faint unexpected bands, all longer than the expected 250-350bp length (500 to 3000bp!)
     * Is it a GC content problem? Top=78% GC, Middle=80% GC, Bottom=66% GC, so there is a pretty big difference between the one that worked and the two that didn't.
     * Maybe more GC enhancer or a longer denaturing step? If the correct band amplifies at all with the Zymo kit the long bands shouldn't be an issue since it selects strongly for short bands, but on this reaction I see no evidence of the correct size bands.
+
+PCR0239
+  * Rerun PCR0238 with 20%v-v GC Enhancer instead of 10%
+
+PCR0239 results:
