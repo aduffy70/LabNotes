@@ -24,3 +24,4 @@ PCR0239
   * Rerun PCR0238 with 20%v-v GC Enhancer instead of 10%
 
 PCR0239 results:
+  * GC content was the problem. We still have some non-specific binding on the middle primers but it is probably longer than what will be amplified by the Zymo kit. I think we can try this with the Zymo kit now.
