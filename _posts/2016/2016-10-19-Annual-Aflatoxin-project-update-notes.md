@@ -25,3 +25,4 @@ First draft comments from Roger:
   * To answer my questions about the antibody data:
     * The data we have suggests that the antibodies do bind to the GSTA proteins but we haven't been able to demonstrate that they block the enzyme activity. We don't have data showing they don't block the enzyme--it is demonstrated by our lack of data, but it was attempted by both Fran and Deepika.
     * We need to get new antibodies.
+  * Make a version with no figures or tables- the online submission system only takes text.
