@@ -91,15 +91,18 @@ You can see why the F1F, F26, and F1379R primers struggle in my samples. It look
 
 ![Forward primers aligned to long filmy rbcL sequences][image1]
 
-Note: the majority of rbcL reads in genbank start at bp751 in this alignment.
+  * Note: the majority of rbcL reads in genbank start at bp751 in this alignment.
 
 ![Reverse primers aligned to long filmy rbcL sequences][image2]
 
-Note: most rbcL reads end at bp1955 in this alignment.
+  * Note: most rbcL reads end at bp1955 in this alignment.
 
 I looked through my records and it doesn't look like I ever tried to amplify using those--though I did test them as sequencing primers.
 
 Let's try amplifying each species with the TKT primers.
+  * In the 2003 paper they used fairly normal PCR: 35 cycles- 94C for 45s, 48-52C for 45s, 72C for 75s
+  * In the 2008 paper they used unusual settings (or there is a typo): 50 cycles- 94C for 5s, 52C for 1s, and 72C for 10s
+  * I'm curious to try the 2008 settings and see if anything amplifies.
 
 [1]: http://dx.doi.org/10.3767/000651906X622210
 [image1]: {{site.image_path}}rbcL_forward_primers_aligned.png
