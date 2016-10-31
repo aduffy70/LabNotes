@@ -87,7 +87,7 @@ CAAGCGGCAGCCRAYTCAG
 
 Most of the sequences in Genbank are too short to show the primer locations (they were amplified using those primers) but there is one long Crepidomanes-Crepidomanes and one long Vandenboschia-Vandenboschia. The only longer Didymoglossum sequence is only longer at the 3' end.
 
-You can see why the F1F, F26, and F1379R primers struggle in my samples. It looks like the TKT-F1 and TKT-R3N-3 pair should work better. I looked through my records and it doesn't look like I ever tried to amplify using those--though I did test them as sequencing primers. The H1F1/H1R1 internal sequencing primers are in conserved sequence.
+You can see why the F1F, F26, and F1379R primers struggle in my samples. It looks like the TKT-F1 and TKT-R3N-3 pair might work better (though 1379R might be better for Didymoglossum). I looked through my records and it doesn't look like I ever tried to amplify using those--though I did test them as sequencing primers. The H1F1/H1R1 internal sequencing primers are in conserved sequence.
 
 ![Forward primers aligned to long filmy rbcL sequences][image1]
 
@@ -99,7 +99,7 @@ You can see why the F1F, F26, and F1379R primers struggle in my samples. It look
 
 I looked through my records and it doesn't look like I ever tried to amplify using those--though I did test them as sequencing primers.
 
-Let's try amplifying each species with the TKT primers.
+Let's try amplifying each species with the TKT forward primer with each of the reverse primers.
   * In the 2003 paper they used fairly normal PCR: 35 cycles- 94C for 45s, 48-52C for 45s, 72C for 75s
   * In the 2008 paper they used unusual settings (or there is a typo): 50 cycles- 94C for 5s, 52C for 1s, and 72C for 10s
   * I'm curious to try the 2008 settings and see if anything amplifies.
