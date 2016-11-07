@@ -9,5 +9,6 @@ Updating fiddlehead to Ubuntu 16.04 and setting it up to replace crozier as my m
 
   * Moved personal files to spore and verified updated my music library and photo library on spore
   * Installed 16.04 from usb drive with default partitioning. Ran updates. Tweaked settings.
-  * Installed chrome, dropbox, synaptic, atom, gimp, ubuntu tweak (for fonts), java8, Aliview, R, 
+  * Installed chrome, dropbox, synaptic, atom, gimp, ubuntu tweak (for fonts), java8, Aliview, R,
   * Set up ufw, openssh-server, my .bash_aliases and .bashrc, nanorc, terminal profile
+  * The versions on jekyll and several of the dependent gems have changed so I had to update everything on my other machines as well to keep my labnotes from breaking.
