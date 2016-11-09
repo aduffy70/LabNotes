@@ -22,11 +22,60 @@ Bisulfite sequencing guidelines from [here][1] and [here (with more links at the
   * Primers should have some non-CpG C's to amplify only the bisulfite modified DNA ???
   * Use hot start polymerase--primer dimers and non-specific binding are more likely with only 3 bases.
   * Longer than normal (26-35bp) primers with high Tm--definitely over 50C
-  * 200-500bp amplicons--bisulfite treatment is harsh and degrades the DNA so larger fragments will be difficult to amplify.
+  * 200-500bp amplicons--bisulfite treatment is harsh and degrades the DNA so larger fragments will be difficult to amplify (and more likely to be incompletely converted).
   * Since we are only amplifying from one strand more PCR cycles are needed (35-40)
   * proteinase K incubation, fully denaturing DNA prior to conversion, and not trying to do too much DNA in one well make bisulfite conversion more consistent
-  *
+
+There are no CpG islands but there are "CpG rafts" where we can capture a larger than normal number of CpGs in one 500bp section.
+
+| Raft start (bp in BAC) | Raft end | Length | CpGs in raft | Comment |
+| 153179 | 153647 | 460bp | 9 | This is >6000bp upstream of the transcription start site (TSS). Ignore. |
+| 157094 | 157566 | 461bp | 12 | ~2400bp upstream of the TSS. Raft A |
+| 159451 | 159951 | 492bp | 9 | ~50bp upstream of the TSS. Raft B |
+| 159993 | 160476 | 474bp | 10 | Straddles the TSS. Raft C |
+| 160786 | 161217 | 424bp | 8 | ~750bp downstream of the TSS in the intron of the 5'UTR. Raft D |
+| 161921 | 162381 | 454bp | 7 | ~2000bp downstream of the TSS in the intron of the 5'UTR. Ignore. |
+
+  * Raft A seems reasonably close upstream to still be part of the promoter.
+  * Raft B, C, and D are all contiguous and about where a promoter might be expected.
+  * Designed bisulfite primers to cover all 4 rafts using [MethPrimer][4]. All amplicons are <550bp:
+  ~~~
+  >G3bsAF
+  TAGTGAAGTTGGTGTTTGTATAGTTATTTTTATTGT
+  >G3bsAR
+  CTCCCCCTAACACAACTCCATACC
+  >G3bsBF
+  AGTTATATTTTATTTTATTTTTGTATATGTTGTGTG
+  >G3bsBR
+  AATACCACTCAAAACAAAAACTCTTTTACC
+  >G3bsCF
+  GGAGTTGTTAAGTTAAATTAGAAGTGGGATTG
+  >G3bsCR
+  ACCAAACATCACCACTAACTACAAAAAACC
+  >G3bsDF
+  GTTTTTTTGTGTAGTTGTAGAATTTTTGGTTGT
+  >G3bsDR
+  CCCACACTTCATTTCCCATTTAAATAAAAT
+  ~~~
+
+  * Designed normal primers to get reference sequence to compare against. Amplicon length is not limited since these will be used in non-bisulfite treated DNA so we will amplify B, C, and D in 2 overlapping amplicons:
+  ~~~
+  >G3AF
+  GTCTGTACAGCCACTCCTACTG
+  >G3AR
+  TTCAAACCCTACTGCACACACACT
+  >G3BCF
+  ACATCACAGAAACAGGGTAGGAAA
+  >G3BCR
+  GCAAATACCATTCCAAACTTGCTG
+  >G3CDF
+  GATACATCCGCTTTCTTTTGTGCT
+  >G3CDR
+  ACAGATGATTTCAATTTTCTCAGAGCT
+  ~~~  
+
 
 [1]: http://www.urogene.org/methprimer/rules.html
 [2]: http://epigenie.com/guide-simple-tips-to-boost-your-bisulfite-based-applications/
 [3]: https://www3.appliedbiosystems.com/cms/groups/mcb_marketing/documents/generaldocuments/cms_039258.pdf
+[4]: http://www.urogene.org/cgi-bin/methprimer/methprimer.cgi
