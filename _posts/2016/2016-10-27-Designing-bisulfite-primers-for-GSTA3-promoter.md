@@ -29,6 +29,7 @@ Bisulfite sequencing guidelines from [here][1] and [here (with more links at the
 There are no CpG islands but there are "CpG rafts" where we can capture a larger than normal number of CpGs in one 500bp section.
 
 | Raft start (bp in BAC) | Raft end | Length | CpGs in raft | Comment |
+| ---------------------- | -------- | ------ | ------------ | ------- |
 | 153179 | 153647 | 460bp | 9 | This is >6000bp upstream of the transcription start site (TSS). Ignore. |
 | 157094 | 157566 | 461bp | 12 | ~2400bp upstream of the TSS. Raft A |
 | 159451 | 159951 | 492bp | 9 | ~50bp upstream of the TSS. Raft B |
@@ -38,41 +39,63 @@ There are no CpG islands but there are "CpG rafts" where we can capture a larger
 
   * Raft A seems reasonably close upstream to still be part of the promoter.
   * Raft B, C, and D are all contiguous and about where a promoter might be expected.
+
+# The plan:
+
+Using these primers, bisulfite sequence the 4 rafts in the 4 birds from each Type-Treatment. We won't clone, so the methylated bases may show double peaks in the sequence chromatographs. The relative height of these peaks is not precise enough to test for differences in methylation rates, but should allow us to see if anything interesting appears to be happening in any of these rafts and get a feel for whether there is variation between birds and between Type-Treatments. If so, we can proceed to cloning and sequencing on just the interesting rafts to quantify the differences. Basically, if it looks like everything is methylated or everything is not methylated and that doesn't differ between birds or Type-Treatments, we can avoid spending an excessive amount on sequencing.
+
   * Designed bisulfite primers to cover all 4 rafts using [MethPrimer][4]. All amplicons are <550bp:
-  ~~~
-  >G3bsAF
-  TAGTGAAGTTGGTGTTTGTATAGTTATTTTTATTGT
-  >G3bsAR
-  CTCCCCCTAACACAACTCCATACC
-  >G3bsBF
-  AGTTATATTTTATTTTATTTTTGTATATGTTGTGTG
-  >G3bsBR
-  AATACCACTCAAAACAAAAACTCTTTTACC
-  >G3bsCF
-  GGAGTTGTTAAGTTAAATTAGAAGTGGGATTG
-  >G3bsCR
-  ACCAAACATCACCACTAACTACAAAAAACC
-  >G3bsDF
-  GTTTTTTTGTGTAGTTGTAGAATTTTTGGTTGT
-  >G3bsDR
-  CCCACACTTCATTTCCCATTTAAATAAAAT
-  ~~~
+    ~~~
+    >G3bsAF
+    TAGTGAAGTTGGTGTTTGTATAGTTATTTTTATTGT
+    >G3bsAR
+    CTCCCCCTAACACAACTCCATACC
+    >G3bsBF
+    AGTTATATTTTATTTTATTTTTGTATATGTTGTGTG
+    >G3bsBR
+    AATACCACTCAAAACAAAAACTCTTTTACC
+    >G3bsCF
+    GGAGTTGTTAAGTTAAATTAGAAGTGGGATTG
+    >G3bsCR
+    ACCAAACATCACCACTAACTACAAAAAACC
+    >G3bsDF
+    GTTTTTTTGTGTAGTTGTAGAATTTTTGGTTGT
+    >G3bsDR
+    CCCACACTTCATTTCCCATTTAAATAAAAT
+    ~~~
+
+  * Expected amplicons with these primers:
+
+| Raft | Length | CpGs captured |
+| ---- | ------ | ------------- |
+| Raft A | 545 | 12 |
+| Raft B | 480 | 8 |
+| Raft C | 548 | 10 |
+| Raft D | 508 | 8 |
 
   * Designed normal primers to get reference sequence to compare against. Amplicon length is not limited since these will be used in non-bisulfite treated DNA so we will amplify B, C, and D in 2 overlapping amplicons:
-  ~~~
-  >G3AF
-  GTCTGTACAGCCACTCCTACTG
-  >G3AR
-  TTCAAACCCTACTGCACACACACT
-  >G3BCF
-  ACATCACAGAAACAGGGTAGGAAA
-  >G3BCR
-  GCAAATACCATTCCAAACTTGCTG
-  >G3CDF
-  GATACATCCGCTTTCTTTTGTGCT
-  >G3CDR
-  ACAGATGATTTCAATTTTCTCAGAGCT
-  ~~~  
+    ~~~
+    >G3AF
+    GTCTGTACAGCCACTCCTACTG
+    >G3AR
+    TTCAAACCCTACTGCACACACACT
+    >G3BCF
+    ACATCACAGAAACAGGGTAGGAAA
+    >G3BCR
+    GCAAATACCATTCCAAACTTGCTG
+    >G3CDF
+    GATACATCCGCTTTCTTTTGTGCT
+    >G3CDR
+    ACAGATGATTTCAATTTTCTCAGAGCT
+    ~~~  
+
+  * Expected amplicons:
+
+| Raft | Length |
+| ---- | ------ |
+| Raft A | 642 |
+| Raft B/C | 1029 |
+| Raft C/D | 1150 |
 
 
 [1]: http://www.urogene.org/methprimer/rules.html
