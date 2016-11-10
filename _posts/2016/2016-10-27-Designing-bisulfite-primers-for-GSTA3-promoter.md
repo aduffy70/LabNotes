@@ -7,7 +7,7 @@ categories:
 ---
 # The problem:
 
-There is no CpG island upstream of GSTA3 but there are 88 CpGs scattered through this region. Bisulfite sequencing all of the CpGs in this region would take >15 500bp fragments. Can we design primers to do capture CpGs that seem more likely to represent the promoter?
+There is no CpG island upstream of GSTA3 but there are 88 CpGs scattered through this region. Bisulfite sequencing all of the CpGs in this region would take >15 500bp fragments. Can we design primers to focus on those CpGs that seem more likely to represent the promoter, while capturing a reasonably sized sample of the total 88?
 
 Sequence investigated: Meleagris gallopavo clone BAC 37H15, 151105-162715. Everything between GSTA4 and GSTA3 coding sequences.
 
