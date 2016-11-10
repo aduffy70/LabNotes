@@ -5,7 +5,9 @@ layout: post
 categories:
   - gsta methylation
 ---
-There is no CpG island upstream of GSTA3, but there are CpG scattered through this region. Can we design primers to do bisulfite sequencing?
+# The problem:
+
+There is no CpG island upstream of GSTA3 but there are 88 CpGs scattered through this region. Bisulfite sequencing all of the CpGs in this region would take >15 500bp fragments. Can we design primers to do capture CpGs that seem more likely to represent the promoter?
 
 Sequence investigated: Meleagris gallopavo clone BAC 37H15, 151105-162715. Everything between GSTA4 and GSTA3 coding sequences.
 
@@ -64,7 +66,7 @@ Using these primers, bisulfite sequence the 4 rafts in the 4 birds from each Typ
     CCCACACTTCATTTCCCATTTAAATAAAAT
     ~~~
 
-  * Expected amplicons with these primers:
+  * Expected amplicons with these primers. This covers 38/88 CpGs:
 
 | Raft | Length | CpGs captured |
 | ---- | ------ | ------------- |
