@@ -26,7 +26,7 @@ No need to purchase non-bisulfite primers to get the genomic DNA sequence for co
 >G3botbsF
 AAGGTTAATATTTAAAAGTTTTTAAGGTTATGGTGA
 >G3botbsR
-> ACCCTTATATCAAAACACCAAAAACACC
+ACCCTTATATCAAAACACCAAAAACACC
 ~~~
 
 No need to place the order immediately... we have lots to do already with the GSTA3 and NRF2 primers. I'll order these when we get closer or when we have to place another order.
