@@ -19,3 +19,14 @@ I can amplify either a long (~575bp) amplicon that includes the entire region. O
 Both amplicons overlap with the top half of the promoter so there will be two CpGs that were targetted by the Zymo OneStep kit and that will be covered by this bisulfite data.
 
 I'm going to use the smaller amplicon to stay inline with the sizes of the GSTA3 fragments. It includes 51 CpGs, about 40 of which are not part of the overlap with the top half. That is still way more CpGs than we have gotten in any other fragment.
+
+No need to purchase non-bisulfite primers to get the genomic DNA sequence for comparison--the Zymo OneShot primers will amplify this section... just not with the Zymo kit.
+
+~~~
+>G3botbsF
+AAGGTTAATATTTAAAAGTTTTTAAGGTTATGGTGA
+>G3botbsR
+> ACCCTTATATCAAAACACCAAAAACACC
+~~~
+
+No need to place the order immediately... we have lots to do already with the GSTA3 and NRF2 primers. I'll order these when we get closer or when we have to place another order.
