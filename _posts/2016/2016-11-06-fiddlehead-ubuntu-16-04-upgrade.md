@@ -19,4 +19,4 @@ Updating fiddlehead to Ubuntu 16.04 and setting it up to replace crozier as my m
   * Copied .config/fontconfig/fonts.conf to fix ugly Calibri fonts. (Needs a restart before it works)
   * Tested weeklybackups
   * Tested 4 hour backups
-  * Moved crozier over to the Wolf Lab and plugged it in headless so I can get anything I've forgotten off it later. Eventually I might set it up as a server for offsite file backups or to replace cordate if it ever fails.
+  * Moved crozier over to the Wolf Lab and installed Ubuntu 16.04 server, got it a fixed IP, setup fiddlehead to connect with a key rather than a password, and set up nightly fiddlehead backups to it.
