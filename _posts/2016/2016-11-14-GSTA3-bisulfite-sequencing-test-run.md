@@ -27,7 +27,7 @@ categories:
     * 4C hold
   * Clean according to Zymo protocol. Combine the 2 replicates for each sample after elution (10uL + 10uL for 20uL of each sample)
 
-# 3) Analyze and quantify bisulfite PCR products
+# 3) Analyze and quantify bisulfite converted DNA
 
 | Sample | ng/uL | 260/280 | 260/230 |
 | ------ | ----- | ------- | ------- |
