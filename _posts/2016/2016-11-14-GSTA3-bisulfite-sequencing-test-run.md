@@ -31,15 +31,17 @@ categories:
 
 | Sample | ng/uL | 260/280 | 260/230 |
 | ------ | ----- | ------- | ------- |
-| EW1-bis 2016-11-15 |  |  |  |
-| N1-bis 2016-11-15 |  |  |  |
+| EW1-bis 2016-11-15 | 20.2 | 2.10 | 1.10 |
+| N1-bis 2016-11-15 | 17.0 | 2.00 | 2.96 |
+
+  * Each of these samples represents 40uL of starting template processed down to 20uL of bisulfite converted product. Does this mean our yield was 50% or can we even compare to the before concentrations since it was measuring double-stranded DNA using the DNA nanodrop settings and these are single-stranded DNA using the RNA nanodrop settings?
+  * The yields are high enough to use these as PCR templates.
 
 # 4) Amplify bisulfite DNA using bisulfite primer pairs
 
 PCR0241:
-  * Testing GSTA3 promoter bisulfite primers for all 4 CpG reefs with an annealing temperature gradient to optimize for each primer pair.
-    * Temperatures for each strip tube of 8 reactions:
-      * (1) 61.0, 60.3, 58.9, 56.7, 53.6, 51.4, 49.9, 49.0 (8)
+  * Testing GSTA3 promoter bisulfite primers
+    * Running ReefA, C, and D primers at 55C annealing temp, and ReefB primers at 52C annealing temp (used 2 thermalcyclers)
     * Hotstart polymerase per Zymo recommendation--AmpliTaq Gold 360
     * Using primer concentration at the lower end of the recommended scale to reduce secondary products per AmpliTaq Gold 360 protocol.
     * 40 cycles per Zymo recommendation
@@ -49,6 +51,17 @@ PCR0241 results:
 
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
+
+| PCR No. | Sample | ng/uL | 260/280 | 260/230 |
+| ------- | ------ | ----- | ------- | ------- |
+| 1 | EW1 ReefA |  |  |  |
+| 2 | N1 ReefA |  |  |  |
+| 3 | EW1 ReefC |  |  |  |
+| 4 | N1 ReefC |  |  |  |
+| 5 | EW1 ReefD |  |  |  |
+| 6 | N1 ReefD |  |  |  |
+| 9 | EW1 ReefB |  |  |  |
+| 10 | N1 ReefB |  |  |  |
 
 # 6) Amplify genomic DNA using normal primer pairs
 
