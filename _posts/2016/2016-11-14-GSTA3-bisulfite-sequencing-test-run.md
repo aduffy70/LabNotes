@@ -29,7 +29,24 @@ categories:
 
 # 3) Analyze and quantify bisulfite PCR products
 
+| Sample | ng/uL | 260/280 | 260/230 |
+| ------ | ----- | ------- | ------- |
+| EW1-bis 2016-11-15 |  |  |  |
+| N1-bis 2016-11-15 |  |  |  |
+
 # 4) Amplify bisulfite DNA using bisulfite primer pairs
+
+PCR0241:
+  * Testing GSTA3 promoter bisulfite primers with an annealing temperature gradient to optimize for each primer pair.
+    * Temperatures for each strip tube of 8 reactions:
+      * (1) 61.0, 60.3, 58.9, 56.7, 53.6, 51.4, 49.9, 49.0 (8)
+    * Hotstart polymerase per Zymo recommendation--AmpliTaq Gold 360
+    * Using primer concentration at the lower end of the recommended scale to reduce secondary products per AmpliTaq Gold 360 protocol.
+    * 40 cycles per Zymo recommendation
+    * Other PCR concentrations per AmpliTaq recommendations
+
+PCR0241 results:
+
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
 
