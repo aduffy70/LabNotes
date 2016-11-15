@@ -37,7 +37,7 @@ categories:
 # 4) Amplify bisulfite DNA using bisulfite primer pairs
 
 PCR0241:
-  * Testing GSTA3 promoter bisulfite primers with an annealing temperature gradient to optimize for each primer pair.
+  * Testing GSTA3 promoter bisulfite primers for all 4 CpG reefs with an annealing temperature gradient to optimize for each primer pair.
     * Temperatures for each strip tube of 8 reactions:
       * (1) 61.0, 60.3, 58.9, 56.7, 53.6, 51.4, 49.9, 49.0 (8)
     * Hotstart polymerase per Zymo recommendation--AmpliTaq Gold 360
