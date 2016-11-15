@@ -28,25 +28,25 @@ Bisulfite sequencing guidelines from [here][1] and [here (with more links at the
   * Since we are only amplifying from one strand more PCR cycles are needed (35-40)
   * proteinase K incubation, fully denaturing DNA prior to conversion, and not trying to do too much DNA in one well make bisulfite conversion more consistent
 
-There are no CpG islands but there are "CpG rafts" where we can capture a larger than normal number of CpGs in one 500bp section.
+There are no CpG islands but there are "CpG reefs" where we can capture a larger than normal number of CpGs in one 500bp section.
 
-| Raft start (bp in BAC) | Raft end | Length | CpGs in raft | Comment |
+| Reef start (bp in BAC) | Reef end | Length | CpGs in reef | Comment |
 | ---------------------- | -------- | ------ | ------------ | ------- |
 | 153179 | 153647 | 460bp | 9 | This is >6000bp upstream of the transcription start site (TSS). Ignore. |
-| 157094 | 157566 | 461bp | 12 | ~2400bp upstream of the TSS. Raft A |
-| 159451 | 159951 | 492bp | 9 | ~50bp upstream of the TSS. Raft B |
-| 159993 | 160476 | 474bp | 10 | Straddles the TSS. Raft C |
-| 160786 | 161217 | 424bp | 8 | ~750bp downstream of the TSS in the intron of the 5'UTR. Raft D |
+| 157094 | 157566 | 461bp | 12 | ~2400bp upstream of the TSS. Reef A |
+| 159451 | 159951 | 492bp | 9 | ~50bp upstream of the TSS. Reef B |
+| 159993 | 160476 | 474bp | 10 | Straddles the TSS. Reef C |
+| 160786 | 161217 | 424bp | 8 | ~750bp downstream of the TSS in the intron of the 5'UTR. Reef D |
 | 161921 | 162381 | 454bp | 7 | ~2000bp downstream of the TSS in the intron of the 5'UTR. Ignore. |
 
-  * Raft A seems reasonably close upstream to still be part of the promoter.
-  * Raft B, C, and D are all contiguous and about where a promoter might be expected.
+  * Reef A seems reasonably close upstream to still be part of the promoter.
+  * Reef B, C, and D are all contiguous and about where a promoter might be expected.
 
 # The plan:
 
-Using these primers, bisulfite sequence the 4 rafts in the 4 birds from each Type-Treatment. We won't clone, so the methylated bases may show double peaks in the sequence chromatographs. The relative height of these peaks is not precise enough to test for differences in methylation rates, but should allow us to see if anything interesting appears to be happening in any of these rafts and get a feel for whether there is variation between birds and between Type-Treatments. If so, we can proceed to cloning and sequencing on just the interesting rafts to quantify the differences. Basically, if it looks like everything is methylated or everything is not methylated and that doesn't differ between birds or Type-Treatments, we can avoid spending an excessive amount on sequencing.
+Using these primers, bisulfite sequence the 4 reefs in the 4 birds from each Type-Treatment. We won't clone, so the methylated bases may show double peaks in the sequence chromatographs. The relative height of these peaks is not precise enough to test for differences in methylation rates, but should allow us to see if anything interesting appears to be happening in any of these reefs and get a feel for whether there is variation between birds and between Type-Treatments. If so, we can proceed to cloning and sequencing on just the interesting reefs to quantify the differences. Basically, if it looks like everything is methylated or everything is not methylated and that doesn't differ between birds or Type-Treatments, we can avoid spending an excessive amount on sequencing.
 
-  * Designed bisulfite primers to cover all 4 rafts using [MethPrimer][4]. All amplicons are <550bp:
+  * Designed bisulfite primers to cover all 4 reefs using [MethPrimer][4]. All amplicons are <550bp:
     ~~~
     >G3bsAF
     TAGTGAAGTTGGTGTTTGTATAGTTATTTTTATTGT
@@ -68,12 +68,12 @@ Using these primers, bisulfite sequence the 4 rafts in the 4 birds from each Typ
 
   * Expected amplicons with these primers. This covers 38/88 CpGs:
 
-| Raft | Length | CpGs captured |
+| Reef | Length | CpGs captured |
 | ---- | ------ | ------------- |
-| Raft A | 545 | 12 |
-| Raft B | 480 | 8 |
-| Raft C | 548 | 10 |
-| Raft D | 508 | 8 |
+| Reef A | 545 | 12 |
+| Reef B | 480 | 8 |
+| Reef C | 548 | 10 |
+| Reef D | 508 | 8 |
 
   * Designed normal primers to get reference sequence to compare against. Amplicon length is not limited since these will be used in non-bisulfite treated DNA so we will amplify B, C, and D in 2 overlapping amplicons:
     ~~~
@@ -93,11 +93,11 @@ Using these primers, bisulfite sequence the 4 rafts in the 4 birds from each Typ
 
   * Expected amplicons:
 
-| Raft | Length |
+| Reef | Length |
 | ---- | ------ |
-| Raft A | 642 |
-| Raft B/C | 1029 |
-| Raft C/D | 1150 |
+| Reef A | 642 |
+| Reef B/C | 1029 |
+| Reef C/D | 1150 |
 
 
 [1]: http://www.urogene.org/methprimer/rules.html
