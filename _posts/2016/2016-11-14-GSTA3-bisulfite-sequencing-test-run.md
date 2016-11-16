@@ -33,6 +33,7 @@ categories:
 | ------ | ----- | ------- | ------- |
 | EW1-bis 2016-11-15 | 20.2 | 2.10 | 1.10 |
 | N1-bis 2016-11-15 | 17.0 | 2.00 | 2.96 |
+| EW1-bis 2016-11-16 | 21.6 | 3.89 | 0.67 |
 
   * Each of these samples represents 40uL of starting template processed down to 20uL of bisulfite converted product. Does this mean our yield was 50% or can we even compare to the before concentrations since it was measuring double-stranded DNA using the DNA nanodrop settings and these are single-stranded DNA using the RNA nanodrop settings?
   * The yields are high enough to use these as PCR templates.
@@ -48,7 +49,13 @@ PCR0240:
     * Other PCR concentrations per AmpliTaq recommendations
 
 PCR0240 results:
+  * All primer pairs run at 55C have weak amplification and a bit of a smear of short bands. They might be good enough to sequence, but let's try to optimize them further. We will pick just one sample and primer set for the optimization tests since they all appear to be behaving similarly.
+  * The primer pair run at 52C failed. Try cooler temp?
 
+Bisulfite converted more (40uL) of EW1 to use for optimization tests.
+
+PCR0242:
+ 
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
 
