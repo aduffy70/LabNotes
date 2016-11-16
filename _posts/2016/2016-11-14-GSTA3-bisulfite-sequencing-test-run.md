@@ -39,7 +39,7 @@ categories:
 
 # 4) Amplify bisulfite DNA using bisulfite primer pairs
 
-PCR0241:
+PCR0240:
   * Testing GSTA3 promoter bisulfite primers
     * Running ReefA, C, and D primers at 55C annealing temp, and ReefB primers at 52C annealing temp (used 2 thermalcyclers)
     * Hotstart polymerase per Zymo recommendation--AmpliTaq Gold 360
@@ -47,7 +47,7 @@ PCR0241:
     * 40 cycles per Zymo recommendation
     * Other PCR concentrations per AmpliTaq recommendations
 
-PCR0241 results:
+PCR0240 results:
 
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
@@ -64,6 +64,15 @@ PCR0241 results:
 | 10 | N1 ReefB |  |  |  |
 
 # 6) Amplify genomic DNA using normal primer pairs
+
+PCR0241:
+  * Amplifying the four GSTA3 promoter CpG reefs (in three sections) so we have the non-sulfite converted sequence.
+  * Expected amplicon sizes:
+    * A: 640bp
+    * BC: 1030bp
+    * CD: 1100bp
+
+PCR0241 results:
 
 # 7) Analyze, purify, and quantify normal PCR products
 
