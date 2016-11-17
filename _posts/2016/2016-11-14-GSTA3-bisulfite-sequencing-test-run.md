@@ -35,7 +35,7 @@ categories:
 | N1-bis 2016-11-15 | 17.0 | 2.00 | 2.96 |
 | EW1-bis 2016-11-16 | 21.6 | 3.89 | 0.67 |
 
-  * Each of these samples represents 40uL of starting template processed down to 20uL of bisulfite converted product. Does this mean our yield was 50% or can we even compare to the before concentrations since it was measuring double-stranded DNA using the DNA nanodrop settings and these are single-stranded DNA using the RNA nanodrop settings?
+  * Each of these samples represents 40uL of starting template processed down to 20uL of bisulfite converted product. Does this mean our yield was 50% or can we even compare to the before concentrations since it was measuring double-stranded DNA using the DNA nanodrop settings and these are single-stranded DNA using the RNA nanodrop settings? In any case, the yields are consistent.
   * The yields are high enough to use these as PCR templates.
 
 # 4) Amplify bisulfite DNA using bisulfite primer pairs
@@ -55,7 +55,11 @@ PCR0240 results:
 Bisulfite converted more (40uL) of EW1 to use for optimization tests.
 
 PCR0242:
- 
+  * Retrying the Reef A primers and EW1 with longer 95C activation time, temperatures +/- 1.5 and 3.0C from the 55C of PCR0240, and with/without GC enhancer to try to optimize the reaction.
+
+PCR0242 results:
+
+
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
 
@@ -80,6 +84,10 @@ PCR0241:
     * CD: 1100bp
 
 PCR0241 results:
+  * Everything amplified with bright expected bands but weaker unexpected bands. These are the brightest bands I've ever had using AmpliTaq--due to the extra activation time at 95C?
+  * The shorter unexpected bands are all the same size proportionally to the expected band in each lane, which seems unlikely if this is nonspecific binding. Every primer pair would have to be amplifying two smaller products that happen to be 1/5 and 1/7 of the expected product for that primer pair. It seems more likely that these are incompletely extended products--in which case they shouldn't cause problems with sequencing.
+  * The slightly longer band in the Reef A primers could be single-stranded products that formed secondary structures, which should also not cause sequencing problems.
+  * Let's try purifying and sequencing. If I am right, I'll get clean sequences. If I'm wrong the entire sequence of 1 & 2 and the first 250bp of 3-6 will have higher than normal background signal.
 
 # 7) Analyze, purify, and quantify normal PCR products
 
