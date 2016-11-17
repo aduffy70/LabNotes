@@ -52,7 +52,7 @@ PCR0240 results:
   * All primer pairs run at 55C have weak amplification and a bit of a smear of short bands. They might be good enough to sequence, but let's try to optimize them further. We will pick just one sample and primer set for the optimization tests since they all appear to be behaving similarly.
   * The primer pair run at 52C failed. Try cooler temp?
 
-Bisulfite converted more (40uL) of EW1 to use for optimization tests.
+Bisulfite converted more (40uL) of EW1 to use for optimization tests (EW1-bis 2016-11-16).
 
 PCR0242:
   * Retrying the Reef A primers and EW1 with longer 95C activation time, temperatures +/- 1.5 and 3.0C from the 55C of PCR0240, and with/without GC enhancer to try to optimize the reaction.
@@ -62,17 +62,6 @@ PCR0242 results:
 
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
-
-| PCR No. | Sample | ng/uL | 260/280 | 260/230 |
-| ------- | ------ | ----- | ------- | ------- |
-| 1 | EW1 ReefA |  |  |  |
-| 2 | N1 ReefA |  |  |  |
-| 3 | EW1 ReefC |  |  |  |
-| 4 | N1 ReefC |  |  |  |
-| 5 | EW1 ReefD |  |  |  |
-| 6 | N1 ReefD |  |  |  |
-| 9 | EW1 ReefB |  |  |  |
-| 10 | N1 ReefB |  |  |  |
 
 # 6) Amplify genomic DNA using normal primer pairs
 
@@ -90,6 +79,8 @@ PCR0241 results:
   * Let's try purifying and sequencing. If I am right, I'll get clean sequences. If I'm wrong the entire sequence of 1 & 2 and the first 250bp of 3-6 will have higher than normal background signal.
 
 # 7) Analyze, purify, and quantify normal PCR products
+
+Beautiful 260/280 & 260/230 scores and sufficient quantity for sequencing (30-50ng/uL). Let's send them off to Retrogen.
 
 # 8) Sequence bisulfite PCR products using bisulfite sequencing primer pairs
 
