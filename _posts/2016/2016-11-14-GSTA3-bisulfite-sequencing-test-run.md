@@ -35,8 +35,8 @@ categories:
 | EW1-bis 2016-11-15 | 20.2 | 2.10 | 1.10 | 20uL (2 eluted together) |
 | N1-bis 2016-11-15 | 17.0 | 2.00 | 2.96 | 20uL (2 eluted together) |
 | EW1-bis 2016-11-16 | 21.6 | 3.89 | 0.67 | 40uL (4 eluted together) |
-| EW1-bis 2016-11-18 |  |  |  | 10uL |
-| N1-bis 2016-11-18 |  |  |  | 10uL |
+| EW1-bis 2016-11-18 | 32.0 | 2.91 | 0.70 | 10uL |
+| N1-bis 2016-11-18 | 28.9 | 2.76 | 0.65 | 10uL |
 
   * The kit starts with 20ng of 25ng/uL DNA and yields 10uL of ~20ng/uL DNA. Does this mean our yield was 50% or can we even compare to the before concentrations since it was measuring double-stranded DNA using the DNA nanodrop settings and these are single-stranded DNA using the RNA nanodrop settings? In any case, the yields are consistent.
   * The yields are high enough to use these as PCR templates.
@@ -71,6 +71,7 @@ PCR0243:
   * ReefB optimization test--on PCR0240 it failed completely at 52C without GC enhancer, so let's try a temperature gradient with GC enhancer.
 
 PCR0243 results:
+  * All reactions failed at all temperatures. Design new primers for ReefB.
 
 PCR0244:
   * Rerunning GSTA3 ReefA, C and D with optimized temperature and GC enhancer.
