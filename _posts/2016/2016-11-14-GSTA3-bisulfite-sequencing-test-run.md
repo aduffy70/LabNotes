@@ -20,19 +20,20 @@ categories:
 
 # 2) Bisulfite conversion and cleaning:
 
-  * Two replicates of each sample. 20uL of 25ng/uL (500ng total) in each reaction.
+  * 20uL of 25ng/uL (500ng total) in each reaction.
   * Using recommended thermal cycler settings (cyclename: bis_cnvrt):
     * 98C for 10min
     * 64C for 2.5 hours
     * 4C hold
-  * Clean according to Zymo protocol. Combine the 2 replicates for each sample after elution (10uL + 10uL for 20uL of each sample)
+  * Clean according to Zymo protocol. Combine the multiple replicates for each sample at the elution step (eluting multiple columns into the same 1.5mL tube)
+  * Storing at -20.
 
 # 3) Analyze and quantify bisulfite converted DNA
 
-| Sample | ng/uL | 260/280 | 260/230 | Quantity |
+| Sample | ng/uL | 260/280 | 260/230 | Volume |
 | ------ | ----- | ------- | ------- | -------- |
 | EW1-bis 2016-11-15 | 20.2 | 2.10 | 1.10 | 20uL (2 eluted together) |
-| N1-bis 2016-11-15 | 17.0 | 2.00 | 2.96 | 20uL |
+| N1-bis 2016-11-15 | 17.0 | 2.00 | 2.96 | 20uL (2 eluted together) |
 | EW1-bis 2016-11-16 | 21.6 | 3.89 | 0.67 | 40uL (4 eluted together) |
 | EW1-bis 2016-11-18 |  |  |  | 10uL |
 | N1-bis 2016-11-18 |  |  |  | 10uL |
