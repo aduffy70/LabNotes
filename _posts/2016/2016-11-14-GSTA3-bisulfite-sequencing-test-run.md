@@ -38,7 +38,7 @@ categories:
 | EW1-bis 2016-11-18 | 32.0 | 2.91 | 0.70 | 10uL |
 | N1-bis 2016-11-18 | 28.9 | 2.76 | 0.65 | 10uL |
 
-  * The kit starts with 20ng of 25ng/uL DNA and yields 10uL of ~20ng/uL DNA. Does this mean our yield was 50% or can we even compare to the before concentrations since it was measuring double-stranded DNA using the DNA nanodrop settings and these are single-stranded DNA using the RNA nanodrop settings? In any case, the yields are consistent.
+  * The kit starts with 20ng of 25ng/uL DNA and yields 10uL of ~25ng/uL DNA. Does this mean our yield was 50% or can we even compare to the before concentrations since it was measuring double-stranded DNA using the DNA nanodrop settings and these are single-stranded DNA using the RNA nanodrop settings? In any case, the yields are consistent.
   * The yields are high enough to use these as PCR templates.
 
 # 4) Amplify bisulfite DNA using bisulfite primer pairs
