@@ -58,7 +58,14 @@ PCR0242:
   * Retrying the Reef A primers and EW1 with longer 95C activation time, temperatures +/- 1.5 and 3.0C from the 55C of PCR0240, and with/without GC enhancer to try to optimize the reaction.
 
 PCR0242 results:
+  * Surprisingly, hotter gives better yields than cooler.
+  * GC enhancer might reduce yield slightly but it makes the specific temperature used a bit less critical.
+  * Let's move forward using 57C annealing temperature and GC enhancer.
 
+PCR0243:
+  * Reef B--it failed completely at 52C without GC enhancer on PCR0240, so let's try a temperature gradient with GC enhancer.
+
+PCR0243 results:
 
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
