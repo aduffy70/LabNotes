@@ -53,29 +53,29 @@ PCR0240:
 
 PCR0240 results:
   * All primer pairs run at 55C have weak amplification and a bit of a smear of short bands. They might be good enough to sequence, but let's try to optimize them further. We will pick just one sample and primer set for the optimization tests since they all appear to be behaving similarly.
-  * The Reef B primer pair run at 52C failed. Try cooler temp?
-
-Bisulfite converted more (40uL) of EW1 to use for optimization tests (EW1-bis 2016-11-16).
+  * The ReefB primer pair run at 52C failed. Try cooler temp?
 
 PCR0242:
-  * Retrying the Reef A primers and EW1 with longer 95C activation time, temperatures +/- 1.5 and 3.0C from the 55C of PCR0240, and with/without GC enhancer to try to optimize the reaction.
+  * Optimizations tests using just the ReefA primers and EW1-bis. Trying:
+    * longer 95C activation time
+    * temperatures +/- 1.5 and 3.0C from the 55C of PCR0240
+    * with/without GC enhancer
+  * Bisulfite converted more (40uL) of EW1 to use for these optimization tests (EW1-bis 2016-11-16).
 
 PCR0242 results:
   * Surprisingly, hotter annealing temps give better yields than cooler.
   * GC enhancer might reduce yield slightly but it makes the annealing temperature a bit less critical.
   * Let's move forward using 57C annealing temperature and GC enhancer.
 
-Bisulfite converted one more batch (10uL each) of Ew1 and N1 (EW1-bis 2016-11-18 & N1-bis 2016-11-18)
-
 PCR0243:
-  * Reef B--on PCR0240 it failed completely at 52C without GC enhancer, so let's try a temperature gradient with GC enhancer.
+  * ReefB optimization test--on PCR0240 it failed completely at 52C without GC enhancer, so let's try a temperature gradient with GC enhancer.
 
 PCR0243 results:
 
 PCR0244:
-  * Rerunning GSTA3 Reefs A, C and D with optimized temperature and GC enhancer.
-  * We already have Reef A for EW1 from the optimization tests on PCR0242, so I'm not rerunning that here (thus, only 5 instead of 6 reactions).
-  * We don't quite have enough of the bisulfite converted DNA for these reactions and the Reef B reactions I still need to run, so I converted more. To avoid wasting what is left, and since our bisulfite conversions have similar yields and qualities, I pooled what was left of the EW1-bis 2016-11-15 & 16 conversions into EW1-bis 2016-11-18.  Same for N1-bis.
+  * Rerunning GSTA3 ReefA, C and D with optimized temperature and GC enhancer.
+  * We already have ReefA for EW1 from the optimization tests on PCR0242, so I'm not rerunning that here (thus, only 5 instead of 6 reactions).
+  * We don't quite have enough of the bisulfite converted DNA for these reactions and all we still need to run, so I converted more (EW1-bis 2016-11-18 & N1-bis 2016-11-18). To avoid wasting what is left, and since our bisulfite conversions have similar yields and qualities, I pooled what was left of the 2016-11-15 & 16 conversions into these new ones.
 
 PCR0244 results:
 
@@ -93,7 +93,7 @@ PCR0241:
 PCR0241 results:
   * Everything amplified with bright expected bands but weaker unexpected bands. These are the brightest bands I've ever had using AmpliTaq--due to the extra activation time at 95C?
   * The shorter unexpected bands are all the same size proportionally to the expected band in each lane, which seems unlikely if this is nonspecific binding. Every primer pair would have to be amplifying two smaller products that happen to be 1/5 and 1/7 of the expected product for that primer pair. It seems more likely that these are incompletely extended products--in which case they shouldn't cause problems with sequencing.
-  * The slightly longer band in the Reef A primers could be single-stranded products that formed secondary structures, which should also not cause sequencing problems.
+  * The slightly longer band in the ReefA primers could be single-stranded products that formed secondary structures, which should also not cause sequencing problems.
   * Let's try purifying and sequencing. If I am right, I'll get clean sequences. If I'm wrong the entire sequence of 1 & 2 and the first 250bp of 3-6 will have higher than normal background signal.
 
 # 7) Analyze, purify, and quantify normal PCR products
