@@ -79,8 +79,12 @@ PCR0244:
   * We don't quite have enough of the bisulfite converted DNA for these reactions and all we still need to run, so I converted more (EW1-bis 2016-11-18 & N1-bis 2016-11-18). To avoid wasting what is left, and since our bisulfite conversions have similar yields and qualities, I pooled what was left of the 2016-11-15 & 16 conversions into these new ones.
 
 PCR0244 results:
+  * The N1 reactions probably have enough product to purify. The EW do not. Try rerunning those 2 with more template?
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
+
+Ready for sequencing:
+  * EW1 Reef A (242-3-EW1 or 242-11-EW1)
 
 # 6) Amplify genomic DNA using normal primer pairs
 
@@ -99,7 +103,13 @@ PCR0241 results:
 
 # 7) Analyze, purify, and quantify normal PCR products
 
-Beautiful 260/280 & 260/230 scores and sufficient quantity for sequencing (30-50ng/uL). Let's send them off to Retrogen.
+Ready for sequencing:
+  * EW1 Reef A (241-1-EW1)
+  * EW1 Reef BC (241-2-N1)
+  * EW1 Reef CD (241-3-EW1)
+  * N1 Reef A (241-4-N1)
+  * N1 Reef BC (241-5-EW1)
+  * N1 Reef CD (241-6-N1)
 
 # 8) Sequence bisulfite PCR products using bisulfite sequencing primer pairs
 
