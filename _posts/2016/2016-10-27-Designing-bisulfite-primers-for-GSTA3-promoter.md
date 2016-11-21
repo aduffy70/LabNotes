@@ -66,7 +66,7 @@ Using these primers, bisulfite sequence the 4 reefs in the 4 birds from each Typ
     CCCACACTTCATTTCCCATTTAAATAAAAT
     ~~~
 
-  * Designed a second ReefB primer because the first one fails to amplify (2016-11-21):
+  * Designed a second ReefB primer set because the first one fails to amplify (2016-11-21):
     ~~~
     >G3bsB2F
     ATTTTTGTATATGTTGTGTGTATATTTTTATGTATA
