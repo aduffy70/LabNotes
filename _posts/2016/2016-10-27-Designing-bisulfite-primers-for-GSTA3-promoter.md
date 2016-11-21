@@ -66,12 +66,21 @@ Using these primers, bisulfite sequence the 4 reefs in the 4 birds from each Typ
     CCCACACTTCATTTCCCATTTAAATAAAAT
     ~~~
 
+  * Designed a second ReefB primer because the first one fails to amplify (2016-11-21):
+    ~~~
+    >G3bsB2F
+    ATTTTTGTATATGTTGTGTGTATATTTTTATGTATA
+    >G3bsB2R
+    AAAATAAAATCTCCTATTACCATTAATCTAATATTA
+    ~~~
+
   * Expected amplicons with these primers. This covers 38/88 CpGs:
 
 | Reef | Length | CpGs captured |
 | ---- | ------ | ------------- |
 | Reef A | 545 | 12 |
 | Reef B | 480 | 8 |
+| Reef B2 | 527 | 8 |
 | Reef C | 548 | 10 |
 | Reef D | 508 | 8 |
 

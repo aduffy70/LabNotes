@@ -23,10 +23,8 @@ I'm going to use the smaller amplicon to stay inline with the sizes of the GSTA3
 No need to purchase non-bisulfite primers to get the genomic DNA sequence for comparison--the Zymo OneShot primers will amplify this section... just not with the Zymo kit.
 
 ~~~
->G3botbsF
+>G4bsbotF
 AAGGTTAATATTTAAAAGTTTTTAAGGTTATGGTGA
->G3botbsR
+>G4bsbotR
 ACCCTTATATCAAAACACCAAAAACACC
 ~~~
-
-No need to place the order immediately... we have lots to do already with the GSTA3 and NRF2 primers. I'll order these when we get closer or when we have to place another order.
