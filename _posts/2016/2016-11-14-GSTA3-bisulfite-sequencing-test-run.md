@@ -81,10 +81,18 @@ PCR0244:
 PCR0244 results:
   * The N1 reactions probably have enough product to purify. The EW do not. Try rerunning those 2 with more template?
 
+PCR0245:
+  * Rerunning EW1 GSTA3 Reef C and D with more template, more primer, longer Taq pre-activation time, and in a 50uL reaction to try to maximize the yield.
+
+PCR0245 results:
+
 # 5) Analyze, purify, and quantify bisulfite PCR products
 
 Ready for sequencing:
   * EW1 Reef A (242-3-EW1 or 242-11-EW1)
+  * N1 Reef A (244-1-N1)
+  * N1 Reef C (244-3-N1)
+  * N1 Reef D (244-5-N1)
 
 # 6) Amplify genomic DNA using normal primer pairs
 
