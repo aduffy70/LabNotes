@@ -79,12 +79,18 @@ PCR0244:
   * We don't quite have enough of the bisulfite converted DNA for these reactions and all we still need to run, so I converted more (EW1-bis 2016-11-18 & N1-bis 2016-11-18). To avoid wasting what is left, and since our bisulfite conversions have similar yields and qualities, I pooled what was left of the 2016-11-15 & 16 conversions into these new ones.
 
 PCR0244 results:
-  * The N1 reactions probably have enough product to purify. The EW do not. Try rerunning those 2 with more template?
+  * The N1 reactions probably have enough product to purify. The EW1 do not. Try rerunning those 2 with more template?
 
 PCR0245:
   * Rerunning EW1 GSTA3 Reef C and D with more template, more primer, longer Taq pre-activation time, and in a 50uL reaction to try to maximize the yield.
 
 PCR0245 results:
+  * Failed!
+
+PCR0246:
+  * Trying to optimize annealing temp for <del>Reef C and</del> Reef D. The 55.0C temp gave weak results on PCR0240, so including it here as a positive control. 57C Failed on PCR0244 and 0245 so trying lower temperatures. Just Reef D... I dropped the striptube with the Reef C reactions :(
+
+PCR0246 results:
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
 
