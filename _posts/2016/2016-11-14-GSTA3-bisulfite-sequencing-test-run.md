@@ -126,10 +126,10 @@ PCR0241 results:
 
 Ready for sequencing:
   * EW1 Reef A (241-1-EW1)
-  * EW1 Reef BC (241-2-N1)
-  * EW1 Reef CD (241-3-EW1)
-  * N1 Reef A (241-4-N1)
-  * N1 Reef BC (241-5-EW1)
+  * EW1 Reef BC (241-3-EW1)
+  * EW1 Reef CD (241-5-EW1)
+  * N1 Reef A (241-2-N1)
+  * N1 Reef BC (241-4-N1)
   * N1 Reef CD (241-6-N1)
 
 # 8) Sequence bisulfite PCR products using bisulfite sequencing primer pairs
