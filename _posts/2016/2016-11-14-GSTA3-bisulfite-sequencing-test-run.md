@@ -98,10 +98,10 @@ PCR0246 results:
   * Everything failed on Reef C... not surprisingly since those reactions were dropped.
     * Bisulfite convert more EW1 and retry the Reef C reactions.
   * Only the 55C reaction worked on Reef D. Apparently that is the optimal temperature... it just doesn't give great results.
-    * Purify and see if there is sufficient product for sequencing.
+    * Purify 246-9 combined with 240-5 to get sufficient product for sequencing.
 
 PCR0247:
-  * Rerunning the EW1 Reef C reactions I dropped from PCR0246 at a range of annealing temperatures.
+  * Rerunning the EW1 Reef C reactions I dropped from PCR0246 at a range of annealing temperatures. Bisulfite converted more EW1 and N1 for these.
 
 PCR0247 results:
 
