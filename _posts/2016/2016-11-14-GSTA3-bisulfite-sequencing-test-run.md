@@ -31,7 +31,7 @@ categories:
 # 3) Analyze and quantify bisulfite converted DNA
 
 | Sample | ng/uL | 260/280 | 260/230 | Volume |
-| ------ | ----- | ------- | ------- | -------- |
+| ------ | ----- | ------- | ------- | ------ |
 | EW1-bis 2016-11-15 | 20.2 | 2.10 | 1.10 | 20uL (2 eluted together) |
 | N1-bis 2016-11-15 | 17.0 | 2.00 | 2.96 | 20uL (2 eluted together) |
 | EW1-bis 2016-11-16 | 21.6 | 3.89 | 0.67 | 40uL (4 eluted together) |
