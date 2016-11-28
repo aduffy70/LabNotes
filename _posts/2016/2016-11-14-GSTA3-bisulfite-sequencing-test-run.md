@@ -20,12 +20,12 @@ categories:
 
 # 2) Bisulfite conversion and cleaning:
 
-  * 20uL of 25ng/uL (500ng total) in each reaction with 130uL CT conversion buffer (fresh on 2016-11-15 & 2016-11-28).
+  * 20uL of 25ng/uL (500ng total) in each reaction with 130uL CT conversion reagent (fresh on 2016-11-15 & 2016-11-28).
   * Using recommended thermal cycler settings (cyclename: bis_cnvrt):
     * 98C for 10min
     * 64C for 2.5 hours
     * 4C hold
-  * Clean according to Zymo protocol. Combine the multiple replicates for each sample at the elution step (eluting multiple columns into the same 1.5mL tube)
+  * Clean according to [Zymo protocol][1]. Combine the multiple replicates for each sample at the elution step (eluting multiple columns into the same 1.5mL tube)
   * Storing at -20.
 
 # 3) Analyze and quantify bisulfite converted DNA
@@ -40,7 +40,8 @@ categories:
 | EW1-bis 2016-11-28 |  |  | 30uL | (3 eluted together) |
 | N1-bis 2016-11-28 |  |  | 30uL | (3 eluted together) |
 
-  * The kit starts with 20ng of 25ng/uL DNA and yields 10uL of ~25ng/uL DNA. Does this mean our yield was 50% or can we even compare to the before concentrations since it was measuring double-stranded DNA using the DNA nanodrop settings and these are single-stranded DNA using the RNA nanodrop settings? In any case, the yields are consistent.
+  * Nanodropped using RNA-40 settings per Zymo recommendation.
+  * Can we directly compare the before measurements of double-stranded DNA with these after measurements of single-stranded DNA? We are starting with 20ng of 25ng/uL DNA (500ng total) and getting 10uL of ~25ng/uL DNA (250ng total). Does this mean our yield is 50%? In any case, the yields are consistent.
   * The yields are high enough to use these as PCR templates.
 
 # 4) Amplify bisulfite DNA using bisulfite primer pairs
@@ -137,3 +138,6 @@ Ready for sequencing:
 # 9) Sequence normal PCR products using normal sequencing primer pairs
 
 # 10) Compare bisulfite and normal sequences.
+
+
+[1]: https://drive.google.com/drive/folders/0B0DnkQIRAeIISHZ6My1rSFBSWEk
