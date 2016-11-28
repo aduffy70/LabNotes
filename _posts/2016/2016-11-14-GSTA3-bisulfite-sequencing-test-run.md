@@ -37,8 +37,8 @@ categories:
 | EW1-bis 2016-11-16 | 21.6 | 3.89 | 0.67 | 40uL (4 eluted together) |
 | EW1-bis 2016-11-18 | 32.0 | 2.91 | 0.70 | 10uL |
 | N1-bis 2016-11-18 | 28.9 | 2.76 | 0.65 | 10uL |
-| EW1-bis 2016-11-28 |  |  | 30uL | (3 eluted together) |
-| N1-bis 2016-11-28 |  |  | 30uL | (3 eluted together) |
+| EW1-bis 2016-11-28 | 16.4 | 2.16 | 0.51 | 30uL (3 eluted together) |
+| N1-bis 2016-11-28 | 16.2 | 4.52 | 0.34 | 30uL (3 eluted together) |
 
   * Nanodropped using RNA-40 settings per Zymo recommendation.
   * Can we directly compare the before measurements of double-stranded DNA with these after measurements of single-stranded DNA? We are starting with 20ng of 25ng/uL DNA (500ng total) and getting 10uL of ~25ng/uL DNA (250ng total). Does this mean our yield is 50%? In any case, the yields are consistent.
@@ -99,6 +99,17 @@ PCR0246 results:
     * Bisulfite convert more EW1 and retry the Reef C reactions.
   * Only the 55C reaction worked on Reef D. Apparently that is the optimal temperature... it just doesn't give great results.
     * Purify and see if there is sufficient product for sequencing.
+
+PCR0247:
+  * Rerunning the EW1 Reef C reactions I dropped from PCR0246 at a range of annealing temperatures.
+
+PCR0247 results:
+
+PCR0248:
+  * Trying to optimize annealing temp for Reef B using redesigned primers.
+  * The other reefs worked best at annealing temp close to the IDT Tm. IDT Tm for this primer pair is 51.4C so straddling this value.
+
+PCR0248 results:
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
 
