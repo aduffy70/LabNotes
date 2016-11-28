@@ -85,12 +85,17 @@ PCR0245:
   * Rerunning EW1 GSTA3 Reef C and D with more template, more primer, longer Taq pre-activation time, and in a 50uL reaction to try to maximize the yield.
 
 PCR0245 results:
-  * Failed!
+  * Failed! Optimize annealing temperatures.
 
 PCR0246:
-  * Trying to optimize annealing temp for <del>Reef C and</del> Reef D. The 55.0C temp gave weak results on PCR0240, so including it here as a positive control. 57C Failed on PCR0244 and 0245 so trying lower temperatures. Just Reef D... I dropped the striptube with the Reef C reactions :(
+  * Trying to optimize annealing temp for <del>Reef C and</del> Reef D. The 55.0C temp gave weak results on PCR0240, so including it here as a positive control. 57C Failed on PCR0244 and 0245 so trying lower temperatures.
+  * Just Reef D... I dropped the striptube with the Reef C reactions :(
 
 PCR0246 results:
+  * Everything failed on Reef C... not surprisingly since those reactions were dropped.
+    * Bisulfite convert more EW1 and retry the Reef C reactions.
+  * Only the 55C reaction worked on Reef D. Apparently that is the optimal temperature... it just doesn't give great results.
+    * Purify and see if there is sufficient product for sequencing.
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
 
