@@ -20,7 +20,7 @@ categories:
 
 # 2) Bisulfite conversion and cleaning:
 
-  * 20uL of 25ng/uL (500ng total) in each reaction.
+  * 20uL of 25ng/uL (500ng total) in each reaction with 130uL CT conversion buffer (fresh on 2016-11-15 & 2016-11-28).
   * Using recommended thermal cycler settings (cyclename: bis_cnvrt):
     * 98C for 10min
     * 64C for 2.5 hours
@@ -37,6 +37,8 @@ categories:
 | EW1-bis 2016-11-16 | 21.6 | 3.89 | 0.67 | 40uL (4 eluted together) |
 | EW1-bis 2016-11-18 | 32.0 | 2.91 | 0.70 | 10uL |
 | N1-bis 2016-11-18 | 28.9 | 2.76 | 0.65 | 10uL |
+| EW1-bis 2016-11-28 |  |  | 30uL | (3 eluted together) |
+| N1-bis 2016-11-28 |  |  | 30uL | (3 eluted together) |
 
   * The kit starts with 20ng of 25ng/uL DNA and yields 10uL of ~25ng/uL DNA. Does this mean our yield was 50% or can we even compare to the before concentrations since it was measuring double-stranded DNA using the DNA nanodrop settings and these are single-stranded DNA using the RNA nanodrop settings? In any case, the yields are consistent.
   * The yields are high enough to use these as PCR templates.
