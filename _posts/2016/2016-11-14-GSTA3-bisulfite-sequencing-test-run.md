@@ -104,18 +104,24 @@ PCR0247:
   * Rerunning the EW1 Reef C reactions I dropped from PCR0246 at a range of annealing temperatures. Bisulfite converted more EW1 and N1 for these.
 
 PCR0247 results:
+  * 55C worked weakly. Purify it
 
 PCR0248:
   * Trying to optimize annealing temp for Reef B using redesigned primers.
   * The other reefs worked best at annealing temp close to the IDT Tm. IDT Tm for this primer pair is 51.4C so straddling this value.
 
 PCR0248 results:
+  * 52.9 and 51.4 worked weakly. Purify and elute together.
 
 # 5) Analyze, purify, and quantify bisulfite PCR products
 
 Ready for sequencing:
   * EW1 Reef A (242-3-EW1 or 242-11-EW1)
+  * EW1 Reef B2 (248-4-EW1)
+  * EW1 Reef C (247-1-EW1)
+  * EW1 Reef D (246-9-EW1)
   * N1 Reef A (244-1-N1)
+  * N1 Reef B2 (248-12-N1)
   * N1 Reef C (244-3-N1)
   * N1 Reef D (244-5-N1)
 
