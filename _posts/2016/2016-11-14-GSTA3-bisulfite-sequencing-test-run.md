@@ -152,9 +152,14 @@ Ready for sequencing:
 
 # 8) Sequence bisulfite PCR products using bisulfite sequencing primer pairs
 
+Sent to Retrogen 2016-11-30
+
 # 9) Sequence normal PCR products using normal sequencing primer pairs
 
+Sent to REtrogen 2016-11-30
+
 # 10) Compare bisulfite and normal sequences.
+
 
 
 [1]: https://drive.google.com/drive/folders/0B0DnkQIRAeIISHZ6My1rSFBSWEk

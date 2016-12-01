@@ -11,13 +11,29 @@ The Zymo OneStep kit worked on the top half of the GSTA4 promoter but not the bo
 
 # Amplify bisulfite DNA using bisulfite primer pairs
 
+Primers:
+  * G4bsbotF
+  * G4bsbotR
+
+PCR0249:
+  * Trying to amplify the GSTA4 promoter bottom half with bisulfite sequencing primers.
+  * Running an annealing temperature gradient to optimize.
+
+PCR0249 results:
 
 # Analyze, purify, and quantify bisulfite PCR products
 
-
 # Amplify genomic DNA using normal primer pairs
 
+Primers:
+  * Using the same primers we used with the Zymo kit.
+  * __Do we have amplified product already from the tests we did to see if the primers worked?__ We do. We can use products 232-11-EW1 and 232-12-N1 (which include the top and bottom sections) and sequence them with G4_promoter4-R and G4_promoter4-F (to get just the bottom section).
+
 # Analyze, purify, and quantify normal PCR products
+
+Ready for sequencing:
+  * 232-11-EW1
+  * 232-12-N1
 
 # Sequence bisulfite PCR products
 
