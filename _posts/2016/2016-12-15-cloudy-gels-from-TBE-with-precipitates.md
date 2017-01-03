@@ -4,7 +4,7 @@ date:  2016-12-15
 layout: post
 categories:
 ---
-#Problem:
+# Problem:
 
   * The 5X and 1X TBE we use for gels keeps precipitating, even after heating/stirring and sonicating.
   * Gels poured using this TBE have bright blotches that make dim bands hard to see.
