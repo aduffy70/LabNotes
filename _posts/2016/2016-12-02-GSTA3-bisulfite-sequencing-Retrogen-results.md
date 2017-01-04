@@ -26,5 +26,5 @@ Reef A
     * Reverse sequences have multiple signal - unusable
 
 Reef BCD
-  * referenc forward and reverse sequences have sections with multiple signal but in different locations on each so I can identify CpGs at most sites in one or the other. Where the multiple signal sections are is consistent between EW1 and N1.
-  * 
+  * reference forward and reverse sequences have sections with multiple signal but in different locations on each so I can identify CpGs at most sites in one or the other. Where the multiple signal sections are is consistent between EW1 and N1.
+  *
