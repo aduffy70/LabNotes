@@ -27,6 +27,8 @@ permalink: /:year/:month/:day/:title/
 # Files to be ignored by jekyll but still kept in the repo for version control
 exclude:
   - _tools/*
+  - Gemfile
+  - Gemfile.lock
 
 # Pagination stuff
 gems: [jekyll-paginate]
