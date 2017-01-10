@@ -20,14 +20,20 @@ PCR0249:
   * Running an annealing temperature gradient to optimize.
 
 PCR0249 results:
-  * Hotter temperatures worked better but all temps have strong nonspecific binding at ~200bp. Try even hotter temps and longer extension times to try to improve amplification of the longer desired band.
+  * Hotter temperatures (57C) worked better but all temps have strong nonspecific binding at ~200bp. Try even hotter temps and longer extension times to try to improve amplification of the longer desired band.
 
 PCR0253:
   * Trying to amplify the GSTA4 promoter bottom section with bisulfite sequencing primers using higher annealing temperatures and longer extension times than PCR0249 to try to reduce non-specific binding.
   * If this doesn't work, try GC Enhancer?
 
 PCR0253 results:
-  * a
+  * Only worked at 57C. At higher annealing temps we lose the target band and still have non-specific binding.
+
+PCR0254:
+  * Trying at 57C with GC Enhancer at 20% and 10% v-v to minimize non-specific binding.
+
+PCR0254 results:
+  * GC Enhancer reduced the non-specific binding but we lost the target band. Perhaps the optimal temperature with GC Enhancer in the reaction is different?
 
 # Analyze, purify, and quantify bisulfite PCR products
 
