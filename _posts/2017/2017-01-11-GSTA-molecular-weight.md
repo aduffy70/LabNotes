@@ -6,7 +6,7 @@ categories:
   - gsta isoforms
 ---
 
-# What is the approximate expected molecular weight of the GSTA proteins we hope to isolate with affinity columns and analyze with mass spectrometry?
+What is the approximate expected molecular weight of the GSTA proteins we hope to isolate with affinity columns and analyze with mass spectrometry?
 
   * In turkeys [Kim et al 2013][1]:
     * 28kDa in Domestic, Eastern Wild, Rio Grande, and Royal Palm
