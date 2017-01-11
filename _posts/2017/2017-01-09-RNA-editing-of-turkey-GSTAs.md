@@ -3,7 +3,7 @@ title:  RNA editing of turkey GSTAs?
 date:  2017-01-09
 layout: post
 categories:
-  - gsta other
+  - gsta isoforms
 ---
 
 One of the suggestions from Roger Coulombe's presentation on our progress to funders:

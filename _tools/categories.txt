@@ -2,6 +2,7 @@
   - gsta alt splicing
   - gsta cbc weight
   - gsta expression
+  - gsta isoforms
   - gsta methylation
   - gsta mirna
   - gsta other

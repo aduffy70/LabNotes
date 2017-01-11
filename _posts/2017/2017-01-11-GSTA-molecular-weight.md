@@ -3,7 +3,7 @@ title:  GSTA molecular weight
 date:  2017-01-11
 layout: post
 categories:
-  - gsta other
+  - gsta isoforms
 ---
 
 # What is the approximate expected molecular weight of the GSTA proteins we hope to isolate with affinity columns and analyze with mass spectrometry?

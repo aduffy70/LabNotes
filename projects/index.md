@@ -7,6 +7,7 @@ layout: page
 * ## [gsta assays](/projects/gsta-assays)
 * ## [gsta cbc weight](/projects/gsta-cbc-weight)
 * ## [gsta expression](/projects/gsta-expression)
+* ## [gsta isoforms](/projects/gsta-isoforms)
 * ## [gsta methylation](/projects/gsta-methylation)
 * ## [gsta mirna](/projects/gsta-mirna)
 * ## [gsta other](/projects/gsta-other)
