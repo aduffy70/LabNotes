@@ -12,4 +12,4 @@ Doug Rhoads suggested looking into possible RNA editing of the GSTAs that leads 
 
 Differences between the Wild and Domesticated turkey proteins can possibly be detected if we use affinity columns to pull out just the GSTAs and then do mass spectrometry to look for differences. Rhoads' lab (or someone they work with?) can do the mass spectrometry if we can do the affinity column work here.
 
-Sean Moody is looking into kits to separate out GSTA proteins.
+Sean Moody found columns that bind GST proteins so you can bind GSTs to a desired protein, bind the GSTs to the column, release the GSTs from the column, and separate the desired protein from the GSTs. We talked to the technicians at GE.com and confirmed that this kit could be used to pull GSTs from lysed cells. We ordered a small kit from ThermoFisher to test the process.
