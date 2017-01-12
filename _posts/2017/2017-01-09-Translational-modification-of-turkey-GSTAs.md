@@ -1,5 +1,5 @@
 ---
-title:  RNA editing of turkey GSTAs?
+title:  Translational modification of turkey GSTAs?
 date:  2017-01-09
 layout: post
 categories:
