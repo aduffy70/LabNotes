@@ -5,6 +5,7 @@
 
 // Our variables
 $base-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$headline-font-family: "ABeeZee", Arial, "Helvetica Neue", Helvetica, sans-serif;
 $base-font-size:   13px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -120,6 +121,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
+    font-family: $base-font-family;
 }
 
 /**
@@ -232,6 +234,7 @@ pre {
 }
 
 .site-title {
+    font-family: $headline-font-family;
     font-size: 26px;
     font-weight: 300;
     line-height: 45px;
@@ -254,6 +257,7 @@ pre {
     }
 
     .page-link {
+        font-family: $headline-font-family;
         color: $text-color;
         line-height: $base-line-height;
 
@@ -321,6 +325,7 @@ pre {
 }
 
 .footer-col-wrapper {
+    font-family: $headline-font-family;
     font-size: $base-font-size;
     color: $grey-color;
     @extend %clearfix;
@@ -412,6 +417,7 @@ pre {
 }
 
 .post-title {
+    font-family: $headline-font-family;
     font-size: 24px;
     letter-spacing: -1px;
     line-height: 1;
@@ -421,11 +427,11 @@ pre {
     margin-bottom: $vertical-spacing-unit;
 
     h1 {
-        font-size: 20px
+        font-size: 22px
     }
 
     h2 {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     h3 {
