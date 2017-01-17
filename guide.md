@@ -29,3 +29,7 @@ permalink: /guide/
     ~~~
     atom ~/Dropbox/LabNotes/_tools/categories.txt
     ~~~
+  * Add the category to the tests for valid project names on the Projects/None page:
+    ~~~
+    atom ~/Dropbox/LabNotes/projects/none.md
+    ~~~
