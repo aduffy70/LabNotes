@@ -68,7 +68,6 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
 }
@@ -227,7 +226,7 @@ pre {
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
-    min-height: 45px;
+    min-height: 40px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -235,9 +234,9 @@ pre {
 
 .site-title {
     font-family: $headline-font-family;
-    font-size: 26px;
+    font-size: 23px;
     font-weight: 300;
-    line-height: 45px;
+    line-height: 40px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
@@ -250,7 +249,8 @@ pre {
 
 .site-nav {
     float: right;
-    line-height: 45px;
+    line-height: 40px;
+    font-size: 17px;
 
     .menu-icon {
         display: none;
@@ -263,7 +263,7 @@ pre {
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
-            margin-right: 20px;
+            margin-right: 18px;
         }
     }
 
