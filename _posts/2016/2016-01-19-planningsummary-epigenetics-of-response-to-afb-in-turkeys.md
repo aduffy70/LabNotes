@@ -86,7 +86,7 @@ categories:
   * Questions/Challenges:
     * GSTA in mice is negatively regulated by thyroid hormones [ doi:10.1113/expphysiol.2011.058172 ]( http://doi.org/10.1113/expphysiol.2011.058172 ). Reducing mouse thyroid hormone levels from normal (hypothyroidism) increases GSTA expression (based on both mRNA levels in rtPCR and protein levels on western blots). A mutation in the hormone receptor protein (Thra) also leads to higher expression of GSTA .
     * Increasing thyroid hormone levels from normal (hyperthyroidism) doesn't affect GSTA expression in mice but in rat livers hyperthyroidism (increased T<sub>3</sub> triiodothyronine) decreases GSTA (not mu) activity and mRNA levels [ doi:10.1677/joe.0.1660363 ]( http://doi.org/10.1677/joe.0.1660363 ). The hormone receptors are transcriptional regulation factors, probably interacting with enhancer elements in the 5'UTR "including the xenobiotic-responsive element (XRE), the antioxidantresponsive element (ARE), the glucocorticoid-responsive element (GRE) and the barbiturate-responsive element (Barbie box)".
-    * Example T<sub>3 </sub>levels (ng/uL in plasma/serum) from the literature:
+    * Example T<sub>3 </sub>levels (ng/mL in plasma/serum) from the literature:
       * 6 - healthy domestic turkey poults
       * 3.1 - "flip-over" turkey poults (which have small hearts and metabolic problems) [ doi:10.3923/ijps.2003.7.14 ]( http://doi.org/10.3923/ijps.2003.7.14 )
       * 2.6 - Eastern Wild turkey (pen-reared)
