@@ -1,6 +1,8 @@
 /* super-search
 Author: Kushagra Gour (http://kushagragour.in)
 MIT Licensed
+
+(With minor tweaks by Aaron M. Duffy to make it return posts in the format I want)
 */
 (function () {
 	var searchFile = '/feed.xml',
