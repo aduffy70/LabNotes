@@ -31,3 +31,5 @@ We talked to the technicians at GE.com and confirmed that this kit could be used
 Their only caveat is that the GSTs bind to the column and then get released from the column through conjugation with glutathione. That means that if the hypothesized translational modification changes the glutathione conjugation ability of the protein we won't capture those modified GSTs in the column. This would be a problem with other methods too... if we use an antibody to capture GSTs we will only capture the GSTs if the modification doesn't affect the sites that the antibody is binding.
 
 We ordered a small kit from ThermoFisher to test the process.
+
+The columns are reusable if they are flushed with sodium azide. We purchased some from USU chem store, but it comes with some terrifying warnings--this chemical will explode if it comes in contact with metals and can be fatal with ingestion or even skin contact! We attached a very large warning label to the container.
