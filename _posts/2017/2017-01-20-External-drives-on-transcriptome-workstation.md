@@ -30,7 +30,7 @@ Some of my files on transcriptome have no backup.
   * Files on my external drive (BigDisc) or the public external drive (arxive) aren't backed up.
 
 Solution:
-  * I have enough space to copy everything on my home to both BigDisc and arxive. Files that aren't currently needed can be deleted from home, freeing space, while still leaving at least two copies of everything on at least 2 different drives.
+  * I think I have enough space to copy everything on my home to both BigDisc and arxive. Files that aren't currently needed can be deleted from home, freeing space, while still leaving at least two copies of all analyses on at least 2 different drives.
   * Organize things the same way with the same name on all three drives.
   * Use rsync to copy from home to the other drives to keep file dates the same and make later updates easier. (I can't trust file sizes. For some reason when I copy folders from home to this other drive, large folder sizes do not exactly match.)
   * Things in home:
@@ -38,5 +38,5 @@ Solution:
     * GenLabActivity2016: copy to external drives and delete from home. DONE
     * ncbi-blast-2.2.23+, ncbi-blast-2.2.31+: my local blast installs (2.2.31 has issues creating databases for large datasets, so I have 2.2.23 in my path). No backup needed.
     * perl5, R: local modules. No backup needed.
-    * turkey_mirna-seq: analysis files. Copy to external drives and delete from home.
-    * GBS_2014-11-24: analysis files (BySample and structureruns): Put them with the rest of the GBS analysis files in ExtDrive/gomp002_files. I think this puts them all in one place so we can then copy them where needed.
+    * turkey_mirna-seq: analysis files. Copy to external drives and delete from home. DONE
+    * GBS_2014-11-24: analysis files (BySample and structureruns): Move them with the rest of the GBS analysis files in ExtDrive/gomp002_files. I think this puts them all in one place so we can then copy them where needed. DONE
