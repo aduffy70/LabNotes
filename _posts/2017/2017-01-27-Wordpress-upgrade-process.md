@@ -11,6 +11,7 @@ I removed these instructions when I switched from Wordpress to jekyll, but I sti
   2. Remove old zip folder and old backup and then backup the current site--now referred to as the "old site".
 ~~~
 cd ~/public_html2
+rm latest.tar.gz
 rm -rf OLDwordpress/
 mv wordpress OLDwordpress
 ~~~
