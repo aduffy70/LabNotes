@@ -31,10 +31,12 @@ cp -r OLDwordpress/wp-content/plugins/wp-google-analytics wordpress/wp-content/p
   5. Login to the [admin dashboard][2] and check whether the [Graphene theme][3] or [WP Google Analytics][4] plugin have available updates. Get the download links and update if needed.
 ~~~
 cd ~/public_html2/wordpress/wp-content/themes/
+rm <old graphene zip file>
 wget <link to latest Graphene version>
 rm -rf graphene
 unzip <zip file you just downloaded>
 cd ~/public_html2/wordpress/wp-content/plugins/
+rm <old wp-google-analytics zip file>
 wget <link to latest WP Google Analytics version>
 rm -rf wp-google-analytics
 unzip <zip file you just downloaded>
