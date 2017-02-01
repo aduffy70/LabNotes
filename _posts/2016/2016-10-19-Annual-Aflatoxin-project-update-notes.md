@@ -3,7 +3,12 @@ title:  Annual Aflatoxin project update notes
 date:  2016-10-19
 layout: post
 categories:
-
+- gsta expression
+- gsta assays
+- gsta methylation
+- gsta mirna
+- gsta alt splicing
+- gsta other
 ---
 # Notes
 
