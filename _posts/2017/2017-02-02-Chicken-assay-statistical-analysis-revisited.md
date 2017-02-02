@@ -11,4 +11,4 @@ I [previously][1] analyzed chicken assay data for Fran Bhushan and found no stat
 # About the dataset
 
 
-[1]: {% post_url 2016/2016-12-05-Chicken-Vmax-and-Km-ANOVA-for-Fran-Bhushan %}
+[1]: {% post_url 2016/2016-12-05-Chicken-Vmax-and-Km-ANOVA-for %}
