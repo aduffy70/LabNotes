@@ -13,7 +13,7 @@ When we have determined the potential epigenetic mechanisms contributing to GSTA
 
   * [Vegan][1]
 
-Joel Nitta used it in his [Morea/Tahiti diversity paper][2] to partition variance in species richness (response) variables among different environmental (explanatory) variables using the "varpart" function.
+Joel Nitta used it in his [Moorea/Tahiti diversity paper][2] to partition variance in species richness (response) variables among different environmental (explanatory) variables using the "varpart" function. Does it work generally or is something about it specific to ecological data?
 
 [1]: https://cran.r-project.org/web/packages/vegan/vegan.pdf
 [2]: http://doi.org/10.1002/ecm.1246
