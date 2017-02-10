@@ -45,7 +45,7 @@ Support for Ubuntu 12.04 ends in April 2017, so I need to upgrade.
     * Created a cyberwp user and granted permissions on the cyberwp database
     * tested that the site works
   * Get jekyll working:
-    * Followed my jekyll installation instructions to install the correct version of ruby and jekyll. Jekyll failed to build with an error about ffi.h which I solved by installing build-essential and gcc with apt-get. Then nokogiri failed with an error about zlib which I solved by apt-getting zlin1g-dev
+    * Followed my jekyll installation instructions to install the correct version of ruby and jekyll. Jekyll failed to build with an error about ffi.h which I solved by installing build-essential and gcc with apt-get. Then nokogiri failed with an error about zlib which I solved by apt-getting zlin1g-dev. Then I got errors because the gem versions on this machine are slightly different from the ones in the lock file. I solved that by removing the lock file from the repo so each machine that tries to build the site can generate on based on the gem versions that it has.
 
 
 
