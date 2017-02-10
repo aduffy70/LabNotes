@@ -35,7 +35,7 @@ Support for Ubuntu 12.04 ends in April 2017, so I need to upgrade.
   * Restored my apache site files
     * Have to add "Require all granted" to the /Directory section since this is now required for Apache 2.4
     * There is also a bug in mod_rewrite where if you are using rewrite rules in .htaccess, they fail if Option MultiViews is in the Directory section... delete it.
-    * Have to add .conf to the end of the files now too.
+    * Have to add .conf to the end of the site files now too.
     * Enabled and tested my websites.
   * Restored my cordatebackup.sh script to /usr/local/bin and tested it
   * Reinstalled rawdog from ubuntu repos and tested
@@ -46,10 +46,10 @@ Support for Ubuntu 12.04 ends in April 2017, so I need to upgrade.
     * tested that the site works
   * Get jekyll working:
     * Followed my jekyll installation instructions to install the correct version of ruby and jekyll. Jekyll failed to build with an error about ffi.h which I solved by installing build-essential and gcc with apt-get. Then nokogiri failed with an error about zlib which I solved by apt-getting zlin1g-dev. Then I got errors because the gem versions on this machine are slightly different from the ones in the lock file. I solved that by removing the lock file from the repo so each machine that tries to build the site can generate on based on the gem versions that it has.
-
-
+  * Moved the vpcsim files to my user space (public_html5), updated the apache files to point to the new location and deleted the vpcsim home directory
+  * Moved a copy of Martin's wordpress database into his backup folder on crozier with the wordpress site files to make sure I have a copy of those together and then deleted the schimar home directory.
 
 # Remaining issues:
-  * Haven't moved VPCsim files back to my user space. They are in the home folder of a (no longer existing) vpcsim user.
+
   * Weirdness in the VPGsim parameters form. The form should load with defaults of None for all the radio buttons but they are blank. Difference between php versions? Low priority since the simulations aren't stable on current Ubuntu versions anyway.
   *
