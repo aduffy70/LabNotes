@@ -44,6 +44,9 @@ Support for Ubuntu 12.04 ends in April 2017, so I need to upgrade.
     * Created a cyberwp database in mysql and restored to it from the last monthly backup
     * Created a cyberwp user and granted permissions on the cyberwp database
     * tested that the site works
+  * Get jekyll working:
+    * Followed my jekyll installation instructions to install the correct version of ruby and jekyll. Jekyll failed to build with an error about ffi.h which I solved by installing build-essential and gcc with apt-get. Then nokogiri failed with an error about zlib which I solved by apt-getting zlin1g-dev
+
 
 
 # Remaining issues:
