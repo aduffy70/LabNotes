@@ -5,9 +5,7 @@ layout: post
 categories:
 
 ---
-Support for Ubuntu 12.04 ends in April 2017, so I need to upgrade.
-
-# Current layout:
+Support for Ubuntu server 12.04 64 bit ends in April 2017, so I need to upgrade to Ubuntu server 16.04 64 bit.
 
 # Strategy:
 
