@@ -46,8 +46,8 @@ Support for Ubuntu server 12.04 64 bit ends in April 2017, so I need to upgrade 
     * Followed my jekyll installation instructions to install the correct version of ruby and jekyll. Jekyll failed to build with an error about ffi.h which I solved by installing build-essential and gcc with apt-get. Then nokogiri failed with an error about zlib which I solved by apt-getting zlin1g-dev. Then I got errors because the gem versions on this machine are slightly different from the ones in the lock file. I solved that by removing the lock file from the repo so each machine that tries to build the site can generate on based on the gem versions that it has.
   * Moved the vpcsim files to my user space (public_html5), updated the apache files to point to the new location and deleted the vpcsim home directory
   * Moved a copy of Martin's wordpress database into his backup folder on crozier with the wordpress site files to make sure I have a copy of those together and then deleted the schimar home directory.
+  * Five days later, things seem to be working correctly. Backups to crozier are working and websites are up and running.
 
 # Remaining issues:
 
   * Weirdness in the VPGsim parameters form. The form should load with defaults of None for all the radio buttons but they are blank. Difference between php versions? Low priority since the simulations aren't stable on current Ubuntu versions anyway.
-  *
