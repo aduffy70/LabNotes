@@ -14,4 +14,9 @@ extract_hplc_data.py - Takes the multiple output files from an HPLC run and extr
   * Sort the table by timepoints
   * Delete everything above and below the timepoints you want
   * Sort everything by Order column to put them back in the sample order we want
-  * 
+  *
+
+# Questions:
+
+  * What exactly is the correction factor? When we calculate it we use afb area/afg area but afg pmol/afb pmol. I think we flip them like this to make the cf a unitless measure, but why is this correct and not the inverse?
+  * What does it mean when we get a negative Km???
