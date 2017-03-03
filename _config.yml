@@ -18,7 +18,7 @@ email: a.duffy@aggiemail.usu.edu
 description: Research records and notes
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://lab.aduffy70.org" # the base hostname & protocol for your site
-image_path: https://dl.dropboxusercontent.com/u/9110565/elab/
+image_path: "/assets/"
 
 # Build settings
 markdown: kramdown
