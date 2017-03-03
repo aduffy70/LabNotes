@@ -33,3 +33,12 @@ Their only caveat is that the GSTs bind to the column and then get released from
 We ordered a small kit from ThermoFisher to test the process.
 
 The columns are reusable if they are flushed with sodium azide. We purchased some from USU chem store, but it comes with some terrifying warnings--this chemical will explode if it comes in contact with metals and can be fatal with ingestion or even skin contact! We attached a very large warning label to the container.
+
+# Diluting sodium azide
+
+Each column requires 5mL of 0.05% w/v sodium azide in water. This dilution can be stored and handled with normal lab precautions but getting it into this dilution from powder must be done with extreme caution. To dilute from powder:
+
+  * We worked entirely in the hood. Moved the scale to the hood. Placed it on a large paper sheet to cover the metal surface of the hood. Covered the metal scale platform with paper and dispensed into a plastic weigh boat. Dispensed by gently tapping/pouring from the container to avoid metal instruments.
+  * 500 mg Sodium azide in 1L water. (Since 0.050g/100mL = 0.05%)
+  * Mixed by swirling to avoid risk of contacting metal in a magnetic stir rod. It went into solution almost immediately with about a minute of swirling to break up some lumps.
+  * Stored the leftover powder (we only used 0.5g out of the 25g) in the locked firebox with the controlled substances. The bottle is still labeled with a huge tag warning of the dangers of using metal instruments.
