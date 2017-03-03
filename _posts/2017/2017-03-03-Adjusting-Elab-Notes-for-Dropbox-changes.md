@@ -1,5 +1,5 @@
 ---
-title:  Adjusting Elab Notes for Dropbox changes
+title:  Adjusting eLab Notes for Dropbox changes
 date:  2017-03-03
 layout: post
 categories:
