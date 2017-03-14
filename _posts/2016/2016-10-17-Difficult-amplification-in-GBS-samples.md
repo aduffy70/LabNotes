@@ -104,8 +104,15 @@ Let's try amplifying each species with the TKT forward primer with each of the r
   * In the 2008 paper they used unusual settings (or there is a typo): 50 cycles- 94C for 5s, 52C for 1s, and 72C for 10s
   * I'm curious to try the 2008 settings and see if anything amplifies.
 
-PCR0250
+PCR0250:
   * Trying rbcL with Ebihara's filmy-specific TKT primers. Using Dpet and Vbos sporophyte templates on an annealing temperature gradient spanning 1.5C on either side of Ebihara's recommended temperatures to try to optimize for these primers with my samples. Using AmpliTaq Gold with a bit of GC Enhancer because it is awesome.
+
+PCR0250 results:
+  * Hottest temperature worked best (53.5C). Vbos gives a single band at about the expected 1300bp length. Dpet has a weak band at that length but has a brighter band at 300bp other weaker bands at ~200 and ~100bp. This nonspecific banding is weakest at the highest temp so perhaps a higher annealing temperature or higher GC concentration will improve results. Even if I can't eliminate the multiple bands, might they be a useful marker of Dpet samples?
+
+PCR0251:
+  * Trying rbcL with Ebihara's filmy fern primers at higher temps and with more GC Enhancer to try to knock down non-specific binding.
+  *
 
 [1]: http://dx.doi.org/10.3767/000651906X622210
 [image1]: {{site.image_path}}rbcL_forward_primers_aligned.png
