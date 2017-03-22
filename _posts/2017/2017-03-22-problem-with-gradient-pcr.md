@@ -1,5 +1,5 @@
 ---
-title:  problem with gradient pcr
+title:  Problem with gradient pcr?
 date:  2017-03-22
 layout: post
 categories:
