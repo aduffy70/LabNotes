@@ -114,7 +114,7 @@ PCR0251:
   * Trying rbcL with Ebihara's filmy fern primers at higher temps and with more GC Enhancer to try to knock down non-specific binding.
 
 PCR0251 results:
-  * All reactions failed. Ran twice. Perhaps the GC Enhancer is hurting rather than helping. The actual GC content of this region is only 43% so it may not be necessary. Try at 53C with 0, 10, and 20% GC Enhancer. The 10% is a positive control since that is what worked on PCR0250.
+  * All reactions failed. Ran twice. Perhaps the GC Enhancer is hurting rather than helping. The actual GC content of this region is only 43% so it may not be necessary. Try at 53C with and without GC Enhancer.
 
 
 
