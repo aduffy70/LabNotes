@@ -15,15 +15,17 @@ I suspect that some of the "Crepidomanes intricatum" samples I used for GBS are 
 ## rbcL-atpB spacer
 
   * I have sequences from 5 suspected C.int and 1 messy but useable sequence from suspected V.bos.
-    * C.int sequences are identical. Blast to ???
-    * V.bos is clearly different. Blast to ???
+    * C.int sequences are identical. Blast to C. latealatum (correct subgenus/section) with 95% identity.
+    * V.bos is clearly different. Blast to Vandenboschia birmanica in two pieces (because of the indel) with 86% and 94% identity.
   * These sequences also overlap with the first 22-53 bases of most of the filmy fern rbcL sequences in NCBI. Obviously the suspected C.int sequences are most similar to C.schmid, but which species is this section of the suspected V.bos most similar to?
 
 ## rbcL
 
   * I have sequences from 5 suspected C.int only. Some more complete and cleaner than others.
     * Sequences are practically identical to each other and to Ebihara's C.schmid sequence.
-    * Many filmy fern rbcL sequences in NCBI in the needed subgenera. [Listed here][1]
+  * Amplified from V.bos sporophyte, and a shorter section (H1F1-F1379R) in D.pet sporophyte
+  * Failed on suspected 4th spp with 26F-F1379R but haven't tried other primers yet.
+  * Many filmy fern rbcL sequences in NCBI in the needed subgenera. [Listed here][1]
 
 
 ## trnS-rps4 spacer
