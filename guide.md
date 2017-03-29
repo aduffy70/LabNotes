@@ -3,13 +3,13 @@ layout: page
 title: eLab Guide
 permalink: /guide/
 ---
+  * Write as if these records will become public
   * ‘Just Enough’ info
-  * Store images and static files in Dropbox/Public/elab/ and link to them with \{\{site.image_path\}\}\<file_name\>
+  * Store images and static files in Dropbox/LabNotes/assets/ and link to them with \{\{site.image_path\}\}\<file_name\>
   * Link to google docs for dynamic files (shared so anyone with the link can view)
   * Link to papers and sources using doi's
   * Record who attended meetings
   * Provide step-by-step code in code blocks
-  * Write as if these records will become public
   * Find balance between many bite-sized posts vs one long updated post  
   * Use Pages for things that aren't project-specific and that will be referenced often
   * Plan ahead for efficient searches:
