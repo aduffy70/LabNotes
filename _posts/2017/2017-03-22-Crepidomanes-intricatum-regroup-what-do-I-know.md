@@ -25,7 +25,7 @@ I suspect that some of the "Crepidomanes intricatum" samples I used for GBS are 
     * Sequences are practically identical to each other and to Ebihara's C.schmid sequence.
   * Amplified from V.bos sporophyte, and a shorter section (H1F1-F1379R) in D.pet sporophyte
   * Failed on suspected 4th spp with 26F-F1379R but haven't tried other primers yet.
-  * Many filmy fern rbcL sequences in NCBI in the needed subgenera. [Listed here][1]
+  * Many filmy fern rbcL sequences in NCBI in the needed subgenera. [Listed here.][1]
 
 
 ## trnS-rps4 spacer
