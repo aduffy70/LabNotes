@@ -1,0 +1,22 @@
+---
+title:  GST isolation with Pierce Glutathione spin columns
+date:  2017-04-11
+layout: post
+categories:
+  - gsta isoforms
+
+---
+First attempt working through the [Pierce Glutathione Spin Column protocol from ThermoScientific][1].
+
+The kit is designed to tag a desired protein in a sample with GSTs, bind the GST-tagged proteins to a column, clean away everything else, flush the GST-tagged proteins from the column, cleave off the GSTs, and collect the desired protein.
+
+We are trying to modify that process to just bind the GSTs that are already present in a sample to the column, clean away everything else, flush the GSTs from the column, and collect them. I documented the [protocol we followed here][2]
+
+  * The first step is to extract proteins from cells as a crude lysate. They suggest several possible methods, including commercial kits or simple freeze/thaw cycles. Our cytosol extractions are essentially a protein extraction that should contain the GSTs so we are starting with those.
+  * Samples for this test run... We have lots of Eastern Wild cytosol unambiguously labeled so we can use some of the same birds from the miRNA and mRNA studies. The Domestic cytosols aren't so clear, so we'll wait on those for til we can sort them out and be sure we are using samples from the right birds..
+    * EW1 (AFB treated) and EW9 (control)
+    * Using 4 tubes of cytosol (~750uL each) with a total protein concentration of approximately 25mg/mL (so about 75mg total protein for each sample).
+  * The last step is to remove the reduced glutathione from the isolated proteins. Is this necessary for what we are doing? Will it affect the mass spectronomy?
+
+[1]: https://drive.google.com/file/d/0B0DnkQIRAeIINWhaXzIzN2hkTFE/view?usp=sharing
+[2]: https://drive.google.com/open?id=1G8fhYLR94R9xw4rQQ-DeS5o0aTYLqgB8tXIOPKq6_vs
