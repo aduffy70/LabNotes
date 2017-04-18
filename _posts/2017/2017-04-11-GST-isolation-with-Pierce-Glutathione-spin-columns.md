@@ -17,6 +17,8 @@ We are trying to modify that process to just bind the GSTs that are already pres
     * EW1 (AFB treated) and EW9 (control)
     * Using 4 tubes of cytosol (~750uL each) with a total protein concentration of approximately 25mg/mL (so about 75mg total protein for each sample).
   * The last step is to remove the reduced glutathione from the isolated proteins. Is this necessary for what we are doing? Will it affect the mass spectronomy?
+  * Verifying that we successfully extracted GSTs (and little else)? Western blots? SDS-PAGE?
+    * On the absorbance checks of the wash step we reduced the absorbance by about 5 times (to about 0.1). Was that low enough to remove the other proteins or should we continue washes to get even lower absorbance?
 
 [1]: https://drive.google.com/file/d/0B0DnkQIRAeIINWhaXzIzN2hkTFE/view?usp=sharing
 [2]: https://drive.google.com/open?id=1G8fhYLR94R9xw4rQQ-DeS5o0aTYLqgB8tXIOPKq6_vs
