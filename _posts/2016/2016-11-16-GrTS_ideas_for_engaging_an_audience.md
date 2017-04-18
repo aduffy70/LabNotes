@@ -1,6 +1,6 @@
 ---
 title:  GrTS_ideas_for_engaging_an_audience
-date:  2017-04-17
+date:  2016-11-16
 layout: post
 categories:
   - ideas
@@ -10,13 +10,10 @@ categories:
 Ideas for presenting research to an audience from the Graduate Training Series. This was held 2016-11-16 but I never copied over the notes.
 
 Presentations:
-
   * Punchline up front- don't make it a mystery novel
   * Minimize text
 
-
 Posters:
-
   * Attractive but not glitzy
   * How do you hook someone walking by?
   * minimize text
@@ -24,7 +21,6 @@ Posters:
   * business cards with contact info
 
 Interviews:
-
   * understand what they are after
   * get questions in advance
   * prepare your key points
@@ -34,7 +30,6 @@ Interviews:
   * avoid filler words
 
 Elevator pitch:
-
   * Pitches for different lengths of time: 30 second and 90 second
   * Different pitch for science audience vs general audience
   * Anecdote, statistic, or short story to capture attention
@@ -48,15 +43,11 @@ Elevator pitch:
   * Avoid jargon and terminology
 
 Getting press:
-
   * Have one paragraph in a paper that explains things at a high school level to encourage it to be picked up by science journalists
   * simplify figures so high schoolers can understand
   * Be ready for bad press... make the obvious joke before they do so maybe they'll use yours instead of making up a worse one
 
-Idea: Comic figure with poison-labeled food and a healthy mouse, sick chicken and really sick turkey... and then add in a less sick wild turkey
-
 How to reach the media:
-
   * Have a press kit ready before the paper comes out
   * Work with PR office in advance
   * Photos videos... do this while the paper is in review
@@ -64,3 +55,5 @@ How to reach the media:
     * Eurekalert
   * When a paper is accepted, can you come up with a cover idea for them, mock it up and offer them the concept?
   * tell the PR rep everything you have coming out and let them help decide whether it has a story
+
+Idea: Comic figure with poison-labeled food and a healthy mouse, sick chicken and really sick turkey... and then add in a less sick wild turkey
