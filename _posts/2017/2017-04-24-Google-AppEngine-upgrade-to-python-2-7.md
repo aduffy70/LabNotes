@@ -25,3 +25,5 @@ It wasn't nearly involved as I was afraid it would be:
   * Used the "Dashboard" button on the Launcher to get to the admin console. Migrated traffic from version 1 to version 2. It shows there as using the correct python 2.7 runtime.
   * Tested from within VPCsim. It is bringing up the new version (v2 in the page name) and seems to function correctly.
   * Merged all changes from my working git branch to master and pushed to GitHub.
+
+The VPCsim app is my only remaining project on Google AppEngine.
