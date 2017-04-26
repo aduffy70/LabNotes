@@ -22,7 +22,7 @@ We are trying to modify that process to just bind the GSTs that are already pres
 
 # Nanodrop results
 
-Nanodrop measurements of protein concentration in each elution (first should have highest concentration, third the least as GSTs get flushed from the column. Based on our mRNA studies and protein assays we would expect more GST proteins in the AFB treated sample (EW9) than in the control)
+Nanodrop measurements of protein concentration in each elution (first should have highest concentration, third the least as GSTs get flushed from the column. Based on our past mRNA studies and protein assays we expect more GST proteins in the AFB treated sample (EW9) than in the control (EW1) and that is what we see.
 
 | Sample | protein concentration | volume | total protein |
 | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ Nanodrop measurements of protein concentration in each elution (first should hav
 
 With a (very roughly) estimated 75mg total starting protein in each sample, this means GSTs account for ~6% of the proteins in EW9 and ~8% of the proteins in EW1. In rat, GSTs make up 4% of the cytosolic proteins ([Hayes et al. 1987][3]), so these values aren't impossibly high.
 
-# SDS-PAGE results:
+# SDS-PAGE results
 
 Checking for a clean ~26kDa band and little else to show that the GSTs were captured and other proteins were removed...
 
