@@ -40,6 +40,6 @@ UPM = 52bp (45bp for the primer, plus the SMART II A Oligo that it binds to exte
 | Name | Location | Length of amplified sequence | Est. length A | Est. length B |
 | ---- | -------- | ---------------------------- | ------------- | ------------- |
 | 3A3-2 | 435-461 | 308 + UTR3 + UPM | 520 | 2320 |
-| 3A3-4 | 566-593 | 177 + UTR3 + UPM | 389 | 2389 |
+| 3A3-4 | 566-593 | 177 + UTR3 + UPM | 389 | 2189 |
 
 UPM = 77bp (45bp for the primer plus the 3' RACE CDS Primer A that it binds to extends 32 bases downstream before the start of the mRNA - so all my estimates were 77 shorter than they should have been)
