@@ -36,4 +36,4 @@ CTCCTGCAATGAAGAGGGACATCTACA
 
 [GSTA3 UTR3 primer locations][image1]
 
-[1]: {{ site.baseurl }}/assets/UTR3_primer_locations.png
+[image1]: {{ site.baseurl }}/assets/UTR3_primer_locations.png
