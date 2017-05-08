@@ -1,5 +1,5 @@
 ---
-title:  GrTS_ideas_for_engaging_an_audience
+title:  GrTS ideas for engaging an audience
 date:  2016-11-16
 layout: post
 categories:
