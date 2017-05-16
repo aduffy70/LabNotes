@@ -36,4 +36,13 @@ CTCCTGCAATGAAGAGGGACATCTACA
 
 ![GSTA3 UTR3 primer locations][image1]
 
+These work but I can't be certain that they are amplifying RACE cDNAs and not genomic DNA contamination in the RACE cDNA tubes. I can amplify an expected length fragment from G3-U3b-3F to the UPM but it has weak multiple bands. If I design internal sequencing primers I should be able to sequence just the desired band. Ordered 2 forward primers within this section:
+
+~~~
+>G3-U3b-4F
+AGATGGCTGTTGACTAATATCCCTAG
+>G3-U3b-5F
+CAATCCAGCCTGTATAGATCAAATATGC
+~~~
+
 [image1]: {{ site.baseurl }}/assets/UTR3_primer_locations.png
