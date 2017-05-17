@@ -17,7 +17,10 @@ If I want to be able to purify smaller fragments (while still removing primers) 
 
 Qiagen's Qiaquick kits remove things smaller than 100bp, so they might be better for my smaller fragments. How sharp is the cutoff for those kits? Purifying a ladder with the kit would yield useful info.
 
-Helpful references [here][1] and [here][2]
+Helpful references [here][1] and [here][2].
+
+My PEG purification protocol [here][3].
 
 [1]: http://www.openwetware.org/wiki/Protocol_Size_selective_DNA_precipitation_by_PEG/MgCl2
 [2]: http://doi.org/10.1007/s00253-013-5195-0
+[3]: https://docs.google.com/document/d/1QIAPW2Sqezbr2klQmA8WXQb_aPfYRmIv7mDHETS03iI/edit?usp=sharing
