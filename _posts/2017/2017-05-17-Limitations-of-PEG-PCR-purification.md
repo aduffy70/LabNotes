@@ -38,12 +38,16 @@ For each ladder:
 
 ## Results:
 
+### Nanodrop
+
 | Sample | ng/uL | 260/280 | 260/230 |
 | --- | --- | --- | --- |
 | L1 Qiagen | 31.5 | 1.86 | 1.84 |
 | L1 PEG | 32.9 | 1.88 | 2.21 |
 | L2 Qiagen | 31.3 | 1.89 | 1.94 |
 | L2 PEG | 15.4 | 1.98 | 2.35 |
+
+### Minigel
 
 ![Qiagen vs PEG gel image][image1]
 
