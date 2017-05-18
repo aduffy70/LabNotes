@@ -50,4 +50,6 @@ For each ladder:
 [1]: http://www.openwetware.org/wiki/Protocol_Size_selective_DNA_precipitation_by_PEG/MgCl2
 [2]: http://doi.org/10.1007/s00253-013-5195-0
 [3]: https://docs.google.com/document/d/1QIAPW2Sqezbr2klQmA8WXQb_aPfYRmIv7mDHETS03iI/edit?usp=sharing
-[image1]: {{ site.baseurl }}/assets/Qiaquick_vs_PEG_Purification.jpg
+[image1]: {{ site.baseurl }}/assets/Qiaquick_vs_PEG_Purification-edit.jpg
+
+For longer fragments Qiagen Qiaquick and PEG purification are comparable. Qiagen is better below 300bp.
