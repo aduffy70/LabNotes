@@ -7,7 +7,7 @@ categories:
 It's been awhile, so documenting the process for sending samples to Retrogen for sequencing...
 
 For each reaction send:
-  * 5uL PCR purified sample at 20ng/uL
+  * 5uL PCR purified sample at 20ng/uL (or 10uL at 10ng/uL if concentrations aren't high enough)
   * 10uL primer at 10ng/uL
   * [Google Spreadsheet][1] to simplify the calculations
 
@@ -22,6 +22,8 @@ Retrogen, Inc.
 Sequencing Department
 6645 Nancy Ridge Dr.
 San Diego, CA 92121
+
+858-455-8411
 ~~~
 
 # Processing without Sequencher:
