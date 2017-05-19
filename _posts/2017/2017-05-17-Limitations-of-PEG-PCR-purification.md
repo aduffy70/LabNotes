@@ -59,7 +59,7 @@ For each ladder:
 ## Conclusions
 
   * For longer fragments Qiagen Qiaquick and PEG purification are comparable.
-  * Below 300bp Qiagen is better below 300bp--PEG loses almost all of the very short products.
+  * Below 300bp Qiagen is better--PEG loses almost all of the very short products.
   * Qiagen kits are supposed to remove fragments <100bp but the cutoff is not sharp. 50bp fragments are reduced but still present. This could explain why I've had better sequencing results from PEG purified samples--PEG does a better job of removing primers.
   * If I have short non-specific bands with a longer desired band, I can use PEG's limitations to my advantage--those short bands will be drastically reduced.
 
