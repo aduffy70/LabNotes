@@ -56,4 +56,19 @@ For each ladder:
 [3]: https://docs.google.com/document/d/1QIAPW2Sqezbr2klQmA8WXQb_aPfYRmIv7mDHETS03iI/edit?usp=sharing
 [image1]: {{ site.baseurl }}/assets/Qiaquick_vs_PEG_Purification-edit.jpg
 
-For longer fragments Qiagen Qiaquick and PEG purification are comparable. Qiagen is better below 300bp.
+## Conclusions
+
+  * For longer fragments Qiagen Qiaquick and PEG purification are comparable.
+  * Below 300bp Qiagen is better below 300bp--PEG loses almost all of the very short products.
+  * Qiagen kits are supposed to remove fragments <100bp but the cutoff is not sharp. 50bp fragments are reduced but still present. This could explain why I've had better sequencing results from PEG purified samples--PEG does a better job of removing primers.
+  * If I have short non-specific bands with a longer desired band, I can use PEG's limitations to my advantage--those short bands will be drastically reduced.
+
+## Related thoughts on PEG purification:
+
+When following the PEG purification protocol, I've worried about balancing the risk of leaving too much liquid in the tube at each step vs the risk of losing my pellet if I try to remove it all. I think it is better to err on the side of leaving too much liquid. Even if I leave 10uL carryover (co) in the tube at each step, a contaminant present at 1ng/uL will be reduced ~1500 times to less than 1pg/uL in the final purified product (assuming 25uL starting sample, 2 washes with 125uL EtOH, and eluting into 30uL TE):
+
+~~~
+                     25uL sample      10uL co         10uL co       10uL co
+1ng/uL contaminant * ----------- * ------------- * ------------- * ---------- = 0.69pg/uL
+                     50uL PEG+co   135uL EtOH+co   135uL EtOH+co   40uL TE+co
+~~~
