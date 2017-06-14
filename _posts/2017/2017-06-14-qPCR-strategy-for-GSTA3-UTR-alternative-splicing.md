@@ -36,11 +36,11 @@ Rules:
   * To ensure we are amplifying cDNA and not genomic DNA contamination: The amplified fragment must cross an exon splice point (where an intron would be present making a much larger fragment in genomic DNA.
   * Tm of primers in all pairs need to be within 5C so we can run them in one qPCR reaction.
 
-Version A
+### Version A
 
-Version B
+### Version B
 
-Version C
+### Version C
 
 ## UTR3
 
@@ -55,7 +55,7 @@ CCACCAGATGAAAATTATGTAGCAAC
 >New Version A reverse primer
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTGCCAGAG
 ~~~
-  * Tm's (Primer3) = F 59.0, R 59.6
+  * Tm's (IDT) = F 54.5, R 54.2
   * Tm (IDT) of reverse primer without polyA = 26.6
 
 ### Version B (longest)
@@ -63,7 +63,7 @@ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTGCCAGAG
 >New Version B reverse primer (use with G3-U3b-5F)
 TTTTTTTTTTTTTTTTTTTTTTTTTTGAGGGACATG
 ~~~
-  * Tm's (Primer3) = F 60.4, R 60.2
+  * Tm's (IDT) = F 55.8, R 54.8
   * Tm (IDT) of reverse primer without polyA = 35.0
 
 ### Version C (long)
@@ -71,7 +71,7 @@ TTTTTTTTTTTTTTTTTTTTTTTTTTGAGGGACATG
 >New Version C reverse primer (use with G3-U3b-4F)
 TTTTTTTTTTTTTTTTTTTTTTTTTTGCAGTAAAAG
 ~~~
-  * Tm's (Primer3) = F 59.8, R 58.3
+  * Tm's (IDT) = F 55.7, R 52.9
   * Tm (IDT) of reverse primer without polyA = 23.3
 
 ### Version D (longer)
@@ -79,5 +79,5 @@ TTTTTTTTTTTTTTTTTTTTTTTTTTGCAGTAAAAG
 >New Version D reverse primer (use with G3-U3b-5F)
 TTTTTTTTTTTTTTTTTTTTTTATTTTCTACTTCAG
 ~~~
-  * Tm's (Primer3) = F 60.4, R 56.8
+  * Tm's (IDT) = F 55.8, R 51.7
   * Tm (IDT) of reverse primer without polyA = 33.6
