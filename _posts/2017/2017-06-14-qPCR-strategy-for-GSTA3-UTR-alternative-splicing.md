@@ -30,6 +30,9 @@ Can I make valid comparisons between things amplified with different primer sets
 # Primers
 
 ## UTR5
+Rules:
+  * To ensure we are only amplifying the correct version: At least one of the primers must be anchored in sequence unique to the version. If the 3' end can also anneal to another version (or to genomic DNA contamination), the Tm of that part must be drastically lower (20+ degrees C).  
+  * To ensure we are amplifying cDNA and not genomic DNA contamination: The amplified fragment must cross an exon splice point (where an intron would be present making a much larger fragment in genomic DNA.
 
 Version A
 
@@ -38,6 +41,8 @@ Version B
 Version C
 
 ## UTR3
+Rules, to ensure we are only amplifying the correct version and not genomic DNA contamination:
+  * Reverse primer must span the point where the polyA tail starts. The 3'end of the primer (the part annealing to cDNA sequence and not to the polyA tail) must have a drastically lower Tm than the whole primer (20+ degrees lower).  This is going to make primer design a little challenging since polyT's in a primer don't add much to the Tm. Primers will need to be long.
 
 Version A (short)
 
