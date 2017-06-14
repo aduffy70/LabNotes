@@ -55,29 +55,29 @@ CCACCAGATGAAAATTATGTAGCAAC
 >New Version A reverse primer
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTGCCAGAG
 ~~~
-Tm's (Primer3) = F 59.0, R 59.6
-Tm (IDT) of reverse primer without polyA = 26.6
+  * Tm's (Primer3) = F 59.0, R 59.6
+  * Tm (IDT) of reverse primer without polyA = 26.6
 
 ### Version B (longest)
 ~~~
 >New Version B reverse primer (use with G3-U3b-5F)
 TTTTTTTTTTTTTTTTTTTTTTTTTTGAGGGACATG
 ~~~
-Tm's (Primer3) = F 60.4, R 60.2
-Tm (IDT) of reverse primer without polyA = 35.0
+  * Tm's (Primer3) = F 60.4, R 60.2
+  * Tm (IDT) of reverse primer without polyA = 35.0
 
 ### Version C (long)
 ~~~
 >New Version C reverse primer (use with G3-U3b-4F)
 TTTTTTTTTTTTTTTTTTTTTTTTTTGCAGTAAAAG
 ~~~
-Tm's (Primer3) = F 59.8, R 58.3
-Tm (IDT) of reverse primer without polyA = 23.3
+  * Tm's (Primer3) = F 59.8, R 58.3
+  * Tm (IDT) of reverse primer without polyA = 23.3
 
 ### Version D (longer)
 ~~~
 >New Version D reverse primer (use with G3-U3b-5F)
 TTTTTTTTTTTTTTTTTTTTTTATTTTCTACTTCAG
 ~~~
-Tm's (Primer3) = F 60.4, R 56.8
-Tm (IDT) of reverse primer without polyA = 33.6
+  * Tm's (Primer3) = F 60.4, R 56.8
+  * Tm (IDT) of reverse primer without polyA = 33.6
