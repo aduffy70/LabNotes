@@ -23,3 +23,32 @@ Looking at the ipyrad analysis:
   * There are >200,000 loci before filtering for how many samples have coverage. A sample has to have 6 reads at the locus to be counted, which means that to have all loci a sample needs at least 6 X 200,000 = 1.2 million reads. Probably many more to account for sampling error. Only 1 sample has that many reads currently (46 samples have less than 100k reads). Reducing the cluster threshold will reduce the number of loci by combining them (and combining the read from these loci with increase the chance of a sample having over 6 reads), but will the new combined loci just be discarded because they will now exceed the maximum number of SNPs per locus? She can easily test this and see.
 
 Paul suggested that she might need to rerun the library to get more reads. But, there is wide variation in the number of reads per barcode. Will rerunning the same library give a similar distribution? If so, she will get many more reads for samples where she already has many and very few for the samples she needs most. It would make more sense to generate a new library using just the samples with the fewest reads. Depending on how the library was prepared she may not need to start from scratch.
+
+What percentage of raw reads can be assigned with 0, 1, or 2 barcode mismatches? Used the first part of my pipeline:
+  * 356024501 raw reads
+  * 0 mismatches: 130543504 (37%)
+  * 1 mismatch: 5466644 (1.5%)
+  * 2 mismatches: 1144122 (0.3%)
+
+That looks reasonable.
+
+Of the reads with the barcode in the first 16 bases, how many have X bp before the cutsite (we expect most to have 8, 9, or 10 since those are the lengths of the barcodes)?
+
+Used grep on the file with counts of unique 16bp starting sequences and then a script to add up the read counts:
+
+| bp before cutsite | count of reads |
+| ----------------- | -------------- |
+| 0	| 43643 |
+| 1	| 31540 |
+| 2	| 37071 |
+| 3	| 48831 |
+| 4	| 40920 |
+| 5	| 45591 |
+| 6	| 48902 |
+| 7	| 181007 |
+| 8	| 52817923 |
+| 9	| 42855453 |
+| 10 | 50700821 |
+| 11 | 160903 |
+
+Looks reasonable. This makes a total of ~147 million reads with a cutsite in the first 16 bases. ipyrad found a cutsite in 99.9% of reads, so is it counting cutsites anywhere in the read? Is it counting both cutsites?
