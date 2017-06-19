@@ -102,3 +102,15 @@ TTTTTTTTTTTTTTTTTTTTTTATTTTCTACTTCAG
   * Tm's (IDT) = F 55.8, R 51.7
   * Tm (IDT) of reverse primer without polyA = 33.6
   * Length: 272bp
+
+### Control/Normalization genes:
+
+GSTA3 coding sequence
+  * A3F at the start of exon 1 of the cds
+  * new G3-U5-1R primer in exon 2 of the cds
+  * Length: 195bp
+  * Tm's (IDT) F 57.1, R 57.6
+
+GAPDH
+  * tGAPDH-F and tGAPDH-R
+  * Tm's (IDT) F 55.0, R 55.1
