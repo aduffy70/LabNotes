@@ -6,14 +6,15 @@
 // Our variables
 $base-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 $headline-font-family: "ABeeZee", Arial, "Helvetica Neue", Helvetica, sans-serif;
-$base-font-size:   13px;
+$base-font-size:   15px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
+$tiny-font-size: $base-font-size * 0.75;
 $base-line-height: 1.5;
 $code-font-size:   $base-font-size * 0.875;
 
 $horizontal-spacing-unit:     30px;
-$vertical-spacing-unit:       10px;
+$vertical-spacing-unit:       12px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
@@ -391,13 +392,13 @@ pre {
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    font-size: $tiny-font-size;
     color: $grey-color;
     line-height: 1;
 }
 
 .post-meta-path {
-    font-size: $small-font-size;
+    font-size: $tiny-font-size;
     color: $grey-color;
     line-height: 1;
 
@@ -418,7 +419,7 @@ pre {
 
 .post-title {
     font-family: $headline-font-family;
-    font-size: 24px;
+    font-size: 32px;
     letter-spacing: -1px;
     line-height: 1;
 }
@@ -427,15 +428,18 @@ pre {
     margin-bottom: $vertical-spacing-unit;
 
     h1 {
-        font-size: 22px
+        font-size: 26px;
+        font-weight: bold;
     }
 
     h2 {
-        font-size: 18px;
+        font-size: 21px;
+        font-weight: bold;
     }
 
     h3 {
-        font-size: 14px;
+        font-size: 16px;
+        font-weight: bold;
     }
 
     h4 {
@@ -527,15 +531,18 @@ MIT Licensed
   margin-bottom: $vertical-spacing-unit;
 
   h1 {
-      font-size: 20px
+      font-size: 26px;
+      font-weight: bold;
   }
 
   h2 {
-      font-size: 17px;
+      font-size: 21px;
+      font-weight: bold;
   }
 
   h3 {
-      font-size: 14px;
+      font-size: 16px;
+      font-weight: bold;
   }
 
   h4 {
@@ -546,14 +553,14 @@ MIT Licensed
 
 .super-search__input {
   margin: $vertical-spacing-unit 0;
-  font-size: 14px;
+  font-size: $base-font-size;
   width: 45%;
   border: 1px solid $grey-color;
   padding: $vertical-spacing-unit;
 }
 
 .search-result-message {
-  font-size: 14px;
+  font-size: $base-font-size;
   padding-bottom: 0;
   margin-bottom: 0;
 }
@@ -565,7 +572,7 @@ MIT Licensed
 //My additions:
 
 .PageNavigation {
-  font-size: $small-font-size;
+  font-size: $tiny-font-size;
   display: block;
   width: auto;
   overflow: hidden;
