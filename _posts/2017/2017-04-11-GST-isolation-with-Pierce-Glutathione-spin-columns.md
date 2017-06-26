@@ -26,16 +26,16 @@ Nanodrop measurements of protein concentration in each elution (first should hav
 
 | Sample | protein concentration | volume | total protein |
 | --- | --- | --- | --- |
-| EW9-1 | 0.415 mg/mL | 5 mL | 2.075 mg |
-| EW9-2 | 0.300 mg/mL | 5 mL | 1.500 mg |
-| EW9-3 | 0.154 mg/mL | 5 mL | 0.770 mg |
-| EW9 Total | | 15 mL | 4.345 mg |
-| EW1-1 | 0.595 mg/mL | 5 mL | 2.975 mg |
-| EW1-2 | 0.423 mg/mL | 5 mL | 2.115 mg |
-| EW1-3 | 0.190 mg/mL | 5 mL | 0.950 mg |
-| EW1 Total | | 15 mL | 6.040 mg |
+| EW9-1 | 0.415 mg/mL | 1 mL | 0.415 mg |
+| EW9-2 | 0.300 mg/mL | 1 mL | 0.300 mg |
+| EW9-3 | 0.154 mg/mL | 1 mL | 0.154 mg |
+| EW9 Total | | 3 mL | 0.869 mg |
+| EW1-1 | 0.595 mg/mL | 1 mL | 0.595 mg |
+| EW1-2 | 0.423 mg/mL | 1 mL | 0.423 mg |
+| EW1-3 | 0.190 mg/mL | 1 mL | 0.190 mg |
+| EW1 Total | | 3 mL | 1.208 mg |
 
-With a (very roughly) estimated 75mg total starting protein in each sample, this means GSTs account for ~6% of the proteins in EW9 and ~8% of the proteins in EW1. In rat, GSTs make up 4% of the cytosolic proteins ([Hayes et al. 1987][3]), so these values aren't impossibly high.
+With a (very roughly) estimated 75mg total starting protein in each sample, this means GSTs account for ~1% of the proteins in EW9 and ~1.6% of the proteins in EW1. In rat, GSTs make up 4% of the cytosolic proteins ([Hayes et al. 1987][3]), so these values aren't impossibly high.
 
 # SDS-PAGE results
 
