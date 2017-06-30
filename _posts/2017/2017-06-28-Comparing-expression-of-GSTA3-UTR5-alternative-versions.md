@@ -41,4 +41,4 @@ Do this before normalization?
 
 Normalization
 
-For calculating delta Ct, I used the average of the 2 GAPDH technical replicates for each bird. Then I subtract this housekeeping factor from the 2 gene technical replicates and average--or average the 2 gene technical replicates and subtract the housekeeping factor--you get the same result in either order.
+  * For calculating delta Ct, I used the average of the 2 GAPDH technical replicates for each bird. Then I subtract this housekeeping factor from the 2 gene technical replicates and average--or average the 2 gene technical replicates and subtract the housekeeping factor--you get the same result in either order.
