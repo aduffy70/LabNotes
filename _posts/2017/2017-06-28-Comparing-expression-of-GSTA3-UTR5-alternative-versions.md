@@ -35,9 +35,9 @@ How to handle missing data?
     * Replace NA with 40. Changed 11 values (all UTR5-C)
 
 Do this before normalization?
-    * Doing it after would make all unexpressed/low values the same (40).
-    * Doing it before will make an unexpressed/low value for a sample with less cDNA lower than one for a sample with more cDNA.
-      * This makes more sense, since having more total cDNA but STILL not having enough to amplify the gene means more.
+  * Doing it after would make all unexpressed/low values the same (40).
+  * Doing it before will make an unexpressed/low value for a sample with less cDNA lower than one for a sample with more cDNA.
+    * This makes more sense, since having more total cDNA but STILL not having enough to amplify the gene means more.
 
 Normalization
 
