@@ -3,7 +3,7 @@ title:  iQ5 qPCR cycler calibration
 date:  2017-06-27
 layout: post
 categories:
-  - gsta isoforms
+  - gsta alt splicing
 ---
 iQ5 qPCR cycler hadn't been calibrated in 700+ days (recommended mask, background, and well factor correction every 30 days).
 
