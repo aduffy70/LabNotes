@@ -20,29 +20,33 @@ I want to Eastern Wild and BB White since these are the same birds we used on th
 
 Nanodrop the 1:20 samples (from 1/5/15 -- these are the most clearly labeled) to see what range of concentrations we have:
 
-| Sample | Concentration (ng/uL) |
-| ------ | --------------------- |
-| B2 | 120.0 |
-| B3 | 41.7 |
-| B4 | 76.0 |
-| B5 | 73.2 |
-| B8 | 49.6 |
-| B9 | 65.5 |
-| B10 | 59.0 |
-| B11 | 86.2 |
-| B12 | 96.4 |
-| B14 | 70.0 |
-| B16 | 171.9 |
-| B17 | 121.4 |
-| E1 | 87.2 |
-| E2 | 225.7 |
-| E3 | 178.8 |
-| E4 | 137.0 |
-| E5 | 66.7 |
-| E8 | 90.4 |
-| E9 | 70.3 |
-| E10 | 146.2 |
-| E11 | 102.7 |
-| E14 | 80.0 |
-| E15 | 183.2 |
-| E16 | 59.3 |
+| Sample | Sample concentration (ng/uL) | uL Sample for dilution | uL Water for dilution | 25ng/uL Dilution volume (uL) |
+| ------ | ---------------------------- | ---------------------- | --------------------- | ---------------------------  |
+| B2 | 120.0 | 10 | 38.0 | 48.0 |
+| B3 | 41.7 | 25 | 16.7 | 41.7 |
+| B4 | 76.0 | 15 | 30.6 | 45.6 | 
+| B5 | 73.2 | 15 | 28.9  | 43.9 |
+| B8 | 49.6 | 20 | 19.7 | 39.7 |
+| B9 | 65.5 | 15 | 24.3 | 39.3 |
+| B10 | 59.0 | 20 | 27.2 | 47.2 |
+| B11 | 86.2 | 15 | 36.7 | 51.7 |
+| B12 | 96.4 | 10 | 28.6 | 38.6 |
+| B14 | 70.0 | 15 | 27.0 | 42.0 |
+| B16 | 171.9 | 10 | 58.8 | 68.8 |
+| B17 | 121.4 | 10 | 38.6 | 48.6 |
+| E1 | 87.2 | 15 | 37.3 | 52.3 |
+| E2 | 225.7 | 5  | 40.1 | 45.1 |
+| E3 | 178.8 | 10 | 61.5 | 71.5 |
+| E4 | 137.0 | 10  | 44.8 | 54.8 |
+| E5 | 66.7 | 15 | 25.0 | 40.0 |
+| E8 | 90.4 | 10 | 26.2 | 36.2 |
+| E9 | 70.3 | 15 | 27.2 | 42.2 |
+| E10 | 146.2 | 10 | 48.5 | 58.5 |
+| E11 | 102.7 | 10 | 31.1 | 41.1 |
+| E15 | 183.2 | 5 | 33.0 | 48.0 |
+| E14 | 80.0 | 15 | 31.6 |  36.6 |
+| E16 | 59.3 | 20 | 27.4 | 47.4 |
+
+It doesn't matter if the concentrations of samples used in qPCR are identical--normalization takes care of that. But, for each sample, it is critical that the dilution used for the normalization primerpairs is exactly the same as the dilution used for all other primerpairs--otherwise normalization won't work. To ensure that is the case, I made enough 25ng/uL dilution of each sample to do all the expected primerpairs with replicates:
+  * 1uL X 2 replicates X (3 UTR5 primerpairs + 4 UTR3 primerpairs + 2 housekeeping gene primerpairs) = 18uL total
+  * Just to be safe, I doubled this and made >36uL of each sample at 25ng/uL.
