@@ -26,6 +26,8 @@ To adjust for this, I used just GAPDH values to find thresholds for each plate t
 
 This was only a problem because of how I set up the experiment. I ran all samples and genes on one plate, and then ran technical replicates on a second plate. I should have run all the samples and replicates that I wanted for a gene on the SAME plate. I never make comparisons between genes, so having genes on different plates isn't an issue. If I decide I need to run more samples it will get even more complicated. So I'll have to include more GAPDH replicates for the samples I ran on these two plates so I'll have something to use to equalize the new plate to these two. Ugh. In the future, I will put all samples and replicates for a gene on ONE plate, even if it means using plates less efficiently.
 
+I setup PCR0292 - PCR??? for UTR3 so that all samples and replicates for a particular gene on one plate so this will not be a problem. No plate equalization is necessary for those runs and I should have lower error in the datapoints I am directly comparing.
+
 # Analysis
 
 How to handle missing data?
