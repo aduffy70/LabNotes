@@ -29,4 +29,4 @@ Total reactions:
   * Removed one replicate of B17 with Ct of ~22. It is >7Ct lower than the other replicate and outside the range of all other measurements for any type treatment.
   * No other missing data
 
-##
+## Normalization
