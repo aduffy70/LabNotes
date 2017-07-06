@@ -19,6 +19,10 @@ PCR0294
   * Still to run to run
   * 2 technical replicates of all 24 samples for UTR3-D
 
+Total reactions:
+  * 192 experimental reactions (2 replicates X 24 samples X 4 primerpairs)
+  * 96 housekeeping/normalization reactions shared with the GSTA3 UTR5 runs (2 replicates X 24 samples X 2 primerpairs)
+
 # Analysis
 
 ## Data cleaning
