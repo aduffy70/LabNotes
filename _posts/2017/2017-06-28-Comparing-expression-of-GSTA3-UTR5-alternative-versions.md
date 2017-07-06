@@ -30,10 +30,10 @@ I setup PCR0292 - PCR??? for UTR3 so that all samples and replicates for a parti
 
 # Analysis
 
-How to handle missing data?
+## How to handle missing data?
   * Likely failed reactions (other technical and biological replicates have low Cts):
     * Remove from dataset. Removed 1 value (a UTR5-A)
-  * Likely unexpressed or so low it needed >40 cycles:
+  * Likely unexpressed or so low it needed >40 cycles (other technical and biological replicates have Cts ~35-40):
     * Replace NA with 40. Changed 11 values (all UTR5-C)
 
 Do this before normalization?
@@ -41,6 +41,6 @@ Do this before normalization?
   * Doing it before will make an unexpressed/low value for a sample with less cDNA lower than one for a sample with more cDNA.
     * This makes more sense, since having more total cDNA but STILL not having enough to amplify the gene means more.
 
-Normalization
+## Normalization
 
   * For calculating delta Ct, I used the average of the 2 GAPDH technical replicates for each bird. Then I subtract this housekeeping factor from the 2 gene technical replicates and average--or average the 2 gene technical replicates and subtract the housekeeping factor--you get the same result in either order.
