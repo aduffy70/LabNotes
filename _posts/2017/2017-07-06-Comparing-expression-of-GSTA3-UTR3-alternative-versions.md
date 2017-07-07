@@ -12,11 +12,11 @@ PCR0292
   * 2 technical replicates of all 24 samples for UTR3-A and GSTA_cds
 
 PCR0293
-  * in process
+  * Good data
   * 2 technical replicates of all 24 samples for UTR3-B and UTR3-C
 
 PCR0294
-  * Still to run to run
+  * In process
   * 2 technical replicates of all 24 samples for UTR3-D
 
 Total reactions:
@@ -26,7 +26,7 @@ Total reactions:
 # Analysis
 
 ## Data cleaning
-  * Removed one replicate of B17 with Ct of ~22. It is >7Ct lower than the other replicate and outside the range of all other measurements for any type treatment.
+  * Removed one replicate of UTR3-A B17 with Ct of ~22. It is >7Ct lower than the other replicate and outside the range of all other measurements for any type treatment.
   * No other missing data
 
 ## Normalization
