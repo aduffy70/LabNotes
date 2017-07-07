@@ -16,7 +16,7 @@ PCR0293
   * 2 technical replicates of all 24 samples for UTR3-B and UTR3-C
 
 PCR0294
-  * In process
+  * Good data
   * 2 technical replicates of all 24 samples for UTR3-D
 
 Total reactions:
