@@ -33,8 +33,7 @@ Total reactions:
 # Analysis
 
 ## Data cleaning
-  * Removed one replicate of UTR3-A B17 with Ct of ~22. It is >7Ct lower than the other replicate and outside the range of all other measurements for any type treatment.
-  * No other missing data
+  * It looks like Ct values for all row A reactions are slightly higher than the replicates in row B. Also, wells A1 and A12 are consistently much higher. I am discarding all data from these 2 wells and will not use row A on future qPCR plates.
 
 ## Normalization
   * Delta Ct using GSTA3_cds and GAPDH (separately). GAPDH is just so I can verify GSTA3 is behaving as expected. Normalization with GSTA3 lets me see how relative levels of each alternative version change holding GSTA3 constant.

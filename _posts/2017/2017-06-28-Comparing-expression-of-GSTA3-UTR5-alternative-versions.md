@@ -11,14 +11,14 @@ PCR0289
   * Do not use. My first qPCR attempt had setup issues and the machine had not been calibrated in years.
 
 PCR0290
-  * Good data
   * 1 replicate of 4 birds from each type-treatment
+  * Good data
 
 PCR0291
-  * Good data
   * 2nd replicate of same 4 birds from each type type-treatment
+  * Good data
 
-# Combining data from plates / Equalizing plates
+## Combining data from plates / Equalizing plates
 
 Because of differences in the auto-determined thresholds on the two plates, they differ systematically, which introduces error (Ct values on PCR0291 were consistently higher than PCR0290).
 
@@ -26,7 +26,23 @@ To adjust for this, I used just GAPDH values to find thresholds for each plate t
 
 This was only a problem because of how I set up the experiment. I ran all samples and genes on one plate, and then ran technical replicates on a second plate. I should have run all the samples and replicates that I wanted for a gene on the SAME plate. I never make comparisons between genes, so having genes on different plates isn't an issue. If I decide I need to run more samples it will get even more complicated. So I'll have to include more GAPDH replicates for the samples I ran on these two plates so I'll have something to use to equalize the new plate to these two. Ugh. In the future, I will put all samples and replicates for a gene on ONE plate, even if it means using plates less efficiently.
 
-I setup PCR0292 - PCR??? for UTR3 so that all samples and replicates for a particular gene on one plate so this will not be a problem. No plate equalization is necessary for those runs and I should have lower error in the datapoints I am directly comparing.
+I setup reactions for UTR3 so that all samples and replicates for a particular gene on one plate so this will not be a problem. No plate equalization is necessary for those runs and I should have lower error in the datapoints I am directly comparing.
+
+I want to run all 6 samples for each type-treatment and I'm not comfortable with the potential for higher error when combining plates, so I am rerunning UTR5 reactions with the proper plate setup:
+
+PCR0295
+  * 2 technical replicates of all 24 samples for UTR5-A
+  * Pending
+
+PCR0296
+  * 2 technical replicates of all 24 samples for UTR5-B
+  * Pending
+
+PCR0297
+  * 2 technical replicates of all 24 samples for UTR5-C
+  * Running at 3X the template concentration to try to bring Ct values into a range where more of them will reach the threshold.
+
+
 
 # Analysis
 
