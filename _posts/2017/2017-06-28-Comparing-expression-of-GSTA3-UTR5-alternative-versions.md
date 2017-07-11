@@ -60,3 +60,4 @@ Do this before normalization?
 ## Normalization
 
   * For calculating delta Ct, I used the average of the 2 GAPDH technical replicates for each bird. Then I subtract this housekeeping factor from the 2 gene technical replicates and average--or average the 2 gene technical replicates and subtract the housekeeping factor--you get the same result in either order.
+  * Did the same thing using GSTA3_cds to get the housekeeping factors. This lets me see how relative levels of each UTR version change while holding GSTA3 constant.
