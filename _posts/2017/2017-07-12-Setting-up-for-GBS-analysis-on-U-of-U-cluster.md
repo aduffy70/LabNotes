@@ -11,5 +11,5 @@ categories:
     * Installed to ~/.miniconda2 instead of the default miniconda2 so it won't be visible in my home folder.
     * I initially installed the latest ipyrad version (0.7.1) but it has libc version dependencies that aren't met on the U of U cluster (CentOS7) and can't be installed in user-space (as far as I can tell).
     * According to Carol this isn't necessary as ipyrad is installed on the CHPC, but I don't see it using `which ipyrad` until I install it.
-    
-[1](http://ipyrad.readthedocs.io/installation.html)
+
+[1]: http://ipyrad.readthedocs.io/installation.html
