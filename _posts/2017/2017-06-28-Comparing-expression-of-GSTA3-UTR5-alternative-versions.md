@@ -12,11 +12,11 @@ PCR0289
 
 PCR0290
   * 1 replicate of 4 birds from each type-treatment
-  * Good data
+  * Good data. I reran these reactions putting everything for one primer pair on a single plate AND including all six birds per type-treatment. Use those data instead.
 
 PCR0291
   * 2nd replicate of same 4 birds from each type type-treatment
-  * Good data
+  * Good data. I reran these reactions putting everything for one primer pair on a single plate AND including all six birds per type-treatment. Use those data instead.
 
 ## Combining data from plates / Equalizing plates
 
@@ -30,17 +30,26 @@ I setup reactions for UTR3 so that all samples and replicates for a particular g
 
 I want to run all 6 samples for each type-treatment and I'm not comfortable with the potential for higher error when combining plates, so I am rerunning UTR5 reactions with the proper plate setup:
 
-PCR0295
-  * 2 technical replicates of all 24 samples for UTR5-A
-  * Pending
-
 PCR0296
-  * 2 technical replicates of all 24 samples for UTR5-B
-  * Pending
+  * 2 technical replicates of all 24 samples for UTR5-A
+  * Good data
 
 PCR0297
+  * 2 technical replicates of all 24 samples for UTR5-B
+  * Good data
+
+PCR0298
   * 2 technical replicates of all 24 samples for UTR5-C
   * Running at 3X the template concentration to try to bring Ct values into a range where more of them will reach the threshold.
+  * Running
+
+PCR0299
+  * 2 technical replicates of all 24 samples for GSTA3_cds
+  * Pending
+
+PCR0300
+  * 2 technical replicates of all 24 samples for GAPDH
+  * Pending
 
 
 
