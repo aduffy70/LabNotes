@@ -41,32 +41,44 @@ PCR0297
 PCR0298
   * 2 technical replicates of all 24 samples for UTR5-C
   * Running at 3X the template concentration to try to bring Ct values into a range where more of them will reach the threshold.
-  * Running
+  * Good data
 
 PCR0299
   * 2 technical replicates of all 24 samples for GSTA3_cds
-  * Pending
+  * Good data. Replaced one value with NA (Well E3, bird E14 Replicate 2) because the line was not as steep as the others so it crossed them and the relative Ct value would be very different depending on where the threshold was set.
 
 PCR0300
   * 2 technical replicates of all 24 samples for GAPDH
-  * Pending
+  * Good data.
 
 
 
 # Analysis
+  * Using data from PCR0296 - PCR0300
 
 ## How to handle missing data?
   * Likely failed reactions (other technical and biological replicates have low Cts):
-    * Remove from dataset. Removed 1 value (a UTR5-A)
+    * Leave it as NA so we only use the value from the other replicate.
+      * 5 UTR5-B reactions
+      * 5 UTR5-C reactions
   * Likely unexpressed or so low it needed >40 cycles (other technical and biological replicates have Cts ~35-40):
-    * Replace NA with 40. Changed 11 values (all UTR5-C)
+    * Replace NA with 40.
+      * 8 UTR5-C reactions (almost all of the Domestic Control samples), which were run at 3X cDNA concentration specifically to minimize this problem
 
 Do this before normalization?
   * Doing it after would make all unexpressed/low values the same (40).
   * Doing it before will make an unexpressed/low value for a sample with less cDNA lower than one for a sample with more cDNA.
     * This makes more sense, since having more total cDNA but STILL not having enough to amplify the gene means more.
 
-## Normalization
+## Quality checks
+  * Looked at variation between replicates:
+    * overall
+    * by Product
+    * and by Bird for each Product
+    * No problems identified.
 
-  * For calculating delta Ct, I used the average of the 2 GAPDH technical replicates for each bird. Then I subtract this housekeeping factor from the 2 gene technical replicates and average--or average the 2 gene technical replicates and subtract the housekeeping factor--you get the same result in either order.
-  * Did the same thing using GSTA3_cds to get the housekeeping factors. This lets me see how relative levels of each UTR version change while holding GSTA3 constant.
+## Normalization
+  * To calculate delta Ct, I used the average of the 2 housekeeping gene technical replicates for each bird. Then I subtract this housekeeping factor from the 2 gene technical replicates and average--or average the 2 gene technical replicates and subtract the housekeeping factor--you get the same result in either order.
+    * Did this using 2 different "housekeeping genes":
+      * GAPDH so I can make sure GSTA3 expression is similar to what we got from previous studies
+      * GSTA3_cds so I can see how relative levels of each UTR version change while holding GSTA3 constant.
