@@ -16,7 +16,7 @@ categories:
   * barcodes_ipyrad-all_samples.txt
   * s1-demultiplex (sorting by barcodes)
     * Tried it allowing 0, 1, and 2 barcode mismatches to compare. Using the 2 mismatch data. Results are comparable to my pipeline (+/-3%).
-    * Tried it using just the cutsite by the barcode (CAATTC) and using both cutsites because I was curious if the second cutsite is used at this step--it shouldn't be and it isn't. Results are exactly the same either way.
+    * Experimented with using just the cutsite by the barcode (CAATTC) and using both cutsites because I was curious if the second cutsite is used at this step--it shouldn't be and it isn't. Results are exactly the same either way.
     * Total reads: 277914244
     * Cutsite found: 277913446 (99.9%)
     * Matched exact: 212483395 (76%)
@@ -27,9 +27,9 @@ categories:
     * Worked with Carol Rowe to determine the correct sequence and orientation for the second cutsite (GTAA) and verified that the cutadapt command ipyrad generates has the same cutsite + adapter sequence that is expected using Zach Gompert's GBS library protocol (TTACAGATCGGAAGAGC).
     * By default ipyrad removes the barcode but leaves the cutsite at the start of every sequence. The cutsite contains no information and may make dissimilar reads appear slightly more similar and affect clustering, so I had ipyrad remove them.
   * s3-clustering
-    * Ran on main brance at 0.9
-    * Branched and reran at 0.85 and 0.95
-  
+    * Ran on main branch at 0.9
+    * Branched and reran at 0.85 (params-all_samples_c85.txt) and 0.95 (params-all_samples_c95.txt)
+
 
 # Questions
 
