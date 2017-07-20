@@ -33,10 +33,8 @@ categories:
 # Questions
 
   * Why does Jenessa's ipyrad 0.7.1 work but I get libc errors if I upgrade?
-    * See [this page][2] for a solution (can't try it now cause ipyrad is running)
   * On ipyrad s1, why are ALL the counts for mismatched barcodes even numbers?
   * Why does my pipeline return different numbers of exact matching barcodes (77% vs 68% for ipyrad)? My script includes the cutsite as part of the barcode so if anything my numbers should look lower than ipyrad's. Numbers with <=2 mismatches are comparable (85% and 88%)
   *
 
 [1]: http://ipyrad.readthedocs.io/installation.html
-[2]: https://patricksnape.github.io/2015/conda_glibc/
