@@ -34,4 +34,4 @@ categories:
   *
 
 [1]: http://ipyrad.readthedocs.io/installation.html
-[2]: {{ site.base_url }}{% post_url /2017//2017-07-19-ipyrad-version-trouble-on-U-of-U-cluster %}
+[2]: {{ site.base_url }}{% post_url /2017/2017-07-19-ipyrad-version-trouble-on-U-of-U-cluster %}
