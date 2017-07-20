@@ -10,27 +10,30 @@ categories:
   * Install miniconda (version 4.3.22) and ipyrad (version 0.7.1) in my user space following [these instructions][1] with [these modifications][2].
 
 # Test-run of ipyrad using all samples (all 3 species)
+
   * params-all_samples.txt
   * all_samples_SLURM.sh
   * barcodes_ipyrad-all_samples.txt
   * s1-demultiplex (sorting by barcodes)
-    * Tried it allowing 1 mismatch and 2 mismatches to compare. Using the 2 mismatch data.
-    * Tried it using just the cutsite by the barcode (CAATTC) and using both cutsites because I was curious if the second cutsite (TTACAG) is used at this step--it shouldn't be and it isn't. Results are exactly the same either way.
+    * Tried it allowing 0, 1, and 2 barcode mismatches to compare. Using the 2 mismatch data. Results are comparable to my pipeline (+/-3%).
+    * Tried it using just the cutsite by the barcode (CAATTC) and using both cutsites because I was curious if the second cutsite is used at this step--it shouldn't be and it isn't. Results are exactly the same either way.
     * Total reads: 277914244
     * Cutsite found: 277913446 (99.9%)
-    * Matched exact: 188940488 (68%)
+    * Matched exact: 212483395 (76%)
     * Matched <=1 mismatches: 236389987 (85%)
     * Matched <=2 mismatches: 236413224 (85%)
   * s2-rawedit (filtering/cleaning)
     * trimmed adapter sequences, and used defaults for quality filtering and minimum length after trimming.
+    * Worked with Carol Rowe to determine the correct sequence and orientation for the second cutsite (GTAA) and verified that the cutadapt command ipyrad generates has the same cutsite + adapter sequence that is expected using Zach Gompert's GBS library protocol (TTACAGATCGGAAGAGC).
+    * By default ipyrad removes the barcode but leaves the cutsite at the start of every sequence. The cutsite contains no information and may make dissimilar reads appear slightly more similar and affect clustering, so I had ipyrad remove them.
   * s3-clustering
-    * Starting with the default 0.85
-    *
+    * Ran on main brance at 0.9
+    * Branched and reran at 0.85 and 0.95
+  
 
 # Questions
 
   * On ipyrad s1, why are ALL the counts for mismatched barcodes even numbers? Also, they don't seem to be accurate. Running with 2 ipyrad gave different counts (though the totals were identical). It looks like it isn't actually reporting ALL the mismatched versions.
-  * Why does my pipeline return different numbers of exact matching barcodes (77% vs 68% for ipyrad)? My script includes the cutsite as part of the barcode so if anything my numbers should look lower than ipyrad's. Numbers with <=2 mismatches are comparable (85% and 88%)
   *
 
 [1]: http://ipyrad.readthedocs.io/installation.html
