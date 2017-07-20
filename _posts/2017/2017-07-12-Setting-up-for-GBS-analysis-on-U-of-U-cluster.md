@@ -7,7 +7,7 @@ categories:
 ---
   * Copied over my screen, nano, and git config files. My .bashrc and .bash_aliases were already there.
   * Reorganized the files on my wolf-group1 folder so raw data will be separate from analyses.
-  * Install miniconda (version 4.3.22) and ipyrad (version 0.6.15) in my user space following [these instructions][1].
+  * Install miniconda (version 4.3.22) and ipyrad (version 0.7.1) in my user space following [these instructions][1] with [these modifications][2].
     * I initially installed the latest ipyrad version (0.7.1) but it has libc version dependencies that aren't met on the U of U cluster (CentOS7) and can't be installed in user-space (as far as I can tell). Though somehow Jenessa has 0.7.1 installed and working?
     * According to Carol Rowe this isn't necessary as ipyrad is installed on the CHPC, but I don't see it using `which ipyrad` until I install it (and it looks like Carol and Jenessa both have ipyrad installed in their user-space and in their PATH to use the local installation).
     * 0.6.15 matches Carol's installation.
@@ -32,9 +32,9 @@ categories:
 
 # Questions
 
-  * Why does Jenessa's ipyrad 0.7.1 work but I get libc errors if I upgrade?
-  * On ipyrad s1, why are ALL the counts for mismatched barcodes even numbers?
+  * On ipyrad s1, why are ALL the counts for mismatched barcodes even numbers? Also, they don't seem to be accurate. Running with 2 ipyrad gave different counts (though the totals were identical). It looks like it isn't actually reporting ALL the mismatched versions.
   * Why does my pipeline return different numbers of exact matching barcodes (77% vs 68% for ipyrad)? My script includes the cutsite as part of the barcode so if anything my numbers should look lower than ipyrad's. Numbers with <=2 mismatches are comparable (85% and 88%)
   *
 
 [1]: http://ipyrad.readthedocs.io/installation.html
+[2]: {{ site.base_url }}{% post_url /2017//2017-07-19-ipyrad-version-trouble-on-U-of-U-cluster}

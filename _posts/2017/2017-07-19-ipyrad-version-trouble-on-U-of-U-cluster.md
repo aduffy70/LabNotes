@@ -28,4 +28,4 @@ The problem is that pysam 0.10.0 was compiled on a system with a more recent GLI
 I created and saved working conda environments for 0.6.15 (the version Carol Rowe and I were testing on), 0.6.27 (the newest version that can be installed without manually changing things), and 0.7.1 (the newest version we can run on the cluster). My default (root) environment is at 0.7.1.
   * View available environments with ```conda info --envs```.  
   * Switch to alternate environments with ```source activate <env>  # <env> = ipy0.6.15, ipy0.6.27, or ipy0.7.1```.
-  * Return to default (root) environment ```source deactivate```.
+  * Return to default (root) environment with ```source deactivate```.
