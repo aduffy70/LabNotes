@@ -5,7 +5,7 @@ layout: post
 categories:
   - t. intricatum gbs
 ---
-# Problem
+# Problem 1
 
 If you install miniconda and the latest ipyrad (currently 0.7.2) according to the ipyrad documentation, ipyrad will fail with an error ending with:
 
@@ -29,3 +29,15 @@ I created and saved working conda environments for 0.6.15 (the version Carol Row
   * View available environments with ```conda info --envs```.  
   * Switch to alternate environments with ```source activate <env>  # <env> = ipy0.6.15, ipy0.6.27, or ipy0.7.1```.
   * Return to default (root) environment with ```source deactivate```.
+
+# Problem 2
+
+Step 6 sometimes (on real datasets but not on the small example dataset) fails with error:
+~~~
+017-07-21 09:56:51,944 pid=142117 [cluster_across.py] ERROR error in persistent_popen_align IndexError(boolean index did not match indexed array along dimension 0; dimension is 93 but corresponding boolean dimension is 92)
+2017-07-21 09:56:55,347 pid=142117 [assembly.py] ERROR IPyradWarningExit: error in step 6 IndexError(boolean index did not match indexed array along dimension 0; dimension is 93 but corresponding boolean dimension is 92)
+~~~
+
+# Solution
+
+The problem is somehow related to numpy revision (or maybe the revision of one of its dependencies). It happens with numpy 1.13.1 installed but not 1.12.1, so downgrade numpy (which will also downgrade its dependencies) with ```conda install numpy=1.12.1```.
