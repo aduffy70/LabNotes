@@ -30,6 +30,8 @@ I created and saved working conda environments for 0.6.15 (the version Carol Row
   * Switch to alternate environments with ```source activate <env>  # <env> = ipy0.6.15, ipy0.6.27, or ipy0.7.1```.
   * Return to default (root) environment with ```source deactivate```.
 
+This is directly related to [issue 252 on Github][1] so they may come up with a more permanent solution.
+
 # Problem 2
 
 Step 6 sometimes (on real datasets but not on the small example dataset) fails with error:
@@ -41,3 +43,8 @@ Step 6 sometimes (on real datasets but not on the small example dataset) fails w
 # Solution
 
 The problem is somehow related to numpy revision (or maybe the revision of one of its dependencies). It happens with numpy 1.13.1 installed but not 1.12.1, so downgrade numpy (which will also downgrade its dependencies) with ```conda install numpy=1.12.1```.
+
+This is being tracked as [issue 253 on Github][2] so they may come up with a more permanent solution.
+
+[1]: https://github.com/dereneaton/ipyrad/issues/252
+[2]: https://github.com/dereneaton/ipyrad/issues/253
