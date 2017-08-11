@@ -35,7 +35,7 @@ categories:
     * Allowing only 1 allele (haploid) and 2 alleles (diploid).
   * I kept all loci with coverage in at least 4 samples. It gives way more missing data than is acceptable but provides me with the info on how many loci have coverage at each level so I can make decisions about where to make the cutoff.
   * I asked for Structure and Phylip-one-SNP-per-locus outputs since I expect I'll be able to use those for my downstream analyses. Rerunning step 7 to get other takes only a few minutes.
-  * AThe ipyrad default settings seemed reasonable for everything else.
+  * The ipyrad default settings seemed reasonable for everything else.
 
 
 # Questions and gotchas
