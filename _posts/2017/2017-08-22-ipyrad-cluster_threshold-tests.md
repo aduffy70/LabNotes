@@ -20,9 +20,19 @@ Use comparisons between cluster counts in sporophytes and gametophytes to determ
   * This observed difference between Vandenboschia sporophytes and gametophytes is more pronounced at higher clustering thresholds.
   * If the clustering threshold is low enough that most alleles are being joined into correct loci, there is no reason why I should expect sporophytes of a species to have more clusters than gameophytes of the same species.
 
-By plotting the cluster numbers at different thresholds, I can see when the Vandenboschia sporophytes (orange points) fall in with the Vandenboschia gametophytes (green points):
+# Results
 
-![cluster_threshold_plots][image1]
+By plotting the cluster numbers at different thresholds, I can see when the Vandenboschia sporophytes (orange points) fall in with the Vandenboschia gametophytes (green points) by about 0.85:
 
+![cluster_threshold_tests1][image1]
 
-[image1]: {{site.baseurl}}/assets/cluster_threshold_tests1.png
+By plotting the mean cluster counts by cluster threshold I can see how the means compare and how the slopes change. At around 0.85, the total cluster counts for gametophytes and sporophytes become approximately the same (error bars are stdev). The slope of the sporophyte noticeably increases above 0.85 as well, suggesting that above this point we begin to split alleles into separate loci at a higher rate.
+
+![more_cluster_threshold_tests2][image2]
+
+#Conclusion
+
+I am using cluster_threshold = 0.85 for my analyses.
+
+[image1]: {{ site.baseurl }}/assets/cluster_threshold_tests1.png
+[image2]: {{ site.baseurl }}/assets/cluster_threshold_tests2.png
