@@ -30,7 +30,7 @@ By plotting the mean cluster counts of the 3 Vandeboshia sporophytes and the 3 h
 
 ![more_cluster_threshold_tests2][image2]
 
-#Conclusion
+# Conclusion
 
 I am using cluster_threshold = 0.85 for my analyses.
 
