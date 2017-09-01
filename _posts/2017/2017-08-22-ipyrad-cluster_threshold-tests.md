@@ -19,3 +19,10 @@ Use comparisons between cluster counts in sporophytes and gametophytes to determ
   * Suspected Vandenboschia gametophyte samples have cluster and hi-depth cluster counts more similar to other samples.
   * This observed difference between Vandenboschia sporophytes and gametophytes is more pronounced at higher clustering thresholds.
   * If the clustering threshold is low enough that most alleles are being joined into correct loci, there is no reason why I should expect sporophytes of a species to have more clusters than gameophytes of the same species.
+
+By plotting the cluster numbers at different thresholds, I can see when the Vandenboschia sporophytes (orange points) fall in with the Vandenboschia gametophytes (green points):
+
+![cluster_threshold_plots][image1]
+
+
+[image1]: {{site.baseurl}}/assets/cluster_threshold_tests1.png
