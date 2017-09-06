@@ -7,7 +7,7 @@ categories:
 ---
 Blasted the 756 loci with no heterozygosity to make sure they aren't homozygous because they are all haploid bacteria, moss, or fungus
 
-  * online blastn, max target sequences=10, expect threshold=0.001, other settings at default.
+  * online blastn, max target sequences=10, expect threshold=0.0001, other settings at default.
   * Format output as text, don't show graphical overview, don't show alignments. This gives a list of just the top 10 hits for each sequence with e-values. It took over an hour to run but it finished - good to know the online blast interface is useful even for relatively large jobs like this.
   * 78 of 756 loci have blast hits in Genbank nr with e<0.0001:
       * Plant nuclear 46
