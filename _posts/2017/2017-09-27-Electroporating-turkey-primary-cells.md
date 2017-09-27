@@ -17,28 +17,28 @@ We want to try electroporating in 2 media types:
   * HBSS (Perfusion buffer 1)
   * Supplemented Williams E media
 
-The cells electroporated in HBSS will have to be spun out and resuspended in Supplemented Williams E media afterwards, so we need controls to separate the effect of media type from the effect of spinning.
-
-All electroporation was with 2uL of 1ug/uL vector. Samples not electroporated also received no vector.
-
-We want to try different electroporation settings (based on what works in rat):
+We want to try different electroporation settings (based on [what works in rat][1]):
   * 0: No electroporation
   * 1: Electroporated at 220V 500uF
   * 2: Electroporated at 220V 950uF
   * 3: Electroporated at 400V 950uF
 
+All electroporation was with 2uL of 1ug/uL vector (pEGFP-C1). Samples not electroporated received no vector.
+
+Everything will be plated in Supplemented Williams E at the end so cells electroporated in HBSS will have to be spun out and resuspended. We need controls to separate the effect of media type from the effect of spinning.
+
 So, our final setup was:
 
-We isolated cells using our protocol but stopped after removing the pellet from the percoll and divided the pellet slurry into three 300uL aliquots and resuspended:
+We isolated cells using our [protocol][2] but stopped after removing the pellet from the percoll and divided the pellet slurry into three 300uL aliquots and resuspended:
   * HS: 300uL pellet slurry + 1400uL HBSS (Perfusion Buffer 1)
   * WS: 300uL pellet slurry + 1400uL Supplemented Williams E
   * WN: 300uL pellet slurry + 1400uL Supplemented Williams E
 
-Hemocytometer count for resuspended cells = ~2.6M/mL 92% variability
+Hemocytometer count for resuspended cells = ~2.6M/mL 92% viability
 
 Each resuspension was divided into 400uL aliquots for electroporation.
 
-After electroporation, HS, and WS samples were spun 2 minutes at max speed in a 1.5uL tube to repellet the cells. Media was removed and replaced with 400uL Supplemented Williams E and mixed by pipetting. WN samples were left in their original media.
+After electroporation, samples that got spun were spun 2 minutes at max speed (on a tabletop centrifuge) in a 1.5uL tube to repellet the cells. Media was removed and replaced with 400uL Supplemented Williams E and mixed by pipetting. Samples that were not spun were left in their original Willaiams E media.
 
 Everything was plated in replicate on a 24well plate. 100uL sample to 200uL Williams E (~260000 cells / well).
 
@@ -56,3 +56,14 @@ Everything was plated in replicate on a 24well plate. 100uL sample to 200uL Will
 | WN1 | Williams | 220V 500uF | No  |
 | WN2 | Williams | 220V 950uF | No |
 | WN3 | Williams | 400V 950uL | No |
+
+Media will be changed according to our cell isolation protocol and transfection results checked after 24 hours (cells should fluoresce)
+
+# Results
+
+# Next steps
+
+Take whichever settings worked the best and now optimize vector concentration?
+
+[1]: http://doi.org/10.3748/wjg.v8.i5.893
+[2]: https://aduffy70.github.io/Protocols/Turkey_liver_cell_isolation/
