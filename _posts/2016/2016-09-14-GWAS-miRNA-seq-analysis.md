@@ -24,7 +24,7 @@ The miRNA-seq analysis has been very GSTA focused, but the dataset contains info
 
 ## Generate a cleaned expression table
 
-  * Started with the expression data from mirdeep_run1
+  * Started with the expression data from mirdeep_run1 (maximizes the number of miRNAs identified and the difference between the predicted mature miRNA and improved predictions made little difference.)
     * Rather than starting over at the raw expression data, I used the data that had already:
       * been 5,2,2 filtered (I checked to make sure that filter didn't remove anything that would have passed a "10 reads in at least one sample" filter)
       * had the novel miRNA expression from miRExpress included
