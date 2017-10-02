@@ -23,15 +23,18 @@ Analyses to consider (including items from Kent Reed's turkey mRNA analyses and 
   * What proportion of reads mapped to something that we decided was a precursor miRNA? What proportion of known turkey miRNAs were present in our data?
   * What miRNAs can be assigned to known miRNA families? How many are novel?
   * Where in the genome do the miRNAs map?
-
+  * MA plots
 
 Completed figures/tables:
   * Venn diagrams. Presence = at least one sample in the type-treatment has 10 or more reads.
     - By type - control birds only
     - By type X treatment - all birds
-
-
-Todo:
-  * Pairwise DE Expression tables
+  * Pairwise Differential Expression tables
     - for all miRNAs - Control birds, Domestic vs Wild
     - for just significantly DE miRNAs - Control birds, Domestic vs Wild
+  * MA plot - Control birds, Domestic vs Wild
+  * PCA plots
+    - By type - Control birds
+    - By type X treatment - all birds
+
+Todo:
