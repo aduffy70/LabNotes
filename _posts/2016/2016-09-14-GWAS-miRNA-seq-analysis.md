@@ -5,6 +5,8 @@ layout: post
 categories:
   - gsta mirna
 ---
+Note: This was for a two-way type and treatment analysis. We've since decided to focus on just the control birds and comparing types for the GWAS analysis. [See new page here.][1]
+
 The miRNA-seq analysis has been very GSTA focused, but the dataset contains information about general miRNA expression in domestic and wild turkeys with and without AFB exposure. Do we have enough for a general turkey miRNA or Genome Wide Association Study-type manuscript?
 
 # Things to show/questions to answer:
@@ -30,7 +32,7 @@ The miRNA-seq analysis has been very GSTA focused, but the dataset contains info
       * had the novel miRNA expression from miRExpress included
       * had the expression for miRNAs "not found by mirdeep" checked and corrected.
   * Filtered out miRNAs with readcounts below 10 in all samples. This is the "base" dataset.
-    * 387 miRNAs (341 unique)
+    * 387 miRNAs (341 unique - some could be from more than one precursor miRNA... we can't tell which one)
 
 ## Presence/Absence Venn
 
@@ -54,7 +56,5 @@ The miRNA-seq analysis has been very GSTA focused, but the dataset contains info
 
   What genes/pathways do they interact with in other taxa?
 
-
-
-
+[1]: {{site.baseurl }}/2017/2017-10-02-GWAS-miRNA-manuscript-notes
 [image1]: {{ site.image_path }}presence-absence_vennplot_2016-09-19.jpg
