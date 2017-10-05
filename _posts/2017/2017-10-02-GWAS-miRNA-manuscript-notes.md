@@ -18,27 +18,37 @@ Analyses to consider (including items from Kent Reed's turkey mRNA analyses and 
   * What miRNAs can be assigned to known miRNA families? How many are novel?
   * Where in the genome do the miRNAs map?
 
-Completed figures/tables:
-  * Venn diagrams. Presence = at least one sample in the type-treatment has 10 or more reads.
-    - By type - Control birds only
-    - By type X treatment - All birds
-  * Pairwise Differential Expression tables - Domestic vs Wild - Control birds only
+Completed figures/tables (All based on control birds only):
+  * Venn diagram by type. Presence = at least one sample in the type-treatment has 10 or more reads.
+  * Pairwise Differential Expression tables - Domestic vs Wild
     - All miRNAs
     - 60 DE miRNAs
-  * MA plot - Domestic vs Wild - Control birds only
-  * PCA plots
-    - By type - Control birds
-    - By type X treatment - All birds
+  * MA plot - Domestic vs Wild
+  * PCA plots by type
+    - rlog transformed
+    - normal transformed
   * Heatmaps
-    - Pairwise sample distance - Control birds only
+    - Pairwise sample distance
       - rlog transformed
       - normal transformed
-    - Expression by sample vs wild mean - Control birds only
-      - All miRNAs - normal transformed
-      - All miRNAs - rlog transformed
-      - 60 DE miRNAs - normal transformed
-      - 60 DE miRNAs - rlog transformed
-  * Boxplots by type for 60 Differentially Expressed miRNAs - Control birds only
+    - Expression by sample compared to wild mean
+      - All miRNAs
+        - normal transformed
+        - rlog transformed
+      - 60 DE miRNAs
+        - normal transformed
+        - rlog transformed
+  * Boxplots by type for 60 DE miRNAs (2 pages)
 
 
-Todo:
+Quality Control and mirdeep2 plots:
+  * Trimmed adapter sequences and discarded short (<18bp reads).
+    - How many reads per sample before and after trimming?
+    - Length distribution of unique reads and total reads? I have this with separate traces for each sample, but perhaps combine into one plot with 2 traces: unique read count and total read count.
+
+
+# Methods
+Generating a list of "known" turkey miRNAs:
+  * Compiled a list of 609 known or predicted precursor miRNA sequences for turkey from RNACentral (179 sequences) and Ensembl (430 sequences) and filtered for duplicates (identical or nested), resulting in 480 unique precursor miRNAs.
+  * Used MatureBayes Online to predict mature miRNAs in the unique precursor miRNAs (2 each = 960 mature miRNA sequences), and filtered duplicates, resulting in 880 unique mature miRNAs.
+  *
