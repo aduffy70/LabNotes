@@ -88,7 +88,7 @@ Differential expression:
     - Independently prefilters data to minimize multiple comparisons
     - Wald tests with Benjamini-Hochberg adjustment (adjusted p<0.1)
     - Shrinkage estimation of log fold changes
-    - Two way ANOVA to compare Domestic vs Wild, AFB vs Control, and interaction effects:
+    - Two way ANOVA-like model to compare Domestic vs Wild, AFB vs Control, and interaction effects:
       - Result
         - No significant interaction effects
         - 59 significantly DE miRNAs by type: 21 up-regulated, 38 down-regulated in Domestic
@@ -109,7 +109,7 @@ Differential expression:
             - all miRNAs
             - 59 DE miRNAs by type
             - 27 DE miRNAs by treatment
-    - Pairwise comparison of Domestic vs Wild using only Control birds:
+    - Pairwise model to compare Domestic vs Wild using only Control birds:
     - Result
       - 60 significantly DE miRNAs by type: 21 up-regulated, 39 down-regulated in Domestic
     - Tables of test results/adjusted p-values
