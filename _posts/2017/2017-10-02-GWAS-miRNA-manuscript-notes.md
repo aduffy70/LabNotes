@@ -71,7 +71,7 @@ Identifying miRNAs in the miRNA-seq data and generating expression data:
       - Align trimmed reads to the genome.
       - Look for stacks of aligned reads.
       - Extract the genomic sequence surrounding each stack and attempt to fold it into a precursor miRNA hairpin structure.
-      - hairpins are checked to see if they match one of the "known" turkey miRNAs
+      - hairpins are checked to see if they match one of the "known" turkey miRNAs and similarity to known miRNAs from other taxa is used to help score matches.
       - Returns information about 3 categories of precursor miRNAs:
         - 339 "Novel" - precursor miRNAs with mature miRNAs present in the dataset but that don't match any of the provided precursor miRNAs. mirdeep2 doesn't provide expression data for these, so we used miRExpress to generate readcounts.
         - 191 "Detected" - precursor miRNAs with mature miRNAs present in the dataset and that match one of the provided precursor miRNAs. We used the expression data provided by mirdeep2.
@@ -124,3 +124,37 @@ Differential expression:
         - Expression by sample:
           - all miRNAs
           - 60 DE miRNAs
+
+How does all this compare to the mirdeep2 run where I did not provide any information about "known" miRNAs? I'm worried that giving wrong information about miRNAs may be affecting how potential miRNAs are being scored and may result in underestimates of expression. mirdeep2 allows more "slop" than miRExpress in how stacks are aligned to the expected mature miRNAs but it does still have limits to what it will accept. Using the 513 novel miRNAs identified in all_data_run4 (with no "known" precursors or mature miRNAs) will give results that are unbiased by the process used to generate "known" miRNA sequences.
+
+  * Take the 513 novel precursors and their mature and star sequences from mirdeep2 and get expression data from miRExpress expression data from miRExpress
+    - files are in BigDisc/Analyses/turkey_mirna-seq/mirdeep2_analysis/all_data_run4/mirna_results_31_05_2016_t_12_00_05
+      - precursors: novel_pres_31_05_2016_t_12_00_05_score-50_to_na.fa
+      - 5p mature: novel_mature_31_05_2016_t_12_00_05_score-50_to_na.fa
+      - 3p mature: novel_star_31_05_2016_t_12_00_05_score-50_to_na.fa
+    - These
+  * Compare to previous run. How many of these are the same miRNAs and how do the expression results compare?
+  * miRExpress results for the 513 novel precursors:
+    - Expressed at any level: 332 have -5p and -3p, 181 have only -5p (845 mature miRNAs
+    total)
+  * Use DESeq2 to get normalized counts. We'll use those to filter for presence/absence venns.
+  * Presence/absence Venns
+    - Filter for miRNAs with at least one sample with >=10 reads, and use 10 reads as the cutoff for presence/absence
+    - 364 miRNAs pass 1_with_10 filter
+  * Differential Expression
+    - Use full dataset (845 mature miRNAs). Let DESeq2 do the filtering of low expression miRNAs
+    - Type-treatment analysis:
+      - 56 DE miRNAs in Domestic vs Wild: 20 up, 36 down
+      - 26 DE miRNAs in AFB vs Control: 18 up, 8 down
+      - 0 significant interaction effects
+    - Domestic vs Wild, Control birds only
+      - 61 DE miRNAs: 25 up, 36 down
+  * How do the 513 novel miRNAs compare to the "known" turkey miRNAs?
+   - Compared precursors for 513 novel miRNAs to known precursors. Of the 513 novel precursor miRNAs, 169 are nested in or contain one or more previously known turkey miRNAs (283 of the 590 unique known precursors)
+  * How do the 513 novel miRNAs compare to human, mouse, and chicken miRNAs?
+    - Built a blast database from all hsa, msu, and gga miRNA hairpin sequences in mirbase21 ```makeblastdb -in hsa_mmu_gga_hairpins-mirbase21.fa -out hsa_mmu_gga_hairpins-mirbase21 -dbtype nucl -hash_index```
+    - Blast each novel miRNA against the hsa_msu_gga_hairpins ```blastn -outfmt "7 std gaps" -query 513_novel_precursors_from_mirdeep_run4.fa -db blastdb/hsa_mmu_gga_hairpins-mirbase21 -out blastout.txt```
+      -
+  * Predict targets
+  * Where are they located in the genome? How are they spread acrossed the chromosomes? What proportion are in intergenic regions, and of those in genes, how many are in intron, exon?
+  *
