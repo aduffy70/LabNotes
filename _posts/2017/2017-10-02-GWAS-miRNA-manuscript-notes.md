@@ -156,8 +156,8 @@ How does all this compare to the mirdeep2 run where I did not provide any inform
     - ```makeblastdb -in unique_turkey_and_mirbase21_hsa_mmu_gga_precursors.fa -out unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -dbtype nucl -hash_index```
     - Blast each novel miRNA against the Ensembl, RNACentral and mirBase21 precursors
     - ```blastn -outfmt "7 std gaps" -query 513_novel_precursors_from_mirdeep_run4.fa -db blastdb/unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -out blastout.txt```
-      - 184 of the 513 miRNAs have similarity (escore < 1E-8) to a chicken, human, or mouse precursor. Where there is more than one, the top hit from each taxa are all the same miRNA family. I kept just the top hit from each.
-      - 186 of the 513 miRNAs have similarity to a "known" turkey Ensembl or RNACentral miRNA.
+      - 184 of the 513 miRNAs have similarity (escore < 1E-8) to a chicken, human, or mouse precursor. Where there is more than one, the top hit from each taxa are all the same miRNA family. I kept just the top hit from each. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
+      - 186 of the 513 miRNAs have similarity to a "known" turkey Ensembl or RNACentral miRNA. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate... the 162 here and above is a coincidence--it isn't the exact same set)
   * Predict targets
     - Predicting targets requires accurately annotated 3'UTRs for all genes in the genome. Rather than directly predicting targets in the turkey genome, get the families for each DE miRNA (where one can be determined) and get the list of interacting mRNAs in chicken from Targetscan. Filter the list for just those with cumulative weighted context score <-0.70 and get a list of unique genes that we can use for GO/KEGG analysis.
       - 123 unique genes for the 26 DE AFB vs Control miRNAs
