@@ -152,9 +152,16 @@ How does all this compare to the mirdeep2 run where I did not provide any inform
   * How do the 513 novel miRNAs compare to the "known" turkey miRNAs?
    - Compared precursors for 513 novel miRNAs to known precursors. Of the 513 novel precursor miRNAs, 169 are nested in or contain one or more previously known turkey miRNAs (283 of the 590 unique known precursors)
   * How do the 513 novel miRNAs compare to human, mouse, and chicken miRNAs?
-    - Built a blast database from all hsa, msu, and gga miRNA hairpin sequences in mirbase21 ```makeblastdb -in hsa_mmu_gga_hairpins-mirbase21.fa -out hsa_mmu_gga_hairpins-mirbase21 -dbtype nucl -hash_index```
-    - Blast each novel miRNA against the hsa_msu_gga_hairpins ```blastn -outfmt "7 std gaps" -query 513_novel_precursors_from_mirdeep_run4.fa -db blastdb/hsa_mmu_gga_hairpins-mirbase21 -out blastout.txt```
-      -
+    - Built a blast database from all hsa, msu, and gga miRNA hairpin sequences in mirbase21 and the 590 unique turkey "known" precursors from Ensemble and RNACentral
+    - ```makeblastdb -in unique_turkey_and_mirbase21_hsa_mmu_gga_precursors.fa -out unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -dbtype nucl -hash_index```
+    - Blast each novel miRNA against the Ensembl, RNACentral and mirBase21 precursors
+    - ```blastn -outfmt "7 std gaps" -query 513_novel_precursors_from_mirdeep_run4.fa -db blastdb/unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -out blastout.txt```
+      - 184 of the 513 miRNAs have similarity (escore < 1E-8) to a chicken, human, or mouse precursor. Where there is more than one, the top hit from each taxa are all the same miRNA family. I kept just the top hit from each.
+      - 186 of the 513 miRNAs have similarity to a "known" turkey Ensembl or RNACentral miRNA.
   * Predict targets
+    - Predicting targets requires accurately annotated 3'UTRs for all genes in the genome. Rather than directly predicting targets in the turkey genome, get the families for each DE miRNA (where one can be determined) and get the list of interacting mRNAs in chicken from Targetscan. Filter the list for just those with cumulative weighted context score <-0.70 and get a list of unique genes that we can use for GO/KEGG analysis.
+      - 123 unique genes for the 26 DE AFB vs Control miRNAs
+      - 172 unique genes for the 61 DE Dom vs Wild miRNA in Control only
+      - 163 unique genes for the 56 DE Dom vs Wild in all birds
   * Where are they located in the genome? How are they spread acrossed the chromosomes? What proportion are in intergenic regions, and of those in genes, how many are in intron, exon?
   *
