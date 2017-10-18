@@ -7,7 +7,8 @@ categories:
 ---
 Focusing on control birds and comparing types. Leaving AFB treatment out entirely for this analysis.
 
-Analyses to consider (including items from Kent Reed's turkey mRNA analyses and Jocelyn Cuthbert's bovine miRNA analysis):
+## Analyses to consider (including items from Kent Reed's turkey mRNA analyses and Jocelyn Cuthbert's bovine miRNA analysis):
+
   * Panther overrepresentation tests. Shows GO processes that are enriched (number of DE genes divided by number of expected DE genes). We can't do this directly for miRNAs but could do it for the genes the miRNAs/families have known interactions with in other organisms?
   * Jocelyn used metascape and DAVID (Database for Annotation, Visualization, and Integrated Discovery) to analyze over/under represented GO terms, KEGG pathways, and Reactome pathways.
   * Table of mean quality-trimmed miRNA-seq read counts for all miRNAs. Highlight those below the cutoff for the presence/absence venns
@@ -23,32 +24,33 @@ Analyses to consider (including items from Kent Reed's turkey mRNA analyses and 
   * What are the most highly expressed miRNAs? Are they the same in each type-treatment? What processes are they associated with in other taxa?
   * Distribution of readcounts by miRNA (or histogram of read counts?)
 
-Quality Control and mirdeep2 plots:
+## Quality Control and mirdeep2 plots:
+
   * How many reads per sample before and after trimming?
   * Length distribution of unique reads and total reads? I have this with separate traces for each sample, but perhaps combine into one plot with 2 traces: unique read count and total read count.
   * How many reads mapped to the genome?
 
+## Previously predicted turkey miRNAs:
 
-# Methods
-Previously predicted turkey miRNAs:
-  * There are no turkey miRNAs in miRBase, the repository for experimentally identified precursor and mature miRNAs but there are predicted precursor miRNAs in Ensembl and RNACentral:
-    - Compiled a list of 609 predicted miRNA sequences for turkey from RNACentral (179 sequences) and Ensembl (430 sequences) and filtered for duplicates (identical or nested), resulting in 480 unique precursor miRNA sequences.
+There are no turkey miRNAs in miRBase, the repository for experimentally identified precursor and mature miRNAs but there are predicted precursor miRNAs in Ensembl and RNACentral:
+  * Compiled a list of 609 predicted miRNA sequences for turkey from RNACentral (179 sequences) and Ensembl (430 sequences) and filtered for duplicates (identical or nested), resulting in 480 unique precursor miRNA sequences.
 
-Trimming miRNA-seq reads:
-  * Trimmed Illumina adapter sequences from the 3' end of reads and discarded reads <18bp. Both mapper.pl (from mirdeep2) and fastx_clipper/fastx_collapser gave similar results. Used mapper.pl.
+## Trimming miRNA-seq reads:
 
-Identifying miRNAs in the miRNA-seq data:
-  * We used mirdeep2 to identify miRNAs in the dataset. The program identifies miRNAs by aligning trimmed reads to the genome (Turkey 5.0 assembly GCA_000146605.3), finding stacks of aligned reads, extracting the genomic sequence surrounding each stack and attempting to fold it into a precursor miRNA hairpin structure. The potential precursor miRNAs are scored and filtered based on how well the folded sequence conforms to the expected structure, how closely the stacks of reads align to the expected positions of mature 5p or 3p miRNAs within a hairpin structure, and similarity to known miRNAs of other taxa from miRBase. The program can also use known miRNA sequences from the study taxon to help score potential miRNAs, but including the predicted turkey miRNAs from Ensembl and RNACentral did not result in any additional miRNAs being identified.
-    - 513 putative precursor miRNAs were identified, each with a putative 5p and 3p mature miRNA sequence.
+Trimmed Illumina adapter sequences from the 3' end of reads and discarded reads <18bp. Both mapper.pl (from mirdeep2) and fastx_clipper/fastx_collapser gave similar results. Used mapper.pl.
 
-Differential expression
+## Identifying miRNAs in the miRNA-seq data:
+
+We used mirdeep2 to identify miRNAs in the dataset. The program identifies miRNAs by aligning trimmed reads to the genome (Turkey 5.0 assembly GCA_000146605.3), finding stacks of aligned reads, extracting the genomic sequence surrounding each stack and attempting to fold it into a precursor miRNA hairpin structure. The potential precursor miRNAs are scored and filtered based on how well the folded sequence conforms to the expected structure, how closely the stacks of reads align to the expected positions of mature 5p or 3p miRNAs within a hairpin structure, and similarity to known miRNAs of other taxa from miRBase. The program can also use known miRNA sequences from the study taxon to help score potential miRNAs, but including the predicted turkey miRNAs from Ensembl and RNACentral did not result in any additional miRNAs being identified.
+  * 513 putative precursor miRNAs were identified, each with a putative 5p and 3p mature miRNA sequence.
+
+## Expression analysis
+
   * Take the 513 novel precursors and their mature and star sequences from mirdeep2 and get expression data from miRExpress expression data from miRExpress
     - files are in BigDisc/Analyses/turkey_mirna-seq/mirdeep2_analysis/all_data_run4/mirna_results_31_05_2016_t_12_00_05
       - precursors: novel_pres_31_05_2016_t_12_00_05_score-50_to_na.fa
       - 5p mature: novel_mature_31_05_2016_t_12_00_05_score-50_to_na.fa
       - 3p mature: novel_star_31_05_2016_t_12_00_05_score-50_to_na.fa
-    - These
-  * Compare to previous run. How many of these are the same miRNAs and how do the expression results compare?
   * miRExpress results for the 513 novel precursors:
     - Expressed at any level: 332 have -5p and -3p, 181 have only -5p (845 mature miRNAs
     total)
@@ -68,17 +70,25 @@ Differential expression
       - 0 significant interaction effects
     - Domestic vs Wild, Control birds only
       - 61 DE miRNAs: 25 up, 36 down
-  * How do the 513 novel miRNAs compare to human, mouse, and chicken miRNAs?
-    - Built a blast database from all hsa, msu, and gga miRNA hairpin sequences in mirbase21 and the 590 unique turkey "known" precursors from Ensemble and RNACentral
-    - ```makeblastdb -in unique_turkey_and_mirbase21_hsa_mmu_gga_precursors.fa -out unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -dbtype nucl -hash_index```
-    - Blast each novel miRNA against the Ensembl, RNACentral and mirBase21 precursors
-    - ```blastn -outfmt "7 std gaps" -query 513_novel_precursors_from_mirdeep_run4.fa -db blastdb/unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -out blastout.txt```
-      - 184 of the 513 miRNAs have similarity (escore < 1E-8) to a chicken, human, or mouse precursor. Where there is more than one, the top hit from each taxa are all the same miRNA family. I kept just the top hit from each. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
-      - 186 of the 513 miRNAs have similarity to a "known" turkey Ensembl or RNACentral miRNA. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate... the 162 here and above is a coincidence--it isn't the exact same set)
-  * Predict targets
-    - Predicting targets requires accurately annotated 3'UTRs for all genes in the genome. Rather than directly predicting targets in the turkey genome, get the families for each DE miRNA (where one can be determined) and get the list of interacting mRNAs in chicken from Targetscan. Filter the list for just those with cumulative weighted context score <-0.70 and get a list of unique genes that we can use for GO/KEGG analysis.
-      - 123 unique genes for the 26 DE AFB vs Control miRNAs
-      - 172 unique genes for the 61 DE Dom vs Wild miRNA in Control only
-      - 163 unique genes for the 56 DE Dom vs Wild in all birds
-  * Where are they located in the genome? How are they spread acrossed the chromosomes? What proportion are in intergenic regions, and of those in genes, how many are in intron, exon?
-  *
+
+## Compare putative turkey miRNAs to human, mouse, and chicken miRNAs
+
+  * Built a blast database (on the workstation) from all hsa, msu, and gga miRNA hairpin sequences in mirbase21 and the 590 unique turkey "known" precursors from Ensemble and RNACentral
+~~~
+makeblastdb -in unique_turkey_and_mirbase21_hsa_mmu_gga_precursors.fa -out unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -dbtype nucl -hash_index
+~~~
+  * Blast each novel miRNA against the Ensembl, RNACentral and mirBase21 precursors
+~~~
+blastn -outfmt "7 std gaps" -query 513_novel_precursors_from_mirdeep_run4.fa -db blastdb/unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -out blastout.txt
+~~~
+  * 184 of the 513 miRNAs have similarity (escore < 1E-8) to a chicken, human, or mouse precursor. Where there is more than one, the top hit from each taxa are all the same miRNA family. I kept just the top hit from each. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
+  * 186 of the 513 miRNAs have similarity to a "known" turkey Ensembl or RNACentral miRNA. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate... the 162 here and above is a coincidence--it isn't the exact same set)
+
+## Predict targets
+
+Predicting targets requires accurately annotated 3'UTRs for all genes in the genome. Rather than directly predicting targets in the turkey genome, get the families for each DE miRNA (where one can be determined) and get the list of interacting mRNAs in chicken from Targetscan. Filter the list for just those with cumulative weighted context score <-0.70 and get a list of unique genes that we can use for GO/KEGG analysis.
+  * 123 unique genes for the 26 DE AFB vs Control miRNAs
+  * 172 unique genes for the 61 DE Dom vs Wild miRNA in Control only
+  * 163 unique genes for the 56 DE Dom vs Wild in all birds
+
+## Where are they located in the genome? How are they spread acrossed the chromosomes? What proportion are in intergenic regions, and of those in genes, how many are in intron, exon?
