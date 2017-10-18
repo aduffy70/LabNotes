@@ -17,7 +17,11 @@ Analyses to consider (including items from Kent Reed's turkey mRNA analyses and 
   * What proportion of reads mapped to something that we decided was a precursor miRNA? What proportion of known turkey miRNAs were present in our data?
   * What miRNAs can be assigned to known miRNA families? How many are novel?
   * Where in the genome do the miRNAs map?
-
+  * How do the differentially expressed miRNAs relate to miRNAs in other taxa?
+  * What mRNA interactions are known for the expressed miRNAs in other taxa and what processes are those mRNAs involved in?
+  * How are the differentially expressed miRNAs distributed in the genome? Are they randomly distributed or clustered on particular chromosomes?
+  * What are the most highly expressed miRNAs? Are they the same in each type-treatment? What processes are they associated with in other taxa?
+  * Distribution of readcounts by miRNA (or histogram of read counts?)
 
 Quality Control and mirdeep2 plots:
   * How many reads per sample before and after trimming?
@@ -64,8 +68,6 @@ Differential expression
       - 0 significant interaction effects
     - Domestic vs Wild, Control birds only
       - 61 DE miRNAs: 25 up, 36 down
-  * How do the 513 novel miRNAs compare to the "known" turkey miRNAs?
-   - Compared precursors for 513 novel miRNAs to known precursors. Of the 513 novel precursor miRNAs, 169 are nested in or contain one or more previously known turkey miRNAs (283 of the 590 unique known precursors)
   * How do the 513 novel miRNAs compare to human, mouse, and chicken miRNAs?
     - Built a blast database from all hsa, msu, and gga miRNA hairpin sequences in mirbase21 and the 590 unique turkey "known" precursors from Ensemble and RNACentral
     - ```makeblastdb -in unique_turkey_and_mirbase21_hsa_mmu_gga_precursors.fa -out unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -dbtype nucl -hash_index```
