@@ -5,7 +5,7 @@ layout: post
 categories:
   - gsta mirna
 ---
-While working on the GWAS miRNA manuscript I realized the analysis I used to identify GSTA3-related miRNAs was not going to be usable for a broader genome wide association study. For the GSTA3 analysis, it was critical to find every possible miRNA even if it meant also finding many false positives, but I can't justify that for the GWAS analysis. These are notes I started compiling about that GSTA3 analysis. I don't need them mixed in with my GWAS analysis notes, but I also don't want to lose them, so I am putting them here.
+While working on the GWAS miRNA manuscript I realized the analysis I used to identify GSTA3-related miRNAs was not going to be usable for a broader genome wide association study. For the GSTA3 analysis, it was critical to find every possible miRNA even if it meant also finding many false positives, but I can't justify that for the GWAS analysis so I started over. These are notes I started compiling about that more permissive analysis. I don't need them mixed in with my GWAS analysis notes, but I also don't want to lose the info, so I am putting them here.
 
 Completed figures/tables (All based on control birds only):
  * Venn diagram by type. Presence = at least one sample in the type-treatment has 10 or more reads.
