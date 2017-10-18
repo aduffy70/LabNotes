@@ -1,5 +1,5 @@
 ---
-title:  miRNA analysis notes- more permissive analysis
+title:  miRNA analysis notes- overly permissive analysis
 date:  2017-10-18
 layout: post
 categories:
