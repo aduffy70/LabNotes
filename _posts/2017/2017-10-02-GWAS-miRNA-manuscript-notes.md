@@ -15,7 +15,7 @@ Focusing on control birds and comparing types. Leaving AFB treatment out entirel
   * Plot of reads and quality-filtered reads per sample. Barplot means by type-treatment and include error bars for ranges.
   * We know the mRNAs expressed in wild and domestic turkey livers and we know the miRNAs. We can predict miRNA-mRNA interactions. How can we visualize these interactions? Jocelyn used MirNET networks to do this?
   * quality-filtering info. Distribution of read lengths. Proportions filtered at various steps. Jocelyn shows proportions of the longer reads that fell into various categories, but we aren't currently doing anything with reads that weren't processed as miRNAs.
-  * What proportion of reads mapped to something that we decided was a precursor miRNA? What proportion of known turkey miRNAs were present in our data?
+  * What proportion of reads mapped to something that we decided was a precursor miRNA? What proportion of predicted turkey miRNAs were present in our data?
   * What miRNAs can be assigned to known miRNA families? How many are novel?
   * Where in the genome do the miRNAs map?
   * How do the differentially expressed miRNAs relate to miRNAs in other taxa?
@@ -46,12 +46,12 @@ We used mirdeep2 to identify miRNAs in the dataset. The program identifies miRNA
 
 ## Expression analysis
 
-  * Take the 513 novel precursors and their mature and star sequences from mirdeep2 and get expression data from miRExpress expression data from miRExpress
+  * Take the 513 putative precursors and their mature and star sequences from mirdeep2 and get expression data from miRExpress expression data from miRExpress
     - files are in BigDisc/Analyses/turkey_mirna-seq/mirdeep2_analysis/all_data_run4/mirna_results_31_05_2016_t_12_00_05
       - precursors: novel_pres_31_05_2016_t_12_00_05_score-50_to_na.fa
       - 5p mature: novel_mature_31_05_2016_t_12_00_05_score-50_to_na.fa
       - 3p mature: novel_star_31_05_2016_t_12_00_05_score-50_to_na.fa
-  * miRExpress results for the 513 novel precursors:
+  * miRExpress results for the 513 putative precursors:
     - Expressed at any level: 332 have -5p and -3p, 181 have only -5p (845 mature miRNAs
     total)
   * Use DESeq2 to get normalized counts. We'll use those to filter for presence/absence venns.
@@ -73,16 +73,16 @@ We used mirdeep2 to identify miRNAs in the dataset. The program identifies miRNA
 
 ## Compare putative turkey miRNAs to human, mouse, and chicken miRNAs
 
-  * Built a blast database (on the workstation) from all hsa, msu, and gga miRNA hairpin sequences in mirbase21 and the 590 unique turkey "known" precursors from Ensemble and RNACentral
+  * Built a blast database (on the workstation) from all hsa, msu, and gga miRNA hairpin sequences in mirbase21 and the 590 unique turkey predicted precursors from Ensemble and RNACentral
 ~~~
 makeblastdb -in unique_turkey_and_mirbase21_hsa_mmu_gga_precursors.fa -out unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -dbtype nucl -hash_index
 ~~~
-  * Blast each novel miRNA against the Ensembl, RNACentral and mirBase21 precursors
+  * Blast each putative miRNA against the Ensembl, RNACentral and mirBase21 precursors
 ~~~
 blastn -outfmt "7 std gaps" -query 513_novel_precursors_from_mirdeep_run4.fa -db blastdb/unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -out blastout.txt
 ~~~
   * 184 of the 513 miRNAs have similarity (escore < 1E-8) to a chicken, human, or mouse precursor. Where there is more than one, the top hit from each taxa are all the same miRNA family. I kept just the top hit from each. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
-  * 186 of the 513 miRNAs have similarity to a "known" turkey Ensembl or RNACentral miRNA. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate... the 162 here and above is a coincidence--it isn't the exact same set)
+  * 186 of the 513 miRNAs have similarity to a predicted turkey Ensembl or RNACentral miRNA. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate... the 162 here and above is a coincidence--it isn't the exact same set)
 
 ## Predict targets
 
@@ -91,4 +91,7 @@ Predicting targets requires accurately annotated 3'UTRs for all genes in the gen
   * 172 unique genes for the 61 DE Dom vs Wild miRNA in Control only
   * 163 unique genes for the 56 DE Dom vs Wild in all birds
 
-## Where are they located in the genome? How are they spread acrossed the chromosomes? What proportion are in intergenic regions, and of those in genes, how many are in intron, exon?
+## Where are they located in the genome?
+
+  * How are they spread acrossed the chromosomes?
+  * What proportion are in intergenic regions, and of those in genes, how many are in intron, exon?
