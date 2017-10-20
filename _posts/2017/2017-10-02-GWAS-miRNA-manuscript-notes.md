@@ -33,7 +33,7 @@ Focusing on control birds and comparing types. Leaving AFB treatment out entirel
 ## Previously predicted turkey miRNAs:
 
 There are no turkey miRNAs in miRBase, the repository for experimentally identified precursor and mature miRNAs but there are predicted precursor miRNAs in Ensembl and RNACentral:
-  * Compiled a list of 609 predicted miRNA sequences for turkey from RNACentral (179 sequences) and Ensembl (430 sequences) and filtered for duplicates (identical or nested), resulting in 480 unique precursor miRNA sequences.
+  * Compiled a list of 609 predicted miRNA sequences for turkey from RNACentral (179 sequences) and Ensembl (430 sequences). Many are identical or very similar, but I kept duplicates for this analysis.
 
 ## Trimming miRNA-seq reads:
 
@@ -81,7 +81,7 @@ makeblastdb -in unique_turkey_and_mirbase21_hsa_mmu_gga_precursors.fa -out uniqu
 ~~~
 blastn -outfmt "7 std gaps" -query 513_novel_precursors_from_mirdeep_run4.fa -db blastdb/unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -out blastout.txt
 ~~~
-  * 184 of the 513 miRNAs have similarity (escore < 1E-8) to a chicken, human, or mouse precursor. Where there is more than one, the top hit from each taxa are all the same miRNA family. I kept just the top hit from each. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
+  * 184 of the 513 miRNAs have high similarity (escore < 1E-8) to a chicken, human, or mouse precursor. Where there is more than one, the top hit from each taxa are all the same miRNA family. I kept just the top hit from each. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
   * 186 of the 513 miRNAs have similarity to a predicted turkey Ensembl or RNACentral miRNA. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate... the 162 here and above is a coincidence--it isn't the exact same set)
 
 ## Predict targets
