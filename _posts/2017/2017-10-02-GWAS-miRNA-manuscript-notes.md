@@ -75,21 +75,31 @@ We used mirdeep2 to identify miRNAs in the dataset. The program identifies miRNA
 
   * Built a blast database (on the workstation) from all hsa, msu, and gga miRNA hairpin sequences in mirbase21 and the 590 unique turkey predicted precursors from Ensemble and RNACentral
 ~~~
-makeblastdb -in unique_turkey_and_mirbase21_hsa_mmu_gga_precursors.fa -out unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -dbtype nucl -hash_index
+makeblastdb -in all_turkey_and_mirbase21_hsa_mmu_gga_precursors.fa -out all_turkey_and_mirbase21_hsa_mmu_gga_precursors -dbtype nucl -hash_index
 ~~~
   * Blast each putative miRNA against the Ensembl, RNACentral and mirBase21 precursors
 ~~~
-blastn -outfmt "7 std gaps" -query 513_novel_precursors_from_mirdeep_run4.fa -db blastdb/unique_turkey_and_mirbase21_hsa_mmu_gga_precursors -out blastout.txt
+blastn -outfmt "7 std gaps" -query 513_novel_precursors_from_mirdeep_run4.fa -db blastdb/all_turkey_and_mirbase21_hsa_mmu_gga_precursors -out 513_novel_vs_all_turkey_and_mirbase21_hsa_mmu_gga-blastout.txt
 ~~~
-  * 184 of the 513 miRNAs have high similarity (escore < 1E-8) to a chicken, human, or mouse precursor. Where there is more than one, the top hit from each taxa are all the same miRNA family. I kept just the top hit from each. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
-  * 186 of the 513 miRNAs have similarity to a predicted turkey Ensembl or RNACentral miRNA. (162 of the 306 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate... the 162 here and above is a coincidence--it isn't the exact same set)
+  * Filter out blast hits where the alignment doesn't include 90% of the shorter read. We don't want "end overlaps". All accepted alignments had e-score <= 3E-15.
+~~~
+Ok: ----------   Ok: ----------   Ok: ----------   Not Ok: ---------  
+    ----------         ------          ----------               ----------
+~~~
+  * 203 of the 513 miRNAs have high similarity to either a predicted turkey precursor miRNA (from Ensembl or RNACentral) or to a known chicken, human, or mouse precursor miRNA from miRBase (175 of the 307 precursors where at least one of the mature miRNAs has enough expression for DESeq to evaluate).
+    - 181 of the 513 miRNAs have high similarity to a chicken, human, or mouse precursor. (160 of the 307 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
+    - 183 of the 513 miRNAs have similarity to a predicted turkey Ensembl or RNACentral miRNA. (160 of the 307 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
+  * Where there is more than one, the top hit from each taxa are all the same miRNA family. 196 of the 513 miRNAs could be assigned to a miRNA family based on annotations of similar predicted turkey, or known chicken, human, or mouse precursors. (171 of 307 precursors with high enough expression for DESEQ)
 
-## Predict targets
+## Predict targets of of up/down regulated miRNAs
 
 Predicting targets requires accurately annotated 3'UTRs for all genes in the genome. Rather than directly predicting targets in the turkey genome, get the families for each DE miRNA (where one can be determined) and get the list of interacting mRNAs in chicken from Targetscan. Filter the list for just those with cumulative weighted context score <-0.70 and get a list of unique genes that we can use for GO/KEGG analysis.
-  * 123 unique genes for the 26 DE AFB vs Control miRNAs
-  * 172 unique genes for the 61 DE Dom vs Wild miRNA in Control only
-  * 163 unique genes for the 56 DE Dom vs Wild in all birds
+  * 174 unique genes for the 61 DE Dom vs Wild miRNA in Control only
+  * 161 unique genes for the 56 DE Dom vs Wild in all birds
+  * 135 unique genes for the 26 DE AFB vs Control miRNAs in all birds
+
+## DAVID analysis of predicted targets
+  * Use the DAVID conversion tool to convert the gene names to Entrez IDs. It returns Entrez IDs for the genes from several species. For each gene I kept the one for the closest available species (Meleagris, Gallus, Homo). Or should I keep the Homo one wherever possible since it will have more complete annotation and pathway info??
 
 ## Where are they located in the genome?
 
