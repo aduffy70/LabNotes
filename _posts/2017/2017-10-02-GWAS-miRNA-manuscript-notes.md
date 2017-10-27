@@ -84,7 +84,7 @@ blastn -outfmt "7 std gaps" -query 513_novel_precursors_from_mirdeep_run4.fa -db
   * Filter out blast hits where the alignment doesn't include 90% of the shorter read. We don't want "end overlaps". All accepted alignments had e-score <= 3E-15.
 ~~~
 Ok: ----------   Ok: ----------   Ok: ----------   Not Ok: ---------  
-    ----------         ------          ----------               ----------
+.   ----------         ------          ----------               ----------
 ~~~
   * 203 of the 513 miRNAs have high similarity to either a predicted turkey precursor miRNA (from Ensembl or RNACentral) or to a known chicken, human, or mouse precursor miRNA from miRBase (175 of the 307 precursors where at least one of the mature miRNAs has enough expression for DESeq to evaluate).
     - 181 of the 513 miRNAs have high similarity to a chicken, human, or mouse precursor. (160 of the 307 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
@@ -93,13 +93,16 @@ Ok: ----------   Ok: ----------   Ok: ----------   Not Ok: ---------
 
 ## Predict targets of of up/down regulated miRNAs
 
-Predicting targets requires accurately annotated 3'UTRs for all genes in the genome. Rather than directly predicting targets in the turkey genome, get the families for each DE miRNA (where one can be determined) and get the list of interacting mRNAs in chicken from Targetscan. Filter the list for just those with cumulative weighted context score <-0.70 and get a list of unique genes that we can use for GO/KEGG analysis.
-  * 174 unique genes for the 61 DE Dom vs Wild miRNA in Control only
-  * 161 unique genes for the 56 DE Dom vs Wild in all birds
-  * 135 unique genes for the 26 DE AFB vs Control miRNAs in all birds
+Predicting targets requires accurately annotated 3'UTRs for all genes in the genome. Rather than directly predicting targets in the turkey genome, get the families for each DE miRNA (where one can be determined) and get the list of interacting mRNAs in chicken from Targetscan. Filter the list for just those with Total context++ score <-0.70 and Aggregate PCT > 0.3 (if PCT is N/A, don't filter based on PCT - we are less concerned with conservation of target than context) and get a list of unique genes that we can use for GO/KEGG analysis. Compare that list to Kent Reed's mRNA data and filter for just the genes that are also present in turkey liver (present = average reads per type-treatment > 1)
+  * 523 unique genes for the 61 DE Dom vs Wild miRNA in Control only. 324 present in turkey liver.
+  * 488 unique genes for the 56 DE Dom vs Wild in all birds. 295 present in turkey liver.
+  * 318 unique genes for the 26 DE AFB vs Control miRNAs in all birds. 161 present in turkey liver.
 
 ## DAVID analysis of predicted targets
-  * Use the DAVID conversion tool to convert the gene names to Entrez IDs. It returns Entrez IDs for the genes from several species. For each gene I kept the one for the closest available species (Meleagris, Gallus, Homo). Or should I keep the Homo one wherever possible since it will have more complete annotation and pathway info??
+  * Use the DAVID conversion tool to convert the generic gene names to species-specific Entrez IDs. I converted them to Meleagris, Gallus, and Homo so I can compare since Meleagris annotations aren't as good as other species.
+  * For the GO/KEGG enrichment analysis, DAVID compares to a background--all annotated genes for the taxa by default. For comparison, I also used genes that are expressed in turkey liver (from Kent Reed's mRNA data) as a background.
+
+
 
 ## Where are they located in the genome?
 

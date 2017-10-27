@@ -36,7 +36,13 @@ Not all genes are in the database for all taxa. Does it matter if we use the rec
       - 31 have GO annotation in Homo
       - 23 have GO annotation in Gallus
       - 17 have GO annotation in Meleagris
-  * I think I'll have better results if I use the human ortholog of each gene when available. If human isn't available, use chicken, and finally turkey if nothing else is available. The annotations for turkey just aren't good enough.
 
+Which annotations to use?
+  * 1-5 are specific GO Term levels
+  * All includes everything in 1-5
+  * FAT filters out some of the higher levels
+  * Direct only includes the level that was actually annotated in the db and not the higher levels that it belongs to.
+
+When I use Direct very few genes get included in the analysis. FAT includes more and All includes the most. I am going to use ALL.
 
 [1]: https://david.ncifcrf.gov
