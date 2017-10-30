@@ -9,18 +9,15 @@ Focusing on control birds and comparing types. Leaving AFB treatment out entirel
 
 ## Analyses to consider (including items from Kent Reed's turkey mRNA analyses and Jocelyn Cuthbert's bovine miRNA analysis):
 
-  * Panther overrepresentation tests. Shows GO processes that are enriched (number of DE genes divided by number of expected DE genes). We can't do this directly for miRNAs but could do it for the genes the miRNAs/families have known interactions with in other organisms?
-  * Jocelyn used metascape and DAVID (Database for Annotation, Visualization, and Integrated Discovery) to analyze over/under represented GO terms, KEGG pathways, and Reactome pathways.
   * Table of mean quality-trimmed miRNA-seq read counts for all miRNAs. Highlight those below the cutoff for the presence/absence venns
   * Plot of reads and quality-filtered reads per sample. Barplot means by type-treatment and include error bars for ranges.
   * We know the mRNAs expressed in wild and domestic turkey livers and we know the miRNAs. We can predict miRNA-mRNA interactions. How can we visualize these interactions? Jocelyn used MirNET networks to do this?
   * quality-filtering info. Distribution of read lengths. Proportions filtered at various steps. Jocelyn shows proportions of the longer reads that fell into various categories, but we aren't currently doing anything with reads that weren't processed as miRNAs.
   * What proportion of reads mapped to something that we decided was a precursor miRNA? What proportion of predicted turkey miRNAs were present in our data?
   * What miRNAs can be assigned to known miRNA families? How many are novel?
-  * Where in the genome do the miRNAs map?
-  * How do the differentially expressed miRNAs relate to miRNAs in other taxa?
-  * What mRNA interactions are known for the expressed miRNAs in other taxa and what processes are those mRNAs involved in?
-  * How are the differentially expressed miRNAs distributed in the genome? Are they randomly distributed or clustered on particular chromosomes?
+  * How do the miRNAs (and especially the differentially expressed miRNAs) relate to miRNAs in other taxa? Blast against miRBase miRNAs
+  * What mRNA interactions are known for the expressed miRNAs in other taxa and what processes are those mRNAs involved in? Jocelyn used metascape and DAVID (Database for Annotation, Visualization, and Integrated Discovery) to analyze over/under represented GO terms, KEGG pathways, and Reactome pathways for genes that are predicted targets of DE miRNAs.
+  * Where in the genome do the miRNAs map? How are the differentially expressed miRNAs distributed in the genome? Are they randomly distributed or clustered on particular chromosomes? Are they located in intergenic regions? Introns? Exons?
   * What are the most highly expressed miRNAs? Are they the same in each type-treatment? What processes are they associated with in other taxa?
   * Distribution of readcounts by miRNA (or histogram of read counts?)
 
@@ -99,10 +96,19 @@ Predicting targets requires accurately annotated 3'UTRs for all genes in the gen
   * 318 unique genes for the 26 DE AFB vs Control miRNAs in all birds. 161 present in turkey liver.
 
 ## DAVID analysis of predicted targets
-  * Use the DAVID conversion tool to convert the generic gene names to species-specific Entrez IDs. I converted them to Meleagris, Gallus, and Homo so I can compare since Meleagris annotations aren't as good as other species.
-  * For the GO/KEGG enrichment analysis, DAVID compares to a background--all annotated genes for the taxa by default. For comparison, I also used genes that are expressed in turkey liver (from Kent Reed's mRNA data) as a background.
-
-
+  * Use the DAVID conversion tool to convert the generic gene names to species-specific Entrez IDs. I converted them to Meleagris, Gallus, and Homo so I can compare since Meleagris annotations aren't as good as other species. Not proceeding with Homo data... it is just too different from turkey and the Gallus annotations are good enough.
+  * For the GO/KEGG enrichment analysis, DAVID compares to a background. I used 2 backgrounds:
+    * All annotated genes for the taxon (Meleagris for the Meleagris version of the genes and Gallus for the Gallus version)
+    * Just genes that expressed in turkey liver (from Kent Reed's mRNA data) after converting their generic gene names to Gallus and Meleagris species-specific Entrez IDs, since DAVID can't use generic gene names for a background.
+    * So, the four comparisons made were:
+      - Meleagris genes vs Meleagris background
+      - Meleagris genes vs genes expressed in turkey liver (converted to Meleagris-specific Entrez IDs)
+      - Gallus genes vs Gallus background
+      - Gallus genes vs genes expressed in turkey liver (converted to Gallus-specific Entrez IDs)
+  * 58 GO/KEGG terms enriched in all 4 comparisons for Dom vs Wild in Control only
+  * 61 GO/KEGG terms enriched in all 4 comparisons for Dom vs Wild in all birds
+  * 1 GO/KEGG term enriched in all 4 comparisons for AFB vs Control in all birds
+  * I have tables showing enriched terms and for which comparisons they were enriched in my DAVID_summary file.
 
 ## Where are they located in the genome?
 
