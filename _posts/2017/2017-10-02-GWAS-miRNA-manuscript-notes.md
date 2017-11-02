@@ -23,9 +23,9 @@ Focusing on control birds and comparing types. Leaving AFB treatment out entirel
 
 ## Quality Control and mirdeep2 plots:
 
-  * How many reads per sample before and after trimming?
-  * Length distribution of unique reads and total reads? I have this with separate traces for each sample, but perhaps combine into one plot with 2 traces: unique read count and total read count.
-  * How many reads mapped to the genome?
+  * How many reads per sample before and after trimming? I have data for each sample separately in my QC_and_mirdeep_stats.ods, but for all samples combined, there were 167553689 reads before trimming and 107061684 (63.9%) remained after trimming.
+  * Length distribution of unique reads and total reads? I have this with separate traces for each sample, but perhaps combine into one plot with 2 traces: unique read count and total read count. Average read length is 23.7nt and 52.0% of reads are 21-24nt long.
+  * How many reads mapped to the genome? For all samples combined, 30% of trimmed reads mapped to the genome 1-5 times (65% of unique reads).
 
 ## Previously predicted turkey miRNAs:
 
