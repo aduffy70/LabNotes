@@ -16,7 +16,7 @@ Focusing on control birds and comparing types. Leaving AFB treatment out entirel
   * What proportion of reads mapped to something that we decided was a precursor miRNA? What proportion of predicted turkey miRNAs were present in our data?
   * What miRNAs can be assigned to known miRNA families? How many are novel?
   * How do the miRNAs (and especially the differentially expressed miRNAs) relate to miRNAs in other taxa? Blast against miRBase miRNAs
-  * What mRNA interactions are known for the expressed miRNAs in other taxa and what processes are those mRNAs involved in? Jocelyn used metascape and DAVID (Database for Annotation, Visualization, and Integrated Discovery) to analyze over/under represented GO terms, KEGG pathways, and Reactome pathways for genes that are predicted targets of DE miRNAs.
+  * What mRNA interactions are known for the expressed miRNAs in other taxa and what processes are those mRNAs involved in? Jocelyn used metascape and DAVID (Database for Annotation, Visualization, and Integrated Discovery) to analyze overrepresented GO terms, KEGG pathways, and Reactome pathways for genes that are predicted targets of DE miRNAs.
   * Where in the genome do the miRNAs map? How are the differentially expressed miRNAs distributed in the genome? Are they randomly distributed or clustered on particular chromosomes? Are they located in intergenic regions? Introns? Exons?
   * What are the most highly expressed miRNAs? Are they the same in each type-treatment? What processes are they associated with in other taxa?
   * Distribution of readcounts by miRNA (or histogram of read counts?)
@@ -43,7 +43,7 @@ We used mirdeep2 to identify miRNAs in the dataset. The program identifies miRNA
 
 ## Expression analysis
 
-  * Take the 513 putative precursors and their mature and star sequences from mirdeep2 and get expression data from miRExpress expression data from miRExpress
+  * Take the 513 putative precursors and their mature and star sequences from mirdeep2 and get expression data from miRExpress
     - files are in BigDisc/Analyses/turkey_mirna-seq/mirdeep2_analysis/all_data_run4/mirna_results_31_05_2016_t_12_00_05
       - precursors: novel_pres_31_05_2016_t_12_00_05_score-50_to_na.fa
       - 5p mature: novel_mature_31_05_2016_t_12_00_05_score-50_to_na.fa
@@ -114,3 +114,12 @@ Predicting targets requires accurately annotated 3'UTRs for all genes in the gen
 
   * How are they spread acrossed the chromosomes?
   * What proportion are in intergenic regions, and of those in genes, how many are in intron, exon?
+  * Mapping to chromosomes:
+    - Make a conversion table for Genbank accession to refseq accession to chromosome number.
+      - The Turkey 5 assembly report has this info but for all 230000 contigs in the assembly. I wrote a script to filter for just the ones where we identified miRNAs (79 contigs including all chromosomes except 18 and W... which is good since we are using male birds which should all be ZZ)
+    - Write a script to pull all gene and cds annotations for a turkey chromosome. If an miRNA position (use center nucleotide? both ends?) is not contained in a gene classify as "intergenic". If in a gene but not a cds, classify as "intron". If in a cds, classify as "exon".
+      - Can't use gene and cds files from Ensembl--they are for turkey2.01 and I used turkey5 for everything else. Downloaded the annotations for Turkey5 from Genbank and filtered for just protein coding genes and their coding sequences (~18500 genes).
+      - For about 30 miRNAs the status (in or out of gene/cds) would be different depending on whether you used the start, center, or end miRNA position. If any part was in, I called it "in".
+    - Plotted positions on karyogram, colored by intergenic, intron, or exon.
+    - Plotted positions on karyogram, colored by whether they had sufficient expression for DESeQ.
+    - The karyotype figures will only include the 455 miRNAs that map to a known position in a chromosome (CM#s), not the 1 that maps to a scaffold with unknown position in chromosome 1 or the 57 that map to scaffolds that haven't been assigned to a chromosome (ADDD and KN#s).
