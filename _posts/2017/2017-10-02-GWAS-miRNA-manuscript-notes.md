@@ -57,7 +57,7 @@ We used mirdeep2 to identify miRNAs in the dataset. The program identifies miRNA
     - Wald tests with Benjamini-Hochberg adjustment (adjusted p<0.1)
     - Shrinkage estimation of log fold changes to minimize tendency of random variation in miRNAs with very low readcounts from overpowering meaningful variation.
   * Presence/absence Venns
-    - Filter for miRNAs with at least one sample with >=10 reads, and use 10 reads as the cutoff for presence/absence
+    - Filter for miRNAs with at least one sample with >=10 reads, and use 10 reads as the cutoff for presence/absence NO--REDO VENNS WITH JUST MIRNAS THAT PASSED DESEQ'S PREFILTERS
     - 364 miRNAs pass 1_with_10 filter
   * Differential Expression
     - Use full dataset (845 mature miRNAs). Let DESeq2 do the filtering of low expression miRNAs
