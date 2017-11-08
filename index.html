@@ -6,12 +6,12 @@ layout: default
 
 <div class="PageNavigation">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">&laquo; Page {{ paginator.previous_page }}</a>
+    <a href="{{ paginator.previous_page_path  | prepend: site.baseurl}}" class="previous">&laquo; Page {{ paginator.previous_page}}</a>
   {% else %}
     <span class="previous">&nbsp;</span>
   {% endif %}
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Page {{ paginator.next_page }}  &raquo;</a>
+    <a href="{{ paginator.next_page_path  | prepend: site.baseurl}}" class="next">Page {{ paginator.next_page }}  &raquo;</a>
   {% else %}
     <span class="next">&nbsp;</span>
   {% endif %}
@@ -35,12 +35,12 @@ layout: default
 
 <div class="PageNavigation">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">&laquo; Page {{ paginator.previous_page }}</a>
+    <a href="{{ paginator.previous_page_path  | prepend: site.baseurl}}" class="previous">&laquo; Page {{ paginator.previous_page }}</a>
   {% else %}
     <span class="previous">&nbsp;</span>
   {% endif %}
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Page {{ paginator.next_page }}  &raquo;</a>
+    <a href="{{ paginator.next_page_path  | prepend: site.baseurl}}" class="next">Page {{ paginator.next_page }}  &raquo;</a>
   {% else %}
     <span class="next">&nbsp;</span>
   {% endif %}
