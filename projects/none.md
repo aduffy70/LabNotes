@@ -60,7 +60,7 @@ title: Project-None
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
       </h1>
       <p class="post-meta-path">atom ~/Dropbox/LabNotes/{{ post.path }}</p>
-      <p class="post-meta">Created: <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time> &nbsp;&nbsp; Updated: {{ post.last_modified | date: "%b %-d, %Y" }} &nbsp;&nbsp; {{ post.categories | join: ', ' }}</p>
+      <p class="post-meta"> <a href="{{ post.path | prepend: 'https://github.com/aduffy70/LabNotes/commits/master/' }}">Revision history on GitHub</a> &nbsp;&nbsp; Created: <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time></p>
     </header>
     <div class="post-content" itemprop="articleBody">
       {{ post.content }}

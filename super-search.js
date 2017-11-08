@@ -79,14 +79,13 @@ MIT Licensed
 		if (matchingPosts.length && currentResultHash !== lastSearchResultHash) {
 			searchResultsEl.innerHTML = matchingPosts.map(function (post) {
 				d = new Date(post.pubDate);
-				md = new Date(post.modDate);
                 if (post.categories == "[object Object]") {
                     cats = " ";
                 }
                 else {
                     cats = post.categories;
                 }
-				return '<article class="post" itemscope itemtype="http://schema.org/BlogPosting"> <header class="post-header"> <h1 class="post-title" itemprop="name headline"> <a href="' + post.link + '">' + post.title + '</a></h1><p class="post-meta-path">atom ~/Dropbox/LabNotes/' + post.filepath + '</p><p class="post-meta">Created: ' + d.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '&nbsp;&nbsp; Updated: ' +  md.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '&nbsp;&nbsp; ' + cats + '</p></header><div class="post-content" itemprop="articleBody">' + post.description + '</div> </article>';
+				return '<article class="post" itemscope itemtype="http://schema.org/BlogPosting"> <header class="post-header"> <h1 class="post-title" itemprop="name headline"> <a href="' + post.link + '">' + post.title + '</a></h1><p class="post-meta-path">atom ~/Dropbox/LabNotes/' + post.filepath + '</p><p class="post-meta"><a href="https://github.com/aduffy70/LabNotes/commits/master/' + post.filepath + '">Revision history on GitHub</a> &nbsp;&nbsp; Created: ' + d.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '&nbsp;&nbsp; ' + cats + '</p></header><div class="post-content" itemprop="articleBody">' + post.description + '</div> </article>';
 			}).join('');
             searchResultsEl.innerHTML = '<p class="search-result-message">' + matchingPosts.length.toString() +  ' results for "' + currentInputValue + '": </p>' + searchResultsEl.innerHTML;
 		}
