@@ -14,11 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: eLab Notebook
-email: a.duffy@aggiemail.usu.edu
 description: Research records and notes
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://lab.aduffy70.org" # the base hostname & protocol for your site
-image_path: "/assets/"
+baseurl: "/LabNotes" # the subpath of your site, e.g. /blog
+image_path: "/LabNotes/assets/"
 
 # Build settings
 markdown: kramdown
@@ -29,6 +27,7 @@ exclude:
   - _tools/*
   - Gemfile
   - Gemfile.lock
+  - README.md
 
 # Pagination stuff
 gems: [jekyll-paginate]

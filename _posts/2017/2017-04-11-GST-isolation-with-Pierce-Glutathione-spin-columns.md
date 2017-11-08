@@ -48,4 +48,4 @@ We have bands at 26kDa indicating we DID capture GSTs and less background than t
 [1]: https://drive.google.com/file/d/0B0DnkQIRAeIINWhaXzIzN2hkTFE/view?usp=sharing
 [2]: https://drive.google.com/open?id=1G8fhYLR94R9xw4rQQ-DeS5o0aTYLqgB8tXIOPKq6_vs
 [3]: http://www.biochemsoctrans.org/content/ppbiost/15/4/721.full.pdf
-[image1]: {{site.url }}/assets/GST_extraction_SDS-PAGE_2017-04-21edit.JPG
+[image1]: {{site.baseurl }}/assets/GST_extraction_SDS-PAGE_2017-04-21edit.JPG

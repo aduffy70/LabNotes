@@ -7,5 +7,5 @@ permalink: /search/
   <input type="text" placeholder="Search..." class="super-search__input" id="js-super-search__input" autofocus>
 </div>
 <div class="super-search__results" id="js-super-search__results"></div>
-<script src="/super-search.js"></script>
-<script>superSearch({ searchFile: '{{site.baseurl}}/feed.xml' });</script>
+<script src="{{ site.baseurl | append: '/super-search.js' }}"></script>
+<script>superSearch({ searchFile: '{{ site.baseurl }}/feed.xml' });</script>
