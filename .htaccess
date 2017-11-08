@@ -1,5 +1,0 @@
-AuthType Basic
-AuthName "Password Protected Area"
-AuthUserFile /home/aduffy/.htpasswd
-Require valid-user
-
