@@ -1,5 +1,5 @@
 ---
-title:  GrTS Talking science with folks who arent scientists
+title:  GrTS Talking science with folks who aren't scientists
 date:  2017-02-01
 layout: post
 categories:
