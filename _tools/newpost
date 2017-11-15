@@ -1,0 +1,20 @@
+#! /bin/bash
+# newpost.sh
+# Creates a new elab post with today's date, a given title, and a list of all
+# categories so I can just delete unneeded ones (should help avoid typos).
+
+CATEGORIES=$(cat $HOME/.labnotes/_tools/categories.txt)
+POSTFOLDER="$HOME/.labnotes/_posts/"
+CURRENTDATE=$(date +%Y-%m-%d)
+CURRENTYEAR=$(date +%Y)
+TITLE=$@
+CLEANTITLE=${TITLE//-/ }
+FILENAME=$POSTFOLDER/$CURRENTYEAR/$CURRENTDATE-$TITLE.md
+touch $FILENAME
+echo "---" > $FILENAME
+echo "title: " $CLEANTITLE >> $FILENAME
+echo "date: " $CURRENTDATE >> $FILENAME
+echo "layout: post" >> $FILENAME
+echo "categories:" >> $FILENAME
+echo -e "$CATEGORIES" >> $FILENAME
+echo "---" >> $FILENAME

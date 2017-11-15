@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<h1>Project: {{ page.title }} &nbsp;&nbsp; - &nbsp;&nbsp; {{ site.categories[page.category] | size }} posts</h1>
+{% for post in site.categories[page.category] %}
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+      </h1>
+      <p class="post-meta-path">atom ~/.labnotes/{{ post.path }}</p>
+      <p class="post-meta">Created: <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time> &nbsp;&nbsp; Updated: {{ post.last_modified | date: "%b %-d, %Y" }} &nbsp;&nbsp; {{ post.categories | join: ', ' }}</p>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+      {{ post.content }}
+    </div>
+  </article>
+{% endfor %}

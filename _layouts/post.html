@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class="PageNavigation">
+  {% if page.next.url %}
+    <a class="prev" href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
+  {% else %}
+    <span class="prev">&nbsp;</span>
+  {% endif %}
+  {% if page.previous.url %}
+    <a class="next" href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
+  {% else %}
+    <span class="next">&nbsp;</span>
+  {% endif %}
+</div>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta-path">atom ~/.labnotes/{{ page.path }}</p>
+    <p class="post-meta">Created: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> &nbsp;&nbsp; Updated: {{ page.last_modified | date: "%b %-d, %Y" }} &nbsp;&nbsp; {{ page.categories | join: ', ' }}</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+</article>
+
+<div class="PageNavigation">
+  {% if page.next.url %}
+    <a class="prev" href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
+  {% else %}
+    <span class="prev">&nbsp;</span>
+  {% endif %}
+  {% if page.previous.url %}
+    <a class="next" href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
+  {% else %}
+    <span class="next">&nbsp;</span>
+  {% endif %}
+</div>

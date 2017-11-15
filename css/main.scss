@@ -1,0 +1,593 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$base-font-size:   13px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+$code-font-size:   $base-font-size * 0.875;
+
+$horizontal-spacing-unit:     30px;
+$vertical-spacing-unit:       10px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// Minima also includes a mixin for defining media queries.
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $horizontal-spacing-unit / 2;
+//         padding-left: $horizontal-spacing-unit / 2;
+//     }
+// }
+
+// Import partials from the `minima` theme.
+//@import "minima";
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+//From minima/_base:
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Basic styling
+ */
+body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $vertical-spacing-unit;
+}
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $horizontal-spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $base-font-weight;
+}
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &:visited {
+        color: $brand-color;
+    }
+
+    &:hover {
+        color: darken($brand-color, 15%);
+        text-decoration: underline;
+    }
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $horizontal-spacing-unit / 2;
+    font-size: $base-font-size;
+    font-style: none;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: $code-font-size;
+    line-height: $base-line-height * 0.9;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: $grey-color-light;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 1px 5px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$horizontal-spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$horizontal-spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $horizontal-spacing-unit;
+    padding-left: $horizontal-spacing-unit;
+    @extend %clearfix;
+}
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/**
+ * Icons
+ */
+.icon > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+
+    path {
+        fill: $grey-color;
+    }
+}
+
+//From minima/_layout:
+
+/**
+ * Site header
+ */
+.site-header {
+    border-top: 5px solid $grey-color-dark;
+    border-bottom: 1px solid $grey-color-light;
+    min-height: 45px;
+
+    // Positioning context for the mobile navigation icon
+    position: relative;
+}
+
+.site-title {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 45px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+
+    &,
+    &:visited {
+        color: $grey-color-dark;
+    }
+}
+
+.site-nav {
+    float: right;
+    line-height: 45px;
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
+
+        // Gaps between nav items, but not on the last one
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    @include media-query($on-palm) {
+        position: absolute;
+        top: 9px;
+        right: $horizontal-spacing-unit / 2;
+        background-color: $background-color;
+        border: 1px solid $grey-color-light;
+        border-radius: 5px;
+        text-align: right;
+
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+
+            > svg {
+                width: 18px;
+                height: 15px;
+
+                path {
+                    fill: $grey-color-dark;
+                }
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 5px 10px;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+/**
+ * Site footer
+ */
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+    padding: $vertical-spacing-unit 0;
+}
+
+.footer-col-wrapper {
+    font-size: $base-font-size;
+    color: $grey-color;
+    @extend %clearfix;
+}
+
+.footer-col {
+    float: left;
+}
+
+.footer-col-1,
+.footer-col-2 {
+    width: 50%;
+}
+
+.footer-col-2 {
+    text-align: right;
+}
+
+.footer-col-2 a {
+    color: $grey-color;
+    text-decoration: none;
+
+    &:visited {
+        color: $grey-color;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@include media-query($on-palm) {
+    .footer-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$horizontal-spacing-unit} / 2));
+        width:         calc(100% - (#{$horizontal-spacing-unit} / 2));
+    }
+}
+
+/**
+ * Page content
+ */
+.page-content {
+    padding: $vertical-spacing-unit 0;
+}
+
+.page-heading {
+    font-size: 24px;
+}
+
+.post {
+    padding-top: $vertical-spacing-unit;
+    padding-bottom: $vertical-spacing-unit;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: 0;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+    line-height: 1;
+}
+
+.post-meta-path {
+    font-size: $small-font-size;
+    color: $grey-color;
+    line-height: 1;
+
+}
+
+.post-link {
+    display: block;
+    font-size: 20px;
+}
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $vertical-spacing-unit;
+    margin-top:    $vertical-spacing-unit;
+}
+
+.post-title {
+    font-size: 24px;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.post-content {
+    margin-bottom: $vertical-spacing-unit;
+
+    h1 {
+        font-size: 20px
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 11px;
+        font-weight: bold;
+    }
+}
+
+//From minima/_syntax_highlighting
+
+/**
+ * Syntax highlighting styles
+ */
+.highlight {
+    background: #fff;
+    @extend %vertical-rhythm;
+
+    .highlighter-rouge & {
+      background: $grey-color-light;
+    }
+
+    .c     { color: #998; font-style: italic } // Comment
+    .err   { color: #a61717; background-color: #e3d2d2 } // Error
+    .k     { font-weight: bold } // Keyword
+    .o     { font-weight: bold } // Operator
+    .cm    { color: #998; font-style: italic } // Comment.Multiline
+    .cp    { color: #999; font-weight: bold } // Comment.Preproc
+    .c1    { color: #998; font-style: italic } // Comment.Single
+    .cs    { color: #999; font-weight: bold; font-style: italic } // Comment.Special
+    .gd    { color: #000; background-color: #fdd } // Generic.Deleted
+    .gd .x { color: #000; background-color: #faa } // Generic.Deleted.Specific
+    .ge    { font-style: italic } // Generic.Emph
+    .gr    { color: #a00 } // Generic.Error
+    .gh    { color: #999 } // Generic.Heading
+    .gi    { color: #000; background-color: #dfd } // Generic.Inserted
+    .gi .x { color: #000; background-color: #afa } // Generic.Inserted.Specific
+    .go    { color: #888 } // Generic.Output
+    .gp    { color: #555 } // Generic.Prompt
+    .gs    { font-weight: bold } // Generic.Strong
+    .gu    { color: #aaa } // Generic.Subheading
+    .gt    { color: #a00 } // Generic.Traceback
+    .kc    { font-weight: bold } // Keyword.Constant
+    .kd    { font-weight: bold } // Keyword.Declaration
+    .kp    { font-weight: bold } // Keyword.Pseudo
+    .kr    { font-weight: bold } // Keyword.Reserved
+    .kt    { color: #458; font-weight: bold } // Keyword.Type
+    .m     { color: #099 } // Literal.Number
+    .s     { color: #d14 } // Literal.String
+    .na    { color: #008080 } // Name.Attribute
+    .nb    { color: #0086B3 } // Name.Builtin
+    .nc    { color: #458; font-weight: bold } // Name.Class
+    .no    { color: #008080 } // Name.Constant
+    .ni    { color: #800080 } // Name.Entity
+    .ne    { color: #900; font-weight: bold } // Name.Exception
+    .nf    { color: #900; font-weight: bold } // Name.Function
+    .nn    { color: #555 } // Name.Namespace
+    .nt    { color: #000080 } // Name.Tag
+    .nv    { color: #008080 } // Name.Variable
+    .ow    { font-weight: bold } // Operator.Word
+    .w     { color: #bbb } // Text.Whitespace
+    .mf    { color: #099 } // Literal.Number.Float
+    .mh    { color: #099 } // Literal.Number.Hex
+    .mi    { color: #099 } // Literal.Number.Integer
+    .mo    { color: #099 } // Literal.Number.Oct
+    .sb    { color: #d14 } // Literal.String.Backtick
+    .sc    { color: #d14 } // Literal.String.Char
+    .sd    { color: #d14 } // Literal.String.Doc
+    .s2    { color: #d14 } // Literal.String.Double
+    .se    { color: #d14 } // Literal.String.Escape
+    .sh    { color: #d14 } // Literal.String.Heredoc
+    .si    { color: #d14 } // Literal.String.Interpol
+    .sx    { color: #d14 } // Literal.String.Other
+    .sr    { color: #009926 } // Literal.String.Regex
+    .s1    { color: #d14 } // Literal.String.Single
+    .ss    { color: #990073 } // Literal.String.Symbol
+    .bp    { color: #999 } // Name.Builtin.Pseudo
+    .vc    { color: #008080 } // Name.Variable.Class
+    .vg    { color: #008080 } // Name.Variable.Global
+    .vi    { color: #008080 } // Name.Variable.Instance
+    .il    { color: #099 } // Literal.Number.Integer.Long
+}
+
+/* super-search
+Author: Kushagra Gour (http://kushagragour.in)
+MIT Licensed
+*/
+
+.super-search {
+  margin-bottom: $vertical-spacing-unit;
+
+  h1 {
+      font-size: 20px
+  }
+
+  h2 {
+      font-size: 17px;
+  }
+
+  h3 {
+      font-size: 14px;
+  }
+
+  h4 {
+      font-size: 11px;
+      font-weight: bold;
+  }
+}
+
+.super-search__input {
+  margin: $vertical-spacing-unit 0;
+  font-size: 14px;
+  width: 45%;
+  border: 1px solid $grey-color;
+  padding: $vertical-spacing-unit;
+}
+
+.search-result-message {
+  font-size: 14px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.search-no-result-message {
+  font-size: 14px;
+  color: #F00;
+}
+//My additions:
+
+.PageNavigation {
+  font-size: $small-font-size;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a, .PageNavigation span {
+  display: block;
+  width: 50%;
+  float: left;
+}
+
+.PageNavigation .next {
+  text-align: right;
+}
+
+
+table, td, th {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+table {
+    margin: auto;
+    margin-bottom: $vertical-spacing-unit;
+}
+
+td, th {
+  padding-right: 7px;
+  padding-left: 7px;
+  vertical-align: top;
+}
