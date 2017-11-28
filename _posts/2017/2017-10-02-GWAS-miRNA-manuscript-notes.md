@@ -57,8 +57,8 @@ We used mirdeep2 to identify miRNAs in the dataset. The program identifies miRNA
     - Wald tests with Benjamini-Hochberg adjustment (adjusted p<0.1)
     - Shrinkage estimation of log fold changes to minimize tendency of random variation in miRNAs with very low readcounts from overpowering meaningful variation.
   * Presence/absence Venns
-    - Filter for miRNAs with at least one sample with >=10 reads, and use 10 reads as the cutoff for presence/absence NO--REDO VENNS WITH JUST MIRNAS THAT PASSED DESEQ'S PREFILTERS
-    - 364 miRNAs pass 1_with_10 filter
+    - Presence = type-treatment mean >=3.5 (>=14 normalized reads in a type-treatment. This gives very similar results as DESeq2's filters:
+    - 418 mature miRNAs (from 307 precursors) pass DESeq filters in Dom vs Wild or AFB vs Control. 426 mature miRNAs (from 314 precursors) pass the >=3.5 filter. 831 of 845 mature miRNAs have the same status in both (pass both filters or don't pass both filters.)
   * Differential Expression
     - Use full dataset (845 mature miRNAs). Let DESeq2 do the filtering of low expression miRNAs
     - Type-treatment analysis:
