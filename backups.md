@@ -57,6 +57,7 @@ mv ~/Downloads/takeout* ~/Backups/Gmail/
   * Backup VPCsim site on crozier
 
 ~~~
+mkdir Backups/crozier.$(date +%Y%m%d)
 tar czf Backups/crozier.$(date +%Y%m%d)/public_html5.tgz public_html5/
 ~~~
 
