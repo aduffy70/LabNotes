@@ -20,13 +20,11 @@ The test reaction cuts with a methylation sensitive restriction enzyme first.
 | High amplification | Low amplification  | High amplification |
 | Low Ct | High Ct (big delta Ct) | Low Ct (small delta Ct) |
 
-At small delta Ct values, small changes in delta Ct correspond to big differences in % methylation.
-
-At hight delta Ct values, even big changes in delta Ct correspond to only small differences in % methylation
-
-That means we can probably more accurately detect differences when methylation is low (e.g., the difference between samples that measure 90% and 100% methylation probably isn't real, but the difference between samples that measure 10% and 20% probably is.)
-
-That also means variation in replicate Ct values used to calculate delta Cts creates more uncertainty at lower delta Ct values.
+Relationship between delta Ct and % methylation:
+  * At small delta Ct values, small increases in delta Ct correspond to big decreases in % methylation.
+  * At high delta Ct values, even big increases in delta Ct correspond to only small decreases in % methylation
+  * That means we can probably more accurately detect differences when methylation is low (e.g., the difference between samples that measure 90% and 100% methylation probably isn't real, but the difference between samples that measure 10% and 20% probably is.)
+  * That also means variation in replicate Ct values used to calculate delta Cts creates more uncertainty at lower delta Ct values.
 
 ![Plot of relationship between deltaCt and % methylation][image1]
 
