@@ -116,7 +116,7 @@ tar -cvpjf fiddleheadBackup-archives/Dropbox_Backup$(date +%Y%m%d).tar.bz fiddle
 #! /bin/bash
 # make_backup.sh
 # Backs up my home folder to my second drive
-rsync -qaz --delete --exclude=".gvfs/" --exclude="Box/" --exclude="Shares" /home/aduffy /media/aduffy/BACKPACK/rsyncbackup/ ;
+rsync -qaz --delete --exclude=".gvfs/" --exclude="Shares" --exclude=".dbus" --exclude=".cache" /home/aduffy /media/aduffy/BACKPACK/rsyncbackup/ ;
 eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome-session)/environ)";
 notify-send -i stock_new-appointment "Local backup complete..." ;
 ~~~
@@ -133,7 +133,7 @@ notify-send -i stock_new-appointment "Local backup complete..." ;
 # Backs up critical subfolders of my home folder to a server in another building
 
 # Let's do everything rather than just specific folders
-rsync -azq -e "ssh -p port" --delete --exclude=".ssh/" --exclude="Shares" --exclude=".smbcredentials" /home/aduffy/ <user@ip:/home/aduffy/fiddleheadBackup-rsync/ ;
+rsync -azq -e "ssh -p port" --delete --exclude=".ssh/" --exclude="Shares" --exclude=".smbcredentials" --exclude=".dbus" --exclude=".cache" /home/aduffy/ <user@ip:/home/aduffy/fiddleheadBackup-rsync/ ;
 
 eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome-session)/environ)";
 notify-send -i stock_new-appointment "Offsite backup complete..." ;
