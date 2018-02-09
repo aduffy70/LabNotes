@@ -52,34 +52,58 @@ Structure
       - 92-100 (Ln>-674): Did sporophyte assigned to all three clusters.
   * Combine runs to get a mean (and min/max) probability of assignment to crepidomanes for each run.
     * Non-Crep (always <10% Crep)- 13 samples: S02, 11, 18, 23, 26, 29, 30, 31, 50, 51, 52, 53, 54
-    * Mixed-mostly-Crep (50-90% Crep) - 9 samples: S05, 14, 17, 22, 28, 34, 36, 37, 39
-    * Mixed - 10 samples: S01, 07, 12, 13, 19, 20, 21, 25, 32, 49
+    * Mixed/Uncertain - 19 samples: S01, S05, 07, 12, 13, 14, 17, 19, 20, 21, 22, 25, 28, 32, 34, 36, 37, 39, 49
     * Crep (>90% crep)- 22 samples: S03, 04, 06, 08, 09, 10, 15, 16, 24, 27, 33, 35, 38, 40, 41, 42, 43, 44, 45, 46, 47, 48
+  * If I remove all of the loci present in the 13 non-Crep samples, those 13 samples drop out of the dataset, but 9 others are left with <10% of the total loci.
+    - Possible explanations:
+      1. These could be entirely Crepidomanes samples that just have low locus coverage, and these loci are Crepidomanes-specific loci.
+      2. These 9 samples could be mixed samples but mostly non-Crepidomanes so they just don't have many loci left after removing the non-Crepidomanes signal. But these few loci left are  Crepidomanes-specific loci.
+      3. But it is also possible that these are mostly or entirely non-Crepidomanes samples and the few remaining loci are non-Crepidomanes loci that happened not to be present in the 13 non-Crep samples. Leaving these samples and their loci in for further analysis results in these samples tending to be grouped together on longer than normal branches, suggesting this is the case.
+    - I am going to remove these samples and all their loci too. This is the more conservative choice if I am trying to remove all non-Crepidomanes signal from my dataset. If I am wrong and these are really Crepidomanes samples/loci, I've lost 9 samples but they wouldn't have placed reliably anyway due to their low locus counts and I'm only losing a few loci since they have so few to start with. Dropping these samples with the lowest locus coverage will reduce the missing data in my dataset making my overall analysis more robust.
 
+Non-Crep (22 samples):
+  * always <10% Crep:
+    - S02, 11, 18, 23, 26, 29, 30, 31, 50, 51, 52, 53, 54
+  * <10% of loci after filtering:
+    - S01, 19, 20, 22, 25, 27, 32, 45, 49
+Mixed/uncertain (12 samples):
+  * S05, 07, 12, 13, 14, 17, 21, 28, 34, 36, 37, 39
+Crep (20 samples):
+  * S03, 04, 06, 08, 09, 10, 15, 16, 24, 33, 35, 38, 40, 41, 42, 43, 44, 46, 47, 48
 
-Neighbor joining trees and heatmaps
-  * Plot structure assignments above onto NJS trees
-  * Heatmaps of distance
-  * Heatmaps of distance by allele presence/absence
-  * NJS trees of distance by allele presence/absence
-
-Generate 4 datasets (start with snp6.stru):
-  * Crep_unfiltered: 22 Crep samples with all loci present in 50% (11 samples)
-    - Remove Mixed-mostly-Crep, Mixed, and Non-Crep samples from snp6.stru
-    - Filter for loci present in 11+ samples
-    - 22 samples, 2176 loci
-  * Crep_filtered: 22 Crep samples with Crep-only loci present in 50% (11 samples)
+Generate 3 datasets (start with snp6.stru):
+  * Crep_unfiltered: 20 Crep samples with all loci present in 50% (10 samples)
+    - Remove Mixed and Non-Crep samples from snp6.stru
+    - Filter for loci present in 10+ samples
+    - Filter for variable loci
+    - 20 samples, 2505 loci
+  * Crep_filtered: 20 Crep samples with Crep-only loci present in 50% (10 samples)
     - Remove loci present in Non-Crep samples from snp6.stru
-    - Remove Mixed-mostly-Crep, Mixed, and Non-Crep samples
-    - Filter for loci present in 11+ samples
-    - 22 samples, 2050 loci
-  * Mostly_Crep_filtered: 22 Crep + 9 Mixed-mostly Crep with Crep-only loci present in 50% (16 samples)
-    - Remove loci present in Non-Crep samples from snp6.stru
-    - Remove Mixed, and Non-Crep samples
+    - Remove Mixed and Non-Crep samples
+    - Filter for loci present in 10+ samples
+    - Filter for variable loci
+    - 20 samples, 1920 loci
+  * All_unfiltered: 20 Crep + 12 Mixed/uncertain with all loci present in 50% (16 samples)
+    - Remove Non-Crep samples
     - Filter for loci present in 16+ samples
-    - 31 samples, 242 loci
-  * All_filtered: 22 Crep + 9 Mixed-mostly Crep + 10 Mixed with Crep-only loci present in 50% (21 samples)
+    - Filter for variable loci
+    - 32 samples, 921 loci  
+  * All_filtered: 20 Crep + 12 Mixed/uncertain with Crep-only loci present in 50% (16 samples)
     - Remove loci present in Non-Crep samples from snp6.stru
     - Remove Non-Crep samples
-    - Filter for loci present in 21+ samples
-    - 41 samples, 173 loci
+    - Filter for loci present in 16+ samples
+    - Filter for variable loci
+    - 32 samples, 725 loci
+
+  Neighbor joining trees and heatmaps
+    * Plot structure assignments above onto NJS trees
+    * Heatmaps of distance
+    * Heatmaps of distance by allele presence/absence
+    * NJS trees of distance by allele presence/absence
+
+# Other questions/concerns
+
+  * What about Paul's suggestion that some of the noise in the data could be due to loci from contaminants? BLAST locus consensus sequences? I did this with my npgeno loci. With no fern genomes BLAST is going to find hits in other genomes. How do we decide how much similarity to potential contaminants is too much?
+  * How does distance between samples compare to distance within a sample? For my replicates, what is the distance between each pair? How much of that distance is due to differences that are autapomorphic? How does that compare to the distance between non-replicate pairs? Maybe show some of this by plotting pairwise distances (by what?) and labeling the replicate comparisons.
+  * Perhaps the IBD will show a general trend now that the non-Crep signal is gone?
+  * Now that we have a better idea of Crep vs Mixed vs Non-Crep species assignments for the samples (including considerations of samples with very few loci), go back and see how accurate the PCR-based species ID method worked. Is that something we could propose as a quick species-test for independent gametophytes?
