@@ -54,24 +54,24 @@ Structure
     * Non-Crep (always <10% Crep)- 13 samples: S02, 11, 18, 23, 26, 29, 30, 31, 50, 51, 52, 53, 54
     * Mixed/Uncertain - 19 samples: S01, S05, 07, 12, 13, 14, 17, 19, 20, 21, 22, 25, 28, 32, 34, 36, 37, 39, 49
     * Crep (>90% crep)- 22 samples: S03, 04, 06, 08, 09, 10, 15, 16, 24, 27, 33, 35, 38, 40, 41, 42, 43, 44, 45, 46, 47, 48
-  * If I remove all of the loci present in the 13 non-Crep samples, those 13 samples drop out of the dataset, but 9 others are left with <10% of the total loci.
+  * If I remove all of the loci present in the 13 non-Crep samples, those 13 samples drop out of the dataset, but 7 others are left with <10% of the total loci.
     - Possible explanations:
       1. These could be entirely Crepidomanes samples that just have low locus coverage, and these loci are Crepidomanes-specific loci.
-      2. These 9 samples could be mixed samples but mostly non-Crepidomanes so they just don't have many loci left after removing the non-Crepidomanes signal. But these few loci left are  Crepidomanes-specific loci.
+      2. These 7 samples could be mixed samples but mostly non-Crepidomanes so they just don't have many loci left after removing the non-Crepidomanes signal. But these few loci left are  Crepidomanes-specific loci.
       3. But it is also possible that these are mostly or entirely non-Crepidomanes samples and the few remaining loci are non-Crepidomanes loci that happened not to be present in the 13 non-Crep samples. Leaving these samples and their loci in for further analysis results in these samples tending to be grouped together on longer than normal branches, suggesting this is the case.
-    - I am going to remove these samples and all their loci too. This is the more conservative choice if I am trying to remove all non-Crepidomanes signal from my dataset. If I am wrong and these are really Crepidomanes samples/loci, I've lost 9 samples but they wouldn't have placed reliably anyway due to their low locus counts and I'm only losing a few loci since they have so few to start with. Dropping these samples with the lowest locus coverage will reduce the missing data in my dataset making my overall analysis more robust.
+    - I am going to remove these samples and all their loci too. This is the more conservative choice if I am trying to remove all non-Crepidomanes signal from my dataset. If I am wrong and these are really Crepidomanes samples/loci, I've lost 7 samples but they wouldn't have placed reliably anyway due to their low locus counts and I'm only losing a few loci since they have so few to start with. Dropping these samples with the lowest locus coverage will reduce the missing data in my dataset making my overall analysis more robust.
 
-Non-Crep (22 samples):
+Non-Crep (20 samples):
   * always <10% Crep:
     - S02, 11, 18, 23, 26, 29, 30, 31, 50, 51, 52, 53, 54
   * <10% of loci after filtering:
-    - S01, 19, 20, 22, 25, 27, 32, 45, 49
-Mixed/uncertain (12 samples):
-  * S05, 07, 12, 13, 14, 17, 21, 28, 34, 36, 37, 39
+    - S01, 19, 22, 27, 32, 45, 49
+Mixed/uncertain (14 samples):
+  * S05, 07, 12, 13, 14, 17, 20, 21, 25, 28, 34, 36, 37, 39
 Crep (20 samples):
   * S03, 04, 06, 08, 09, 10, 15, 16, 24, 33, 35, 38, 40, 41, 42, 43, 44, 46, 47, 48
 
-Generate 3 datasets (start with snp6.stru):
+Generate 4 datasets (start with snp6.stru):
   * Crep_unfiltered: 20 Crep samples with all loci present in 50% (10 samples)
     - Remove Mixed and Non-Crep samples from snp6.stru
     - Filter for loci present in 10+ samples
@@ -82,18 +82,18 @@ Generate 3 datasets (start with snp6.stru):
     - Remove Mixed and Non-Crep samples
     - Filter for loci present in 10+ samples
     - Filter for variable loci
-    - 20 samples, 1920 loci
-  * All_unfiltered: 20 Crep + 12 Mixed/uncertain with all loci present in 50% (16 samples)
-    - Remove Non-Crep samples
-    - Filter for loci present in 16+ samples
+    - 20 samples, 1954 loci
+  * All_unfiltered: 20 Crep + 14 Mixed/uncertain with all loci present in 50% (17 samples)
+    - Remove Non-Crep samples from snp6.stru
+    - Filter for loci present in 17+ samples
     - Filter for variable loci
-    - 32 samples, 921 loci  
-  * All_filtered: 20 Crep + 12 Mixed/uncertain with Crep-only loci present in 50% (16 samples)
+    - 34 samples, 632 loci  
+  * All_filtered: 20 Crep + 14 Mixed/uncertain with Crep-only loci present in 50% (17 samples)
     - Remove loci present in Non-Crep samples from snp6.stru
     - Remove Non-Crep samples
-    - Filter for loci present in 16+ samples
+    - Filter for loci present in 17+ samples
     - Filter for variable loci
-    - 32 samples, 725 loci
+    - 34 samples, 516 loci
 
   Neighbor joining trees and heatmaps
     * Plot structure assignments above onto NJS trees
@@ -107,3 +107,10 @@ Generate 3 datasets (start with snp6.stru):
   * How does distance between samples compare to distance within a sample? For my replicates, what is the distance between each pair? How much of that distance is due to differences that are autapomorphic? How does that compare to the distance between non-replicate pairs? Maybe show some of this by plotting pairwise distances (by what?) and labeling the replicate comparisons.
   * Perhaps the IBD will show a general trend now that the non-Crep signal is gone?
   * Now that we have a better idea of Crep vs Mixed vs Non-Crep species assignments for the samples (including considerations of samples with very few loci), go back and see how accurate the PCR-based species ID method worked. Is that something we could propose as a quick species-test for independent gametophytes?
+  * Questions/ideas from looking at the old npgeno analysis:
+    - I split my loci 3-ways:
+      - Loci with no heterozygosity (only AA and aa genotypes).
+      - Loci with the maximum possible heterozygosity (only AA and Aa genotypes).
+      - Loci with all 3 genotypes present (AA, Aa, and aa)
+    - The distance tree for all loci looks very much like my current distance tree. The V.bos samples and mixed/uncertain samples are separate on long branches, and the Crepidomanes samples are clustered on short branches.
+    - The tree for MaxHet loci looks like a star--all signal is lost.
