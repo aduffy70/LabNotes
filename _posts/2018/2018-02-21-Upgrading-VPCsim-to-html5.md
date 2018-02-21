@@ -48,4 +48,4 @@ Starting a new project:
 Uncaught TypeError: WEBAudio.audioContext.listener.setVelocity is not a function
 ~~~
 
-    - It looks like this is due to changes in WebGL's API that Unity's player has not kept up with. The recommendations were to update the app to use an even newer version of Unity and to accept that keeping a Unity-based WebGL game working in all browsers will take ongoing maintenance. So even if I get it working today, it may break again tomorrow...
+  * It looks like this is due to changes in WebGL's API that Unity's player has not kept up with. The recommendations were to update the app to use an even newer version of Unity and to accept that keeping a Unity-based WebGL game working in all browsers will take ongoing maintenance. So even if I get it working today, it may break again tomorrow.
