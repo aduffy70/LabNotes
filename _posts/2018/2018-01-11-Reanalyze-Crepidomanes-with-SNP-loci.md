@@ -106,11 +106,13 @@ Generate 4 datasets (start with snp6.stru):
   * What about Paul's suggestion that some of the noise in the data could be due to loci from contaminants? BLAST locus consensus sequences? I did this with my npgeno loci. With no fern genomes BLAST is going to find hits in other genomes. How do we decide how much similarity to potential contaminants is too much?
   * How does distance between samples compare to distance within a sample? For my replicates, what is the distance between each pair? How much of that distance is due to differences that are autapomorphic? How does that compare to the distance between non-replicate pairs? Maybe show some of this by plotting pairwise distances (by what?) and labeling the replicate comparisons.
   * Perhaps the IBD will show a general trend now that the non-Crep signal is gone?
+  * If there is no IBD trend acrossed the entire landscape, consider whether there is a trend within smaller geographic areas (just within Southern Illinois or just moving around the plateau at Pound's hollow, for example. I have clusters of geographic distances. Does it make sense to look at only the smallest distance cluster comparisons... all comparisons where the geographic distance between 2 samples is less than xx km? Or greater than xx km? How does average genetic distance within a sample compare to within a site compare to within a region?)
   * Now that we have a better idea of Crep vs Mixed vs Non-Crep species assignments for the samples (including considerations of samples with very few loci), go back and see how accurate the PCR-based species ID method worked. Is that something we could propose as a quick species-test for independent gametophytes?
   * Questions/ideas from looking at the old npgeno analysis:
     - I split my loci 3-ways:
-      - Loci with no heterozygosity (only AA and aa genotypes).
-      - Loci with the maximum possible heterozygosity (only AA and Aa genotypes).
-      - Loci with all 3 genotypes present (AA, Aa, and aa)
+      - Loci with no heterozygosity (only AA and aa genotypes). These are consistent with what would be expected in haploid gametophytes.
+      - Loci with the maximum possible heterozygosity (only AA and Aa genotypes). These could occur by chance, especially at low minor allele frequencies, but I have many loci that have the maximum possible heterozygosity even when expected heterozygosity is high (i.e., with large minor allele frequencies). This is consistent with what would be expected if some samples have low-level contaminants of other species.
+      - Loci with all 3 genotypes present (AA, Aa, and aa). This is the expected situation, especially when minor allele frequencies are high.
     - The distance tree for all loci looks very much like my current distance tree. The V.bos samples and mixed/uncertain samples are separate on long branches, and the Crepidomanes samples are clustered on short branches.
     - The tree for MaxHet loci looks like a star--all signal is lost.
+    - The tree for HObs0 has better defined groups than my current tree. The samples in the groups are similar, but the ratio of internal branch lengths to tip lengths is higher.
