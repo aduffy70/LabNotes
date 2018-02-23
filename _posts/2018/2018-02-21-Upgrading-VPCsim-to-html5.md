@@ -7,9 +7,9 @@ categories:
 ---
 # Problem
 
-VPCsim uses a Unity plugin that is no longer supported by Chrome or Firefox. I think the only browser still working is Safari.
+VPCsim uses a Unity plugin that is no longer supported by Chrome or Firefox. I think the only browser still working is Safari. Unity has depreciated the webapp and are no longer supporting it.
 
-# Solution
+# Ideas
 
 Unity now has WebGL/html5 options (though only supported as a "preview"?) that should be supported by all browsers. See what is required to update to use that.
 
@@ -44,3 +44,16 @@ Uncaught TypeError: WEBAudio.audioContext.listener.setVelocity is not a function
 ~~~
 
   * It appears this is due to changes in WebGL's API that Unity's player has not kept up with. The recommendations were to try updating to the latest Unity environment and build again, and to accept that keeping a Unity-based WebGL game working in all browsers will take ongoing maintenance. WebGL is not stable, browsers implement it inconsistently, and Unity doesn't fully support it. So even if I get it working today, it will likely break again.
+
+# Solution
+
+I think the most stable option is to convert VPCsim as a downloadable app for osx and windows.
+  * I should still be able to make it communicate with the settings webapp and open browser windows for the setup form and plots.
+  * Instead of launching the simulations from a web page, they would download the app from the web page and then run it on their machine. Instead of launching the simulation in multiple browser windows or tabs to compare multiple simulations, they would run multiple instances of the app on their machine.
+  * Converting the old project will still have the problems listed in the Converting section above so I will create a new project and move my files to it.
+
+## Starting a new project:
+  * Renamed the html5 project I started above as ~/Dev/VPCsim-Unity-app.
+  * Testing the standalone builds:
+    - The basic version with just a character controller script builds and runs fine on OSX.
+    - Need to test opening browser windows and sending data to/from the setup webapp before I spend time remaking the entire simulation system in this new project.
