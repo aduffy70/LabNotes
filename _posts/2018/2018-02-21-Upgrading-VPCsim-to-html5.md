@@ -53,7 +53,7 @@ I think the most stable option is to convert VPCsim as a downloadable app for os
   * Converting the old project will still have the problems listed in the Converting section above so I will create a new project and move my files to it.
 
 ## Starting a new project:
-  * Renamed the html5 project I started above as ~/Dev/VPCsim-Unity-app.
+  * Renamed the html5 project I started above as ~/Dev/VPCsim-Unity-app, initiated a git repo and pushed it to GitHub.
   * Testing the standalone builds:
     - The basic version with just a character controller script builds and runs fine on OSX.
     - Need to test opening browser windows and sending data to/from the setup webapp before I spend time remaking the entire simulation system in this new project.
