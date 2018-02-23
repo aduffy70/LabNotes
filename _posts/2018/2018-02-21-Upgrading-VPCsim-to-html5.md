@@ -18,7 +18,7 @@ Unity now has WebGL/html5 options (though only supported as a "preview"?) that s
   * Made a copy of the VPCsim-Unity folder (~/Dev/VPCsim-Unity-Update) on spore2 so I can test things without breaking the original.
   * Try converting the existing project? Make a new project and copy my files into it? Either way, my files are using APIs that no longer exist and will need to be changed.
 
-## Converting:
+## Converting the existing project:
   * When I open the project it automatically tries to convert things. Afterwards it won't run because of errors:
 
 ~~~
@@ -32,7 +32,7 @@ Warning: Assets/Standard Assets/Character Controllers/Sources/Scripts/ThirdPerso
 
   * These are all scripts built in to Unity--not my custom scripts--so better to start a new project and move my files into it.
 
-## Starting a new project:
+## Starting a new WebGL/html5 project:
   * ~/Dev/VPCsim-Unity-html5
   * Testing the html5 builds:
     - Loaded just my character controller script into an object and built the scene.
@@ -49,10 +49,11 @@ Uncaught TypeError: WEBAudio.audioContext.listener.setVelocity is not a function
 
 I think the most stable option is to convert VPCsim as a downloadable app for osx and windows.
   * I should still be able to make it communicate with the settings webapp and open browser windows for the setup form and plots.
-  * Instead of launching the simulations from a web page, they would download the app from the web page and then run it on their machine. Instead of launching the simulation in multiple browser windows or tabs to compare multiple simulations, they would run multiple instances of the app on their machine.
-  * Converting the old project will still have the problems listed in the Converting section above so I will create a new project and move my files to it.
+  * Instead of launching the simulations from a web page, students would download the app from the web page and then run it on their machine. Instead of launching the simulation in multiple browser windows or tabs to compare multiple simulations, they would run multiple instances of the app on their machine.
+  * Because they will only download an app once (per student or per computer?) instead of downloading a webplayer file multiple times, the server bandwidth requirements might even drop to a level compatible with standard web-hosting services.
+  * Converting the existing project will still have the problems listed above so I will start a new project and move my files to it.
 
-## Starting a new project:
+## Starting a new standalone app project:
   * Renamed the html5 project I started above as ~/Dev/VPCsim-Unity-app, initiated a git repo and pushed it to GitHub.
   * Testing the standalone builds:
     - The basic version with just a character controller script builds and runs fine on OSX.
