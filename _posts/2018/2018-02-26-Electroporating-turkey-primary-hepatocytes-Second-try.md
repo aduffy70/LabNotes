@@ -33,7 +33,7 @@ Constants:
   * Samples were electroporated in the GenePulser XCell using an exponential cycle program.
   * Samples were incubated on ice ~10 minutes after electroporation.
   * Samples were gently pipette mixed in the cuvette and 100uL (~320000 cells) was plated with 200uL Supplemented media in a 48 well plate. In triplicate.
-  * To confirm that vectors are not entering the cells spontaneously, three control samples were not electroporated but otherwise handled identically:
+  * To confirm that vectors are not entering the cells spontaneously, three control samples were not electroporated but otherwise received the same treatment as the electroporated samples:
     - Control 1 - No Vector
     - Control 2 - Low Vector
     - Control 3 - High Vector
