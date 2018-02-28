@@ -116,3 +116,5 @@ Generate 4 datasets (start with snp6.stru):
     - The distance tree for all loci looks very much like my current distance tree. The V.bos samples and mixed/uncertain samples are separate on long branches, and the Crepidomanes samples are clustered on short branches.
     - The tree for MaxHet loci looks like a star--all signal is lost.
     - The tree for HObs0 has better defined groups than my current tree. The samples in the groups are similar, but the ratio of internal branch lengths to tip lengths is higher.
+  * Check out Poptree2 for nj and upgma trees using population allele frequencies as the input data. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2877541/
+  * Do the samples I suspect are mixed have higher estimated error rates than the samples I think are not mixed? A sample mixed at a ratio other than 50:50 would tend to have more loci that don't pass ipyrad's heterozygosity analysis and those minor alleles would then be called as errors.
