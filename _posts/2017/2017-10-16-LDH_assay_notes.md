@@ -1,5 +1,5 @@
 ---
-title:  LDH_assay_notes
+title:  LDH assay notes
 date:  2017-10-16
 layout: post
 categories:
