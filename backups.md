@@ -12,7 +12,11 @@ layout: page
   * Once a month, my active files, less active files, and backup files on fiddlehead are saved to an external drive (CAMEL) that is only connected during this backup process.
   * Once a month, my emails, contacts, and calendar events on Google, my documents on Google Drive, and my VPCsim files on crozier are backed up on fiddlehead (these are the "backup files" referred to above).
   * Once a month, a copy of all Coulombe Lab-related files (from my active files, less active files, and Google Drive) are placed on the Tox Shares drive to provide easy access for labmates.
-  * When Large data files (e.g., high-throughput sequencing data) are received they are saved on fiddlehead, on an external drive attached to transcriptome (BIGDISC) and the wolf-group drive on the University of Utah's CHPC cluster.  Since they are on these external drives and don't get changed, they don't get saved on CAMEL.
+  * When Large data files (e.g., high-throughput sequencing data) are received they are saved:
+    * on fiddlehead
+    * on an external drive attached to transcriptome (BIGDISC)
+    * on the wolf-group drive on the University of Utah's CHPC cluster.  
+  * Since they never change and are already stored in these multiple locations, they are not included in fiddlehead backups to CAMEL.
 
 # Backup process
 
