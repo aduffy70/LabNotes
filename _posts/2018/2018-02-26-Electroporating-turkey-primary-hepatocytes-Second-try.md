@@ -38,3 +38,27 @@ Constants:
     - Control 2 - Low Vector
     - Control 3 - High Vector
   * Plated cells were incubated @37C overnight, media was changed to Definitive media (to remove dead cells and debris) and inspected under the microscope.
+
+# Results
+
+No cells expressed the protein in the Control reactions--good.
+
+Higher vector concentrations worked better than lower.
+
+Higher voltage worked better than lower
+
+Higher capacitance worked better than lower
+
+The high/high/high samples had hundreds of bright glowing points against a weakly glowing background. ~40% of cells were brightly glowing:
+
+![Electroporation sample 8 normal view][image1]
+![Electroporation sample 8 GFP view][image2]
+
+# Next steps
+
+Determine where the point of diminishing returns for vector concentration. Will adding even more vector lead to even more cells expressing the vector or is 10ug/750uL already more than is required to maximize uptake?
+
+Use just the high voltage/high capacitance settings with a range of vector concentrations.
+
+[image1]: {{site.image_path}}Electroporation_Sample_8_normal_view.jpg
+[image2]: {{site.image_path}}Electroporation_Sample_8_GFP_view.jpg
