@@ -51,7 +51,12 @@ Higher capacitance worked better than lower
 
 The high/high/high samples had hundreds of bright glowing points against a weakly glowing background. ~40% of cells were brightly glowing:
 
+Normal view:
+
 ![Electroporation sample 8 normal view][image1]
+
+GFP view:
+
 ![Electroporation sample 8 GFP view][image2]
 
 # Next steps
