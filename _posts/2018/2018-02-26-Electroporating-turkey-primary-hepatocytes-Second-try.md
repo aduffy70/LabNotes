@@ -67,6 +67,15 @@ Use just the high voltage (400V)/high capacitance (950pF) settings with a range 
 
   * Three concentrations of vector (5ug, 10ug or 20ug in 750uL media with 2400000 cells). We would have liked to have gone higher but we didn't have enough vector. This will at least tell us if we are already beyond the optimum or if we still need to go higher.
   * Included a no vector/no electroporation control again but did not include a vector/no electroporation control this time since we already demonstrated that the cells will not take up and express the vector spontaneously with no electroporation.
+  * Process was identical to the last experiment (see "constants" above)
+
+| Sample number | Voltage (V) | Capacitance (uF) | Vector (ug per 750uL sample volume) |
+| ------------- | ----------- | ---------------- | ----------------------------------- |
+| Control  | None | None | None |
+| 1 | 400 | 950 | 5 |
+| 2 | 400 | 950 | 10 |
+| 3 | 400 | 950 | 20 |
+
 
 [image1]: {{site.image_path}}Electroporation_Sample_8_normal_view.jpg
 [image2]: {{site.image_path}}Electroporation_Sample_8_GFP_view.jpg
