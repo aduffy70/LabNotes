@@ -5,15 +5,52 @@ layout: post
 categories:
   - gsta assays
 ---
+# Problem
 
-While working on the quail trapping and bioactivation data, we discovered problems with the spreadsheet for analyzing individual HPLC runs. Now that I have a better understanding of how this type of data should be analyzed, I want to take another look at the chicken trapping and bioactivation runs to see if I can reduce some of the within-Type variation. Also, we were calculating a V128 value (though it was not applicable for many runs that didn't use 128nm AFB as a test value) instead of a kcat.
+While working on the quail trapping and bioactivation data, we discovered problems with the spreadsheet for analyzing individual HPLC runs. Now that I have a better understanding of how this type of data should be analyzed, I want to take another look at the chicken trapping and bioactivation runs to see if I can reduce some of the within-Type variation. Also, we were calculating and analyzing a V128 value (though it was not applicable for many runs that didn't use 128nm AFB as a test value) instead of a kcat.
 
-Still focus just on the 2015 data for the same reasons as last time?  Or load all of the data into the new spreadsheets to see if I can identify why replicates from other years are consistent with each other but not consistent with the replicates from 2015?
+Still focus just on the 2015 data for the same reasons as last time:
+  - They are internally consistent. Multiple runs for the same bird give similar Vmax and Km values. Replicates from other years give very different values.
+  - They are most complete. Three birds of each Type with at least 2 replicate runs per bird. Data from other years don't have as many birds or don't have replicate runs to allow comparing consistency.
 
 Start with the 2015 data and see how much the recalculated values differ from the original values.
 
+# Re-evaluating 2015 runs
+
+## Runs with no AFG spike-in
+
 All of Deepika's runs and the first of Fran's runs use the AFB-gsh peak value directly instead of the AFB-gsh:AFG ratio. Looking at the raw data from the HPLC, there is a peak at 23.7 minutes (our AFG spike-in peak is usually at 24.4 minutes) but the peak areas for this peak double as AFB concentration doubles. If it IS an AFG spike-in it was not spiked in at the same value in each reaction. It can't be used. This affects both L533 runs and one B27 run. The B27 run that was adjusted correctly has similar Vmax and Km values as the one that was not adjusted correctly, so that adjustment may not make much difference--especially since our RRF is so close to 1.0. The Vmax and Kmax values for the two L533 runs are similar to the L529 and L533 runs that were adjusted correctly. I am going to use these 3 "unadjusted" runs as is.
+
+## RRF (CF) values
 
 Fran uses calculated CF values for the first two runs (0.889 and 0.914), then the average of those two CF values (0.902) for 10 runs, and then a new calculated CF value (0.919) for the next last two runs. The values are all similar. Recalculate Vmax, Km, and kcat values for all runs using the average of the three calculated values (0.907). While I am doing that, look for outlier HPLC measurements that may be throwing off calculations.
 
-All of the Vmax and Km values for repeated runs on the same sample are very similar except for L532. The Vmax values are similar but the Km values differ greatly (one is higher than all the other 2015 L-type runs and one is lower). When I initially analyzed this dataset I analyzed it using the average of the two values, just the higher, just the lower, and without L532.  It didn't make a difference in significance but it is an outlier in an otherwise consistent-looking dataset. See if I see any issues with those two analysis spreadsheets?
+## Unusually high variation in Km values for L532 replicates
+
+All of the Vmax and Km values for repeated runs on the same sample are very similar except for L532. The Vmax values are similar but the Km values differ greatly (one is higher than all the other 2015 L-type runs and one is lower). When I initially analyzed this dataset I analyzed it using the average of the two values, just the higher, just the lower, and without L532.  It didn't make a difference in significance but it is an outlier in an otherwise consistent-looking dataset. I don't see any issues with either of those two analyses that could explain the difference and the difference is still there  (though slightly smaller) even after I reanalyze as described below.
+
+## Slope/intercept calculation differences
+
+I can exactly replicate Fran's analyses using my updated HPLC analysis templates with one big difference. She plots all of the replicate activity values when calculating the slopes and intercepts to get Vmax and Km. I have been plotting the mean of the replicate values. This results in slightly different numbers but I know this is the only difference between our analyses because when I use all of the replicate values my Vmax and Km exactly match hers. Using all replicates causes problems if we drop any outlier replicates (which we often do) because then AFB levels with fewer replicates in the final dataset are weighted differently, potentially leading to big shifts in slope and intercept. As I go through each analysis, I need to recalculate using mean activities rather than individual replicate activities.
+
+# Re-analysis plan
+
+So, for each 2015 Chicken bioactivation analysis that has AFG spike-in values:
+  * Add the data to my template and confirm that I can replicate the original results.
+  * Replace the RRF/CF value with the average of the three calculated values (0.907)
+  * Remove any obvious outlier replicate activity levels
+  * Do calculations using mean of replicate activity levels instead of all replicates
+
+For the 3 runs without AFG spike-in values:
+  * Confirm that the starting concentrations, A365 readings, etc look correct.
+  * Remove any obvious outlier replicate activity levels
+  * Do calculations using mean of replicate activity levels instead of all replicates
+
+## How I am defining outliers:
+
+If the activities of two replicate reactions at a given AFB concentration seem more similar than the third, I calculated the difference between the third and the average of the other two. If that difference is >33% of the average of the two similar replicates I call it an outlier and remove it.
+
+## kcat calculation problem
+
+We have been expressing kcat in the wrong units. It is Vmax/amount of enzyme in reaction. We express Vmax in units of nmol/min/mg but we express the amount of enzyme in the reaction in pmol. We need to convert that to nmol so the equation we want is Vmax / (amount of enzyme in reaction * 1000)
+So all of our old kcat values should be multiplied by 1000. Values around 1E-3 to 1E-4 are the old, incorrect values. New values tend to be around 1.
