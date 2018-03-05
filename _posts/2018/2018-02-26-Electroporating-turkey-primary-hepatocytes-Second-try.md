@@ -61,9 +61,9 @@ GFP view:
 
 # Next step - find optimal vector concentration
 
-Determine where the point of diminishing returns for vector concentration. Will adding even more vector lead to even more cells expressing the vector or is 10ug/750uL already more than is required to maximize uptake?
+Determine where the point of diminishing returns is for vector concentration. Will adding even more vector lead to even more cells expressing the vector or is 10ug/750uL already more than is required to maximize uptake?
 
-Use just the high voltage (400V)/high capacitance (950pF) settings with a range of vector concentrations.
+Use just the high voltage (400V)/high capacitance (950uF) settings with a range of vector concentrations.
 
   * Three concentrations of vector (5ug, 10ug or 20ug in 750uL media with 2400000 cells). We would have liked to have gone higher but we didn't have enough vector. This will at least tell us if we are already beyond the optimum or if we still need to go higher.
   * Included a no vector/no electroporation control again but did not include a vector/no electroporation control this time since we already demonstrated that the cells will not take up and express the vector spontaneously with no electroporation.
