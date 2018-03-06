@@ -47,16 +47,16 @@ We have three replicate HPLC runs of F562. Two are very similar but the oldest i
 # Data correction plan
 
 So, for each 2015 Chicken bioactivation analysis that has AFG spike-in values:
-  * Add the data to my template and confirm that I can replicate the original results. This will ensure I am using the right assay concentrations, injection volumens, etc.
+  * Add the AFB-gsh and AFG peak area data to my template and confirm that I can replicate the original results. This will ensure I am using the right assay concentrations, injection volumes, etc.
   * Replace the RRF/CF value with the average of the three calculated values (0.907).
   * Remove any outlier replicate activity levels.
   * Do slope and intercept calculations using mean of replicate activity levels instead of all replicates.
 
 For the runs without AFG spike-in values:
   * Confirm that the starting concentrations, A365 readings, etc look reasonable and that I can replicate the original results.
-  * Replace the AFB-gsh RF value with the average from the seven non-outlier standard runs (1182.1)
-  * Remove any outlier replicate activity levels
-  * Do slope and intercept calculations using mean of replicate activity levels instead of all replicates
+  * Replace the AFB-gsh RF value with the average from the seven non-outlier standard runs (1182.1).
+  * Remove any outlier replicate activity levels.
+  * Do slope and intercept calculations using mean of replicate activity levels instead of all replicates.
 
 ## How I am defining outliers:
 
@@ -67,3 +67,11 @@ If the activities of two replicate reactions at a given AFB concentration seem m
   * Correcting the data did drastically change things.
   * In general, correcting the data slightly reduced the variation between replicates for the same bird.
   * One-way ANOVA still shows now significant differences between chicken Types.
+
+![Chicken Vmax corrections][image1]
+![Chicken Km corrections][image2]
+![Chicken kcat corrections][image3]
+
+[image1]: {{site.image_path}}Chicken_Vmax_corrections.png
+[image2]: {{site.image_path}}Chicken_Km_corrections.png
+[image3]: {{site.image_path}}Chicken_kcat_corrections.png
