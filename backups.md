@@ -8,10 +8,11 @@ layout: page
   * Active files (including my LabNotes) are synced acrossed machines through Dropbox.
   * Less active files and large data files are only on fiddlehead.
   * Every 4 hours, my home drive on fiddlehead (including active files, less active files, backup files, and large data files) is backed up to a second drive in fiddlehead (BACKPACK).
+  * Every 4 hours, a copy of all Coulombe Lab-related files (from my active files and less active files are placed on the Tox Shares drive to provide easy access for labmates.
   * Every night, those same files are backed up to a second machine in a different building (crozier).
   * Once a month, my active files, less active files, and backup files on fiddlehead are saved to an external drive (CAMEL) that is only connected during this backup process.
   * Once a month, my emails, contacts, and calendar events on Google, my documents on Google Drive, and my VPCsim files on crozier are backed up on fiddlehead (these are the "backup files" referred to above).
-  * Once a month, a copy of all Coulombe Lab-related files (from my active files, less active files, and Google Drive) are placed on the Tox Shares drive to provide easy access for labmates.
+  * Once a month, a copy of all Coulombe Lab-related files from Google Drive are placed on the Tox Shares drive to provide easy access for labmates.
   * When Large data files (e.g., high-throughput sequencing data) are received they are saved:
     * on fiddlehead
     * on an external drive attached to transcriptome (BIGDISC)
@@ -28,7 +29,8 @@ layout: page
 
 ### 1) Verify automatic backups
 
-  * Verify that 4 hour backups are working (confirm a recently created/updated file on BACKPACK).
+  * Verify that 4 hour local backups are working (confirm a recently created/updated file on BACKPACK).
+  * Verify that 4 hour Shares backups are working (confirm a recently created/updated file on the Tox Shares drive)
   * Verify that Nightly backups are working (confirm a recently created/updated file on crozier).
 
 ### 2) Backup Google stuff
@@ -92,28 +94,15 @@ tar -cvpjf fiddleheadBackup-archives/Documents_Backup$(date +%Y%m%d).tar.bz fidd
 tar -cvpjf fiddleheadBackup-archives/Dropbox_Backup$(date +%Y%m%d).tar.bz fiddleheadBackup-rsync/Dropbox
 ~~~
 
-### 5) Make stuff available to the lab group
-
-* Make sure fiddlehead is connected to Toxicology Shares (open in Nautilus to connect).
-* Sync current Coulombe Lab projects to Toxicology Shares
-
-~~~
- rsync -azv --delete /home/aduffy/Dropbox/Coulombe_Lab/ /home/aduffy/Shares/Groups/toxicology/Duffy/Coulombe_Lab
-~~~
-
-* If there were changes in the Documents subfolder, sync archived Coulombe Lab projects to Toxicology Shares
-
-~~~
- rsync -azv --delete /home/aduffy/Documents/Coulombe_Lab_archived/ /home/aduffy/Shares/Groups/toxicology/Duffy/Coulombe_Lab_archived
-~~~
-
 # Commands and scripts to support the steps above
 
-  * 4 hour cron job:
+  * Cron jobs for 4 hour and nightly backups:
 
 ~~~
 # m h  dom mon dow   command
 0 */4 * * * /usr/local/bin/make_backup.sh > /dev/null
+1 */4 * * * /usr/local/bin/make_backup-coulombe_lab.sh > /dev/null
+30 2 * * * /usr/local/bin/offsite_backup.sh > /dev/null
 ~~~
 
 ~~~
@@ -125,10 +114,22 @@ eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome
 notify-send -i stock_new-appointment "Local backup complete..." ;
 ~~~
 
-  * Nightly backup cronjob on fiddlehead:
-
 ~~~
-30 2 * * * /usr/local/bin/offsite_backup.sh > /dev/null
+#! /bin/bash
+# make_backup-coulombe_lab.sh
+# Backs up my Coulombe lab current and archived folders to the Shares drive
+# Only writes if I have the Shares drive mounted. Otherwise displays a notification of the failure
+
+if [ -w "/home/aduffy/Shares/Groups/toxicology/Duffy" ] ;
+  then
+    rsync -qaz --delete /home/aduffy/Dropbox/Coulombe_Lab/ /home/aduffy/Shares/Groups/toxicology/Duffy/Coulombe_Lab ;
+    rsync -qaz --delete /home/aduffy/Documents/Coulombe_Lab_archived/ /home/aduffy/Shares/Groups/toxicology/Duffy/Coulombe_Lab_archived ;
+    eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome-session)/environ)";
+    notify-send -i stock_new-appointment "Shares backup complete..." ;
+  else
+    eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome-session)/environ)";
+    notify-send -i stock_new-appointment "BACKUP FAILURE - Shares not mounted?" ;
+fi
 ~~~
 
 ~~~
