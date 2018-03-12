@@ -76,6 +76,9 @@ Use just the high voltage (400V)/high capacitance (950uF) settings with a range 
 | 2 | 400 | 950 | 10 |
 | 3 | 400 | 950 | 20 |
 
+## Results
+
+Only a few (5 or less per well) cells expressed the vector, even at the highest concentration. We were expecting the 10ug level on this run to be comparable to the 10ug level on the previous run and it was much lower so something clearly went wrong. We only had a few ug of the vector we had been using so we mixed it with another tube Sean found. We think it is the same vector, but perhaps it was not stored properly and is degraded. We need to get more of the original vector and retry this experiment.
 
 [image1]: {{site.image_path}}Electroporation_Sample_8_normal_view.jpg
 [image2]: {{site.image_path}}Electroporation_Sample_8_GFP_view.jpg
