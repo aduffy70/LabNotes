@@ -95,11 +95,11 @@ Generate 4 datasets (start with snp6.stru):
     - Filter for variable loci
     - 34 samples, 516 loci
 
-  Neighbor joining trees and heatmaps
-    * Plot structure assignments above onto NJS trees
-    * Heatmaps of distance
-    * Heatmaps of distance by allele presence/absence
-    * NJS trees of distance by allele presence/absence
+Neighbor joining trees and heatmaps
+  * Plot structure assignments above onto NJS trees
+  * Heatmaps of distance
+  * Heatmaps of distance by allele presence/absence
+  * NJS trees of distance by allele presence/absence
 
 # Other questions/concerns
 
