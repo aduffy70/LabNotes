@@ -102,13 +102,13 @@ When I do structure runs on the 4 datasets I get results that suggest I might do
   * Reran structure on snp18, snp27, and snp36 with ancdist turned on to get confidence intervals. 20 runs of each and selected the run from each with highest likelihood.
   * Using those 3 best runs, I assigned samples as follows (and added to the sample_attributes_table.csv as less_cons_structure_id):
     - Non-Crepidomanes (13 samples).
-      - >90% assignment to the sporophyte group (<10% assignment to the non-sporophyte group) on all 3 runs.
+      - \>90% assignment to the sporophyte group (<10% assignment to the non-sporophyte group) on all 3 runs.
       - S02, 11, 18, 23, 26, 29, 30, 31, 50, 51, 52, 53, 54
       - Low-loci (7 samples).
-        - Have <10% of total loci after removing loci present in the 13 non-Crepidomanes samples.
+        - <10% of total loci after removing loci present in the 13 non-Crepidomanes samples.
         - S01, S19, S22, S27, S32, S45, S49
     - Crepidomanes (28 samples).
-      - Have >90% assignment to the non-sporophyte group AND the confidence interval includes 100% and doesn't extend below 80% (<10% assignment to the sporophyte group AND confidence interval includes 0% and doesn't extend above 20%) on all 3 runs.
+      - \>90% assignment to the non-sporophyte group AND the confidence interval includes 100% and doesn't extend below 80% (<10% assignment to the sporophyte group AND confidence interval includes 0% and doesn't extend above 20%) on all 3 runs.
       - S03, S04, (S05), S06, S08, S09, S10, (S14), S15, S16, (S17), S24, (S28), S33, (S34), S35, (S36), (S37), S38, (S39), S40, S41, S42, S43, S44, S46, S47, S48 (samples in parantheses were previously assigned as Mixed)
     - Mixed (6 samples).
       - Don't meet the requirements for the other groups.
