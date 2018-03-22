@@ -32,10 +32,10 @@ I made 4 filtered datasets:
   * snp27 (50% coverage - 69 loci)
   * snp36 (66% coverage - 14 loci)
 
-## Identify likely mixed samples:
+## Identify likely mixed samples - "multiple run variation method"
 
 Structure
-  * For each dataset, find the optimal K. Tested K=1 to 20, with 5 reps each. 100K burnin/250K MCMC.
+  * For each dataset, find the optimal K. Tested K=1 to 20, with 5 reps each. 100K burnin/250K MCMC. K values plateau at 3-4. Using 3 since we are expecting 3 species.
   * For each dataset, do 100 runs at K3 to check for consistency of species assignment.
     - snp18
       - best 1-27 (Ln>-8565): crep = c1+c3. van+did = c2.
@@ -74,46 +74,32 @@ Crep (20 samples):
 
 Generate 4 datasets (start with snp6.stru):
   * Crep_unfiltered: 20 Crep samples with all loci present in 50% (10 samples)
-    - Remove Mixed and Non-Crep samples from snp6.stru
-    - Filter for loci present in 10+ samples
-    - Filter for variable loci
+    - Remove Mixed/Non-Crep/Low-loci samples from snp6.stru, Filter for loci present in 10+ samples, Filter for variable loci
     - 20 samples, 2505 loci
   * Crep_filtered: 20 Crep samples with Crep-only loci present in 50% (10 samples)
-    - Remove loci present in Non-Crep samples from snp6.stru
-    - Remove Mixed and Non-Crep samples
-    - Filter for loci present in 10+ samples
-    - Filter for variable loci
+    - Remove loci present in Non-Crep/Low-loci samples from snp6.stru, Remove Mixed/Non-Crep/Low-loci samples, Filter for loci present in 10+ samples, Filter for variable loci
     - 20 samples, 1954 loci
   * All_unfiltered: 20 Crep + 14 Mixed/uncertain with all loci present in 50% (17 samples)
-    - Remove Non-Crep samples from snp6.stru
-    - Filter for loci present in 17+ samples
-    - Filter for variable loci
+    - Remove Non-Crep/Low-loci samples from snp6.stru, Filter for loci present in 17+ samples, Filter for variable loci
     - 34 samples, 632 loci  
   * All_filtered: 20 Crep + 14 Mixed/uncertain with Crep-only loci present in 50% (17 samples)
-    - Remove loci present in Non-Crep samples from snp6.stru
-    - Remove Non-Crep samples
-    - Filter for loci present in 17+ samples
-    - Filter for variable loci
+    - Remove loci present in Non-Crep/Low-loci samples from snp6.stru, Remove Non-Crep/Low-loci samples, Filter for loci present in 17+ samples, Filter for variable loci
     - 34 samples, 516 loci
-
-Neighbor joining trees and heatmaps
-  * Plot structure assignments above onto NJS trees
-  * Heatmaps of distance
-  * Heatmaps of distance by allele presence/absence
-  * NJS trees of distance by allele presence/absence
 
 When I do structure runs on the 4 datasets I get results that suggest I might do this better another way...
   * Crep_filtered vs Crep_unfiltered gives nearly identical structure assignments. This is good and suggests my Crepidomanes samples really are Crepidomanes, not mixed samples.
   * All_filtered vs All_unfiltered gives very different results. This is expected, since removing the non-Crep loci from mixed samples should make them group differently.
   * Crep_filtered vs All_filtered gives concerning results. In Crep_filtered, the Crep samples get split into 4 groups. In All_filtered, the Crep samples all get lumped into one group and the mixed samples get split between that group and other groups. This suggests that when you add mixed samples the variation in the Crep samples is small compared to the variation among the mixed samples. This would be the expected result if the Crepidomanes part of the mixed samples happened to be more variable than the pure Crepidomanes samples (possible but unlikely), or if we weren't really removing all the Non-Crep loci and the mixed samples are grouping based on the non-Crep signal (more likely).
   * Based on this:
-    * using the Crep_filtered or Crep_unfiltered dataset should be fine. I'll get similar inferences either way. Crep_filtered is more conservative.
-    * Using All_filtered is not good. There is likely non-Crep signal overriding any variation among the Crepidomanes part of the mixed samples.
-    * However, some of the mixed samples DO group with the Crepidomanes samples, suggesting that they may not have the non-Crep signal that the others do. I was very conservative in how I segregated mixed from Crepidomanes samples, and I can redo that in a way that reassigns most of the mixed samples that seem to not have non-Crep signal as Crepidomanes while still assigning the others as mixed samples. Then my Crep_filtered and Crep_unfiltered datasets will have more samples and I focus on them and leave out mixed samples entirely.
+    * using the either the Crep_filtered or Crep_unfiltered dataset should be fine. I'll get similar inferences either way. Crep_filtered is more conservative.
+    * I should not use All_unfiltered (I'd never planned to... I just included it to be able to make these comparisons).
+    * I should not use All_filtered. There is likely non-Crep signal overriding any variation among the Crepidomanes part of the mixed samples.
+    * However, some of the mixed samples DO group with the Crepidomanes samples, suggesting that they may not have the non-Crep signal that the others do. I was very conservative in how I segregated Mixed from Crepidomanes samples (by including results from structure runs with much lower likelihoods than the highest run), and I can redo that in a way that reassigns most of the mixed samples that seem to not have non-Crep signal as Crepidomanes while still assigning the others as mixed samples. Then my Crep_filtered and Crep_unfiltered datasets will have more samples and I focus on them and leave out mixed samples entirely.
 
-Redoing the mixed vs Crepidomanes assignments:
-  * I did this before based on the results of 100 structure runs for snp18, snp27, and snp36. Those 100 runs had a range of different likelihoods and even the lower likelyhood runs were included in my decision making. But I thought I needed those 100 runs to get a feel for the confidence in the group assignments. I don't. I can use the best run from each and use the ancdist confidence intervals from the run. This reassignment reassigns the mixed samples that grouped with the Crepidomanes samples as Crepidomanes while leaving the ones that grouped separately as Mixed.
-  * Reran structure on snp18, snp27, and snp36 with ancdist turned on. 20 runs of each and selected the run from each with highest likelihood.
+## Identify likely mixed samples - "best run confidence interval method"
+
+  * I previously thought I needed to use results from many structure runs to get a feel for the variation in group assignments, so I was combining results from 100 runs with a wide range of likelihoods. As a result, I was overly conservative in deciding which samples were "pure" Crepidomanes. Using the confidence intervals from the best run on each dataset (snp18, snp27, and snp36) will allow me to reassign the mixed samples that grouped with the Crepidomanes samples as Crepidomanes while leaving the ones that grouped separately as Mixed.
+  * Reran structure on snp18, snp27, and snp36 with ancdist turned on to get confidence intervals. 20 runs of each and selected the run from each with highest likelihood.
   * Using those 3 best runs, I assigned samples as follows (and added to the sample_attributes_table.csv as less_cons_structure_id):
     - Non-Crepidomanes (13 samples).
       - >90% assignment to the sporophyte group (<10% assignment to the non-sporophyte group) on all 3 runs.
@@ -122,34 +108,24 @@ Redoing the mixed vs Crepidomanes assignments:
         - Have <10% of total loci after removing loci present in the 13 non-Crepidomanes samples.
         - S01, S19, S22, S27, S32, S45, S49
     - Crepidomanes (28 samples).
-      - Have >90% assignment to the non-sporophyte group (<10% assignment to the sporophyte group) on all 3 runs.
+      - Have >90% assignment to the non-sporophyte group AND the confidence interval includes 100% and doesn't extend below 80% (<10% assignment to the sporophyte group AND confidence interval includes 0% and doesn't extend above 20%) on all 3 runs.
       - S03, S04, (S05), S06, S08, S09, S10, (S14), S15, S16, (S17), S24, (S28), S33, (S34), S35, (S36), (S37), S38, (S39), S40, S41, S42, S43, S44, S46, S47, S48 (samples in parantheses were previously assigned as Mixed)
     - Mixed (6 samples).
       - Don't meet the requirements for the other groups.
       - S07, S12, S13, S20, S21, S25
   * Made 4 new datasets following same process as last time, but with these new assignments:
     - Crep_28_unfiltered: 28 Crep samples with all loci present in 50% (14 samples)
-      - Remove Mixed and Non-Crep samples from snp6.stru
-      - Filter for loci present in 14+ samples
-      - Filter for variable loci
+      - Remove Mixed/Non-Crep/Low-loci samples from snp6.stru, Filter for loci present in 14+ samples, Filter for variable loci
       - 28 samples, 1596 loci
     * Crep_28_filtered: 28 Crep samples with Crep-only loci present in 50% (14 samples)
-      - Remove loci present in Non-Crep samples from snp6.stru
-      - Remove Mixed and Non-Crep samples
-      - Filter for loci present in 14+ samples
-      - Filter for variable loci
+      - Remove loci present in Non-Crep/Low-loci samples from snp6.stru, Remove Mixed/Non-Crep/Low-loci samples, Filter for loci present in 14+ samples, Filter for variable loci
       - 28 samples, 1316 loci
     * All_34_unfiltered: 28 Crep + 6 Mixed/uncertain with all loci present in 50% (17 samples)
-      - Remove Non-Crep samples from snp6.stru
-      - Filter for loci present in 17+ samples
-      - Filter for variable loci
-      - 34 samples, 632 loci  (Note- these changes didn't affect this dataset)
+      - Remove Non-Crep/Low-loci samples from snp6.stru, Filter for loci present in 17+ samples, Filter for variable loci
+      - 34 samples, 632 loci
     * All_34_filtered: 28 Crep + 6 Mixed/uncertain with Crep-only loci present in 50% (17 samples)
-      - Remove loci present in Non-Crep samples from snp6.stru
-      - Remove Non-Crep samples
-      - Filter for loci present in 17+ samples
-      - Filter for variable loci
-      - 34 samples, 516 loci (Note- these changes didn't affect this dataset)
+      - Remove loci present in Non-Crep/Low-loci samples from snp6.stru, Remove Non-Crep/Low-loci samples, Filter for loci present in 17+ samples, Filter for variable loci
+      - 34 samples, 516 loci
 
 # Other questions/concerns
 
