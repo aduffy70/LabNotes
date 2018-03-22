@@ -109,7 +109,7 @@ When I do structure runs on the 4 datasets I get results that suggest I might do
         - S01, S19, S22, S27, S32, S45, S49
     - Crepidomanes (28 samples).
       - \>90% assignment to the non-sporophyte group AND the confidence interval includes 100% and doesn't extend below 80% (<10% assignment to the sporophyte group AND confidence interval includes 0% and doesn't extend above 20%) on all 3 runs.
-      - S03, S04, (S05), S06, S08, S09, S10, (S14), S15, S16, (S17), S24, (S28), S33, (S34), S35, (S36), (S37), S38, (S39), S40, S41, S42, S43, S44, S46, S47, S48 (samples in parantheses were previously assigned as Mixed)
+      - S03, S04, (S05), S06, S08, S09, S10, (S14), S15, S16, (S17), S24, (S28), S33, (S34), S35, (S36), (S37), S38, (S39), S40, S41, S42, S43, S44, S46, S47, S48 (samples in parentheses were previously assigned as Mixed)
     - Mixed (6 samples).
       - Don't meet the requirements for the other groups.
       - S07, S12, S13, S20, S21, S25
@@ -150,8 +150,11 @@ What about Paul's suggestion that some of the noise in the data could be due to 
     - The tree for HObs0 has better defined groups than my current tree. The samples in the groups are similar, but the ratio of internal branch lengths to tip lengths is higher.
 
 ## Treat samples as populations rather than individuals
-  * Check out Poptree2 for nj and upgma trees using population allele frequencies as the input data. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2877541/
-  * Do the samples I suspect are mixed have higher estimated error rates than the samples I think are not mixed? A sample mixed at a ratio other than 50:50 would tend to have more loci that don't pass ipyrad's heterozygosity analysis and those minor alleles would then be called as errors.
+
+  * I am giving up on this for now:
+    - The tools I can find to make distance tables or trees from allele frequency data are designed for microsat or microarray data and don't have a mechanism for handling missing data.
+    - The pool-seq tools assume that a known number of individuals are included in each pool, the number of individuals per pool is consistent, and the the amounts of DNA from each individual has been carefully balanced. My experiment violates all three assumptions--I have an unknown number of individuals in each pool, likely different numbers of individuals in each pool, and the amount of DNA from each individual likely varies drastically.
+  * Something interesting I could still look at: Do the samples I suspect are mixed have higher estimated error rates than the samples I think are not mixed? A sample mixed at a ratio other than 50:50 would tend to have more loci that don't pass ipyrad's heterozygosity analysis and those minor alleles would then be called as errors.
 
 # Problem with my geographic distances in previous IBD analyses
   * Problem with some Illinois sample coordinates: My longitude values were wrong on my Giant City, Little Grand Canyon, Pomona Bridge, and Piney Creek Ravine locations. They all said -88.xxxx when they should be -89.xxxx. It looks like I switched the 89's for 88s when making the table of locations for my dissertation and then used that same table of locations in the npgeno analysis I presented in Washington, DC and everything since. That explains why my IL samples looked farther east than I expected on the map. 4 of the samples should be shifted west by 1 degree. I am fixing it on the maps I am making now and will use the correct locations for the IBD analysis.
