@@ -32,7 +32,7 @@ I made 4 filtered datasets:
   * snp27 (50% coverage - 69 loci)
   * snp36 (66% coverage - 14 loci)
 
-## Identify likely mixed samples - "multiple run variation method"
+## Identify likely mixed samples - OUTDATED "multiple run variation method"
 
 Structure
   * For each dataset, find the optimal K. Tested K=1 to 20, with 5 reps each. 100K burnin/250K MCMC. K values plateau at 3-4. Using 3 since we are expecting 3 species.
@@ -104,28 +104,26 @@ When I do structure runs on the 4 datasets I get results that suggest I might do
     - Non-Crepidomanes (13 samples).
       - \>90% assignment to the sporophyte group (<10% assignment to the non-sporophyte group) on all 3 runs.
       - S02, 11, 18, 23, 26, 29, 30, 31, 50, 51, 52, 53, 54
-      - Low-loci (7 samples).
-        - <10% of total loci after removing loci present in the 13 non-Crepidomanes samples.
-        - S01, S19, S22, S27, S32, S45, S49
-    - Crepidomanes (28 samples).
-      - \>90% assignment to the non-sporophyte group AND the confidence interval includes 100% and doesn't extend below 80% (<10% assignment to the sporophyte group AND confidence interval includes 0% and doesn't extend above 20%) on all 3 runs.
-      - S03, S04, (S05), S06, S08, S09, S10, (S14), S15, S16, (S17), S24, (S28), S33, (S34), S35, (S36), (S37), S38, (S39), S40, S41, S42, S43, S44, S46, S47, S48 (samples in parentheses were previously assigned as Mixed)
-    - Mixed (6 samples).
+    - Crepidomanes (26 samples).
+      - \>90% assignment to the non-sporophyte group AND the confidence interval includes 100% and doesn't extend below 87.5% (<10% assignment to the sporophyte group AND confidence interval includes 0% and doesn't extend above 12.5%) on all 3 runs.
+      - S03, S04, S05, S06, S08, S09, S10, S14, S15, S16, S28, S33, S34, S35, S37, S38, S39, S40, S41, S42, S43, S44, S45, S46, S47, S48
+    - Mixed (15 samples).
       - Don't meet the requirements for the other groups.
-      - S07, S12, S13, S20, S21, S25
+      - S01, S07, S12, S13, S17, S19, S20, S21, S22, S24, S25, S27, S32, S36, S49
+    - Interestingly, these species assignments are all consistent with my PCR results.
   * Made 4 new datasets following same process as last time, but with these new assignments:
-    - Crep_28_unfiltered: 28 Crep samples with all loci present in 50% (14 samples)
-      - Remove Mixed/Non-Crep/Low-loci samples from snp6.stru, Filter for loci present in 14+ samples, Filter for variable loci
-      - 28 samples, 1596 loci
-    * Crep_28_filtered: 28 Crep samples with Crep-only loci present in 50% (14 samples)
-      - Remove loci present in Non-Crep/Low-loci samples from snp6.stru, Remove Mixed/Non-Crep/Low-loci samples, Filter for loci present in 14+ samples, Filter for variable loci
-      - 28 samples, 1316 loci
-    * All_34_unfiltered: 28 Crep + 6 Mixed/uncertain with all loci present in 50% (17 samples)
-      - Remove Non-Crep/Low-loci samples from snp6.stru, Filter for loci present in 17+ samples, Filter for variable loci
-      - 34 samples, 632 loci
-    * All_34_filtered: 28 Crep + 6 Mixed/uncertain with Crep-only loci present in 50% (17 samples)
-      - Remove loci present in Non-Crep/Low-loci samples from snp6.stru, Remove Non-Crep/Low-loci samples, Filter for loci present in 17+ samples, Filter for variable loci
-      - 34 samples, 516 loci
+    - Crep_26_unfiltered: 26 Crep samples with all loci present in >=50%
+      - Remove Mixed/Non-Crep samples from snp6.stru, Filter for loci present in >=50% samples, Filter for variable loci
+      - 26 samples, 2487 loci
+    * Crep_26_filtered: 26 Crep samples with Crep-only loci present in >=50%
+      - Remove loci present in Non-Crep samples from snp6.stru, Remove Mixed/Non-Crep samples, Filter for loci present in >50% samples, Filter for variable loci
+      - 26 samples, 2436 loci
+    * All_41_unfiltered: 26 Crep + 15 Mixed/uncertain with all loci present in >=50%
+      - Remove Non-Crep samples from snp6.stru, Filter for loci present in >=50% samples, Filter for variable loci
+      - 41 samples, 1113 loci
+    * All_41_filtered: 26 Crep + 15 Mixed/uncertain with Crep-only loci present in 50%
+      - Remove loci present in Non-Crep samples from snp6.stru, Remove Non-Crep samples, Filter for loci present in >=50% samples, Filter for variable loci
+      - 41 samples, 1046 loci
 
 # Other questions/concerns
 
@@ -137,7 +135,6 @@ What about Paul's suggestion that some of the noise in the data could be due to 
   * How does distance between samples compare to distance within a sample? For my replicates, what is the distance between each pair? How much of that distance is due to differences that are autapomorphic? How does that compare to the distance between non-replicate pairs? Maybe show some of this by plotting pairwise distances (by what?) and labeling the replicate comparisons.
   * Perhaps the IBD will show a general trend now that the non-Crep signal is gone? Yes... but it disappears when you remove the within-collection pairwise comparisons. Within-collections there is less distance than at larger distance scales. Distances are very similar for within-site, within-region (<100km), and between regions.
   * If there is no IBD trend acrossed the entire landscape, consider whether there is a trend within smaller geographic areas (just within Southern Illinois or just moving around the plateau at Pound's hollow, for example. I have clusters of geographic distances. Does it make sense to look at only the smallest distance cluster comparisons... all comparisons where the geographic distance between 2 samples is less than xx km? Or greater than xx km? How does average genetic distance within a sample compare to within a site compare to within a region?)
-  * Now that we have a better idea of Crep vs Mixed vs Non-Crep species assignments for the samples (including considerations of samples with very few loci), go back and see how accurate the PCR-based species ID method worked. Is that something we could propose as a quick species-test for independent gametophytes?
 
 ## Subdivide loci by which genotypes are present?
   * In the old npgeno analysis I split my loci 3-ways:
