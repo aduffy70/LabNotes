@@ -155,3 +155,6 @@ What about Paul's suggestion that some of the noise in the data could be due to 
 
 # Problem with my geographic distances in previous IBD analyses
   * Problem with some Illinois sample coordinates: My longitude values were wrong on my Giant City, Little Grand Canyon, Pomona Bridge, and Piney Creek Ravine locations. They all said -88.xxxx when they should be -89.xxxx. It looks like I switched the 89's for 88s when making the table of locations for my dissertation and then used that same table of locations in the npgeno analysis I presented in Washington, DC and everything since. That explains why my IL samples looked farther east than I expected on the map. 4 of the samples should be shifted west by 1 degree. I am fixing it on the maps I am making now and will use the correct locations for the IBD analysis.
+
+# Uninformative/autaopomorphic loci?
+  * 878 of my 2436 Crep_26_filtered loci are not informative (they have only 2 genotypes and 1 genotype is only present in 1 sample). I wondered if having all these autapomorphic loci was lengthening the tip branches on my trees and affecting the results. I filtered out those loci and it does make some minor shifts in the tree but the tip branches are just as long relative to the internal branches so it isn't making relationships any more clear. I am leaving those loci in the dataset.

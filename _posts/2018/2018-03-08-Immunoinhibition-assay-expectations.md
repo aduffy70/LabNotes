@@ -26,7 +26,7 @@ But we need to control for two possibilities:
 
 We can control for possibility 1 by treating purified GSTA3 protein with GSTA3 antibody and purified GSTA4 protein with GSTA4 antibody and doing trapping assays/HPLC runs. We will be able to clearly see how well the antibody blocks the target GSTA.
 
-We can control for possibility 2 by running all of our purified GSTA proteins (GSTA1.1, 1.2, 1.3, 2, 3, and 4) on a Western and checking for binding to each of our two antibodies. If the antibody can't bind to a non-target protein than we can assume it doesn't block it either. It is still possible that our antibody blocks a non-GSTA protein that is important for AFB response, but it is unlikely that an antibody would block the target GSTA, not block any of the very similar non-target GSTAs, but still block a more different non-GSTA enzyme.
+We can control for possibility 2 by running all of our purified GSTA proteins (GSTA1.1, 1.2, 1.3, 2, 3, and 4) on a Western and checking for binding to each of our two antibodies. If the antibody can't bind to the non-target GSTA proteins then it is likely that it doesn't block them either. It is still possible that our antibody blocks other non-GSTA proteins that are important for AFB response, but it is unlikely that an antibody would block the target GSTA, not block any of the very similar non-target GSTAs, but still block a more different non-GSTA enzyme.
 
 Once we have controlled for those two possibilities we can do the experiments with cytosols.
 
