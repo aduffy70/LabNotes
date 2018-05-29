@@ -55,16 +55,16 @@ S47 28.551 27.255 24.662
 S48 28.703 27.069 23.084 28.393
 ~~~
 
-The resampled distances are generally smaller, though not near zero and some are similar to the original distances. Because there are different numbers of loci in the ipyrad outputs for the original and resampled data distances are not directly comparable so I plotted the distances against the background distributions of pairwise distances for the non-within-collection samples (which should not have changed much since the reads for those samples did not get touched):
+The resampled distances are generally smaller, though not near zero and some are similar to the original distances. Because there are different numbers of loci in the ipyrad outputs for the original and resampled data distances may not be directly comparable so I plotted the distances against the background distributions of pairwise distances for the non-within-collection samples (which should not have changed much since the reads for those samples did not get touched):
 
 ![Distribution_of_clonal_pairwise_distances][image1]
 
 Plot "a" is the original data and plot "b" is the resampled data. As expected, the curves for the background distributions of non-within-collection sample differences are similar. The difference where the within-clone distances fall relative to the background distributions suggest several things:
 
-  * Several of the within-collection samples are almost certainly not clones
-  * The range of distances in the resampled data where the distances should theoretically all be equal suggest we can't be certain that two pairwise distance just a few distance units (5-6?) apart can't be differentiated from each other.
-  * The values of the distance (that should theoretically all be zero) suggest there is noise in the data and values as high as 23-29 distance units can't be differentiated from zero. So some of the within-collection samples are either clones or so similar we can't differentiate them from clones.
-  * Because the resampled values do cluster at the lower end of distance values I have some confidence that ALL the variation I am seeing is not due to noise. There is signal and I don't have a group of samples that are all genetically identical.
+  * Most of the within-collection samples are probably not clones.
+  * The resampled distances should theoretically be equal but they range over ~6 distance units, suggesting that any two pairwise distances just a few distance units apart can't really be differentiated from each other. This will affect any analysis based on deciding which samples are nearest neighbors--there may be uncertainty.
+  * The values of the resampled distances (that should theoretically all be zero) range from 23-29, suggesting there is noise in the data and values in this range can't be differentiated from zero. So any samples with pairwise distances in this range are either clones or so similar we can't differentiate them from clones.
+  * Because the resampled distances _do_ cluster at the lower end of distance values I have some confidence that most of the variation I am seeing is due to genetic signal and not just due to noise. I was worried that if all my samples were genetically identical I might just be exploring noise--that is not the case.
 
 
 [image1]: {{site.image_path}}Distribution_of_clonal_pairwise_distances.png
