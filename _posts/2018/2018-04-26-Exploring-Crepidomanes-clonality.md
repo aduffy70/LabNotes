@@ -63,8 +63,8 @@ Plot "a" is the original data and plot "b" is the resampled data. As expected, t
 
   * Several of the within-collection samples are almost certainly not clones
   * The range of distances in the resampled data where the distances should theoretically all be equal suggest we can't be certain that two pairwise distance just a few distance units (5-6?) apart can't be differentiated from each other.
-  * The values of the distance (that should theoretically all be zero) suggest there is noise in the data and values as high as 26-29 distance units can't be differentiated from zero. So some of the within-collection samples are either clones or so similar we can't differentiate them from clones.
-  * Because the resampled values do cluster at the lower end of distance values I have some confidence that ALL the variation I am seeing is not due to noise. There is signal.
+  * The values of the distance (that should theoretically all be zero) suggest there is noise in the data and values as high as 23-29 distance units can't be differentiated from zero. So some of the within-collection samples are either clones or so similar we can't differentiate them from clones.
+  * Because the resampled values do cluster at the lower end of distance values I have some confidence that ALL the variation I am seeing is not due to noise. There is signal and I don't have a group of samples that are all genetically identical.
 
 
 [image1]: {{site.image_path}}Distribution_of_clonal_pairwise_distances.png
