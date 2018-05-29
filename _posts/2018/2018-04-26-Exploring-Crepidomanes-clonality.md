@@ -67,4 +67,4 @@ Plot "a" is the original data and plot "b" is the resampled data. As expected, t
   * Because the resampled values do cluster at the lower end of distance values I have some confidence that ALL the variation I am seeing is not due to noise. There is signal.
 
 
-[image1]: {{site.image_path}} Distribution_of_clonal_pairwise_distances.png
+[image1]: {{site.image_path}}Distribution_of_clonal_pairwise_distances.png
