@@ -9,12 +9,12 @@ layout: page
   * Less active files and large data files are only on fiddlehead.
   * Every 4 hours, my home drive on fiddlehead (including active files, less active files, backup files, and large data files) is backed up to a second drive in fiddlehead (BACKPACK).
   * Every 4 hours, a copy of all Coulombe Lab-related files (from my active files and less active files are placed on the Tox Shares drive to provide easy access for labmates.
-  * Every night, those same files are backed up to a second machine in a different building (crozier).
-  * Once a month, my active files, less active files, and backup files on fiddlehead are saved to an external drive (CAMEL) that is only connected during this backup process.
+  * Every night, those same files from the 4 hour backups are backed up to a second machine in a different building (crozier).
+  * Once a month, my active files, less active files, and backup files on fiddlehead are saved to an external drive (CAMEL) that is stored in my locked cabinet and only connected during this backup process.
   * Once a month, my emails, contacts, and calendar events on Google, my documents on Google Drive, and my VPCsim files on crozier are backed up on fiddlehead (these are the "backup files" referred to above).
-  * Once a month, a copy of all Coulombe Lab-related files from Google Drive are placed on the Tox Shares drive to provide easy access for labmates.
+  * Once a month, a copy of all Coulombe Lab-related files from Google Drive are placed on the Tox Shares drive to provide easy access for labmates (they can also access the originals on Google Drive).
   * When Large data files (e.g., high-throughput sequencing data) are received they are saved:
-    * on fiddlehead
+    * on fiddlehead or an external drive in my locked cabinet
     * on an external drive attached to transcriptome (BIGDISC)
     * on the wolf-group drive on the University of Utah's CHPC cluster.  
   * Since they never change and are already stored in these multiple locations, they are not included in fiddlehead backups to CAMEL.
@@ -23,7 +23,7 @@ layout: page
 
 ## 4 hour backups and nightly backups
 
-  Performed automatically by a cron job
+  Performed automatically by cron jobs
 
 ## Monthly backups
 
@@ -159,5 +159,4 @@ rsync -azv --delete /home/aduffy/Backups /media/aduffy/CAMEL/fiddleheadBackup-rs
 rsync -azv --delete /home/aduffy/Dev /media/aduffy/CAMEL/fiddleheadBackup-rsync/ ;
 rsync -azv --delete /home/aduffy/Documents /media/aduffy/CAMEL/fiddleheadBackup-rsync/ ;
 rsync -azv --delete /home/aduffy/Dropbox /media/aduffy/CAMEL/fiddleheadBackup-rsync/ ;
-rsync -azv --delete /home/aduffy/.thunderbird /media/aduffy/CAMEL/fiddleheadBackup-rsync/ ;
 ~~~
