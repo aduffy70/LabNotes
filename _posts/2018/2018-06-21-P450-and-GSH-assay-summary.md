@@ -34,7 +34,7 @@ Conclusions:
 
 Open questions:
 
-  * Can this activity level tell us anything about how much CYP1A2 is present in our cells? No, but if we use purified turkey CYP1A5 to generate a standard curve to convert RLUs to amount of CYP we would be able to say that this level of CYP1A2 activity in our ~150K cells is equivalent to the activity of XX pmols of purified turkey CYP1A2.
+  * Can this activity level tell us anything about how much CYP1A2 is present in our cells? No, but if we use purified turkey CYP1A5 to generate a standard curve to convert RLUs to amount of CYP we would be able to say that this level of CYP1A2 activity in our ~150K cells is equivalent to the activity of XX pmols of purified turkey CYP1A2. __Running assays to generate this RLU to CYP standard curve__
 
 # CYP3A4 assay
 
