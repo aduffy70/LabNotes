@@ -27,6 +27,7 @@ Is AFB-treated different than untreated?
 
 Conclusions:
 
+  * Our hepatocytes have CYP1A2 activity.
   * Any effect of AFB treatment cannot be distinguished from effect of DMSO vehicle, so there does not appear to be a difference in CYP1A2 activity with AFB treatment.
   * Turkey red blood cells do not appear to have CYP1A2 activity, so low levels of RBC contamination in our hepatocytes should not affect results.
   * The CYP1A2 in ~150K cells produces ~5pmols of D-luciferin in 1hr.
@@ -57,6 +58,7 @@ Is AFB-treated different than untreated?
 
 Conclusions:
 
+  * Our hepatocytes have CYP3A4 activity.
   * Any effect of AFB treatment cannot be distinguished from effect of DMSO vehicle, so there does not appear to be a difference in CYP3A4 activity with AFB treatment.
   * Turkey red blood cells have only low levels CYP3A4 activity, so low levels of RBC contamination in our hepatocytes should have little affect on results.
   * The CYP3A4 in ~150K cells produces ~5pmols of D-luciferin in 3hrs.
@@ -89,6 +91,7 @@ Is DMSO control different than untreated?
   * No (p=0.0337) (using p<0.017 cutoff corrected for multiple tests)
 
 Conclusions:
+  * Our hepatocytes contain GSH or GSSG.
   * AFB treatment decreases GSH+GSSG levels
   * The ~150K untreated cells contain ~300 pmols GSH+GSSG whereas the cells after AFB-treatment only contain ~200pmols GSH+GSSG
 
