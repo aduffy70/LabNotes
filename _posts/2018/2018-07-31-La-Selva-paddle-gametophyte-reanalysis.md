@@ -17,7 +17,9 @@ In 2008, I used atpB sequence to try to identify the "paddle gametophytes" from 
 
 ![ML_tree][image1]
 
-  The La Selva gametophyte falls within the _Hymenasplenium_ clade. It is sister to _A. laetum_ (which Robbin confirms is actually a _Hymenasplenium_) in a subclade with _H. hoffmanii_, _H. delitescens_, and _H. triquetrum_. It appears in clades with different combinations of those four species in all bootstrap trees as well. The relationships with _H. hoffmanii_ and _H. delitescens_ should be considered less certain than the others. Those sequences are short (only 382 and 393 of the 1242 bases in the full alignment). In those bases _H. hoffmanii_ differs from the paddle gametophyte at 2 bases and _H. delitescens_ differs at 7 bases. For comparison, only 1 of the 11 _A. laetum_ mismatches is in that section). For _H. hoffmanii_ in particular there is just not enough information to determine whether it is more or less similar to the paddle gametophyte than _A. laetum_ is.
+  The La Selva gametophyte falls within the _Hymenasplenium_ clade. It is sister to _A. laetum_ (which Robbin confirms is actually a _Hymenasplenium_) in a subclade with _H. hoffmanii_, _H. delitescens_, and _H. triquetrum_. It appears in clades with different combinations of those four species in all bootstrap trees as well. This group and its placement relative to the rest of the _Hymenasplenium_ species corresponds to the _H. laetum_ and _H. riparium_ clades in [Xu et al. 2018.][1]
+
+  The relationships with _H. hoffmanii_ and _H. delitescens_ should be considered less certain than the others. Those sequences are short (only 382 and 393 of the 1242 bases in the full alignment). In those bases _H. hoffmanii_ differs from the paddle gametophyte at 2 bases and _H. delitescens_ differs at 7 bases. For comparison, only 1 of the 11 _A. laetum_ mismatches is in that section). For _H. hoffmanii_ in particular there is just not enough information to determine whether it is more or less similar to the paddle gametophyte than _A. laetum_ is. Other likely members of the _H. laetum_ clade for which we have no atpB sequence include _H. purpurascens_, _H. ortegae_, and hybrids between other members of the clade ([Mirakami and Moran 1993][2]).
 
   According to Robbin and Eddie, _A. laetum_ and other _Hymenasplenium_ species are not known to be present at La Selva.
 
@@ -29,3 +31,5 @@ In 2008, I used atpB sequence to try to identify the "paddle gametophytes" from 
 
 [image1]: {{ site.image_path }}La_Selva_Aspleniaceae_phylogeny.png
 [image2]: {{ site.image_path }}La_Selva_relationships_from_ML_bootstraps.jpg
+[1]: https://doi.org/10.1016/j.ympev.2018.05.021
+[2]: https://doi.org/10.2307/2399820
