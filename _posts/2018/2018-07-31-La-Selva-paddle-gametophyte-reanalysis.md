@@ -17,9 +17,9 @@ In 2008, I used atpB sequence to try to identify the "paddle gametophytes" from 
 
 ![ML_tree][image1]
 
-  The La Selva gametophyte falls within the _Hymenasplenium_ clade. It is sister to _A. laetum_ (which Robbin confirms is actually a _Hymenasplenium_) in subclade with _H. hoffmanii_, _H. delitescens_, and _H. triquetrum_. It appears in clades with different combinations of those four species in all bootstrap trees as well.
+  The La Selva gametophyte falls within the _Hymenasplenium_ clade. It is sister to _A. laetum_ (which Robbin confirms is actually a _Hymenasplenium_) in a subclade with _H. hoffmanii_, _H. delitescens_, and _H. triquetrum_. It appears in clades with different combinations of those four species in all bootstrap trees as well.
 
-  According to Robbin and Eddie, A. laetum is not known to be present at La Selva.
+  According to Robbin and Eddie, _A. laetum_ is not known to be present at La Selva.
 
 ![Bootstrapped_relationships][image2]
 
