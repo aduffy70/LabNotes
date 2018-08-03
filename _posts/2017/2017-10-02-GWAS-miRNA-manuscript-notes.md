@@ -54,19 +54,19 @@ We used mirdeep2 to identify miRNAs in the dataset. The program identifies miRNA
   * Use DESeq2 to get normalized counts. We'll use those to filter for presence/absence venns.
     - Normalizes based on total expressed readcounts
     - Independently prefilters data to minimize multiple comparisons
-    - Wald tests with Benjamini-Hochberg adjustment (adjusted p<0.1)
+    - Wald tests with Benjamini-Hochberg adjustment (adjusted p<0.05) (Note, originally used default value of 0.1, but other published miRNAseq papers all seem to use 0.05)
     - Shrinkage estimation of log fold changes to minimize tendency of random variation in miRNAs with very low readcounts from overpowering meaningful variation.
   * Presence/absence Venns
     - Presence = type-treatment mean >=3.5 (>=14 normalized reads in a type-treatment. This gives very similar results as DESeq2's filters:
     - 418 mature miRNAs (from 307 precursors) pass DESeq filters in Dom vs Wild or AFB vs Control. 426 mature miRNAs (from 314 precursors) pass the >=3.5 filter. 831 of 845 mature miRNAs have the same status in both (pass both filters or don't pass both filters.)
   * Differential Expression
     - Use full dataset (845 mature miRNAs). Let DESeq2 do the filtering of low expression miRNAs
-    - Type-treatment analysis:
-      - 56 DE miRNAs in Domestic vs Wild: 20 up, 36 down
-      - 26 DE miRNAs in AFB vs Control: 18 up, 8 down
+    - Type-treatment analysis (BH adjusted p<0.05) (Note-these were higher but I was using p<0.1 and no LFC cutoff):
+      -  32 DE miRNAs in Domestic vs Wild:
+        - 18 with LFC>=1: 4 up, 14 down
+      - 21 DE miRNAs in AFB vs Control
+        - 13 with LFC>=1: 11 up, 2 down
       - 0 significant interaction effects
-    - Domestic vs Wild, Control birds only
-      - 61 DE miRNAs: 25 up, 36 down
 
 ## Compare putative turkey miRNAs to human, mouse, and chicken miRNAs
 
@@ -86,7 +86,7 @@ Ok: ----------   Ok: ----------   Ok: ----------   Not Ok: ---------
   * 203 of the 513 miRNAs have high similarity to either a predicted turkey precursor miRNA (from Ensembl or RNACentral) or to a known chicken, human, or mouse precursor miRNA from miRBase (175 of the 307 precursors where at least one of the mature miRNAs has enough expression for DESeq to evaluate).
     - 181 of the 513 miRNAs have high similarity to a chicken, human, or mouse precursor. (160 of the 307 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
     - 183 of the 513 miRNAs have similarity to a predicted turkey Ensembl or RNACentral miRNA. (160 of the 307 precursors where at least one of the miRNAs has enough expression for DESEQ to evaluate)
-  * Where there is more than one, the top hit from each taxa are all the same miRNA family. 196 of the 513 miRNAs could be assigned to a miRNA family based on annotations of similar predicted turkey, or known chicken, human, or mouse precursors. (171 of 307 precursors with high enough expression for DESEQ)
+  * Where there is more than one, the top hit from each taxa are all the same miRNA family. 196 of the 513 miRNAs could be assigned to a miRNA faqmily based on annotations of similar predicted turkey, or known chicken, human, or mouse precursors--the other 7 of the 203 match to Ensembl miRNAs that don't have annotated miRNA family. (171 of 307 precursors with high enough expression for DESEQ)
 
 ## Predict targets of of up/down regulated miRNAs
 
