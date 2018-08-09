@@ -41,14 +41,27 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
   * Calculate reads per million mapped reads (PMMR) and filter out putative miRNAs with PMMR<5.0.
     - 299 mature miRNAs from 218 precursors (81 with 5p & 3p expression, 137 with only 5p)
 
-## Compare precursors to known miRNAs to identify
+## Compare precursors to known miRNAs to identify miRNA families
   * Get fasta sequences for the 218 precursors (using my BioinformaticScraps filterfasta.py)
   * Build blast db of predicted Ensembl and RNACentral turkey miRNAs and mirbase22 avian, mouse, and human miRNAs
   * Blast 218 PMMR5 precursors against the db and non-matching against ALL mirbase22 precursors for all species. Then, for all without matches that allow assigning to a family, use Turkey BLAT to look for annotations for that position in the genome and Blastn against nr to look for similarity to DNA/RNA from any organism
-    - 163 assigned to family (full length alignments--most are exact--and escore <1e20).
-    - 37 don't have evidence that they are NOT miRNAs - possible novel turkey miRNAs.
-    - 18 are likely repeat elements, mtRNAs, mRNAs, other ncRNA.
-  * 200 (163+37) likely precursor miRNAs continuing on to further analysis
+    - 163 assigned to family (full length alignments--most are exact--and escore <1e20). Keep
+    - 18 are likely repeat elements, mtRNAs, mRNAs, other ncRNA. Discard
+    - 24 have only weak mirdeep2 support (mirdeep score<10) and are likely mirdeep false positives. Discard
+    - 13 don't have evidence that they are NOT miRNAs and have higher mirdeep2 support (mirdeep scores<75) - possible novel turkey miRNAs. Keep with miRNA family as "Novel-1"  through "Novel-13"
+  * 176 likely precursor miRNAs continuing on to further analysis (163 assigned to a miRNA family + 13 possibly novel to turkey)
 
 ## Differential expression analysis
-  * Filter miRExpress table to just the mature miRNAs for the 200 likely precursors
+  * Filter miRExpress table to just the mature miRNAs for the 200 likely precursors and export table for R (Expression_data_forR.csv)
+    - 256 mature miRNAs from 176 precursors.
+      - 80 precursors with 5p & 3p mature miRNA expression, 96 precursors with just 5p mature miRNA expression (at PMMR5 level).
+      - 242 mature miRNAs with an assigned miRNA family, 14 unknown (potentially novel turkey miRNAs)
+  * Differential expression with DESEQ in R (Expression_Analysis.R)
+    - significance cutoff = 0.05
+    - Analyzing with an ANOVA-like model so we can look for effects of treatment, type, and type-treatment interactions: design = \~ treatment \* type
+    - Type: 16 miRNAs significantly differentially expressed (SDE) AND Log2 Fold Change (LFC)>=1 in domestic vs wild
+      - 12 down, 4 up (1 novel)
+    - Treatment: 11 SDE and LFC>1 in AFB vs control
+      - 1 down, 10 up
+    - 0 SDE interaction effects
+    
