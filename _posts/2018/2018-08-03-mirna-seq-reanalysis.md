@@ -44,12 +44,11 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
 ## Compare precursors to known miRNAs to identify
   * Get fasta sequences for the 218 precursors (using my BioinformaticScraps filterfasta.py)
   * Build blast db of predicted Ensembl and RNACentral turkey miRNAs and mirbase22 avian, mouse, and human miRNAs
-  * Blast 218 PMMR5 precursors against the db.
-    - 166 clearly assigned to family (full length alignments (most exact alignments) and escore <1e20). Keep
-    - 4 only match a known precursor at one end and have no 3p expression. So they are possible precursors overlapping with a known miRNA but we don't have any reads supporting their expression that couldn't just be expression of the known miRNA. Discard.
-    - 3 match only a predicted miRNA precursor from Ensembl with no family info available. Keep.
-    - 50 don't match turkey, avian, mouse, or human miRNAs.
-      - Blast against nr (online)
-        - 17/50 have matches (E value <1e-03) to mRNAs or ncrna.
-        - 33/50 have no matches or high E value matches or match to unannotated genomic sequence
-      - Blast against Ensembl and/or turkey5?
+  * Blast 218 PMMR5 precursors against the db and non-matching against ALL mirbase22 precursors for all species. Then, for all without matches that allow assigning to a family, use Turkey BLAT to look for annotations for that position in the genome and Blastn against nr to look for similarity to DNA/RNA from any organism
+    - 163 assigned to family (full length alignments--most are exact--and escore <1e20).
+    - 37 don't have evidence that they are NOT miRNAs - possible novel turkey miRNAs.
+    - 18 are likely repeat elements, mtRNAs, mRNAs, other ncRNA.
+  * 200 (163+37) likely precursor miRNAs continuing on to further analysis
+
+## Differential expression analysis
+  * Filter miRExpress table to just the mature miRNAs for the 200 likely precursors
