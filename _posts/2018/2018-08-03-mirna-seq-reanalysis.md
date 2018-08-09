@@ -48,7 +48,7 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
     - 163 assigned to family (full length alignments--most are exact--and escore <1e20). Keep
     - 18 are likely repeat elements, mtRNAs, mRNAs, other ncRNA. Discard
     - 24 have only weak mirdeep2 support (mirdeep score<10) and are likely mirdeep false positives. Discard
-    - 13 don't have evidence that they are NOT miRNAs and have higher mirdeep2 support (mirdeep scores<75) - possible novel turkey miRNAs. Keep with miRNA family as "Novel-1"  through "Novel-13"
+    - 13 don't have evidence that they are NOT miRNAs and have higher mirdeep2 support (mirdeep scores>75) - possible novel turkey miRNAs. Keep with miRNA family as "Novel-1"  through "Novel-13"
   * 176 likely precursor miRNAs continuing on to further analysis (163 assigned to a miRNA family + 13 possibly novel to turkey)
 
 ## Differential expression analysis
@@ -64,4 +64,3 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
     - Treatment: 11 SDE and LFC>1 in AFB vs control
       - 1 down, 10 up
     - 0 SDE interaction effects
-    
