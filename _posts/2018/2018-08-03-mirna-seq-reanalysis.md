@@ -52,15 +52,21 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
   * 176 likely precursor miRNAs continuing on to further analysis (163 assigned to a miRNA family + 13 possibly novel to turkey)
 
 ## Differential expression analysis
-  * Filter miRExpress table to just the mature miRNAs for the 200 likely precursors and export table for R (Expression_data_forR.csv)
+  * Filter miRExpress table to just the mature miRNAs for the 176 likely precursors and export table for R (Expression_data_forR.csv)
     - 256 mature miRNAs from 176 precursors.
       - 80 precursors with 5p & 3p mature miRNA expression, 96 precursors with just 5p mature miRNA expression (at PMMR5 level).
       - 242 mature miRNAs with an assigned miRNA family, 14 unknown (potentially novel turkey miRNAs)
   * Differential expression with DESEQ in R (Expression_Analysis.R)
-    - significance cutoff = 0.05
+    - BH adjusted significance cutoff = 0.05
     - Analyzing with an ANOVA-like model so we can look for effects of treatment, type, and type-treatment interactions: design = \~ treatment \* type
     - Type: 16 miRNAs significantly differentially expressed (SDE) AND Log2 Fold Change (LFC)>=1 in domestic vs wild
       - 12 down, 4 up (1 novel)
     - Treatment: 11 SDE and LFC>1 in AFB vs control
       - 1 down, 10 up
     - 0 SDE interaction effects
+  * PCA - the separation between groups isn't drastic or complete but...
+    - PC1 separates Domestic vs Wild with 31% of the variance. The range of variation along this axis is much larger for Wild than for Domestic.
+    - PC2 separates AFB vs Control with 22% of the variance. Range of variation along this axis is just a bit larger for AFB than control.
+  * Heatmaps. Rethink this. See what others are doing. I don't get a clear picture because even the SDE miRNAs don't fairly small expression differences between type and treatment--especially compared to the differences in expression between different miRNAs is general.
+
+## Predict mRNA targets od DE miRNAs with Targetscan
