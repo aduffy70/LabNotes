@@ -82,10 +82,14 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
   * Filter for only targets with Cumulative weighted context++ score <=-0.5 using my parse_targetscan_output.py script. Keep the gene name, description, and which miRNA(s) were predicted to target it.
   - This cutoff (-0.5) is high enough that we keep at least the best target for every miRNA while only keeping at most the top 25% of predicted targets for any miRNA. We are likely missing some true targets but are minimizing the number of false positives.
   - When I tried -0.7 several miRNAs had no targets that passed the filter. I found papers going as low as -0.4 so -0.5 is not extreme.
+  - At cutoff -0.5 we get fewer than 100 genes present in turkey liver with predicted interactions. I think this isn't enough to get signifance in the GO/KEGG analysis statistical tests (almost nothing is significant after Benjamini correction). So I am trying -0.4 which keeps more potential interactions (and hopefully not too many more false positive interactions) to see if the GO/KEGG analysis looks any better.
   - Cutoff at -0.4 is high enough to keep at least the best 2 targets for each miRNA and keep at most the best third of predicted targets for any miRNA.
   - Other studies have found that the chances of being able to detect miRNA effects experimentally goes down as the context score increases, so by using the lowest ones we minimize false positives.
   * Further filter gene target list to remove genes not present in the turkey liver mRNAseq data (present = mean readcount per sample > 1). If an mRNA is not present at detectable levels in turkey liver (in any of our type-treatments) then any predicted miRNA-mRNA interactions involving that mRNA are probably not occurring or biologically relevant in turkey liver.
-    - Type: 223 gene targets, 139 have mRNAs present in turkey liver
-    - Treatment: 136 gene targets, 97 have mRNAs present in turkey liver
+    - Type: 223 gene targets, 139 have mRNAs present in turkey liver with context score cutoff=-0.5 (377 and 243 with -0.4 cutoff)
+    - Treatment: 136 gene targets, 97 have mRNAs present in turkey liver with context score cutoff=-0.5 (270 and 189 with -0.4 cutoff)
 
 ## DAVID GO/KEGG analysis
+  * Background = 17532 genes with >1 mean reads/sample in turkey liver mRNA-seq dataset.
+  * Using "ALL" and "DIRECT" Goterms, KEGG_PATHWAY, the default protein domains (INTERPRO, PIR_SUPERFAMILY, and SMART), and UP_KEYWORDS
+  * Downloaded Functional Annotation Clustering, Functional Annotation Chart, and Functional Annotation Table for each analysis.
