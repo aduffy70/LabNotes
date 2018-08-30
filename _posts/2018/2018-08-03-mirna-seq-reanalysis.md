@@ -89,11 +89,11 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
 
 ## DAVID GO/KEGG analysis
   * Settings:
-  * Background = 17532 genes with >1 mean reads/sample in turkey liver mRNA-seq dataset.
-  * Using "ALL" and "DIRECT" GOTERMS, KEGG_PATHWAY, the default protein domains (INTERPRO, PIR_SUPERFAMILY, and SMART), and UP_KEYWORDS
-  * Downloaded Functional Annotation Clustering, Functional Annotation Chart, and Functional Annotation Table for each analysis.
-  * Used default Medium clustering stringency.
-  * Kept/evaluated results with p<0.1, any Fold enrichment, and any Benjamini adjusted p-value, but focused on results with adjusted p<0.05 or both p<0.05 and fold enrichment>2. In the annotation clustering analysis, I kept all clusters but focused on the top 50 and all the general themes I found in the top 50 were also in the best clusters with enrichment scores>1.3.
+    - Background = 17532 genes with >1 mean reads/sample in turkey liver mRNA-seq dataset.
+    - Using "ALL" and "DIRECT" GOTERMS, KEGG_PATHWAY, the default protein domains (INTERPRO, PIR_SUPERFAMILY, and SMART), and UP_KEYWORDS
+    - Used default Medium clustering stringency.
+    - Kept/evaluated results with p<0.1, any Fold enrichment, and any Benjamini adjusted p-value, but focused on results with adjusted p<0.05 or both p<0.05 and fold enrichment>2. In the annotation clustering analysis, I kept all clusters but focused on the top 50 and all the general themes I found in the top 50 were also in the best clusters with enrichment scores>1.3.
+    - Downloaded Functional Annotation Clustering, Functional Annotation Chart, and Functional Annotation Table for each analysis.
   * Looking for common themes in the Annotation clusters:
     - Domestic vs Wild (# of clusters for each theme)
       - 20 gene regulation:
