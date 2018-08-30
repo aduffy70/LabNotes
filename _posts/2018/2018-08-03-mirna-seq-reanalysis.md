@@ -33,7 +33,7 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
     - 2 have hits to Rfam - discard as likely not miRNAs
     - 430 (>70%) have seed similarity to avian, mouse, or human miRNAs from mirbase. This is reassuring.
   * Started with the mirdeep result.csv. Removed the top section with incomplete signal to noise info (it doesn't get calculated if you don't provide mirbase miRNAs for your species). Used the "location" column to generated separate contig, start, end, and strand columns in Excel. Use Excel to convert this to a 600_novel_precursors.txt and 1200_novel_mature_mirnas.txt for input to miRExpress.
-
+  * Plot locations of miRNAs in genome
 ## Get expression data
   * Convert the trimmed, collapsed, length filtered, not-cds or ncrna reads to the format needed for miRExpress (tab-delimited readcount and read sequence instead of fasta) using my custom script (convert_fasta_to_miRExpress_input.py).
   * Run the alignmentSIMD and analysis steps of miRExpress using the converted reads, the 600 precursor miRNAs and 1200 mature miRNAs. We don't need to run the other steps since our data are already collapsed, filtered, and in the format required.
@@ -79,17 +79,47 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
       - It is the most similar species in the Targetscan database
       - The UTRs of chicken mRNAs are better annotated than turkey mRNAs
       - A major part of the scoring process for determining likely miRNA-mRNA interactions is whether the interaction is conserved. So the most likely interactions for chicken in the database are those that are conserved in mammals--and likely conserved in turkey as well.
-  * Filter for only targets with Cumulative weighted context++ score <=-0.5 using my parse_targetscan_output.py script. Keep the gene name, description, and which miRNA(s) were predicted to target it.
-  - This cutoff (-0.5) is high enough that we keep at least the best target for every miRNA while only keeping at most the top 25% of predicted targets for any miRNA. We are likely missing some true targets but are minimizing the number of false positives.
-  - When I tried -0.7 several miRNAs had no targets that passed the filter. I found papers going as low as -0.4 so -0.5 is not extreme.
-  - At cutoff -0.5 we get fewer than 100 genes present in turkey liver with predicted interactions. I think this isn't enough to get signifance in the GO/KEGG analysis statistical tests (almost nothing is significant after Benjamini correction). So I am trying -0.4 which keeps more potential interactions (and hopefully not too many more false positive interactions) to see if the GO/KEGG analysis looks any better.
-  - Cutoff at -0.4 is high enough to keep at least the best 2 targets for each miRNA and keep at most the best third of predicted targets for any miRNA.
-  - Other studies have found that the chances of being able to detect miRNA effects experimentally goes down as the context score increases, so by using the lowest ones we minimize false positives.
+  * Filter for only targets with Cumulative weighted context++ score <=-0.40 using my parse_targetscan_output.py script. Keep the gene name, description, and which miRNA(s) were predicted to target it.
+  - This cutoff (-0.40) is high enough that we keep at least the best 2 targets for every miRNA while keeping at most the top 1/3rd of predicted targets for any miRNA.
+    - When I tried -0.7 several miRNAs had no targets that passed the filter. I found papers going as low as -0.04. Other studies have found that the chances of being able to detect miRNA effects experimentally goes down as the context score increases, so by using the lowest ones we minimize false positives.
+    - At cutoff -0.5 we get fewer than 100 genes present in turkey liver with predicted interactions for AFB vs Control. I think this isn't enough to get signifance in the GO/KEGG analysis statistical tests (nothing is significant after Benjamini correction). So I am using -0.40 which keeps more potential interactions (and hopefully not too many more false positive interactions).
   * Further filter gene target list to remove genes not present in the turkey liver mRNAseq data (present = mean readcount per sample > 1). If an mRNA is not present at detectable levels in turkey liver (in any of our type-treatments) then any predicted miRNA-mRNA interactions involving that mRNA are probably not occurring or biologically relevant in turkey liver.
-    - Type: 223 gene targets, 139 have mRNAs present in turkey liver with context score cutoff=-0.5 (377 and 243 with -0.4 cutoff)
-    - Treatment: 136 gene targets, 97 have mRNAs present in turkey liver with context score cutoff=-0.5 (270 and 189 with -0.4 cutoff)
+    - Type: 377 gene targets, 243 have mRNAs present in turkey liver with context score cutoff=-0.40
+    - Treatment: 270 gene targets, 189 have mRNAs present in turkey liver with context score cutoff=-0.40
 
 ## DAVID GO/KEGG analysis
+  * Settings:
   * Background = 17532 genes with >1 mean reads/sample in turkey liver mRNA-seq dataset.
-  * Using "ALL" and "DIRECT" Goterms, KEGG_PATHWAY, the default protein domains (INTERPRO, PIR_SUPERFAMILY, and SMART), and UP_KEYWORDS
+  * Using "ALL" and "DIRECT" GOTERMS, KEGG_PATHWAY, the default protein domains (INTERPRO, PIR_SUPERFAMILY, and SMART), and UP_KEYWORDS
   * Downloaded Functional Annotation Clustering, Functional Annotation Chart, and Functional Annotation Table for each analysis.
+  * Used default Medium clustering stringency.
+  * Kept/evaluated results with p<0.1, any Fold enrichment, and any Benjamini adjusted p-value, but focused on results with adjusted p<0.05 or both p<0.05 and fold enrichment>2. In the annotation clustering analysis, I kept all clusters but focused on the top 50 and all the general themes I found in the top 50 were also in the best clusters with enrichment scores>1.3.
+  * Looking for common themes in the Annotation clusters:
+    - Domestic vs Wild (# of clusters for each theme)
+      - 20 gene regulation:
+        - 11 - Transcription regulation (DNA binding / RNA polymerase II regulation)
+        - 3 - Transcription regulation (methylation)
+        - 6 - Transcription regulation (histone modification)
+        - 2 - Other gene regulation
+      - 13 - Cell signaling
+      - 7 - Stress response
+      - 16 - Growth/metabolism (not all relevant to liver cells)
+      - 6 - Clusters probably not relevant to liver cells
+    - AFB vs Control (# of clusters for each theme)
+      - 19 gene regulation:
+        - 13 - Transcription regulation (DNA binding / RNA polymerase II regulation)
+        - 6 - Other gene regulation
+      - 22 - Cell signaling
+      - 9 - Stress response
+  * Takeaways...
+    - Most (44/50 in DvW and 46/50 in AvC) of the top Annotation clusters are relevant to liver cells--that is good. Most of the ones that aren't relevant to liver cells ARE relevant to the observed organism-level differences between Domestic vs Wild or AFB-treated vs Control birds--that makes sense too. (I don't know what the circadian rhythm genes are doing though...)
+    - The DE expressed miRNAs in DvW and AvC interact with mRNAs for genes involved in gene expression, cell signaling, and stress response, but the DE miRNAs in DvW also interact with mRNAs for genes involved in growth and metabolism.
+    - AFB treatment or domestication result in shifts in miRNA expression, which leads to changes in translation of genes that control expression of other genes (mostly through transcription, but also translation and degradation of proteins). Gene regulation is complex!
+    - AFB treatment also shifts the expression of miRNAs that regulate genes directly involved in stress response, and also many genes involved in cell signaling, which are likely involved in coordinating that stress response.
+    - Genes controlled by miRNAs DE in AFB vs Control are involved in transcription control through RNA polymerase II binding, whereas we also see transcriptional control through methylation, and histone modifications in genes controlled by miRNAs DE in Domestic vs Wild.
+  * How to report this data? Show my table of cluster themes? Include Annotation cluster report as supplemental data?
+  * Evaluating Annotation charts to see what is interesting beyond the common themes from clustering:
+    - Domestic vs Wild:
+      - liver development genes are enriched 8.3-fold (p<0.00067, after BH adjustment p<0.054). This is not surprising given the observed differences in liver size and detoxification ability.
+    - AFB vs Control:
+      - p53 signaling pathway genes are enriched 5.3-fold (p<0.0372, though not after BH adjustment). Many anticancer functions so not surprising that AFB-treatment would lead to changes in expression of miRNAs interacting with genes in this pathway.
