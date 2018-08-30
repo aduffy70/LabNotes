@@ -34,6 +34,7 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
     - 430 (>70%) have seed similarity to avian, mouse, or human miRNAs from mirbase. This is reassuring.
   * Started with the mirdeep result.csv. Removed the top section with incomplete signal to noise info (it doesn't get calculated if you don't provide mirbase miRNAs for your species). Used the "location" column to generated separate contig, start, end, and strand columns in Excel. Use Excel to convert this to a 600_novel_precursors.txt and 1200_novel_mature_mirnas.txt for input to miRExpress.
   * Plot locations of miRNAs in genome
+
 ## Get expression data
   * Convert the trimmed, collapsed, length filtered, not-cds or ncrna reads to the format needed for miRExpress (tab-delimited readcount and read sequence instead of fasta) using my custom script (convert_fasta_to_miRExpress_input.py).
   * Run the alignmentSIMD and analysis steps of miRExpress using the converted reads, the 600 precursor miRNAs and 1200 mature miRNAs. We don't need to run the other steps since our data are already collapsed, filtered, and in the format required.
@@ -126,4 +127,4 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
       - p53 signaling pathway genes are enriched 5.3-fold (p<0.0372, though not after BH adjustment). Many anticancer functions so not surprising that AFB-treatment would lead to changes in expression of miRNAs interacting with genes in this pathway.
 
 
-[1]: {{ site.baseurl }}{% post_url /2017/notes-on-DAVID-Bioinformatic-Resources %}
+[1]: https://{{ site.baseurl }}{% post_url /2017/notes-on-DAVID-Bioinformatic-Resources %}
