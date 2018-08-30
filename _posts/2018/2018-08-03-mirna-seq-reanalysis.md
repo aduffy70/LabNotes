@@ -127,4 +127,4 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
       - p53 signaling pathway genes are enriched 5.3-fold (p<0.0372, though not after BH adjustment). Many anticancer functions so not surprising that AFB-treatment would lead to changes in expression of miRNAs interacting with genes in this pathway.
 
 
-[1]: https://{{ site.baseurl }}{% post_url /2017/notes-on-DAVID-Bioinformatic-Resources %}
+[1]: https://{{ site.baseurl }}{% post_url /2017/2017-10-24-notes-on-DAVID-Bioinformatic-Resources %}
