@@ -89,6 +89,7 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
 
 ## DAVID GO/KEGG analysis
   * Settings:
+    - Analyzed DvW and AvC gene sets separately. Used _Meleagris gallopavo_ GO/Pathway annotations (when I did this originally they were much worse than chicken, but now the number of genes in my gene sets without annotations are almost identical). (See [DAVID notes][1] for steps I used to import and convert my gene sets and background)
     - Background = 17532 genes with >1 mean reads/sample in turkey liver mRNA-seq dataset.
     - Using "ALL" and "DIRECT" GOTERMS, KEGG_PATHWAY, the default protein domains (INTERPRO, PIR_SUPERFAMILY, and SMART), and UP_KEYWORDS
     - Used default Medium clustering stringency.
@@ -123,3 +124,6 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
       - liver development genes are enriched 8.3-fold (p<0.00067, after BH adjustment p<0.054). This is not surprising given the observed differences in liver size and detoxification ability.
     - AFB vs Control:
       - p53 signaling pathway genes are enriched 5.3-fold (p<0.0372, though not after BH adjustment). Many anticancer functions so not surprising that AFB-treatment would lead to changes in expression of miRNAs interacting with genes in this pathway.
+
+
+[1]: {{ site.baseurl }}{% post_url /2017/notes-on-DAVID-Bioinformatic-Resources %}
