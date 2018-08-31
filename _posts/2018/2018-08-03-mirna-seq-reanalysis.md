@@ -33,7 +33,6 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
     - 2 have hits to Rfam - discard as likely not miRNAs
     - 430 (>70%) have seed similarity to avian, mouse, or human miRNAs from mirbase. This is reassuring.
   * Started with the mirdeep result.csv. Removed the top section with incomplete signal to noise info (it doesn't get calculated if you don't provide mirbase miRNAs for your species). Used the "location" column to generated separate contig, start, end, and strand columns in Excel. Use Excel to convert this to a 600_novel_precursors.txt and 1200_novel_mature_mirnas.txt for input to miRExpress.
-  * Plot locations of miRNAs in genome
 
 ## Get expression data
   * Convert the trimmed, collapsed, length filtered, not-cds or ncrna reads to the format needed for miRExpress (tab-delimited readcount and read sequence instead of fasta) using my custom script (convert_fasta_to_miRExpress_input.py).
@@ -55,6 +54,9 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
     - 24 have only weak mirdeep2 support (mirdeep score<10) and are likely mirdeep false positives. Discard
     - 13 don't have evidence that they are NOT miRNAs and have higher mirdeep2 support (mirdeep scores>75) - possible novel turkey miRNAs. Keep with miRNA family assigned as "Novel-1"  through "Novel-13"
   * 176 likely precursor miRNAs continuing on to further analysis (163 assigned to a miRNA family + 13 possibly novel to turkey)
+  * Plot locations of miRNAs in genome
+    - 110 in intergenic regions, 66 in non-coding regions of genes (introns or UTRs). If we drop the 15 that map to contigs not assigned to chromosomes that changes to 95 in intergenic regions and 66 in non-coding gene regions. That makes sense... there are few genes annotated in the unknown contigs--if they had genes it could help assign them to a chromosome.
+    - Generated karyograms showing the miRNA positions in the genome colored by intergenic vs non-coding gene, DE vs not DE, and known vs novel status. The karyograms have bad resolution--miRNAs up to ~70k bases apart have overlapping lines. But there isn't really anything interesting in the clustering of miRNAs. I don't have clusters of miRNAs that are all DE, for example.
 
 ## Differential expression analysis
   * Filter miRExpress table to just the mature miRNAs for the 176 likely precursors and export table for R (Expression_data_forR.csv)
@@ -98,7 +100,7 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
     - Downloaded Functional Annotation Clustering, Functional Annotation Chart, and Functional Annotation Table for each analysis.
   * Looking for common themes in the Annotation clusters:
     - Domestic vs Wild (# of clusters for each theme)
-      - 20 gene regulation:
+      - 20 - Gene regulation:
         - 11 - Transcription regulation (DNA binding / RNA polymerase II regulation)
         - 3 - Transcription regulation (methylation)
         - 6 - Transcription regulation (histone modification)
@@ -108,17 +110,18 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
       - 16 - Growth/metabolism (not all relevant to liver cells)
       - 6 - Clusters probably not relevant to liver cells
     - AFB vs Control (# of clusters for each theme)
-      - 19 gene regulation:
+      - 19 - Gene regulation:
         - 13 - Transcription regulation (DNA binding / RNA polymerase II regulation)
         - 6 - Other gene regulation
       - 22 - Cell signaling
       - 9 - Stress response
+      - 4 - Clusters not relevant to liver cells
   * Takeaways...
     - Most (44/50 in DvW and 46/50 in AvC) of the top Annotation clusters are relevant to liver cells--that is good. Most of the ones that aren't relevant to liver cells ARE relevant to the observed organism-level differences between Domestic vs Wild or AFB-treated vs Control birds--that makes sense too. (I don't know what the circadian rhythm genes are doing though...)
     - The DE expressed miRNAs in DvW and AvC interact with mRNAs for genes involved in gene expression, cell signaling, and stress response, but the DE miRNAs in DvW also interact with mRNAs for genes involved in growth and metabolism.
     - AFB treatment or domestication result in shifts in miRNA expression, which leads to changes in translation of genes that control expression of other genes (mostly through transcription, but also translation and degradation of proteins). Gene regulation is complex!
-    - AFB treatment also shifts the expression of miRNAs that regulate genes directly involved in stress response, and also many genes involved in cell signaling, which are likely involved in coordinating that stress response.
-    - Genes controlled by miRNAs DE in AFB vs Control are involved in transcription control through RNA polymerase II binding, whereas we also see transcriptional control through methylation, and histone modifications in genes controlled by miRNAs DE in Domestic vs Wild.
+    - AFB treatment or domestication shift the expression of miRNAs that regulate genes directly involved in stress response, and also many genes involved in cell signaling, which are likely involved in coordinating a stress response.
+    - Genes controlled by miRNAs DE in AFB vs Control are involved in transcription control through RNA polymerase II binding, whereas we also see transcriptional control through methylation and histone modifications in genes controlled by miRNAs DE in Domestic vs Wild.
   * How to report this data? Show my table of cluster themes? Include Annotation cluster report as supplemental data?
   * Evaluating Annotation charts to see what is interesting beyond the common themes from clustering:
     - Domestic vs Wild:
