@@ -56,7 +56,13 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
   * 176 likely precursor miRNAs continuing on to further analysis (163 assigned to a miRNA family + 13 possibly novel to turkey)
   * Plot locations of miRNAs in genome
     - 110 in intergenic regions, 66 in non-coding regions of genes (introns or UTRs). If we drop the 15 that map to contigs not assigned to chromosomes that changes to 95 in intergenic regions and 66 in non-coding gene regions. That makes sense... there are few genes annotated in the unknown contigs--if they had genes it could help assign them to a chromosome.
-    - Generated karyograms showing the miRNA positions in the genome colored by intergenic vs non-coding gene, DE vs not DE, and known vs novel status. The karyograms have bad resolution--miRNAs up to ~70k bases apart have overlapping lines. But there isn't really anything interesting in the clustering of miRNAs. I don't have clusters of miRNAs that are all DE, for example.
+    - Generated karyograms showing the miRNA positions in the genome colored by intergenic vs non-coding gene, DE vs not DE, and known vs novel status.
+      - The karyograms have bad resolution--miRNAs up to ~70k bases apart have overlapping lines. Consider splitting Chr1 onto 2 lines to almost double resolution. If I just want to show where they are location and how they are clustered (rather than annotating them in other ways) I could use the annotation to show whether a line represents a single miRNA or a cluster of them.
+      - I don't have clustering based on DE, intergenic status, or known/novel status.
+      - In general, there is some clustering of miRNAs within the genome compared to what is expected by chance:
+        - 30 places in the genome have more than one miRNA within 10kb. 25 of those have more than one in 2kb and 21 have more than 1 in 1kb.
+        - Rough probability estimates suggest that for a genome of 972 million bases the chance of 2 randomly placed miRNAs being in the same 10kb section is 1 in 97200. With 176 miRNAs we have 15400 pairs of miRNAs so the probability of ANY 2 miRNAs being in the same 10kb section is 0.158. So we expect it to happen by chance but not 30 times. The probabilities of any 2 miRNAs being in the same 2kb or 1kb section are 0.032 and 0.016.
+
 
 ## Differential expression analysis
   * Filter miRExpress table to just the mature miRNAs for the 176 likely precursors and export table for R (Expression_data_forR.csv)
@@ -106,18 +112,18 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
         - 6 - Transcription regulation (histone modification)
         - 2 - Other gene regulation
       - 13 - Cell signaling
-      - 7 - Stress response
+      - 8 - Stress response
       - 16 - Growth/metabolism (not all relevant to liver cells)
-      - 6 - Clusters probably not relevant to liver cells
+      - 5 - Clusters probably not relevant to liver cells
     - AFB vs Control (# of clusters for each theme)
       - 19 - Gene regulation:
         - 13 - Transcription regulation (DNA binding / RNA polymerase II regulation)
         - 6 - Other gene regulation
       - 22 - Cell signaling
-      - 9 - Stress response
-      - 4 - Clusters not relevant to liver cells
+      - 10 - Stress response
+      - 3 - Clusters probably not relevant to liver cells
   * Takeaways...
-    - Most (44/50 in DvW and 46/50 in AvC) of the top Annotation clusters are relevant to liver cells--that is good. Most of the ones that aren't relevant to liver cells ARE relevant to the observed organism-level differences between Domestic vs Wild or AFB-treated vs Control birds--that makes sense too. (I don't know what the circadian rhythm genes are doing though...)
+    - Most (45/50 in DvW and 47/50 in AvC) of the top Annotation clusters are relevant to liver cells--that is good. Most of the ones that aren't relevant to liver cells ARE relevant to the observed organism-level differences between Domestic vs Wild or AFB-treated vs Control birds--that makes sense too.
     - The DE expressed miRNAs in DvW and AvC interact with mRNAs for genes involved in gene expression, cell signaling, and stress response, but the DE miRNAs in DvW also interact with mRNAs for genes involved in growth and metabolism.
     - AFB treatment or domestication result in shifts in miRNA expression, which leads to changes in translation of genes that control expression of other genes (mostly through transcription, but also translation and degradation of proteins). Gene regulation is complex!
     - AFB treatment or domestication shift the expression of miRNAs that regulate genes directly involved in stress response, and also many genes involved in cell signaling, which are likely involved in coordinating a stress response.
