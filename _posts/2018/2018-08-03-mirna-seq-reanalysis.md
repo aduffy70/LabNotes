@@ -63,7 +63,6 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
         - 30 places in the genome have more than one miRNA within 10kb. 25 of those have more than one in 2kb and 21 have more than 1 in 1kb.
         - Rough probability estimates suggest that for a genome of 972 million bases the chance of 2 randomly placed miRNAs being in the same 10kb section is 1 in 97200. With 176 miRNAs we have 15400 pairs of miRNAs so the probability of ANY 2 miRNAs being in the same 10kb section is 0.158. So we expect it to happen by chance but not 30 times. The probabilities of any 2 miRNAs being in the same 2kb or 1kb section are 0.032 and 0.016.
 
-
 ## Differential expression analysis
   * Filter miRExpress table to just the mature miRNAs for the 176 likely precursors and export table for R (Expression_data_forR.csv)
     - 256 mature miRNAs from 176 precursors.
@@ -88,7 +87,7 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
       - It is the most similar species in the Targetscan database
       - The UTRs of chicken mRNAs are better annotated than turkey mRNAs
       - A major part of the scoring process for determining likely miRNA-mRNA interactions is whether the interaction is conserved. So the most likely interactions for chicken in the database are those that are conserved in mammals--and likely conserved in turkey as well.
-  * Filter for only targets with Cumulative weighted context++ score <=-0.40 using my parse_targetscan_output.py script. Keep the gene name, description, and which miRNA(s) were predicted to target it.
+  * Filter for only targets with Total context++ score <=-0.40 using my parse_targetscan_output.py script. Keep the gene name, description, and which miRNA(s) were predicted to target it.
   - This cutoff (-0.40) is high enough that we keep at least the best 2 targets for every miRNA while keeping at most the top 1/3rd of predicted targets for any miRNA.
     - When I tried -0.7 several miRNAs had no targets that passed the filter. I found papers going as low as -0.04. Other studies have found that the chances of being able to detect miRNA effects experimentally goes down as the context score increases, so by using the lowest ones we minimize false positives.
     - At cutoff -0.5 we get fewer than 100 genes present in turkey liver with predicted interactions for AFB vs Control. I think this isn't enough to get signifance in the GO/KEGG analysis statistical tests (nothing is significant after Benjamini correction). So I am using -0.40 which keeps more potential interactions (and hopefully not too many more false positive interactions).
