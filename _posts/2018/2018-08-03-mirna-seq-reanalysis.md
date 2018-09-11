@@ -43,6 +43,7 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
       - PMMR5 corresponds to 7 raw reads in my lowest readcount sample and 20 raw reads in my highest readcount sample.
       - Others have filtered as high as PMMR15, so PMMR5 is not too high of a cutoff. PMMR15 corresponds to 20-59 raw reads, and not accepting 58 reads as evidence of expression feels overly strict and eliminates an additional 60 miRNAs.
       - I also considered PMMR3 (4-12 raw reads) but accepting only 4 raw reads as evidence of expression feels insufficient and only keeps ~30 additional miRNAs.
+      - With this cutoff, the highest mean PMMR reads (per sample) for a miRNA I discarded is 3.4. The mean PMMR for the top miRNA (mir-22) is 115876. So the miRNAs I discarded for low expression all have less than 1/34000th the expression of the top miRNA. They are only present at very low levels.
   * With PMMR5x2 cutoff: 299 mature miRNAs from 218 precursors (81 with 5p & 3p expression, 137 with only 5p)
 
 ## Compare precursors to known miRNAs to identify miRNA families
@@ -80,12 +81,18 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
     - PC1 separates Domestic vs Wild with 31% of the variance. The range of variation along this axis is much larger for Wild than for Domestic.
     - PC2 separates AFB vs Control with 22% of the variance. Range of variation along this axis is just a bit larger for AFB than control.
   * Heatmaps. Rethink this. See what others are doing. I don't get a clear picture because even the SDE miRNAs have fairly small expression differences between type and treatment--especially compared to the differences in expression between different miRNAs is general.
+  * Venn diagram - I am not including it because:
+    - Almost all (240/256 miRNAs) are expressed at the PMMR5 level in all type-treatments.
+    - The miRNAs that are not expressed at the PMMR5 level in all type treatments are all expressed at SOME level in all type-treatments.
+    - None of them are cases where PMMR5 expression matches perfectly to type treatment.
+    - All of them are cases where the ones that do meet PMMR5 are barely above the threshold, while the ones that do not meet PMMR5 are barely below it--we are calling individual samples expressed or not expressed based on an arbitrary cutoff.
+    - So I stand by the PMMR5 cutoff for filtering out the low expression miRNAs--if we can't pass that level in 2 samples, expression is probably too low to be confident that the miRNA is real or to make meaningful decisions about differential expression. But as a cutoff to determine whether a miRNA (that we've already decided has high enough expression in enough samples to be real) is expressed in a _particular_ sample of not, it just isn't useful. Stick to the DE analysis for determining expression differences between type-treatments.
 
 ## Predict mRNA targets of DE miRNAs with Targetscan
   * Targetscan7.2, using chicken miRNA data, search for predicted miRNA targets for each of the DE miRNAs and download all tables.
     - Using chicken (rather than making direct predictions against annotated turkey UTRs) because:
       - It is the most similar species in the Targetscan database
-      - The UTRs of chicken mRNAs are better annotated than turkey mRNAs
+      - The UTRs of chicken mRNAs are better annotated than turkey mRNAs. When I download UTR3 sequences for all protein coding genes from Ensembl there are only ~4700 UTR3 sequences for ~15000 genes--and some of those are multiple spliced versions for the same gene. When I do the same for chicken there are ~16000 UTR3 sequences for ~25000 genes.
       - A major part of the scoring process for determining likely miRNA-mRNA interactions is whether the interaction is conserved. So the most likely interactions for chicken in the database are those that are conserved in mammals--and likely conserved in turkey as well.
   * Filter for only targets with Total context++ score <=-0.40 using my parse_targetscan_output.py script. Keep the gene name, description, and which miRNA(s) were predicted to target it.
   - This cutoff (-0.40) is high enough that we keep at least the best 2 targets for every miRNA while keeping at most the top 1/3rd of predicted targets for any miRNA.
@@ -94,6 +101,7 @@ While working on the turkey miRNA-seq GWAS manuscript, I was finding that the nu
   * Further filter gene target list to remove genes not present in the turkey liver mRNAseq data (present = mean readcount per sample > 1). If an mRNA is not present at detectable levels in turkey liver (in any of our type-treatments) then any predicted miRNA-mRNA interactions involving that mRNA are probably not occurring or biologically relevant in turkey liver.
     - Type: 377 gene targets, 243 have mRNAs present in turkey liver with context score cutoff=-0.40
     - Treatment: 270 gene targets, 189 have mRNAs present in turkey liver with context score cutoff=-0.40
+  * There is almost no overlap between the lists of predicted target genes for DE miRNAs and the lists of DE genes from the mRNA study. Only 2 DvW genes are shared between both lists (both regulated in the correct direction) and one AvC gene (regulated the wrong direction). Making this comparison is difficult because ~50% of the DE genes from the mRNA study are not fully annotated to a gene--they are LOC###### identifiers. I'm also not certain I should even expect there to be large overlap. The DE of mRNAs is being driven by transcription regulation, whereas the miRNAs are controlling translation. Presumably, if a miRNA is targeting an mRNA for degradation there would be less of the mRNA there to be detected by mRNAseq, but a miRNA-mRNA interaction doesn't necessarily result in mRNA degradation. But the whole point of miRNA-mRNA integrated analysis is that they DO find an inverse correlation between them.
 
 ## DAVID GO/KEGG analysis
   * Settings:
