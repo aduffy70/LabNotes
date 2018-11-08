@@ -4,21 +4,21 @@
 # categories so I can just delete unneeded ones (should help avoid typos).
 
 # Generate the new post file
-CATEGORIES=$(cat $HOME/Dropbox/LabNotes/_tools/categories.txt)
-POSTFOLDER="$HOME/Dropbox/LabNotes/_posts/"
+CATEGORIES=$(cat $HOME/Dropbox\ \(Duke\ Bio_Ea\)/LabNotes/_tools/categories.txt)
+POSTFOLDER=$HOME/Dropbox\ \(Duke\ Bio_Ea\)/LabNotes/_posts
 CURRENTDATE=$(date +%Y-%m-%d)
 CURRENTYEAR=$(date +%Y)
 TITLE=$@
 CLEANTITLE=${TITLE//-/ }
-FILENAME=$POSTFOLDER/$CURRENTYEAR/$CURRENTDATE-$TITLE.md
-touch $FILENAME
-echo "---" > $FILENAME
-echo "title: " $CLEANTITLE >> $FILENAME
-echo "date: " $CURRENTDATE >> $FILENAME
-echo "layout: post" >> $FILENAME
-echo "categories:" >> $FILENAME
-echo -e "$CATEGORIES" >> $FILENAME
-echo "---" >> $FILENAME
+FILENAME="$POSTFOLDER"/$CURRENTYEAR/$CURRENTDATE-$TITLE.md
+touch "$FILENAME"
+echo "---" > "$FILENAME"
+echo "title: " $CLEANTITLE >> "$FILENAME"
+echo "date: " $CURRENTDATE >> "$FILENAME"
+echo "layout: post" >> "$FILENAME"
+echo "categories:" >> "$FILENAME"
+echo -e "$CATEGORIES" >> "$FILENAME"
+echo "---" >> "$FILENAME"
 
 # Open the new post file for editing
-atom $FILENAME
+atom "$FILENAME"
