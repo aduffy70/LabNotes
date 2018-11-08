@@ -3,6 +3,7 @@ title: Projects
 date: 2016-08-23
 layout: page
 ---
+* ## [sphagnum]({{ site.baseurl }}/projects/sphagnum)
 * ## [gsta alt splicing]({{ site.baseurl }}/projects/gsta-alt-splicing)
 * ## [gsta assays]({{ site.baseurl }}/projects/gsta-assays)
 * ## [gsta cbc weight]({{ site.baseurl }}/projects/gsta-cbc-weight)
