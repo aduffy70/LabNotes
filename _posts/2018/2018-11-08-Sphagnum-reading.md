@@ -24,7 +24,7 @@ The previously accepted order of bryophytes as successive sister groups to landp
 
 Cuspidata and Subsecunda tend to be species of hollows, whereas Sphagnum and Acutifolia tend to form hummocks. Rigida is less common in peatlands and the outgroups (Eosphagnum and Flatbergia don't occur in peatlands.
 
-[Timing of Sphagnum diversification][5]
+[Timing of bryophyte diversification][5] using multiple genes from all 3 genomic partitions and calibrating with fossils. Overall, diversification rates in mosses are lower than in ferns or angiosperms, but recently diverged groups have comparable rates. Since current rates are similar to other plant groups it is likely the lower overall diversification rates are being driven by past extinctions. The data seem to support the "In the shadow of the angiosperms" hypothesis, with lots of diversification in mosses since the angiosperms appeared.
 
 [1]: http://doi.org/10.1126/science.1194585
 [2]: http://dx.doi.org/10.1073/pnas.1323926111
