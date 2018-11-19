@@ -44,6 +44,10 @@ Major questions to be investigated:
 
 [Worldwide patterns of population diversity in Sphagnum][8]. Some species show no genetic structure suggesting frequent long-distance spore dispersal. In others, mountains seem to be a bigger dispersal barrier than oceans, with NE North American/European plants more genetically distant than Pacific Northwest/Asian plants. There also appears to be a N-S separation between Alaskan and Pacific NW plants in some spp.
 
+[Testing for phylogenetic differences in Sphagnum species' niche preferences][9]. There is a phylogenetic component to differences in height above water table (the hummock-hollow gradient) and possibly pH but not for other ionic gradients.
+
+[Looking at margin and expanse morphs of S. magellanicum][10]. The colors change with environment (phenotypic plasticity) but the other morphological characters have a genetic basis and the two morphs form separate genetic clusters.
+
 [1]: http://doi.org/10.1126/science.1194585
 [2]: http://dx.doi.org/10.1073/pnas.1323926111
 [3]: https://doi.org/10.1639/0007-2745-117.2.095
@@ -52,3 +56,5 @@ Major questions to be investigated:
 [6]: https://doi.org/10.1111/nph.14860
 [7]: https://doi.org/10.1111/bij.12497
 [8]: https://doi.org/10.1111/jbi.12716
+[9]: https://doi.org/10.1111/evo.12547
+[10]: https://doi.org/10.3732/ajb.1700163
