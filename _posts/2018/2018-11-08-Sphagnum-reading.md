@@ -40,7 +40,9 @@ Major questions to be investigated:
   * "What is the role of Sphagnum and its interacting microbiome in ecosystem carbon and nitrogen cycling?"
   * "How do we model Sphagnum genotype-by-environment interactions?"
 
-[Factors controlling mating patterns in Sphagnum][7]
+[Factors controlling mating patterns in Sphagnum][7].
+
+[Worldwide patterns of population diversity in Sphagnum][8]. Some species show no genetic structure suggesting frequent long-distance spore dispersal. In others, mountains seem to be a bigger dispersal barrier than oceans, with NE North American/European plants more genetically distant than Pacific Northwest/Asian plants. There also appears to be a N-S separation between Alaskan and Pacific NW plants in some spp.
 
 [1]: http://doi.org/10.1126/science.1194585
 [2]: http://dx.doi.org/10.1073/pnas.1323926111
@@ -49,3 +51,4 @@ Major questions to be investigated:
 [5]: http://doi.org/10.1038/ncomms6134
 [6]: https://doi.org/10.1111/nph.14860
 [7]: https://doi.org/10.1111/bij.12497
+[8]: https://doi.org/10.1111/jbi.12716
