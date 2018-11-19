@@ -48,13 +48,28 @@ Major questions to be investigated:
 
 [Looking at margin and expanse morphs of S. magellanicum][10]. The colors change with environment (phenotypic plasticity) but the other morphological characters have a genetic basis and the two morphs form separate genetic clusters.
 
-[1]: http://doi.org/10.1126/science.1194585
-[2]: http://dx.doi.org/10.1073/pnas.1323926111
+[Book chapter on Sphagnum genome project][11].
+
+Comparative size for reference:
+  * Arabidopsis 135 Mbp
+  * Sphagnum 450 Mbp
+  * Fern (small- Azolla) 750 Mbp
+  * Human 3.2 Gbp
+  * Fern (average) 12 Gbp
+  * Fern (extreme) 148Gbp
+
+__Unpublished moss backbone manuscript__ (Exome capture and 1KP data phylogeny using genes from all 3 genomic partitions). Sphagnopsida diverges early... probably right after Takakiopsida (the earliest diverging) but some data also supports either Sphagnopsida diverging first or a monophyletic Sphagnopsida + Takakiopsida. 400 million year old divergences are hard to tease out, even with genomic data.
+
+__Unpublished Sphagnum biogepgraphy manuscript__ (4 plastid loci).  
+
+[1]: https://doi.org/10.1126/science.1194585
+[2]: https://doi.org/10.1073/pnas.1323926111
 [3]: https://doi.org/10.1639/0007-2745-117.2.095
-[4]: http://doi.org/10.1093/aob/mcw086
-[5]: http://doi.org/10.1038/ncomms6134
+[4]: https://doi.org/10.1093/aob/mcw086
+[5]: https://doi.org/10.1038/ncomms6134
 [6]: https://doi.org/10.1111/nph.14860
 [7]: https://doi.org/10.1111/bij.12497
 [8]: https://doi.org/10.1111/jbi.12716
 [9]: https://doi.org/10.1111/evo.12547
 [10]: https://doi.org/10.3732/ajb.1700163
+[11]: https://doi.org/10.1016/bs.abr.2016.01.003
