@@ -25,7 +25,8 @@ On computing clusters:
 
 ## Backup schedules
 
-Backed up continuously/automatically in the cloud:
+### Backed up continuously/automatically in the cloud:
+
   * Through Dropbox:
     - Active files (sync to my laptop)
     - Archived files (sync to my laptop)
@@ -34,14 +35,16 @@ Backed up continuously/automatically in the cloud:
   * Through Google Drive:
     - Lab files
 
-Backed up automatically every 4 hours on a second harddrive in fiddlehead (BACKPACK):
+### Backed up automatically every 4 hours on a second harddrive in fiddlehead (BACKPACK):
+
   * Active files
   * Archived files
   * Large data files
   * Backups
   * Shared Shaw Lab files
 
-Backed up automatically every night:
+### Backed up automatically every night:
+
   * On my offsite server (crozier):
     - Active files
     - Archived files
@@ -50,7 +53,8 @@ Backed up automatically every night:
     - Shaw Lab-related Active files
     - Shaw Lab-related Archived files
 
-Backed up manually once a month:
+### Backed up manually once a month:
+
   * On an external drive only attached during the backup (CAMEL):
     - Active files
     - Archived files
@@ -62,11 +66,15 @@ Backed up manually once a month:
   * On the Shared Shaw Lab dropbox folder (for sharing, more than backup purposes):
     - Shaw Lab-related Lab files from Google Drive
 
-Backed up manually when received on an external drive only attached during the backup and on one or more computing clusters:
-  * Large data files
+### Backed up manually when received:
 
-Backed up manually in whole or part as needed by storing on external drives or moving to Active or Archived folders on fiddlehead:
-  * Large analysis files from computing clusters
+   * On an external drive (BIGDISK) only attached during the backup and on one or more computing clusters:
+    - Large data files
+
+### Backed up manually as needed:
+
+  * On an external drive (BIGDISK) or moved to Active or Archived folders on fiddlehead:
+    - Large analysis files from computing clusters
 
 
 # Backup process
