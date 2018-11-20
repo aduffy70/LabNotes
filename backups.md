@@ -153,7 +153,7 @@ Scripts:
 #! /bin/bash
 # make_backup.sh
 # Backs up my home folder to my second drive. Exclude Shares (Coulombe Lab Tox drive) and cache files
-rsync -qaz --delete --exclude=".gvfs/" --exclude="Shares" --exclude=".dbus" --exclude=".cache" /home/aduffy /media/aduffy/BACKPACK/rsyncbackup/ ;
+rsync -qaz --delete --exclude=".gvfs/" --exclude="Shares" --exclude=".dbus" --exclude=".cache" --exclude=".dropbox" /home/aduffy /media/aduffy/BACKPACK/rsyncbackup/ ;
 eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome-session)/environ)";
 notify-send -i stock_new-appointment "Local backup complete..." ;
 ~~~
@@ -176,7 +176,7 @@ notify-send -i stock_new-appointment "Shaw Lab backup complete..." ;
 
 # Let's do everything rather than just specific folders
 
-rsync -aqz -e "ssh -p port" --delete --exclude=".ssh/" --exclude="Shares" --exclude="Dropbox (Duke Bio_Ea)/Data" --exclude="Dropbox (Duke Bio_Ea)/Shaw Lab" --exclude=".smbcredentials" --exclude=".dbus" --exclude=".cache" /home/aduffy/ user@ip:/home/aduffy/fiddleheadBackup-rsync/
+rsync -aqz -e "ssh -p port" --delete --exclude=".ssh/" --exclude="Shares" --exclude="Dropbox (Duke Bio_Ea)/Data" --exclude="Dropbox (Duke Bio_Ea)/Shaw Lab" --exclude=".smbcredentials" --exclude=".dbus" --exclude=".cache" --exclude=".dropbox" /home/aduffy/ user@ip:/home/aduffy/fiddleheadBackup-rsync/
 
 eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome-session)/environ)";
 notify-send -i stock_new-appointment "Offsite backup complete..." ;
@@ -194,5 +194,5 @@ alias weeklybackup='sudo /usr/local/bin/weeklybackupnew.sh'
 # Backs up critical subfolders of my home folder to my external drive
 
 # Let's do everything rather than just specific folders
-rsync -azv -e --delete --exclude=".ssh/" --exclude="Shares" --exclude="Dropbox (Duke Bio_Ea)/Data" --exclude="Dropbox (Duke Bio_Ea)/Shaw Lab" --exclude=".smbcredentials" --exclude=".dbus" --exclude=".cache" /home/aduffy /media/aduffy/CAMEL/fiddleheadBackup-rsync/ ;
+rsync -azv -e --delete --exclude=".ssh/" --exclude="Shares" --exclude="Dropbox (Duke Bio_Ea)/Data" --exclude="Dropbox (Duke Bio_Ea)/Shaw Lab" --exclude=".smbcredentials" --exclude=".dbus" --exclude=".cache" --exclude=".dropbox" /home/aduffy /media/aduffy/CAMEL/fiddleheadBackup-rsync/ ;
 ~~~
