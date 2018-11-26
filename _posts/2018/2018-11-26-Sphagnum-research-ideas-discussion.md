@@ -6,14 +6,14 @@ categories:
   - sphagnum
   - ideas
 ---
-From research ideas discussion with John Shaw and Blanka Aguero. Three projects:
+From research ideas discussion with Jon Shaw and Blanka Aguero. Three projects:
 
 # 1) Mariana microsat data
 
-Mariana left behind two mostly-analyzed microsat datasets of eastern NA Sphagnum in the "S. subsegunda complex" that need to be re-analyzed, written up and published. Rerun structure, look at IBD (with distinct groups there will be but it probably won't be linear--look at IBD within the groups?). Other biogeographic analyses?
+Mariana left behind two mostly-analyzed microsat datasets of eastern NA Sphagnum in the "S. subsecundum complex" that need to be re-analyzed, written up and published. Rerun structure, look at IBD (with distinct groups there will be but it probably won't be linear--look at IBD within the groups?). Other biogeographic analyses?
 
 ## Diploid S. lescurii:
-  * Exists as haploids and allodiploids. Diploids are result from hybridization with S. subsegundum (found in Europe/NA).
+  * Exists as haploids and allodiploids. Diploids are result from hybridization with S. subsecundum (found in Europe/NA).
   * Range: New Jersey to Newfoundland
   * Structure suggests Newfoundland form a separate genetic group
 
@@ -22,8 +22,8 @@ Mariana left behind two mostly-analyzed microsat datasets of eastern NA Sphagnum
   * Range: Mississippi to New Jersey (we only have samples MS to VA included in the dataset)
   * Structure suggests Mississippi is a separate genetic group
 
-## Not directly related to either of these  projects but part of the same "Subsegundum complex" and interesting:
-  * Diploid S. auriculatum also has S. subsegundum as one of its hybrid parents but is morphologically very similar to haploid S. auriculatum, while diploid S. lescurii is nearly identical to haploid S. lescurii. S. subsegundum apparently makes little contribution to the morphology of either of these hybrids. Unequal genome expression? S. auriculatum alleles code for more recessive traits?
+## Not directly related to either of these  projects but part of the same "Subsecundum complex" and interesting:
+  * Diploid S. auriculatum also has S. subsecundum as one of its hybrid parents but is morphologically very similar to haploid S. auriculatum, while diploid S. lescurii is nearly identical to haploid S. lescurii. S. subsecundum apparently makes little contribution to the morphology of either of these hybrids. Unequal genome expression? S. auriculatum alleles code for more recessive traits?
 
 # 2) Old (up to 1980's?) South American Spagnum samples
 
