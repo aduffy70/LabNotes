@@ -60,7 +60,10 @@ Comparative size for reference:
 
 __Unpublished moss backbone manuscript__ (Exome capture and 1KP data phylogeny using genes from all 3 genomic partitions). Sphagnopsida diverges early... probably right after Takakiopsida (the earliest diverging) but some data also supports either Sphagnopsida diverging first or a monophyletic Sphagnopsida + Takakiopsida. 400 million year old divergences are hard to tease out, even with genomic data.
 
-__Unpublished Sphagnum biogepgraphy manuscript__ (4 plastid loci).  
+__Unpublished Sphagnum biogeography manuscript__ (4 plastid loci).
+
+There is a lot going on in this paper and we may want to do similar analyses on the SA Sphagnum project (though that will be RADseq SNP data, not cpDNA data) so I need to spend some time understanding better what they did here.
+
 
 [1]: https://doi.org/10.1126/science.1194585
 [2]: https://doi.org/10.1073/pnas.1323926111
