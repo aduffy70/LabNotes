@@ -3,6 +3,65 @@ title: Backups
 date: 2011-07-01T11:05:29+00:00
 layout: page
 ---
+# Backup process
+
+## 4 hour backups and nightly backups
+
+  Performed automatically by cron job
+
+## Monthly backups
+
+### 1) Verify automatic backups
+
+  * Confirm a recently created/updated file on BACKPACK.
+  * Confirm a recently created/updated file on the Shared Shaw Lab dropbox folder
+  * Confirm a recently created/updated file on crozier.
+
+### 2) Backup Google stuff
+
+  * On fiddlehead, download a zip file of all Google Drive documents (select all folders/files, right-click and select Download)
+
+~~~
+mv ~/Downloads/drive-download* ~/Backups/GoogleDocs/
+~~~
+
+  * Also download a zip file of just Shaw Lab-related Google Drive documents:
+    * Protocols and References folder
+    * Others?
+
+~~~
+ mv ~/Downloads/drive-download* ~/Dropbox/Shaw\ Lab/Aaron/GoogleDrive_backup
+~~~
+
+  * On fiddlehead, download a zip file of Gmail messages, Contacts and Google Calendar events. (Visit <https://takeout.google.com/settings/takeout> )
+
+~~~
+mv ~/Downloads/takeout* ~/Backups/Gmail/
+~~~
+
+### 3) Backup server stuff
+
+  * Backup VPCsim site on crozier
+
+~~~
+mkdir Backups/crozier.$(date +%Y%m%d)
+tar czf Backups/crozier.$(date +%Y%m%d)/public_html5.tgz public_html5/
+~~~
+
+  * From fiddlehead, copy crozier backup to fiddlehead
+
+~~~
+scp -r -P port user@ip:Backups/crozier.$(date +%Y%m%d) ~/Backups/
+~~~
+
+### 4) Backup to an external drive
+
+  * Backup fiddlehead home directory to CAMEL
+
+~~~
+weeklybackup
+~~~
+
 # Strategy
 
 ## Categories of files
@@ -75,66 +134,6 @@ On computing clusters:
 
   * On an external drive (BIGDISK) or moved to Active or Archived folders on fiddlehead:
     - Large analysis files from computing clusters
-
-
-# Backup process
-
-## 4 hour backups and nightly backups
-
-  Performed automatically by cron job
-
-## Monthly backups
-
-### 1) Verify automatic backups
-
-  * Confirm a recently created/updated file on BACKPACK.
-  * Confirm a recently created/updated file on the Shared Shaw Lab dropbox folder
-  * Confirm a recently created/updated file on crozier.
-
-### 2) Backup Google stuff
-
-  * On fiddlehead, download a zip file of all Google Drive documents (select all folders/files, right-click and select Download)
-
-~~~
-mv ~/Downloads/drive-download* ~/Backups/GoogleDocs/
-~~~
-
-  * Also download a zip file of just Shaw Lab-related Google Drive documents:
-    * Protocols and References folder
-    * Others?
-
-~~~
- mv ~/Downloads/drive-download* ~/Dropbox/Shaw\ Lab/Aaron/GoogleDrive_backup
-~~~
-
-  * On fiddlehead, download a zip file of Gmail messages, Contacts and Google Calendar events. (Visit <https://takeout.google.com/settings/takeout> )
-
-~~~
-mv ~/Downloads/takeout* ~/Backups/Gmail/
-~~~
-
-### 3) Backup server stuff
-
-  * Backup VPCsim site on crozier
-
-~~~
-mkdir Backups/crozier.$(date +%Y%m%d)
-tar czf Backups/crozier.$(date +%Y%m%d)/public_html5.tgz public_html5/
-~~~
-
-  * From fiddlehead, copy crozier backup to fiddlehead
-
-~~~
-scp -r -P port user@ip:Backups/crozier.$(date +%Y%m%d) ~/Backups/
-~~~
-
-### 4) Backup to an external drive
-
-  * Backup fiddlehead home directory to CAMEL
-
-~~~
-weeklybackup
-~~~
 
 # Commands and scripts to support the steps above
 
