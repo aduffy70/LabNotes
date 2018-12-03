@@ -41,12 +41,14 @@ Data:
 
 If we are willing to accept samples going back to the 1980's or 1990's, what SA Sphagnum are available in our herbarium and in other herbaria? Do some test extractions on some of our new and old samples to compare DNA quality. Run the raw extracted DNA out on a gel? Do digests with our RADseq REs and compare size distributions of fragments? Ligate and PCR amplify to see if we get similar results?
 
-Are there Falkland Islands samples available? Are there Sphagnum on the Galapagos Islands? According to [this list][1] there are four species in two subgenera:
+Are there Falkland Islands samples available?
+* DUKE has three samples collected since 1980 of S. fimbriatum (2) and S. magellanicum (1) from the Falklands listed in the Bryophyte Portal.
+
+Are there Sphagnum on the Galapagos Islands? According to [this list][1] there are four species in two subgenera:
   * S. alegrense (Spagnum)
   * S. cuspidatum var serrulatum (Cuspidata)
   * S. perichaetiale (Sphagnum)
   * S. recurvum (Cuspidata)
-  * DUKE has three samples collected since 1980 of S. fimbriatum (2) and S. magellanicum (1) from the Falklands listed in the Bryophyte Portal.
 
 DUKE has 287 South American Sphagnum samples collected since 1980 listed in Bryophyte Portal covering Argentina, Bolivia, Brazil, Chile, Colombia, Ecuador, Falkland Islands, Guyana, Paraguay, Peru, Suriname, Venezuela. We also have many from Central America and the Caribbean, including Trinidad and Tobago just off Venezuela.
 
