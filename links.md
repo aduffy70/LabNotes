@@ -18,6 +18,10 @@ permalink: /links/
 * ## [My Primers (Coulombe Lab)][7]
 * ## [PCR Purifications (Coulombe Lab)][8]
 
+# Shaw Lab
+
+* ## [Extraction Records (Shaw Lab)][9]
+
 [1]: https://aduffy70.github.io/Protocols/
 [2]: https://drive.google.com/open?id=0B0DnkQIRAeIISHZ6My1rSFBSWEk
 [3]: https://docs.google.com/spreadsheets/d/1SwwyyLw9wluSJUBs2seKnixyT9U5qkcc61VwliV7JX4/edit?usp=sharing&authkey=CN2j18cC
@@ -26,3 +30,4 @@ permalink: /links/
 [6]: https://docs.google.com/spreadsheets/d/1otg4lAr_F65i7KYufP2YrJBmvz8Sz-bjjxdCWaWMeFY/edit?usp=sharing&authkey=CNr785cB
 [7]: https://docs.google.com/spreadsheets/d/1GMdWIMPTv9oDxIkSGMus2iW3Ud9xdOQYDqFaWWtVx64/edit?usp=sharing
 [8]: https://docs.google.com/spreadsheets/d/1XPeZCDzF5TrwR0BsNxL2H9NgH-8j4VkJyRIibHVJEu0/edit?usp=sharing
+[9]: https://drive.google.com/open?id=1KQzFYnQ9ELwWecQmkQyuKCxn2H8hyYxrJ-4DqoI5U2U
