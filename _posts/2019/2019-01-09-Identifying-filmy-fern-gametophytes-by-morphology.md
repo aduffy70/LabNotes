@@ -30,5 +30,6 @@ Traits to consider:
 Things to investigate:
   * Are there dichotomous keys to filamentous algae? What traits do they use?
   * What methods are used to highlight cell wall ornamentation or different internal structures?
+  * Can I find a set of primers that consistently amplify either different lengths for the 3 species, or primer sets that are specific to species so I can quickly identify single gametophytes through PCR?
 
 If I can identify fixed characters, test those characters by visually inspecting other samples (mine, Don Farrar's, or others) and then using DNA markers to confirm the species assignment from morphology. Also look further into the GBS samples with mixed/uncertain species to see if I see evidence of more than one species within the sample or evidence of individuals with intermediate morphology.
