@@ -24,4 +24,4 @@ Compared Blanka's ipyrad params file to my Crepidomanes intricatum and Carol Row
 
 ## Demultiplex
 
-Run each fastq and its barcode file through ipyrad step 1 separately to generate separate fastqs for each sample. Then we can run all the demultiplexed files through the rest of the process together.
+Run each fastq and its barcode file through ipyrad step 1 separately params-rec1 thru params-rec4) to generate separate fastqs for each sample. Then we can merge all the demultiplex runs into one run (rec_all).
