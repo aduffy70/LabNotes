@@ -6,6 +6,8 @@ categories:
   - sphagnum
 ---
 
+# Planning
+
 Compared Blanka's ipyrad params file to my Crepidomanes intricatum and Carol Rowe's S. minima params files. Differences:
 
 | Difference | Blanka / Wolf Lab | Notes |
@@ -17,3 +19,9 @@ Compared Blanka's ipyrad params file to my Crepidomanes intricatum and Carol Row
 | max_barcode_mismatch | 1 / 0 or 2  | I don't know how many errors our barcodes were designed to allow, so I'll stick with the 1 that was used here. |
 | max_alleles_consens | 1 / 2 | Setting it to 1 is appropriate for haploids but we have some diploids mixed in. At 1, all the heterozygous loci in the diploids will be discarded--more missing data for diploid samples. At 2, some loci with errors in haploids will be miscalled as heterozygous--which makes no sense for a haploid. Ideally, I would use all samples to find the loci, then cluster individuals and call genotypes in 2 batches--haploids and diploids--then bring everything back together before filtering loci by sample coverage. But I don't know for sure which are which ploidy level. I'll start by running as diploid and see if I can determine ploidy from heterozygosity levels. Then reconsider how to proceed. |
 | trim_reads | 0,80,0,80 / 0,0,0,0 | Trimming the reads to a fixed length after quality trimming should reduce problems from the low-quality "extra third" readlengths. If we expect good reads to about bp100 we should be able to go beyond 80 though (100 - 8barcode = 92). I can check this was effective with FASTQC after trimming. |
+
+# Process
+
+## Demultiplex
+
+Run each fastq and its barcode file through ipyrad step 1 separately to generate separate fastqs for each sample. Then we can run all the demultiplexed files through the rest of the process together.
