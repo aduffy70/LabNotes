@@ -25,6 +25,7 @@ Traits to consider:
   * cell wall ornamentation (stains to use?)
   * branching patterns (number of cells before branching, shape of branching cell)
   * position, size, attachment or other features of gemmae
+  * position, size, attachment, branching, or other features of trichomes
   * others?
 
 Things to investigate:
