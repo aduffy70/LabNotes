@@ -16,7 +16,7 @@ Compared Blanka Aguero's ipyrad params file to my _Crepidomanes intricatum_ and 
 | max_low_quality_bases | 5 / 4  | Carol used 4 rather than the default 5. Reducing this will tend to shorten lower quality reads. It might be worth playing with to minimize the low-quality bases we expect with these 150bp reads where we expect garbage in the last third. Leaving at the default for now. I'll run FASTQC on the trimmed/filtered reads and decide whether to reduce it. |
 | phred_Qscore_offset | 43 / 33  | Blanka increased this to require higher quality reads thinking that bad sequence at read ends was leading to "data-churn" but I suspect that might have been caused by untrimmed adapters. I am using the default 33 until I see evidence of a problem. |
 | mindepth_statistical & min_depth_majority | 12 & 18 / 6 | These were both increased from the default (6). This will result in any locus with 6-11 or 6-17 reads in a sample getting thrown out, drastically reducing the number of loci. If we had mostly diploids, increasing these would reduce the number of heterozygotes miscalled as homozygotes, but with mostly haploids it is just throwing loci away unnecessarily. I'm going to put this back to the default. |
-| max_barcode_mismatch | 1 / 0 or 2  | I don't know how many errors our barcodes were designed to allow, so I'll stick with the 1 that was used here. |
+| max_barcode_mismatch | 1 / 0 or 2  | I don't know how many errors our barcodes were designed to allow, so I'll stick with the 1 that was used here. (I checked--they all differ by at least 4 bases so we could have used 2. Oh well.) |
 | max_alleles_consens | 1 / 2 | Setting it to 1 is appropriate for haploids but we have some diploids mixed in. At 1, all the heterozygous loci in the diploids will be discarded--more missing data for diploid samples. At 2, some loci with errors in haploids will be miscalled as heterozygous--which makes no sense for a haploid. Ideally, I would use all samples to find the loci, then cluster individuals and call genotypes in 2 batches--haploids and diploids--then bring everything back together before filtering loci by sample coverage. But I don't know for sure which are which ploidy level. I'll start by running as diploid and see if I can determine ploidy from heterozygosity levels. Then reconsider how to proceed. |
 | trim_reads | 0,80,0,80 / 0,0,0,0 | Trimming the reads to a fixed length after quality trimming should reduce problems from the low-quality "extra third" readlengths. If we expect good reads to about bp100 we should be able to go beyond 80 though (100 - 8barcode = 92). I will start with 0,92,0,92 and check with FASTQC after trimming. |
 
@@ -26,12 +26,22 @@ All files are in /work/amd176/S_recurvum_radseq/demultiplex1 on the Duke cluster
 
 ## Demultiplex
 
-Run each fastq and its barcode file through ipyrad step 1 separately params-rec1 thru params-rec4) to generate separate fastq files for each sample. Then merge all the demultiplex runs into one run (rec_combined).
+Run each fastq and its barcode file through ipyrad step 1 separately (params-rec1 thru params-rec4) to generate separate fastq files for each sample. Then merge all the demultiplex runs into one run (params-rec_combined).
 
 ## Filtering
 
-Even after filtering there are large numbers of reads (>5% of reads in some samples) with Illumina adapter sequence. It looks like sometimes the second adapter is getting attached where there is not a cutsite. I refiltered without a second cutsite sequence in the parameters so ipyrad just cuts off the adapter. The cutsite bases at the end of the sequence should not be any more of a problem then the other cutsite bases at the start of the sequence (they may even help with alignment). This reduced the adapter content so it doesn't appear in the FASTQC output anymore.
+Even after filtering there are large numbers of reads (>5% of reads in some samples) with Illumina adapter sequence. It looks like sometimes the second adapter is getting attached where there is not a cutsite. I refiltered without a second cutsite sequence in the parameters (params-rec_combined-no_2nd_cut) so ipyrad just cuts off the adapter. The cutsite bases at the end of the sequence should not be any more of a problem then the other cutsite bases at the start of the sequence (they may even help with alignment). This reduced the adapter content so it doesn't appear in the FASTQC output anymore.
+
+The number of reads passing all filters is correlated with number of raw reads (R-square 0.997), but there are some differences between the 4 lanes:
+  * number of adapter bp trimmed: 2 & 3 > 4 > 1
+  * number of low quality bp trimmed: 1 >>> 2, 3 & 4
+  * number of reads filtered for too many Ns: 3 & 4 > 2 >>> 1
+  * number of reads filtered by min length: 1 > 2, 3, & 4
 
 ## Clustering
 
-Start at cluster_threshold 0.85 (default) to see if the data-churn problem is resolved. Then try additional values to look for evidence of diploid samples and to determine the best value.
+Started at cluster_threshold 0.85 (default) to see if the "data-churn" problem is resolved--no problems. Then ran additional values (0.80, 0.825, 0.875, 0.90, 0.925, 0.95) to look for evidence of diploid samples and to determine the best value.
+
+# Things to keep in mind
+
+  * Some of the over-represented sequences after trimming/filtering match prokaryote ribosomal RNA and we know there are organisms that live within the hyaline cells of sphagnum, so it would be a good idea to map the final set of loci to the genome to filter out contaminant loci.
