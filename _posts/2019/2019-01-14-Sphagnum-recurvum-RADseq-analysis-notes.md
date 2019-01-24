@@ -22,7 +22,19 @@ Compared Blanka Aguero's ipyrad params file to my _Crepidomanes intricatum_ and 
 
 # Process
 
-All files are in /work/amd176/S_recurvum_radseq/demultiplex1 on the Duke cluster (An unfortunate folder name choice but I forgot ipyrad doesn't like when you move/rename folders)
+All analysis files are in /work/amd176/S_recurvum_radseq/demultiplex1 on the Duke cluster (An unfortunate folder name choice but I forgot ipyrad doesn't like when you move/rename folders).
+
+The voucher file with more info about the samples is in the lab dropbox at ShawLab/Jon/RecurvumComplex/plates_combined.xlsx.
+
+We have 2 outgroup species:
+  * S. missouricum - most likely diploid
+  * S. riparium - possibly diploid
+
+We think all other species included in the dataset are haploid.
+
+Consider how to handle THAT!
+
+A file with what we know about Sphagnum ploidy levels is at ShawLab/Jon/OOTT_nexus_files/OOTT_20150604/ploidy_for_MalloryUSE_THIS.xlsx.
 
 ## Demultiplex
 
@@ -45,3 +57,7 @@ Started at cluster_threshold 0.85 (default) to see if the "data-churn" problem i
 # Things to keep in mind
 
   * Some of the over-represented sequences after trimming/filtering match prokaryote ribosomal RNA and we know there are organisms that live within the hyaline cells of sphagnum, so it would be a good idea to map the final set of loci to the genome to filter out contaminant loci.
+
+# More ipyrad gotchas
+
+Step 3 makes deduplicated read files in the step 2 folder, uses them to make the clusters and then deletes them. That means if you branch after step 2 to cluster at several different levels you can only run ONE step 3 at a time. If more than one run in parallel, the first will create the deduplicated read files, the second will recreate and overwrite them with the same names in the same location (weird but not a problem) but when the first run ends it deletes the deduplicated read files while the second run is still trying to use them. Crash (big problem).
