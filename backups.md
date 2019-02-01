@@ -26,14 +26,23 @@ mv ~/Downloads/drive-download* ~/Backups/GoogleDocs/
 ~~~
 
   * Also download a zip file of just Shaw Lab-related Google Drive documents:
+    * Extraction Sheets folder
     * Protocols and References folder
-    * Others?
+    * CollectionNotes
+    * DNA Extraction Crossreference-ShawLab
 
 ~~~
  mv ~/Downloads/drive-download* ~/Dropbox/Shaw\ Lab/Aaron/GoogleDrive_backup
 ~~~
 
-  * On fiddlehead, download a zip file of Gmail messages, Contacts and Google Calendar events. (Visit <https://takeout.google.com/settings/takeout> )
+  * On fiddlehead, visit <https://takeout.google.com/settings/takeout> and download a tgz file of:
+    * Calendar
+    * Chrome
+    * Contacts
+    * Keep
+    * Mail
+    * MyMaps
+    * Tasks
 
 ~~~
 mv ~/Downloads/takeout* ~/Backups/Gmail/
@@ -51,7 +60,7 @@ tar czf Backups/crozier.$(date +%Y%m%d)/public_html5.tgz public_html5/
   * From fiddlehead, copy crozier backup to fiddlehead
 
 ~~~
-scp -r -P port user@ip:Backups/crozier.$(date +%Y%m%d) ~/Backups/
+scp -r crozier:Backups/crozier.$(date +%Y%m%d) ~/Backups/
 ~~~
 
 ### 4) Backup to an external drive
