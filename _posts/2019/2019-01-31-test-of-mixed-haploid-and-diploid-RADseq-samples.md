@@ -28,3 +28,7 @@ Testing processing of mixed haploid and diploid samples on a dataset where we kn
   * See if we can determine ploidy of samples from the ipyrad output.
   * Rebranch at step 4 to process haploids and diploids separately at the correct ploidy, then merge for steps 6 and 7.
   * Run STRUCTURE, RAxML, IBD analysis, PCA, etc on all three datasets and compare inferences.
+
+# Result
+
+  * Identifying ploidy based on error rates doesn't seem to work. When you process everything as haploid (so heterozygosity gets counted as higher error) the mean error rate from ipyrad step 4 IS higher for diploids than for haploids but the distributions of error rates overlap so much that it couldn't be used to determine ploidy of an unknown sample. There does seem to be a natural break in the some of the plots but it would suggest that many of the samples have been assigned the wrong ploidy. I need to think about this further.
