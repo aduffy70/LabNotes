@@ -22,7 +22,7 @@ Testing processing of mixed haploid and diploid samples on a dataset where we kn
 
   * Make a barcode file from the voucher file, copy the Illumina read files to the cluster, and concatenate the many files into a single rawdata file.
   * Demultiplex, clean and filter (ipyrad s1-2) and make sure things look ok.
-  * Branch and cluster at different thresholds (ipyrad s3).
+  * Branch and run at different clustering thresholds (ipyrad s3). Use the number of variable and parsimony informative loci at each threshold to determine the best threshold to use for further analysis.
   * See if we can determine ploidy of the samples from the ipyrad output and see if we can determine the best cluster_threshold given our knowledge of the ploidy.
   * Use the best threshold to branch and run as haploid and diploid.
   * See if we can determine ploidy of samples from the ipyrad output.
@@ -31,9 +31,17 @@ Testing processing of mixed haploid and diploid samples on a dataset where we kn
 
 # Result
 
+## "Best" clustering threshold
+
+Some of the thresholds failed (due to the branching-before-building-database bug?), but enough finished to see the optimal threshold is around 0.950 to 0.925. I'm using 0.925.
+
+![Plot of peak in assembly locus count][image1]
+
+## Determining ploidy
+
 Identifying ploidy based on error rates or heterozygosity doesn't seem to work. When you process everything as haploid (so heterozygosity gets counted as higher error) the mean error rate from ipyrad step 4 IS higher for diploids than for haploids but the distributions of error rates overlap so much that it couldn't be used to determine ploidy of an unknown sample. There does seem to be a natural break suggesting a group of samples with higher heterozygosity and haploid-called error, but if the groupings are correct then we have about 8 of the 44 haploids that are really diploids and maybe one of the 19 diploids that is really haploid.
 
-![Heterozygosity vs readcount plot][image1]
+![Heterozygosity vs readcount plot][image2]
 
 Maybe the ploidy assignments based on microsat heterozygosity are flawed.
   * It seems possible diploid samples could happen to be homozygous at 13 microsat loci and appear haploid, while still having heterozygous loci in a dataset of thousands of radseq loci.
@@ -41,4 +49,5 @@ Maybe the ploidy assignments based on microsat heterozygosity are flawed.
 
 I think I need a dataset where sample ploidy has been determined using flow cytometry.
 
-[image1]:{{site.image_path}}Het_vs_readcount.png
+[image1]:{{site.image_path}}Loci_by_cluster_threshold-2019-03-21.png
+[image2]:{{site.image_path}}Het_vs_readcount.png
