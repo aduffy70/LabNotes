@@ -31,4 +31,14 @@ Testing processing of mixed haploid and diploid samples on a dataset where we kn
 
 # Result
 
-  * Identifying ploidy based on error rates doesn't seem to work. When you process everything as haploid (so heterozygosity gets counted as higher error) the mean error rate from ipyrad step 4 IS higher for diploids than for haploids but the distributions of error rates overlap so much that it couldn't be used to determine ploidy of an unknown sample. There does seem to be a natural break in the some of the plots but it would suggest that many of the samples have been assigned the wrong ploidy. I need to think about this further.
+Identifying ploidy based on error rates or heterozygosity doesn't seem to work. When you process everything as haploid (so heterozygosity gets counted as higher error) the mean error rate from ipyrad step 4 IS higher for diploids than for haploids but the distributions of error rates overlap so much that it couldn't be used to determine ploidy of an unknown sample. There does seem to be a natural break suggesting a group of samples with higher heterozygosity and haploid-called error, but if the groupings are correct then we have about 8 of the 44 haploids that are really diploids and maybe one of the 19 diploids that is really haploid.
+
+![Heterozygosity vs readcount plot][image1]
+
+Maybe the ploidy assignments based on microsat heterozygosity are flawed.
+  * It seems possible diploid samples could happen to be homozygous at 13 microsat loci and appear haploid, while still having heterozygous loci in a dataset of thousands of radseq loci.
+  * The one diploid that appears to be haploid is in the area between the two clusters where it could plausibly be a diploid with relatively low heterozygosity.
+
+I think I need a dataset where sample ploidy has been determined using flow cytometry.
+
+[image1]:{{site.image_path}}Het_vs_readcount.png
