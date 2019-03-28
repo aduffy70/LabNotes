@@ -29,8 +29,8 @@ On the Duke Computing cluster:
 # Results
 
   * Southern macrophyllum is supported as sister to S. cribrosum.
-  * Norther macrophyllum is separate and falls with cyclophyllum and pylaesii, but relationships among those three are not well resolved.
-  * So we essentially have an unresolved polytomy with pylaesii, cyclophyllum, Northern macrophyllum and Southern macrophyllum+cribrosum
+  * Northern macrophyllum is separate and falls with cyclophyllum and pylaesii, but relationships among those three are not well resolved.
+  * So we essentially have an unresolved polytomy with pylaesii, cyclophyllum, Northern macrophyllum and Southern macrophyllum+cribrosum.
 
 ![Maximum likelihood tree cartoon][image1]
 
