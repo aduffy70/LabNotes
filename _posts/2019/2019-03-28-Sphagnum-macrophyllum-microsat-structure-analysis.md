@@ -8,7 +8,7 @@ categories:
 
 # Problem
 
-We have evidence for (Northern NJ/DE to Newfoundland) and Southern (DE/VA to FL/TX) groups of S. macrophyllum and want to see how they fit in with each other and related species. Note- these do not appear to be the same samples used in the S. macrophyllum DNA sequence analysis.
+We have evidence for (Northern NJ/DE to Newfoundland) and Southern (DE/VA to FL/TX) groups of S. macrophyllum and want to see how they fit in with each other and related species. Note- only a subset of these appear to be the same samples used in the S. macrophyllum DNA sequence analysis.
 
 # Data
   * Original "rawdata" spreadsheet with microsat data was in ShawLab/Aaron/Subsegunda_geography_diploids and Blanka Aguero added georeference data.
