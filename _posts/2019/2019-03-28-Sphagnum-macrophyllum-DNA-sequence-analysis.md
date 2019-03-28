@@ -20,7 +20,8 @@ Sequence data files were emailed from Jon Shaw and placed in ShawLab/Aaron/Activ
 # Analysis
 
 On the Duke Computing cluster:
-  * Ran RAxML bootstrap and likelihood search using separate partitions for each locus with all samples. Ran 1000 bootstraps which is probably overkill but it only takes ~4 hours anyway.
+  * Ran RAxML bootstrap and likelihood search using separate partitions for each locus with all samples. Ran 1000 bootstraps which is overkill but only took ~4 hours anyway.
     - One cyclophyllum (P9 NC Carteret) fell with the outgroup which isn't interesting or relevant to our questions so I removed it from the alignment.
-    - RAxML complained about 31 sequences being exact duplicates so I removed them as well, renaming sequences to indicate they represent multiple samples. - It also complained about 2 alignment columns with entirely undetermined columns so I verified that they really were undetermined in the original nexus files (I didn't foul something up) but left them in since RAxML just treats them as missing data and in removing them I risk messing up the partition boundaries.
-  * Re-ran RAxML using the reduced dataset of XXX samples.
+    - RAxML complained about 31 sequences being exact duplicates so I removed them. Actually, I let RAxML remove them and just renamed the samples in the reduced alignment file it created to indicate they represent multiple samples. In all but one case they were samples of the same species from the same site. The other was cyclophyllum from SC and MS. The name now includes both states.
+    - It also complained about 2 alignment columns with entirely undetermined columns so I let RAxML remove those too and create the updated partition file for me.
+  * Re-ran RAxML using this reduced/renamed dataset of 242 samples and 4358 alignment positions.
