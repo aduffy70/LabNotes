@@ -24,20 +24,36 @@ We have evidence for (Northern NJ/DE to Newfoundland) and Southern (DE/VA to FL/
     - Best K=2
   * Some of the NC samples have the wrong county name in the samplename. The georeferenced locations are not in the counties included in the names, but in the spreadsheet of Herbarium info, the samples have the correct county listed for the georeference location. So, I changed the sample names to include the correct county on the ones that were incorrect:
 
-| Sample | Co. in samplename | Co. in Herbarium info | Co. of coordinates |
-| ------ | ----------------- | --------------------- | ------------------ |
-| Z63 | Brunswick | Brunswick | Brunswick (Cape Fear River) |
-| Z64 | Scotland | Brunswick | Brunswick (Green Swamp) |
-| Z65 | Brunswick | Scotland | Scotland (Camerons Lake) |
-| Z66 | Brunswick | Brunswick | Brunswick (Green Swamp) |    
-| Z67 | Craven | Brunswick | Brunswick (Orton Pond) |
-| Z68 | Craven | Craven | Craven (Croatan NF) |
-| Z70 | Richmond | Brunswick | Brunswick (Orton Pond) |
+| Sample | Co. in samplename | Co. in Herbarium info | Co. of coordinates | Status |
+| ------ | ----------------- | --------------------- | ------------------ | ------ |
+| Z63 | Brunswick | Brunswick | Brunswick (Cape Fear River) | ok |
+| Z64 | Scotland | Brunswick | Brunswick (Green Swamp) | fixed |
+| Z65 | Brunswick | Scotland | Scotland (Camerons Lake) | fixed |
+| Z66 | Brunswick | Brunswick | Brunswick (Green Swamp) | ok |
+| Z67 | Craven | Brunswick | Brunswick (Orton Pond) | fixed |
+| Z68 | Craven | Craven | Craven (Croatan NF) | ok |
+| Z70 | Richmond | Brunswick | Brunswick (Orton Pond) | fixed |
+
+  * Isolation by distance:
+    - Generated a table of all pairwise combinations of sample coordinates with my coordinatepairs.py script so I can use an online calculator to calculate the distances.
+    - Got the distances with [online calculator][2].
+    - Categorized pairwise comparisons based on whether the two samples are in the same Structure-identified cluster or in different clusters, using my classifycomparisons.py script.
+    - Looked for evidence of IBD with Mantel tests in R for all samples together and within the groups identified by Structure.
 
 # Result
 
-  * At K=2 we have a split between Southern (TX, MS, FL, GA, SC, NC, VA, MD) and Northern (DE, NS, NF) with 3 of 20 DE samples grouped with Southern. NJ is split--the southernmost(!) 3 sites in Northern and sites 5-6 in Southern, and site 4 apparently admixed (80%N:20%S). Few other samples show any admixture and those are Southern with <5% Northern signal.
+  * At K=2 we have a split between Southern (TX, MS, FL, GA, SC, NC, VA, MD) and Northern (DE, NS, NF) with 3 of 20 DE samples grouped with Southern. NJ is split--the southernmost(!) 3 sites in Northern and sites 5-6 in Southern, and the site 4 sample apparently admixed (80%N:20%S). Few other samples show any admixture and those are Southern with <5% Northern signal.
   * At K=3 MD becomes it's own group and the NJ that previously grouped with Southern appear admixed between MD and Southern. The NJ sample that was admixed N/S at K=2 is still admixed 80%N:20%S. A few Southern samples still show low levels of N admixture and a few now show MD admixture.
-  * At higher levels the big pattern from K=3 holds and Southern samples all become admixed at varying levels between three sources with only weak geographic patterns to the genetic structure. 
+  * At higher levels the big pattern from K=3 holds and Southern samples all become admixed at varying levels between three sources with only weak geographic patterns to the genetic structure.
+  * There is evidence of isolation by distance when considering all samples together (correlation=0.317, p<1e-05). But things are more interesting when we look at just Northern samples, just Southern samples and comparisons between Northern and Southern:
+    - There is evidence of IBD in the Northern samples (correlation 0.545, p<1e-04)
+    - There is evidence of IBD in the Southern samples (correlation 0.294, p<1e-04)
+    - There is no evidence of IBD when comparing Northern and Southern samples (genetic distance and geographic distance are slightly negatively correlated).
+    - Even though Northern and Southern samples span similar geographic distance ranges (0-2000km) the genetic distances between pairs of Northern samples are lower than the genetic distances between pairs of Southern samples (i.e., pairs of Northern samples are generally more genetically similar to each other than pairs of Southern samples are).
+    - Pairwise distances between Northern and Southern samples are higher than within-cluster comparisons (i.e., samples within each cluster are generally more similar to each other than they are to samples in the other cluster--further supporting the clustering assignments made by Structure).
+
+![S macrophyllum Pairwise distance plot][image1]
 
 [1]: https://drive.google.com/open?id=1DBN0Ub_KafXjANs2qlDufeXC6snAH43B&usp=sharing
+[2]: http://www.stevemorse.org/nearest/distancebatch.html
+[image1]: {{site.image_path}}S_macrophyllum_pairwise_distance_plot.png
