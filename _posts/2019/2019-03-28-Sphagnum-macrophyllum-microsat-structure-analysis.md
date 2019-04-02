@@ -69,9 +69,11 @@ We have evidence for (Northern NJ/DE to Newfoundland) and Southern (DE/VA to FL/
 
 # Consistency with DNA sequence analysis
 
-  * There is only partial overlap between the samples used in the microsat dataset and Ping's sequence data, but the samples or sites that ARE represented in both give consistent results in both analyses.
+  * There is only partial overlap between the samples used in the microsat dataset and Ping's sequence data, but the 110 samples that are represented in both give consistent results in both analyses.
     * The DE and NJ samples in the Southern cluster are also in the Southern clade and the Northern cluster samples are in the Northern clade.
     * The one admixed NJ sample (80% Northern:20% Southern) is in the Northern clade but is sister to the rest of the Northern clade samples.
+  * In the ML tree, the branch lengths within the Northern clade are shorter than the branch lengths in the Southern clade, consistent with the smaller pairwise genetic distances in the Northern cluster vs the Southern cluster.
+  * In the K=3 structure results, MD forms a separate cluster. In the ML tree the 3 MD samples that are really in MD (2 are mislabeled VA samples) form a reasonably supported clade (BS=89). However, that clade is buried within the mess of Southern samples--not sister to the rest of the Southern samples, which would have been more consistent with the Structure results.
 
 [1]: https://drive.google.com/open?id=1DBN0Ub_KafXjANs2qlDufeXC6snAH43B&usp=sharing
 [2]: http://www.stevemorse.org/nearest/distancebatch.html
