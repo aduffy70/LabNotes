@@ -61,13 +61,13 @@ We have evidence for (Northern NJ/DE to Newfoundland) and Southern (DE/VA to FL/
   * There is evidence of isolation by distance when considering all samples together (correlation=0.317, p<1e-05). But things are more interesting when we look at just Northern samples, just Southern samples and comparisons between Northern and Southern:
     - There is evidence of IBD in the Northern samples (correlation 0.545, p<1e-04)
     - There is evidence of IBD in the Southern samples (correlation 0.294, p<1e-04)
-    - When comparing Northern and Southern samples, genetic distance and geographic distance are slightly negatively correlated, suggesting there is no IBD. No mantel test can be performed but even if the correlation is statistically significantly different from zero it is negative, not positive.
+    - When comparing Northern and Southern samples, genetic distance and geographic distance are slightly negatively correlated, suggesting there is no IBD (though no mantel test can be performed).  This is true even if I only include comparisons in the same geographic range as the within-cluster comparisons (0-2000km), so it is NOT an artifact of the greater geographic distances between clusters.
     - Even though Northern and Southern samples span similar geographic distance ranges (0-2000km) the genetic distances between pairs of Northern samples are generally lower than the genetic distances between pairs of Southern samples (i.e., pairs of Northern samples are more genetically similar to each other than pairs of Southern samples are).
     - Pairwise genetic distances between Northern and Southern samples are higher than within-cluster comparisons (i.e., samples within each cluster are generally more similar to each other than they are to samples in the other cluster--further supporting the clustering assignments made by Structure).
 
     ![S macrophyllum Pairwise distance plot][image1]
 
-## Consistency with DNA sequence analysis
+# Consistency with DNA sequence analysis
 
   * There is only partial overlap between the samples used in the microsat dataset and Ping's sequence data, but the samples or sites that ARE represented in both give consistent results in both analyses.
     * The DE and NJ samples in the Southern cluster are also in the Southern clade and the Northern cluster samples are in the Northern clade.
