@@ -3,7 +3,7 @@ title:  Test of mixed haploid and diploid RADseq samples
 date:  2019-01-31
 layout: post
 categories:
-  - sphagnum
+  - sphagnum other
   - ideas
 ---
 Testing processing of mixed haploid and diploid samples on a dataset where we know the ploidy. Using Yan's "potato" Pacific Rim sphagnum dataset. These same taxa were analyzed using microsats so we know ploidy of each.

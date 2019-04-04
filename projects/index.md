@@ -3,7 +3,10 @@ title: Projects
 date: 2016-08-23
 layout: page
 ---
-* ## [sphagnum]({{ site.baseurl }}/projects/sphagnum)
+* ## [sphagnum diploid subsecunda]({{ site.baseurl }}/projects/sphagnum-diploid-subsecunda)
+* ## [sphagnum other]({{ site.baseurl }}/projects/sphagnum-other)
+* ## [t. intricatum gbs]({{ site.baseurl }}/projects/t-intricatum-gbs)
+* ## [h. wrightii]({{ site.baseurl }}/projects/h-wrightii)
 * ## [gsta alt splicing]({{ site.baseurl }}/projects/gsta-alt-splicing)
 * ## [gsta assays]({{ site.baseurl }}/projects/gsta-assays)
 * ## [gsta cbc weight]({{ site.baseurl }}/projects/gsta-cbc-weight)
@@ -13,8 +16,6 @@ layout: page
 * ## [gsta mirna]({{ site.baseurl }}/projects/gsta-mirna)
 * ## [gsta other]({{ site.baseurl }}/projects/gsta-other)
 * ## [pm2.5]({{ site.baseurl }}/projects/pm2-5)
-* ## [t. intricatum gbs]({{ site.baseurl }}/projects/t-intricatum-gbs)
-* ## [h. wrightii]({{ site.baseurl }}/projects/h-wrightii)
 * ## [science ed drk12]({{ site.baseurl }}/projects/science-ed-drk12)
 * ## [science ed vpcsim]({{ site.baseurl }}/projects/science-ed-vpcsim)
 * ## [science ed vpgsim]({{ site.baseurl }}/projects/science-ed-vpgsim)

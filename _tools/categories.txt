@@ -1,4 +1,5 @@
-  - sphagnum
+  - sphagnum diploid subsecunda
+  - sphagnum other
   - gsta assays
   - gsta alt splicing
   - gsta cbc weight

@@ -5,7 +5,10 @@ title: Project-None
 <h1>Project: None</h1>
 {% for post in site.posts %}
   {% assign noproject = true %}
-  {% if post.categories contains 'sphagnum' %}
+  {% if post.categories contains 'sphagnum diploid subsecunda' %}
+    {% assign noproject = false %}
+  {% endif %}
+  {% if post.categories contains 'sphagnum other' %}
     {% assign noproject = false %}
   {% endif %}
   {% if post.categories contains 'gsta alt splicing' %}

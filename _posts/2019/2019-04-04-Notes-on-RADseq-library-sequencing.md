@@ -3,7 +3,7 @@ title:  Notes on RADseq library sequencing
 date:  2019-04-04
 layout: post
 categories:
-  - sphagnum
+  - sphagnum other
 ---
 We use [DUGSIM][1] to submit sequencing orders to the Duke Center for Genomic and Computational Biology.
 

@@ -3,7 +3,7 @@ title:  Sphagnum reading
 date:  2018-11-08
 layout: post
 categories:
-  - sphagnum
+  - sphagnum other
 
 ---
 

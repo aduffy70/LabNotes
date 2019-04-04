@@ -3,7 +3,7 @@ title:  Sphagnum macrophyllum microsat structure analysis
 date:  2019-03-28
 layout: post
 categories:
-  - sphagnum
+  - sphagnum diploid subsecunda
 ---
 
 # Problem

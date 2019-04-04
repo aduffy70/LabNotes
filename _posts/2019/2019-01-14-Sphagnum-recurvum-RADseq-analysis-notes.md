@@ -3,7 +3,7 @@ title:  Sphagnum recurvum RADseq analysis notes
 date:  2019-01-14
 layout: post
 categories:
-  - sphagnum
+  - sphagnum other
 ---
 
 # Planning

@@ -3,7 +3,8 @@ title:  Sphagnum research ideas discussion
 date:  2018-11-26
 layout: post
 categories:
-  - sphagnum
+  - sphagnum diploid subsecunda
+  - sphagnum other
   - ideas
 ---
 From research ideas discussion with Jon Shaw and Blanka Aguero. Three projects:

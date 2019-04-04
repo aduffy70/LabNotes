@@ -3,7 +3,7 @@ title:  Sphagnum macrophyllum DNA sequence analysis
 date:  2019-03-28
 layout: post
 categories:
-  - sphagnum
+  - sphagnum diploid subsecunda
 ---
 Maximum Likelihood analysis of Ping's S. macrophyllum DNA sequence data using RAxML.
 

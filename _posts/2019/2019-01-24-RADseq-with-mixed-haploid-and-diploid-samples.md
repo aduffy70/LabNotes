@@ -3,7 +3,7 @@ title:  RADseq with mixed haploid and diploid samples
 date:  2019-01-24
 layout: post
 categories:
-  - sphagnum
+  - sphagnum other
   - t. intricatum gbs
   - ideas
 ---
