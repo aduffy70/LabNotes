@@ -47,7 +47,7 @@ mv ~/Downloads/drive-download* ~/Backups/GoogleDocs/
 mv ~/Downloads/takeout* ~/Backups/Gmail/
 ~~~
 
-### 4) Backup to an external drive
+### 3) Backup to an external drive
 
   * Backup fiddlehead home directory to CAMEL
 
