@@ -3,7 +3,7 @@ title:  Sphagnum research ideas discussion
 date:  2018-11-26
 layout: post
 categories:
-  - sphagnum diploid subsecunda
+  - sphagnum subsecunda biogeography
   - sphagnum other
   - ideas
 ---
