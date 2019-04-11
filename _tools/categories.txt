@@ -1,4 +1,4 @@
-  - sphagnum diploid subsecunda
+  - sphagnum subsecunda biogeography
   - sphagnum other
   - gsta assays
   - gsta alt splicing

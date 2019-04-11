@@ -3,7 +3,7 @@ title: Projects
 date: 2016-08-23
 layout: page
 ---
-* ## [sphagnum diploid subsecunda]({{ site.baseurl }}/projects/sphagnum-diploid-subsecunda)
+* ## [sphagnum subsecunda biogeography]({{ site.baseurl }}/projects/sphagnum-subsecunda-biogeography)
 * ## [sphagnum other]({{ site.baseurl }}/projects/sphagnum-other)
 * ## [t. intricatum gbs]({{ site.baseurl }}/projects/t-intricatum-gbs)
 * ## [h. wrightii]({{ site.baseurl }}/projects/h-wrightii)
