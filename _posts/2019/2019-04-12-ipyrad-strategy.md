@@ -15,7 +15,7 @@ categories:
 1. Make branches for cluster thresholds from 0.999[^1] to 0.8ish and run ipyrad steps 3-7 on all of them. Plot number of variable and parsimony informative loci from each run to identify "best" cluster threshold (look for the peak).
 1. On "best" cluster threshold branch, look at locus sample coverage to decide what minimum coverage to use. Balance # of loci against level of missing data.
 1. Branch "best" cluster threshold branch and run ipyrad step 7 with chosen minimum coverage. Identify bad samples with "excessive" missing data.
-1. Branch "best" cluster threshold branch filtering to remove bad samples and run ipyrad step 7 with chosen minimum coverage (adjusted?[^2]).
+1. Branch "best" cluster threshold branch, filtering to remove bad samples and run ipyrad step 7 with chosen minimum coverage (adjusted?[^2]).
 1. Use the output files to do downstream analyses.
 
 If you want to sleep at night after all the arbitrary decisions you just made:
