@@ -35,7 +35,7 @@ Ploidy levels:
 
 A file with what we know about Sphagnum ploidy levels is at
 ~~~
-ShawLab/Jon/OOTT_nexus_files/OOTT_20150604/ploidy_for_MalloryUSE_THIS.xlsx.
+ShawLab/Jon/OOTT_nexus_files/OOTT_20150604/ploidy_for_MalloryUSE_THIS.xlsx
 ~~~
 
 # Analysis
@@ -57,7 +57,11 @@ I did an initial "quick-and-dirty" ipyrad run (dropped worst 20% of samples and 
 
 ### Full exploratory analysis
 
-  * The "real" analysis files are in /work/amd176/S_recurvum_radseq/ipyrad_runs on the Duke cluster. A branching diagram for the analyses in this folder [is available here][1].
+  * The "real" analysis files are on the Duke cluster at
+  ~~~
+  /work/amd176/S_recurvum_radseq/ipyrad_runs
+  ~~~
+  * A branching diagram for the analyses in this folder [is available here][1].
   * To determine the optimal cluster threshold (~0.90) I ran multiple cluster thresholds on a subset of the samples (~1/5 samples including multiple samples of each species) and plotted the variable and parsimony informative loci.
 
   ![Cluster threshold plot][image1]
@@ -82,13 +86,10 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
 
   * After ipyrad trimming/filtering (step 2) there were large numbers of reads (>5% of reads in some samples) with Illumina adapter sequence. Sometimes the second adapter is getting attached where there is not a cutsite. I refiltered without a second cutsite sequence in the parameters so ipyrad just cuts off the adapter. The cutsite bases at the end of the sequence should not be any more of a problem then the first cutsite bases at the start of the sequence (they may even help with alignment). This reduced the adapter content so it doesn't appear in the FASTQC output anymore.
   * The number of reads passing all filters is correlated with number of raw reads (R-square 0.997), but there are some quality differences between the 4 lanes and especially between the 100bp and 150bp runs. See [discussion of quality differences here][2].
-    - number of low quality bp trimmed: 1 > 2, 3 & 4
-    - number of reads filtered by min length: 1 > 2, 3, & 4
-    - estimated error rates (step 4): 2, 3, & 4 > 1
 
 # Results
 
 
 [1]: {{site.image_path}}ipyrad_branching_diagram.pdf
-[2]: {{site.base_url}}{% post_url /2019/2019-04-04-Notes-on-RADseq-library-sequencing %}
+[2]: {{site.baseurl}}{% post_url /2019/2019-04-04-Notes-on-RADseq-library-sequencing %}
 [image1]: {{site.image_path}}S_recurvum_best_cluster_threshold.png
