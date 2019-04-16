@@ -37,4 +37,4 @@ I [previously][1] analyzed chicken AFBO trapping assay data for Fran Bhushan and
 
 I have reservations about the repeatability of the assays, but we can minimize those concerns by focusing on the subset of the data that has evidence of repeatability, and by directly exploring the effect of the most variable replicates.  We find no significant differences between chicken types for Km, Vmax, or Velocity at 128uM AFB regardless of whether we use the entire dataset, or just the datapoints with the best evidence for repeatability. The data may violate the ANOVA assumptions of normality and homoscedasticity, but we find no significant differences between chicken types even after transforming the data.
 
-[1]: {% post_url 2016/2016-12-05-Chicken-Vmax-and-Km-ANOVA-for-Fran-Bhushan %}
+[1]: {{site.baseurl}} {% post_url 2016/2016-12-05-Chicken-Vmax-and-Km-ANOVA-for-Fran-Bhushan %}
