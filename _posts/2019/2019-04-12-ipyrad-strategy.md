@@ -26,8 +26,8 @@ If you want to sleep at night after all the arbitrary decisions you just made:
 # ipyrad gotchas:
 
 * Step 3 makes deduplicated read files in the step 2 folder, uses them to make the clusters and then deletes them. That means if you branch after step 2 to cluster at several different levels you can only run ONE step 3 at a time. If you try to run more than one run in parallel, the first will create the deduplicated read files, the second will recreate and overwrite them with the same names in the same location (weird but not a problem) but when the first run ends it deletes the deduplicated read files while the second run is still trying to use them. Crash (big problem).
+* Step 4 puts the stats file in the same folder as the previous step. That means if you make branches, the stats files from different branches will overwrite each other. Be sure to copy your stats files to another folder before running branches.
 * Step 6 on 384 samples takes a long time (after 28hours it was only 23%) on the building database step. Apparently this part has to run in serial so throwing multiple cpus at it doesn't help, but it is also memory hungry so if you try to run on a single cpu with only 2Gb memory it will bog down and crash.
-* Step 4, put the stats file in the same folder as the previous step. That means if you make branches, the stats files will overwrite each other. Be sure to copy your stats files to another folder before branching.
 
 Note:
 
