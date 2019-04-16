@@ -46,14 +46,14 @@ This analysis got messy...
 
 ### Initial quick-and-dirty analysis
 
-I did an initial "quick-and-dirty" ipyrad run (dropped worst 20% of samples and keeping only loci with coverage in 90% of remaining samples) and raxml/structure analysis but we discovered some errors in the barcode file for lane 1. Blanka figured out which samples were out of order and fixed the barcodes file. I made a conversion table from wrong samplename to correct sample name and used it to fix the raxml tree and structure plots.
+I did an initial "quick-and-dirty" ipyrad run (dropped worst 20% of samples and keeping only loci with coverage in 90% of remaining samples) and RAxML/Structure analysis but we discovered some errors in the barcode file for lane 1. Blanka figured out which samples were out of order and fixed the barcodes file. I made a conversion table from wrong samplename to correct sample name and used it to fix the RAxML tree and Structure plots.
   * The files from that run are on the Duke cluster in a poorly named subfolder--I forgot ipyrad doesn't like when you move/rename folders
   ~~~
   /work/amd176/S_recurvum_radseq/demultiplex1
   ~~~
 
   * In that folder, I also started some other branches with different settings but aborted them to start over with the correct barcodes in a new folder.
-  * When everything is done, there is no reason to keep this quick-and-dirty run. Some of the sample names in the ipyrad output files are still wrong because I only fixed the tree figure labels and structure figure labels.
+  * When everything is done, there is no reason to keep this quick-and-dirty run. Some of the sample names in the ipyrad output files are still wrong because I only fixed the tree figure labels and Structure figure labels.
 
 ### Full exploratory analysis
 
@@ -72,7 +72,7 @@ I did an initial "quick-and-dirty" ipyrad run (dropped worst 20% of samples and 
     - Loci present in 70% (214) of the 305 good samples. 10053 loci. (More loci but more missing data)
   * I ran both filtered datasets through RAxML and Structure to ensure the results are not sensitive to number of loci and level of missing data.
   * I also ran datasets at cluster thresholds 0.85, and 0.80 through RAxML trees to ensure that the results are not sensitive to cluster threshold.
-  * Strongly supported clades and clearly defined structure clusters were consistent in all analyses so I focused on just the 0.90, fewer-loci, less missing data results.
+  * Strongly supported clades and clearly defined Structure clusters were consistent in all analyses so I focused on just the 0.90, fewer-loci, less missing data results.
 
 ### Re-analysis after checking morphology
 
@@ -83,13 +83,19 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
   * Fixed typos and inconsistencies in the sample names.
   * For this re-analysis, I did not rerun ipyrad from scratch to rename things. I branched the c0.90 ipyrad run to include the desired samples, and ran step 7 (filtering for loci with coverage in XXX% or XXX of XXX samples), ran RAxML and Structure, and then renamed the samples in the RAxML and Structure output.
 
-
 ## Miscellaneous analysis notes
 
   * After ipyrad trimming/filtering (step 2) there were large numbers of reads (>5% of reads in some samples) with Illumina adapter sequence. Sometimes the second adapter is getting attached where there is not a cutsite. I refiltered without a second cutsite sequence in the parameters so ipyrad just cuts off the adapter. The cutsite bases at the end of the sequence should not be any more of a problem then the first cutsite bases at the start of the sequence (they may even help with alignment). This reduced the adapter content so it doesn't appear in the FASTQC output anymore.
   * The number of reads passing all filters is correlated with number of raw reads (R-square 0.997), but there are some quality differences between the 4 lanes and especially between the 100bp and 150bp runs. See [discussion of quality differences here][2].
 
 # Results
+
+## Structure
+
+## RAxML
+
+## S. balticum ploidy
+
 
 
 [1]: {{site.image_path}}ipyrad_branching_diagram.pdf
