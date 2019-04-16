@@ -24,7 +24,7 @@ Compared Blanka Aguero's ipyrad params file to my _Crepidomanes intricatum_ and 
 
 The voucher file with more info about the samples is in the lab dropbox at
 ~~~
-ShawLab/Jon/RecurvumComplex/plates_combined.xlsx.
+ShawLab/Jon/RecurvumComplex/plates_combined.xlsx
 ~~~
 
 We have 4 lanes (96 samples each) of Illumina sequence data. Lane 1 was standard 100bp single-end reads. Plates 2-4 are Illumina NextSeq 500, Mid output, 75bp PE but requesting in the comments that they “run at 150bp”.
@@ -80,6 +80,8 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
   * Renamed the mislabeled samples
   * Removed ~8 samples that are clearly falling in the wrong places based on morphology--it is likely they represent errors or mixed species herbarium specimens. If some DO represent something biologically interesting, there just aren't enough to provide good evidence.
   * Put back one sample that I dropped for having 70% missing data but is our only sample from the Azores. We also hoped to save Japanese and Sakhalin island samples but they both had over 99.5% missing data so I left them out.
+  * Fixed typos and inconsistencies in the sample names.
+  * For this re-analysis, I did not rerun ipyrad from scratch to rename things. I branched the c0.90 ipyrad run to include the desired samples, and ran step 7 (filtering for loci with coverage in XXX% or XXX of XXX samples), ran RAxML and Structure, and then renamed the samples in the RAxML and Structure output.
 
 
 ## Miscellaneous analysis notes
