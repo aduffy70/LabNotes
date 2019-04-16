@@ -46,14 +46,7 @@ This analysis got messy...
 
 ### Initial quick-and-dirty analysis
 
-I did an initial "quick-and-dirty" ipyrad run (dropped worst 20% of samples and keeping only loci with coverage in 90% of remaining samples) and RAxML/Structure analysis but we discovered some errors in the barcode file for lane 1. Blanka figured out which samples were out of order and fixed the barcodes file. I made a conversion table from wrong samplename to correct sample name and used it to fix the RAxML tree and Structure plots.
-  * The files from that run are on the Duke cluster in a poorly named subfolder--I forgot ipyrad doesn't like when you move/rename folders
-  ~~~
-  /work/amd176/S_recurvum_radseq/demultiplex1
-  ~~~
-
-  * In that folder, I also started some other branches with different settings but aborted them to start over with the correct barcodes in a new folder.
-  * When everything is done, there is no reason to keep this quick-and-dirty run. Some of the sample names in the ipyrad output files are still wrong because I only fixed the tree figure labels and Structure figure labels.
+I did an initial "quick-and-dirty" ipyrad run (dropped worst 20% of samples and keeping only loci with coverage in 90% of remaining samples) and RAxML/Structure analysis but we discovered some errors in the barcode file for lane 1. Blanka figured out which samples were out of order and fixed the barcodes file. I deleted the ipyrad run files from this analysis once the full exploratory analysis was complete.
 
 ### Full exploratory analysis
 
@@ -76,12 +69,15 @@ I did an initial "quick-and-dirty" ipyrad run (dropped worst 20% of samples and 
 
 ### Re-analysis after checking morphology
 
-Jon and Blanka reinspected the herbarium specimens for all samples that fell in wrong clades/clusters and determined that for most, the species labels were wrong and the morphology is consistent with the clades/clusters. For the reanalysis:
-  * Renamed the mislabeled samples
-  * Removed ~8 samples that are clearly falling in the wrong places based on morphology--it is likely they represent errors or mixed species herbarium specimens. If some DO represent something biologically interesting, there just aren't enough to provide good evidence.
-  * Put back one sample that I dropped for having 70% missing data but is our only sample from the Azores. We also hoped to save Japanese and Sakhalin island samples but they both had over 99.5% missing data so I left them out.
+Jon and Blanka reinspected the herbarium specimens for all samples that fell in wrong clades/clusters in the full exploratory analysis results and determined that for most, the species labels were wrong and the morphology is consistent with the clades/clusters. For the reanalysis:
+  * Renamed 13 mislabeled samples.
+  * Clarified the names of 14 samples (e.g. it was labeled "baltbrev" and it is in the "balt" clade/cluster)
+  * Removed ~8 samples that are falling in the wrong places based on morphology. They are either errors, mixed-species herbarium specimens, or potentially interesting. If some DO represent something biologically interesting, there just aren't enough and they are too scattered on the tree to do more than speculate.
+  * Removed a couple samples because we can't locate the voucher to inspect morphology.
+  * Added back one sample that I dropped for having 70% missing data but is our only sample from the Azores. We also hoped to save Japanese and Sakhalin island samples but they both had >99.5% missing data so I did not add them back in.
+  * A few samples could have been added back since we removed them earlier over a possible barcoding shift-error that turned out not be an error. But I didn't because they are from species and locations with other samples.
   * Fixed typos and inconsistencies in the sample names.
-  * For this re-analysis, I did not rerun ipyrad from scratch to rename things. I branched the c0.90 ipyrad run to include the desired samples, and ran step 7 (filtering for loci with coverage in XXX% or XXX of XXX samples), ran RAxML and Structure, and then renamed the samples in the RAxML and Structure output.
+  * For this re-analysis, I did not rerun ipyrad from scratch to rename things. I branched the all-c90 ipyrad run from the full exploratory analysis to include the desired samples, and ran step 7 (filtering for loci with coverage in 80% or 235 of 294 samples = 6148 loci), ran RAxML and Structure, and then renamed the samples in the RAxML and Structure output.
 
 ## Miscellaneous analysis notes
 
@@ -90,9 +86,13 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
 
 # Results
 
+## RAxML
+
 ## Structure
 
-## RAxML
+  * Everything, pointed-leaf group (fal, pac, pseudopac, ingroup balt?), round-leaf group (ingroup balt?, rec, ang, flex), individual spp clades where there are sufficient samples (fal/brev/isov, ang, flex, recurvum  ).
+
+## Network analysis?
 
 ## S. balticum ploidy
 
