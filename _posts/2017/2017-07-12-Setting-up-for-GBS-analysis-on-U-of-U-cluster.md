@@ -46,5 +46,5 @@ categories:
   * Be cautious about drawing inferences from the heterozygosity estimates generated at s4. I think they are only meant to be used to call genotypes in the next step (along with the error rate). They are highly correlated with with that error rate, and thus suspect, since there is no reason the true heterozygosity and error rates would be correlated. I asked about this on the [ipyrad gitter channel][3] but recieved no response.  
 
 [1]: http://ipyrad.readthedocs.io/installation.html
-[2]: {{ site.base_url }}{% post_url /2017/2017-07-19-ipyrad-version-trouble-on-U-of-U-cluster %}
+[2]: {{ site.baseurl }}{% post_url /2017/2017-07-19-ipyrad-version-trouble-on-U-of-U-cluster %}
 [3]: https://gitter.im/dereneaton/ipyrad
