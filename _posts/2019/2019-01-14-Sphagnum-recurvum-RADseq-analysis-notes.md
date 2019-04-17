@@ -70,9 +70,10 @@ I did an initial "quick-and-dirty" ipyrad run (dropped worst 20% of samples and 
 ### Re-analysis after checking morphology
 
 Jon and Blanka reinspected the herbarium specimens for all samples that fell in wrong clades/clusters in the full exploratory analysis results and determined that for most, the species labels were wrong and the morphology is consistent with the clades/clusters. For the reanalysis:
-  * Renamed 13 mislabeled samples.
+  * Renamed 12 mislabeled samples.
   * Clarified the names of 14 samples (e.g. it was labeled "baltbrev" and it is in the "balt" clade/cluster)
-  * Removed ~8 samples that are falling in the wrong places based on morphology. They are either errors, mixed-species herbarium specimens, or potentially interesting. If some DO represent something biologically interesting, there just aren't enough and they are too scattered on the tree to do more than speculate.
+  * Removed ~8 samples that are falling in the wrong places based on morphology. They are either errors, mixed-species herbarium specimens, or potentially interesting. If some DO represent something biologically interesting, there just aren't enough and they are too scattered on the tree to do more than speculate about them.
+  * Removed 2 samples that were mislabeled and are actually outgroup species--we don't need more outgroup in the analysis.
   * Removed a couple samples because we can't locate the voucher to inspect morphology.
   * Added back one sample that I dropped for having 70% missing data but is our only sample from the Azores. We also hoped to save Japanese and Sakhalin island samples but they both had >99.5% missing data so I did not add them back in.
   * A few samples could have been added back since we removed them earlier over a possible barcoding shift-error that turned out not be an error. But I didn't because they are from species and locations with other samples.
@@ -90,7 +91,17 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
 
 ## Structure
 
-  * Everything, pointed-leaf group (fal, pac, pseudopac, ingroup balt?), round-leaf group (ingroup balt?, rec, ang, flex), individual spp clades where there are sufficient samples (fal/brev/isov, ang, flex, recurvum  ).
+  * All samples = 294 samples RUNNING
+  * ingroup only (no waffling balticum, outgroup balticum, annulatum, pulchrum, riparium, or missouricum) = 280 samples RUNNING
+  * pointed-leaf clade (fal, pac, pseudopac, ingroup balt?) = 148 samples
+  * round-leaf clade (rec, ang, flex, obt) = 132 samples
+  * individual spp where there are sufficient samples:
+    * fal = 128 samples
+    * ang = 67 samples
+    * flex = 44 samples
+    * rec = 16 samples
+    * balt (all of them?) = 13 samples
+    * pac+pseudopac = 15 samples
 
 ## Network analysis?
 
