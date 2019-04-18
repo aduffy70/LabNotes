@@ -91,8 +91,8 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
 
 ## Structure
 
-  * All samples = 294 samples RUNNING
-  * ingroup only (no waffling balticum, outgroup balticum, annulatum, pulchrum, riparium, or missouricum) = 280 samples RUNNING
+  * All samples = 294 samples
+  * ingroup only (no waffling balticum, outgroup balticum, annulatum, pulchrum, riparium, or missouricum) = 280 samples
   * pointed-leaf clade (fal, pac, pseudopac, ingroup balt?) = 148 samples
   * round-leaf clade (rec, ang, flex, obt) = 132 samples
   * individual spp where there are sufficient samples:
