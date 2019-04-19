@@ -10,8 +10,9 @@ Based on my recent experiences analyzing RADseq datasets with ipyrad, Structure,
 # Things to do differently
 
   * Closely inspect the ipyrad output at step 2 to ensure I am getting rid of all the Illumina adapter sequence.
+    - There was still ~0.5% of reads with adapter sequence so I dropped the second cutsite from the params file. Also extended the minimum sequence length to 41 (a 35bp sequence with both cutsites would only really be 25bp of meaningful sequence. Now it is at least 31).
   * Only run things as diploid--don't complicate things with haploid runs.
-  * Use the variable loci/parsimony informative loci method of identifying the optimal clustering level and pick a value that I is less likely to overcluster.
+  * Use the variable loci/parsimony informative loci method of identifying the optimal clustering level and pick a value that is less likely to overcluster.
   * After I identify the non-Crepidomanes samples, don't remove them by just deleting them from the ustr file. Actually go back and rerun ipyrad step 7 with them removed. I'll likely pick up loci that weren't present in the all-samples data and some of those loci might be important for resolving relationships within the Crepidomanes samples. The way I did it before biased for loci useful for resolving between species, but those loci might not be good for within-species relationships. Maybe even consider going back and reclustering--the optimal clustering level for within-species samples might be different (probably higher?).
   * Save disk space and time by only producing the output formats I need: ustr, str, and full locus phy.
   * Rather comparing analysis results at 33, 50, and 66% minimum coverage, consider just using 50 and removing samples with less than 50% of loci? If we can drop some of the samples that are likely waffling around due to low genetic signal BEFORE running Structure and building trees, it might make those results cleaner.
