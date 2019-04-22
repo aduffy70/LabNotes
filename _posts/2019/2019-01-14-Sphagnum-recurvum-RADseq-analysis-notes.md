@@ -90,13 +90,17 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
 ## RAxML
 
 ![RAxML maximum likelihood tree cartoon][image2]
-
+  * Nice bootstrap support for the species and subgroups of interest.
+  * Note the two groups of S. balticum samples. One balticum sample AG249 waffles back and forth between the ingroup and outgroup balticums in some of the exploratory analyses.
+  * Within S. fallax, the European samples are monophyletic with BS100. There is not support for the relationships of the NA fallax samples.
+  * Within S. angustifolium, there is a strongly supported group of the European samples, the Eastern NA samples and four of the Alaskan samples. Relationships of the majority of the Alaskan samples are not clear.
+  * Within S. flexuosum, the European (Norway) samples form a strongly supported monophyletic group and a strongly supported group of most (5 of 7) NY samples, but relationships with the Eastern NA samples are not clear.
 
 ## Structure
 
   * All samples = 294 samples (6148 loci)
   * ingroup only (no waffling balticum, outgroup balticum, annulatum, pulchrum, riparium, or missouricum) = 280 samples
-  * pointed-leaf clade (fal, pac, pseudopac, ingroup balt?) = 148 samples
+  * pointed-leaf clade (fal, pac, pseudopac, ingroup balt) = 148 samples
   * round-leaf clade (rec, ang, flex, obt) = 132 samples
   * individual spp where there are sufficient samples:
     * fal = 128 samples (also trying an alternative method where I go back to ipyrad and refilter for loci in 80% of just these 128 samples = 13482 loci--let's see if it makes a difference)
