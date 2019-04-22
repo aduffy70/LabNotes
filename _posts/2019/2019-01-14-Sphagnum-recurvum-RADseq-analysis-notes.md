@@ -99,16 +99,27 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
 ## Structure
 
   * All samples = 294 samples (6148 loci)
+    - Best K=2
   * ingroup only (no waffling balticum, outgroup balticum, annulatum, pulchrum, riparium, or missouricum) = 280 samples
+    - Best K=2
   * pointed-leaf clade (fal, pac, pseudopac, ingroup balt) = 148 samples
+    - Best K=3
   * round-leaf clade (rec, ang, flex, obt) = 132 samples
+    - Best K=2 (but 3-4 are better than 5+)
   * individual spp where there are sufficient samples:
-    * fal = 128 samples (also trying an alternative method where I go back to ipyrad and refilter for loci in 80% of just these 128 samples = 13482 loci--let's see if it makes a difference)
+    * fal = 128 samples
+      - Best K=2
+    * fal-alt (trying an alternative method where I go back to ipyrad and refilter for loci in 80% of just these 128 samples = 13482 loci--let's see if it makes a difference)
     * ang = 67 samples
+      - Best K=2 (but 3 is better than 4+)
     * flex = 44 samples
+      - Best K=2
     * rec = 16 samples
+      - Best K=2
     * balt (all of them?) = 13 samples
+      - Best K=2
     * pac+pseudopac = 15 samples
+      - Best K=2
 
 ## Network analysis?
 
