@@ -78,7 +78,7 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
   * Added back one sample that I dropped for having 70% missing data but is our only sample from the Azores. We also hoped to save Japanese and Sakhalin island samples but they both had >99.5% missing data so I did not add them back in.
   * A few samples could have been added back since we removed them earlier over a possible barcoding shift-error that turned out not be an error. But I didn't because they are from species and locations with other samples.
   * Fixed typos and inconsistencies in the sample names.
-  * For this re-analysis, I did not rerun ipyrad from scratch to rename things. I branched the all-c90 ipyrad run from the full exploratory analysis to include the desired samples, and ran step 7 (filtering for loci with coverage in 80% or 235 of 294 samples = 6148 loci), ran RAxML and Structure, and then renamed the samples in the RAxML and Structure output.
+  * For this re-analysis, I did not rerun ipyrad from scratch to rename things. I branched the all-c90 ipyrad run from the full exploratory analysis to include the desired samples, and ran step 7 (filtering for loci with coverage in 80% or 235 of 294 samples = 6148 loci), ran RAxML and Structure, and then renamed the samples in the RAxML tree (with my rename_tree_tips.py script) and Structure output (in the R script I used to generate the plots).
 
 ## Miscellaneous analysis notes
 
@@ -88,6 +88,9 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
 # Results
 
 ## RAxML
+
+![RAxML maximum likelihood tree cartoon][image2]
+
 
 ## Structure
 
@@ -108,7 +111,7 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
 ## S. balticum ploidy
 
 
-
 [1]: {{site.image_path}}ipyrad_branching_diagram.pdf
 [2]: {{site.baseurl}}{% post_url /2019/2019-04-04-Notes-on-RADseq-library-sequencing %}
 [image1]: {{site.image_path}}S_recurvum_best_cluster_threshold.png
+[image2]: {{site.image_path}}S_recurvum_RAxML_tree-cartoon.png
