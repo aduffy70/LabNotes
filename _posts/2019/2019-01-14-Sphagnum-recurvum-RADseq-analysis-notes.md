@@ -91,7 +91,8 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
 
 ![RAxML maximum likelihood tree cartoon][image2]
   * Nice bootstrap support for the species and subgroups of interest.
-  * Note the two groups of S. balticum samples. One balticum sample AG249 waffles back and forth between the ingroup and outgroup balticums in some of the exploratory analyses.
+  * We initially thought there were two groups of S. balticum samples but based on Flatberg's re-inspection of the samples, we now think the outgroup balticums are really majus. I renamed things to reflect that.
+  *  One balticum sample AG249 waffles back and forth between the balticum and sister to S. annulatum in some of the exploratory analyses and looks different from the other balticums in the structure analyses.The waffling balticum might be admixed balticum+annulatum (or something not in the dataset that is related to annulatum. When we thought the majus samples were a second balticum group it might have made sense to suspect it was a balticum+majus, but the sister relationship to annulatum rather than majus and the structure results when I just include balticum and majus don't seem to support that.
   * Within S. fallax, the European samples are monophyletic with BS100. There is not support for the relationships of the NA fallax samples.
   * Within S. angustifolium, there is a strongly supported group of the European samples, the Eastern NA samples and four of the Alaskan samples. Relationships of the majority of the Alaskan samples are not clear.
   * Within S. flexuosum, the European (Norway) samples form a strongly supported monophyletic group and a strongly supported group of most (5 of 7) NY samples, but relationships with the Eastern NA samples are not clear.
@@ -100,30 +101,40 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
 
   * All samples = 294 samples (6148 loci)
     - Best K=2
-  * ingroup only (no waffling balticum, outgroup balticum, annulatum, pulchrum, riparium, or missouricum) = 280 samples
+  * ingroup only (no waffling balticum, majus, annulatum, pulchrum, riparium, or missouricum) = 280 samples
     - Best K=2
-  * pointed-leaf clade (fal, pac, pseudopac, ingroup balt) = 148 samples
-    - Best K=3
+      - Clusters fal+pac+pseudopac and rec+ang+flex+obt. Balt is 50:50 admixed. Pseudopac and obt show low (~5-10% admixture).
+  * pointed-leaf clade (fal, pac, pseudopac, balt) = 148 samples
+    - Best K=3 but K=5 clusters more "naturally"
+      - Five clusters: Eur fal, NA fal, pseudopac, pac, balt. Balt and pac samples show no admixture but all others do at low levels in some samples.
   * round-leaf clade (rec, ang, flex, obt) = 132 samples
-    - Best K=2 (but 3-4 are better than 5+)
+    - Best K=2 but K=4 clusters species PERFECTLY
+      - NO admixture in any sample.
   * individual spp where there are sufficient samples:
     * fal = 128 samples
       - Best K=2
-    * fal-alt (trying an alternative method where I go back to ipyrad and refilter for loci in 80% of just these 128 samples = 13482 loci--let's see if it makes a difference)
+        - Nothing we couldn't already see in the Pointed leaf clade results. Clusters Eur fal and NA fal. Basically identical to what we could already see in the Pointed clade results, but the admixture levels don't seem quite as high (only~5% instead of up to around 10%).
     * ang = 67 samples
-      - Best K=2 (but 3 is better than 4+)
+      - Best K=2
+        - Clusters match the two clades in the RAxML tree: Eur + NA + a few AK/BC samples and the rest of the AK samples. One sample is admixed ~50% and that sample is the one that is outside the well supported Eur/NA clade but not within the less supported AK clade.
     * flex = 44 samples
       - Best K=2
+        - Clusters Eur and NA.
     * rec = 16 samples
       - Best K=2
-    * balt (all of them?) = 13 samples
-      - Best K=2
+        - Not interesting? All Eastern NA samples. Two of the NY samples cluster from the rest. Three of the MD samples are admixed 80%NY:20%rest
+    * balt (actually we now think it is balt+majus) = 13 samples
+      - Best K=2 but K=3+ might be more interesting.
+        - K=2 splits the two species and one sample admixed ~50%
+        - K=3 shows the same thing but part of the admixed sample still comes from balticum while the other half now comes from a cluster not represented. Higher K values just spilt this unknown half into smaller and smaller pieces. I think this suggests that the admixed plant is NOT admixed balticum and majus, but rather balticum and something else. I'm running balt+majus+annulatum so see what that does. I suspect the admixed sample will be split between balt and annulatum instead of majus.
+    * balt+majus+annulatum (can we show that the waffling balt is admixed balt+annulatum rather than balt+majus?) = 14 samples
+      - Best K=??? RUNNING
     * pac+pseudopac = 15 samples
       - Best K=2
+        - Not interesting? It just splits the species, which we already saw in the pointed clade results.
 
 ## Network analysis?
 
-## S. balticum ploidy
 
 
 [1]: {{site.image_path}}ipyrad_branching_diagram.pdf
