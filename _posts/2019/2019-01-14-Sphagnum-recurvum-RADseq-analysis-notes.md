@@ -126,9 +126,9 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
     * balt (actually we now think it is balt+majus) = 13 samples
       - Best K=2 but K=3+ might be more interesting.
         - K=2 splits the two species and one sample admixed ~50%
-        - K=3 shows the same thing but part of the admixed sample still comes from balticum while the other half now comes from a cluster not represented. Higher K values just spilt this unknown half into smaller and smaller pieces. I think this suggests that the admixed plant is NOT admixed balticum and majus, but rather balticum and something else. I'm running balt+majus+annulatum so see what that does. I suspect the admixed sample will be split between balt and annulatum instead of majus.
+        - K=3 shows the same thing but part of the admixed sample still comes from balticum while the other half now comes from a cluster not represented. Higher K values just spilt this unknown half into smaller and smaller pieces. I think this suggests that the admixed plant is NOT admixed balticum and majus, but rather balticum and something else. Run with annulatum in the mix to see what happens...
     * balt+majus+annulatum (can we show that the waffling balt is admixed balt+annulatum rather than balt+majus?) = 14 samples
-      - Best K=??? RUNNING
+      - Best K=2 but 3+ all show the exact same picture: The admixed sample is NOT admixed balticum+majus, it is balticum+annulatum or something closely related.
     * pac+pseudopac = 15 samples
       - Best K=2
         - Not interesting? It just splits the species, which we already saw in the pointed clade results.

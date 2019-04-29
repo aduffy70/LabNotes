@@ -19,3 +19,12 @@ Based on my recent experiences analyzing RADseq datasets with ipyrad, Structure,
   * The way I used Structure was confusing and non-standard. Just use the standard StructureHarvester/CLUMPP method to combine the multiple runs and then call samples with >5% admixture or appearing in the wrong tree clade as Non-Crepidomanes samples.
   * Try Maximum Likelihood instead of Neighbor-joining trees.
   * Don't do any of the stuff to try to bioinformatically remove non-Crepidomanes signal from "mixed" samples. It distracts from the real story and didn't work anyway. In fact, don't make a big deal about the "mixed" samples anyway. Keep the focus on the idea that we ONLY included samples in the population genetics analysis if they were clearly Crepidomanes samples. The others might be mixed or low genetic signal, but it isn't important--they just aren't unambiguously Crepidomanes so we didn't include them.
+  * Since I know the Didymoglossum and Vandenboschia samples have fewer loci, rather than using a cutoff based on sample coverage, maybe use loci present in one of the sporophytes and at least XX other samples? That should maximize information about relatedness between all samples and the sporophytes, which is what I really need for the species identification part of the analysis.
+    * Why this matters: In my original analysis, I ran at three coverage levels--33%, 50%, and 66%) to see how things differed at different levels of missing data and number of loci. But even at the levels with less missing data, I still had a lot of missing data about the relationships to the sporophytes that I really care about. So I had lots of information but almost none of it was about the relationships I was interested in:
+
+| sample coverage cutoff | loci in original analysis | loci that include a sporophyte |
+| ---------------------- | ------------------------- | ------------------------------ |
+| s36 - 66% | 14 | 13 |
+| s27 - 50% | 69 | 24 |
+| s18 - 33% | 578 | 55 |
+| s6 - 11% | 30242 | 1970 |
