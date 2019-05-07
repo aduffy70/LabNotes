@@ -54,16 +54,23 @@ Based on my recent experiences analyzing RADseq datasets with ipyrad, Structure,
 ## Determining species of gametophyte samples
 
   * Used Structure to cluster samples.
-    - Gametophyte samples assigned to a cluster with the Didymoglossum or Vandenboschia sporophytes with less than 5% admixture from other clusters were assumed to be the same species as the sporophyte. Gametophytes with less than 5% admixture from sporophyte clusters were assumed to be Crepidomanes.
-  * Generated neighbor-joining trees (and ML? and SVDquartets?) using all 48 samples and just the samples clearly assigned to a single species in Structure.
-  * PCA?
-  * Compared heterozygosity and HWE in gametophytes of each species in R.
+    - Gametophyte samples that were assigned to a cluster with the Didymoglossum or Vandenboschia sporophytes with less than 5% admixture from other clusters were assumed to be the same species as the sporophyte. Gametophytes with less than 5% admixture from sporophyte clusters were assumed to be Crepidomanes.
+  * Generated neighbor-joining trees (and ML? and SVDquartets?) two ways:
+    * using all 48 samples, and
+    * using the 42 samples clearly assigned to a single species in Structure (the no admixture samples).
+  * PCA. Ran both ways: with and without admixted samples.
+  * Compared heterozygosity and HWE in gametophytes (only) of each species in R.
 
 ## Crepidomanes population genetics
 
-  * Use Structure to cluster samples.
+  * 30 samples, 945 loci present in at least 18 samples (60% sample coverage)
+  * Used Structure to cluster samples. Best K=2 clusters but all samples are admixed between both clusters (sample with lowest level of admixture is still about 90%:10%).
   * Isolation-by-distance analysis
   * Investigate clonality
   * Similarity networks
   * PCA?
   * Other?
+
+## Exploring clonality
+
+  * For each set of the expected clonal samples, I pooled their trimmed cleaned reads and resampled the original number of reads for each sample from the pool using my randomly_sample_fastq.py (or randomly_sample_fastq-low_mem.py) script. Then I reran ipyrad with the same settings from the crep18 branch with these "pooled clones" in place of the original samples.
