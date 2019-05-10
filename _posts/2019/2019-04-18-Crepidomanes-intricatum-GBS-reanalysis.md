@@ -50,23 +50,27 @@ Based on my recent experiences analyzing RADseq datasets with ipyrad, Structure,
     * Clustered at a range of clustering levels and inspected the numbers of variable and parsimony informative loci to determine the appropriate level. Peak at 0.98. I used 0.97 for further analyses--below the peak but still above 0.95 where locus counts "level off."
     * Removed 6 samples with low reads and locus counts, leaving 48 samples in the dataset.
     * Used a minimum sample coverage cutoff of 4 samples in ipyrad but filtered for loci present in 16 samples (33%) AND at least one sporophyte sample (using custom script). This yielded 52 loci. To ensure species inferences were robust to number of loci and level of missing data I also tried cutoffs of 24 samples (50%, 28 loci), 12 samples (25%, 90 loci), and 10 samples (20%, 180 loci). Inferences regarding species assignments were consistent in all datasets so I will only report the 16-sample 33% results.
+      - I also did this from the loci format output, converting it to phy so I can run RAxML. It gave different numbers of loci because the stru output only includes variable loci (and one SNP per locus) while phy output is supposed to include the non-variable loci as well. I started with the loci output instead of the phy output because the loci output is MUCH easier to parse to determine coverage levels and converting to phy was simple.
 
 ## Determining species of gametophyte samples
 
   * Used Structure to cluster samples.
     - Gametophyte samples that were assigned to a cluster with the Didymoglossum or Vandenboschia sporophytes with less than 5% admixture from other clusters were assumed to be the same species as the sporophyte. Gametophytes with less than 5% admixture from sporophyte clusters were assumed to be Crepidomanes.
-  * Generated neighbor-joining trees (and ML? and SVDquartets?) two ways:
+  * Generated neighbor-joining trees (in R) and ML trees (in RAxML) two ways:
     * using all 48 samples, and
     * using the 42 samples clearly assigned to a single species in Structure (the no admixture samples).
-  * PCA. Ran both ways: with and without admixted samples.
+  * PCA. Ran (in R) both ways: with and without admixed samples.
+    * First PC separates Vandeboschia from Crepidomanes. Second PC separates Didymoglossum. Admixed samples fall between the expected "parent" species. Without the admixed samples the species clusters are quite distinct.
+    * Results are similar acrossed datasets with lower levels of missing data (sporo24, 16, and 12). At higher levels of missing data, the ability to distinguish the species decreases.
   * Compared heterozygosity and HWE in gametophytes (only) of each species in R.
+    * Acrossed datasets with different levels of missing data, Crepidomanes consistently has Hobs ~50% of Didymoglossum and Vandenboschia while the admixed samples have much higher levels of heterozygosity. The difference in the admixed samples is almost always statistically significant but differences between the other groups are not consistently significant in different datasets. The trend is consistent though.
+    * Crepidomanes has higher levels of loci out of HWE. Didymoglossum and Vandenboschia have nearly none and the admixed samples are intermediate.
 
 ## Crepidomanes population genetics
 
   * 30 samples, 945 loci present in at least 18 samples (60% sample coverage)
   * Used Structure to cluster samples. Best K=2 clusters but all samples are admixed between both clusters (sample with lowest level of admixture is still about 90%:10%).
   * Isolation-by-distance analysis
-  * Investigate clonality
   * Similarity networks
   * PCA?
   * Other?
@@ -74,3 +78,4 @@ Based on my recent experiences analyzing RADseq datasets with ipyrad, Structure,
 ## Exploring clonality
 
   * For each set of the expected clonal samples, I pooled their trimmed cleaned reads and resampled the original number of reads for each sample from the pool using my randomly_sample_fastq.py (or randomly_sample_fastq-low_mem.py) script. Then I reran ipyrad with the same settings from the crep18 branch with these "pooled clones" in place of the original samples.
+  * Used Structure on the resampled dataset. Very similar to before with all samples admixed. The levels of admixture in clones seem to be more similar to each other than they were before but there are still differences.
