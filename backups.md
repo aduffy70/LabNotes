@@ -47,7 +47,14 @@ mv ~/Downloads/drive-download* ~/Backups/GoogleDocs/
 mv ~/Downloads/takeout* ~/Backups/Gmail/
 ~~~
 
-### 3) Backup to an external drive
+### 3) Backup Duke Computing Cluster files
+
+~~~
+rsync -qaz --delete dcc:projects/* /home/aduffy/Backups/duke_cluster/projects_rsync/
+rsync -qaz --delete dcc:work/* /home/aduffy/Backups/duke_cluster/work_rsync/
+~~~
+
+### 4) Backup to an external drive
 
   * Backup fiddlehead home directory to CAMEL
 
@@ -107,6 +114,7 @@ On computing clusters:
   * On fiddlehead (these become the "Backups" referred to above):
     - Lab files from Google Drive
     - Emails, contacts, and calendars from Google
+    - Analysis files from Duke Computing Cluster
   * On the Shared Shaw Lab dropbox folder (for sharing, more than backup purposes):
     - Shaw Lab-related Lab files from Google Drive
 
