@@ -20,17 +20,6 @@ Analyses:
     - Molecular variation within/among populations
     - Sample Size, Number of Alleles, Number of Effective Alleles, Information Index, Observed Heterozygosity, Expected and Unbiased Expected Heterozygosity, and Fixation Index
 
-Figures:
-  * Structure K2 & K3 for North American lescurii
-  * Evanno deltaK (supplemental)
-  * IBD plot (Just K3? K2 & K3?)
-  * PCA?
-  * Map?
-
-Tables:
-  * Voucher/locations table
-  * Population diversity stats (using K3 clusters as populations?)
-
 # Sphagnum carolinianum
 
 Analyses:
@@ -40,17 +29,6 @@ Analyses:
   * Population diversity statistics
     - Molecular variation within/among populations - DONE (previously)
     - Sample Size, Number of Alleles, Number of Effective Alleles, Information Index, Observed Heterozygosity, Expected and Unbiased Expected Heterozygosity, and Fixation Index - SHEET MISSING FROM GENALEX OUTPUT?
-
-Figures:
-  * Structure K2
-  * Evanno deltaK (supplemental)
-  * IBD plot
-  * PCA?
-  * Map?
-
-Tables:
-  * Voucher/locations table
-  * Population diversity stats (using K2 clusters as pops)
 
 # Sphagnum macrophyllum
 
@@ -63,17 +41,30 @@ Analyses:
     - Molecular variation within/among populations - DONE (previously)
     - Sample Size, Number of Alleles, Number of Effective Alleles, Information Index, Observed Heterozygosity, Expected and Unbiased Expected Heterozygosity, and Fixation Index - SHEET MISSING FROM GENALEX OUTPUT?
 
-Figures:
-  * Full ML tree (supplemental)
-  * Cartoon ML tree
-  * Structure K2
-  * Evanno deltaK (supplemental)
-  * IBD plot
-  * PCA?
-  * Map?
+# Figures and Tables for Manuscript
 
-Tables:
-  * Voucher table for DNA sequence data (Genbank accession info?)
-  * Voucher/locations table for microsat data
-  * Population diversity stats (using K2 clusters)
-  * Genomic regions used (alignment lengths,autapomorphic character count, synapomorphic character count)
+The text will address each species separately but we are combining figures and tables from all species:
+
+## Figures
+
+  * Figure 1 - Maps (3 acrossed?)
+  * Figure 2 - Structure plots (3 down?)
+    - K2 & K3 for S. lescurii
+    - K2 for S. carolinianum
+    - K2 for S. macrophyllum
+  * Figure 3 - Isolation by distance (IBD) (3 down?)
+    - K2 or K3 for S. lescurii???
+  * Figure 4 - PCA plots (3 acrossed)
+  * Figure 5 - Cartoon ML phylogeny for S. macrophyllum
+  * Supplemental Figure 1 - Full ML phylogeny for S. macrophyllum
+
+## Tables
+
+  * Table 1 - Vouchers (Blanka is working on it)
+  * Table 2 - Diversity stats
+    - Alleles per locus
+    - % Polymorphic loci
+    - Expected Heterozygosity
+    - Genetic differentiation of clusters (Fst, Gst, D?)
+    - Distribution of variance between clusters (AMOVA)
+    - Shannon's Index
