@@ -56,7 +56,7 @@ rsync -qaz --delete dcc:work/* /home/aduffy/Backups/duke_cluster/work_rsync/
 
 ### 4) Backup to an external drive
 
-  * Backup fiddlehead home directory to CAMEL
+  * Backup fiddlehead home directory to CAMEL2
 
 ~~~
 weeklybackup
@@ -107,7 +107,7 @@ On computing clusters:
 
 ### Backed up manually once a month:
 
-  * On an external drive only attached during the backup (CAMEL):
+  * On an external drive only attached during the backup (CAMEL2):
     - Active files
     - Archived files
     - Backups
