@@ -172,5 +172,5 @@ alias weeklybackup='sudo /usr/local/bin/weeklybackupnew.sh'
 # Backs up critical subfolders of my home folder to my external drive
 
 # Let's do everything rather than just specific folders
-rsync -azv -e --delete --exclude=".ssh/" --exclude="Shares" --exclude="Dropbox (Duke Bio_Ea)/Data" --exclude="Dropbox (Duke Bio_Ea)/Shaw Lab" --exclude=".smbcredentials" --exclude=".dbus" --exclude=".cache" --exclude=".dropbox" /home/aduffy /media/aduffy/CAMEL/fiddleheadBackup-rsync/ ;
+rsync -azv -e --delete --exclude=".ssh/" --exclude="Shares" --exclude="Dropbox (Duke Bio_Ea)/Data" --exclude="Dropbox (Duke Bio_Ea)/Shaw Lab" --exclude=".smbcredentials" --exclude=".dbus" --exclude=".cache" --exclude=".dropbox" /home/aduffy /media/aduffy/CAMEL2/fiddleheadBackup-rsync/ ;
 ~~~
