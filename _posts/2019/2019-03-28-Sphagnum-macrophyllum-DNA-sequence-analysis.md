@@ -13,9 +13,14 @@ We have evidence for (Northern NJ/DE to Newfoundland) and Southern (DE/VA to FL/
 
 # Data
 
-Sequence data files were emailed from Jon Shaw and placed in ShawLab/Aaron/Active/S_macrophyllum_biogeography/Ping_files. Sequences are in nexus format, but I converted the combined alignment to fasta (using Aliview) and put that in the same folders. Also contains accession info and results of a previous parsimony analysis.
+Sequence data files were emailed from Jon Shaw and placed in:
+~~~
+ShawLab/Aaron/Active/S_macrophyllum_biogeography/Ping_files
+~~~
+
+Sequences are in nexus format, but I converted the combined alignment to fasta (using Aliview) and put that in the same folder. Also contains accession info and results of a previous parsimony analysis.
   * 6 loci: LL, LS, rapdA, rapdB, rapdF, trnG with 4360bp in combined alignment.
-  * 275 taxa with multiple representatives of macrophyllum (North and South), cribrosum, cyclophyllum, and pylaesii, plus one microcarpum and guwanense as outgroup.
+  * 275 taxa with multiple representatives of macrophyllum (North and South), cribrosum, cyclophyllum, and pylaesii, plus one microcarpum and guwassenense as outgroup.
 
 # Analysis
 
