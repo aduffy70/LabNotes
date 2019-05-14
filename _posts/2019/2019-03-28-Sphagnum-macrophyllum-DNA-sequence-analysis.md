@@ -15,7 +15,7 @@ We have evidence for (Northern NJ/DE to Newfoundland) and Southern (DE/VA to FL/
 
 Sequence data files were emailed from Jon Shaw and placed in:
 ~~~
-ShawLab/Aaron/Active/S_macrophyllum_biogeography/Ping_files
+ShawLab/Aaron/Active/S_macrophyllum_biogeography/Ping_DNA_sequence_files
 ~~~
 
 Sequences are in nexus format, but I converted the combined alignment to fasta (using Aliview) and put that in the same folder. Also contains accession info and results of a previous parsimony analysis.
