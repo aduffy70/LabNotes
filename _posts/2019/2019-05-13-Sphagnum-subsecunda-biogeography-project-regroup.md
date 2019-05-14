@@ -75,3 +75,4 @@ Tables:
   * Voucher table for DNA sequence data (Genbank accession info?)
   * Voucher/locations table for microsat data
   * Population diversity stats (using K2 clusters)
+  * Genomic regions used (alignment lengths,autapomorphic character count, synapomorphic character count)
