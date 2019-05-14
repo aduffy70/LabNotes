@@ -69,6 +69,7 @@ Figures:
   * Structure K2
   * Evanno deltaK (supplemental)
   * IBD plot
+  * PCA?
   * Map?
 
 Tables:
