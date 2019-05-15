@@ -6,11 +6,11 @@ categories:
   - sphagnum subsecunda biogeography
 ---
 
-# Sphagnum lescurii
+# _Sphagnum lescurii_
 
 Analyses:
   * Structure - DONE (previously)
-  * Structure including Norwegian S. auriculatum - DONE
+  * Structure including Norwegian _S. auriculatum_ - DONE
   * PCA but it was done by state. Redo by cluster.
   * Isolation by distance (IBD) - DONE
     - All North American lescurii
@@ -20,7 +20,7 @@ Analyses:
     - Molecular variation within/among populations
     - Sample Size, Number of Alleles, Number of Effective Alleles, Information Index, Observed Heterozygosity, Expected and Unbiased Expected Heterozygosity, and Fixation Index
 
-# Sphagnum carolinianum
+# _Sphagnum carolinianum_
 
 Analyses:
   * Structure - DONE (previously)
@@ -30,7 +30,7 @@ Analyses:
     - Molecular variation within/among populations - DONE (previously)
     - Sample Size, Number of Alleles, Number of Effective Alleles, Information Index, Observed Heterozygosity, Expected and Unbiased Expected Heterozygosity, and Fixation Index - SHEET MISSING FROM GENALEX OUTPUT?
 
-# Sphagnum macrophyllum
+# _Sphagnum macrophyllum_
 
 Analyses:
   * Maximum likelihood phylogeny (macrophyllum, cribrosum, cyclophyllum, pylaesii, microcarpum, guwassenense) - DONE
@@ -49,14 +49,14 @@ The text will address each species separately but we are combining figures and t
 
   * Figure 1 - Maps (3 acrossed?)
   * Figure 2 - Structure plots (3 down?)
-    - K2 & K3 for S. lescurii
-    - K2 for S. carolinianum
-    - K2 for S. macrophyllum
+    - K2 & K3 for _S. lescurii_
+    - K2 for _S. carolinianum_
+    - K2 for _S. macrophyllum_
   * Figure 3 - Isolation by distance (IBD) (3 down?)
-    - K2 or K3 for S. lescurii???
+    - K2 or K3 for _S. lescurii_???
   * Figure 4 - PCA plots (3 acrossed)
-  * Figure 5 - Cartoon ML phylogeny for S. macrophyllum
-  * Supplemental Figure 1 - Full ML phylogeny for S. macrophyllum
+  * Figure 5 - Cartoon ML phylogeny for _S. macrophyllum_
+  * Supplemental Figure 1 - Full ML phylogeny for _S. macrophyllum_
 
 ## Tables
 
