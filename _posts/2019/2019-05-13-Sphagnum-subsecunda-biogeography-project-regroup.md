@@ -47,7 +47,11 @@ The text will address each species separately but we are combining figures and t
 
 ## Figures
 
-  * Figure 1 - Maps (3 acrossed?)
+  * Figure 1 - Maps (3 down, full page height and width)
+    - K3 for _S. lescurii_
+    - K2 for _S. carolinianum_
+    - K2 for _S. macrophyllum_
+    - Used R (PBSmapping package) to make svg format maps. Rotated, cropped, manually applied a border, combined, and manually added a legend in Inkscape. There are functions in the latest version of PBSmapping to rotate map data, but it requires R version >3.5 and Ubuntu 16.04 is on version 3.4.4. Doing it manually worked out ok. It just took some trial and error to find the size and x-y limits for the plot that would allow me to rotate and crop out the section I wanted. 
   * Figure 2 - Structure plots (3 down, full page height and width)
     - K3 for _S. lescurii_
     - K2 for _S. carolinianum_
