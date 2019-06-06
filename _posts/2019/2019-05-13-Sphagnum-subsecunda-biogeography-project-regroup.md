@@ -62,7 +62,7 @@ The text will address each species separately but we are combining figures and t
     - K2 for _S. carolinianum_
     - K2 for _S. macrophyllum_
     - Showed the data with just line plots rather than scatter plots because we have so many points in such a small place the figures became unreadable.
-    - Reran the analysis using log10 km for distance rather than km because this is what is recommended for distances in 2D space and is consistent with past Shaw Lab papers. **NEED TO UPDATE MY ONLINE NOTES FOR EACH SPECIES WITH THE NEW MANTEL RESULTS. SOME THINGS CHANGED!**
+    - Reran the analysis using log10 km for distance rather than km because this is what is recommended for distances in 2D space and is consistent with past Shaw Lab papers.
     - Used R to make a svg format plot for each species separately with just axis labels and no axis titles other titles, or legend. Combined and labeled them in Inkscape. Made another plot from R with a legend just so I could cut out the legend symbols in Inkscape and manually add a legend to the combined figure.
   * Figure 4 - PCA plots (3 acrossed, full page width, about half page height)
     - K3 for _S. lescurii_
