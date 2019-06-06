@@ -68,6 +68,7 @@ The text will address each species separately but we are combining figures and t
     - K3 for _S. lescurii_
     - K2 for _S. carolinianum_
     - K2 for _S. macrophyllum_
+    - Used R to make a svg format plot for each species separately and used the IBD plot as a template (inlcuding the legend since I used the same symbols) for the final combined figure.
   * Figure 5 - Cartoon ML phylogeny for _S. macrophyllum_ (full page width, about half page height)
     - Opened RAxML_bipartitions.mac-reduced-vouchered in FigTree, collapsed the clades, hid the bootstrap and tip labels, and saved as svg file. Opened svg in Inkscape, set page size, reduced tree to fit on page, manually added bootstrap and tip labels, repositioned the scale bar, resized/formatted the scale bar text, and saved as svg and pdf.
   * Supplemental Figure 1 - Full ML phylogeny for _S. macrophyllum_ (Made it big enough to display clearly onscreen and didn't worry about page size since it is supplemental)
