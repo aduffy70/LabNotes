@@ -12,7 +12,10 @@ We have evidence for (Northern NJ/DE to Newfoundland) and Southern (DE/VA to FL/
 
 # Data
   * I originally analyzed this using 223 samples (after removing 5 with no vouchers or accession info), but later realized there were many identical genotypes (clones--as far as we can tell). I reanalyzed using 138 individuals after removing all identical clones collected at the same site. A couple genotypes are found at more than one site so I left one of those clones for each site. These analysis results are for the "no_clone" data.
-  * Original "rawdata" spreadsheet with microsat data was in ShawLab/Aaron/Subsecunda_geography_diploids and Blanka Aguero added georeference data.
+  * Original "rawdata" spreadsheet with microsat data (and Blanka Aguero's added georeference data) was in
+  ~~~
+  ShawLab/Aaron/Subsecunda_geography_diploids and Blanka Aguero added georeference data.
+  ~~~
   * My files are in
   ~~~
   ShawLab/Aaron/Active/S_macrophyllum_biogeography/structure_output-from_microsats
