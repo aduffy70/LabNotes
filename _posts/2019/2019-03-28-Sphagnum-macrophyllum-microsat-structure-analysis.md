@@ -48,13 +48,13 @@ We have evidence for (Northern NJ/DE to Newfoundland) and Southern (DE/VA to FL/
 ## Isolation by distance:
 
   * Generated a table of all pairwise combinations of sample coordinates with my coordinatepairs.py script so I can use an online calculator to calculate the distances.
-  * Got the distances in km with [online calculator][2] and log10 transformed (appropriate for distances in 2D space).
+  * Got the distances in km with [online calculator][2].
   * Categorized pairwise comparisons based on whether the two samples are in the same Structure-identified cluster or in different clusters, using my classifycomparisons.py script.
-  * Looked for evidence of IBD with Mantel tests (9999 replicates) in R for all samples together and within the groups identified by Structure.
+  * Log10 transformed the geographic distances (appropriate for distances in 2D space) and looked for evidence of IBD with Mantel tests (9999 replicates) in R for all samples together and within the groups identified by Structure.
 
 ## PCA:
 
-  * Ran PCA and looked at K2 structure clusters and state/province in R (dudi.pca).
+  * Ran PCA and looked at the Structure clusters and state/province in R (dudi.pca).
 
 # Results
 
