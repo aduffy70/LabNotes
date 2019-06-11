@@ -95,4 +95,4 @@ The text will address each species separately but we are combining figures and t
     - I - Shannon's Information Index
       - From GENALEX HFP tab (HDP in macrophyllum)
     - Pairwise Fst of clusters
-      - From GENALEX FstP tab
+      - From GENALEX FstP tab (R hierfstat for macrophyllum since GENALEX doesn't report Fst for haploids)
