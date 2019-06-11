@@ -85,14 +85,14 @@ The text will address each species separately but we are combining figures and t
     - Na - number of alleles +/-SE
       - From GENALEX HFP tab
     - Ne - effective number of alleles +/-SE
-      - From GENALEX HFP tab
+      - From GENALEX HFP (HDP in macrophyllum) tab
     - % Polymorphic loci
-      - From GENALEX HFP tab
+      - From GENALEX HFP tab (HDP in macrophyllum)
     - Ho - observed heterozygosity
-      - From GENALEX HFP tab
+      - From GENALEX HFP tab (HDP in macrophyllum)
     - He - expected heterozygosity
-      - From GENALEX HFP tab
+      - From GENALEX HFP tab (HDP in macrophyllum)
     - I - Shannon's Information Index
-      - From GENALEX HFP tab
+      - From GENALEX HFP tab (HDP in macrophyllum)
     - Pairwise Fst of clusters
       - From GENALEX FstP tab
