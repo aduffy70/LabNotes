@@ -11,7 +11,7 @@ categories:
 Analyses:
   * Structure - DONE (previously)
   * Structure including Norwegian _S. auriculatum_ - DONE
-  * PCA but it was done by state. Redo by cluster.
+  * PCA but it was done by state. Redo by cluster. - DONE
   * Isolation by distance (IBD) - DONE
     - All North American lescurii
     - K2 clusters (Northern and Southern) separately
@@ -24,7 +24,7 @@ Analyses:
 
 Analyses:
   * Structure - DONE (previously)
-  * PCA - DONE (previously)
+  * PCA - DONE
   * IBD - DONE
   * Population diversity statistics
     - Molecular variation within/among populations - DONE (previously)
@@ -35,7 +35,7 @@ Analyses:
 Analyses:
   * Maximum likelihood phylogeny (macrophyllum, cribrosum, cyclophyllum, pylaesii, microcarpum, guwassenense) - DONE
   * Structure - DONE
-  * PCA
+  * PCA - DONE
   * IBD - DONE
   * Population diversity statistics
     - Molecular variation within/among populations - DONE (previously)
@@ -80,9 +80,19 @@ The text will address each species separately but we are combining figures and t
 
   * Table 1 - Vouchers (Blanka is working on it)
   * Table 2 - Diversity stats
-    - Alleles per locus
+    - I fought too long to get comparable numbers from R to the old analysis numbers from GENALEX and finally gave up and had Blanka help me run all the diversity stats in GENALEX 6.5 on Excel 2016.
+    - For lescurii, the total values were from the GENALEX analysis including the admixed (>10%) samples and the Northern/Southern/Southern2/pairwise FST values were from the analysis omitting admixed samples. Other species didn't have admixture over 10% so it didn't matter.
+    - Na - number of alleles +/-SE
+      - From GENALEX HFP tab
+    - Ne - effective number of alleles +/-SE
+      - From GENALEX HFP tab
     - % Polymorphic loci
-    - Expected Heterozygosity
-    - Genetic differentiation of clusters (Fst, Gst, D?)
-    - Distribution of variance between clusters (AMOVA)
-    - Shannon's Index
+      - From GENALEX HFP tab
+    - Ho - observed heterozygosity
+      - From GENALEX HFP tab
+    - He - expected heterozygosity
+      - From GENALEX HFP tab
+    - I - Shannon's Information Index
+      - From GENALEX HFP tab
+    - Pairwise Fst of clusters
+      - From GENALEX FstP tab
