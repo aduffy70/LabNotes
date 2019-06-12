@@ -16,9 +16,9 @@ Analyses:
     - All North American lescurii
     - K2 clusters (Northern and Southern) separately
     - K3 clusters (Northern, Southern, and Midatlantic) separately
-  * Population diversity statistics - DONE (previously for K3 clusters)
+  * Population diversity statistics - DONE
     - Molecular variation within/among populations
-    - Sample Size, Number of Alleles, Number of Effective Alleles, Information Index, Observed Heterozygosity, Expected and Unbiased Expected Heterozygosity, and Fixation Index
+    - Sample Size, Number of Alleles, Number of Effective Alleles, Information Index, Observed Heterozygosity, Expected Heterozygosity
 
 # _Sphagnum carolinianum_
 
@@ -26,9 +26,9 @@ Analyses:
   * Structure - DONE (previously)
   * PCA - DONE
   * IBD - DONE
-  * Population diversity statistics
+  * Population diversity statistics - DONE
     - Molecular variation within/among populations - DONE (previously)
-    - Sample Size, Number of Alleles, Number of Effective Alleles, Information Index, Observed Heterozygosity, Expected and Unbiased Expected Heterozygosity, and Fixation Index - SHEET MISSING FROM GENALEX OUTPUT?
+    - Sample Size, Number of Alleles, Number of Effective Alleles, Information Index, Observed Heterozygosity, Expected Heterozygosity
 
 # _Sphagnum macrophyllum_
 
@@ -37,9 +37,9 @@ Analyses:
   * Structure - DONE
   * PCA - DONE
   * IBD - DONE
-  * Population diversity statistics
+  * Population diversity statistics - DONE
     - Molecular variation within/among populations - DONE (previously)
-    - Sample Size, Number of Alleles, Number of Effective Alleles, Information Index, Observed Heterozygosity, Expected and Unbiased Expected Heterozygosity, and Fixation Index - SHEET MISSING FROM GENALEX OUTPUT?
+    - Sample Size, Number of Alleles, Number of Effective Alleles, Information Index, Observed Heterozygosity, Expected Heterozygosity
 
 # Figures and Tables for Manuscript
 
@@ -81,18 +81,21 @@ The text will address each species separately but we are combining figures and t
   * Table 1 - Vouchers (Blanka is working on it)
   * Table 2 - Diversity stats
     - I fought too long to get comparable numbers from R to the old analysis numbers from GENALEX and finally gave up and had Blanka help me run all the diversity stats in GENALEX 6.5 on Excel 2016.
-    - For lescurii, the total values were from the GENALEX analysis including the admixed (>10%) samples and the Northern/Southern/Southern2/pairwise FST values were from the analysis omitting admixed samples. Other species didn't have admixture over 10% so it didn't matter.
+    - For lescurii, the total values were from the GENALEX analysis including the admixed (>10%) samples and the Northern/Southern/Southern2 values were from the analysis omitting admixed samples. Other species didn't have admixture over 10% so it didn't matter.
     - Na - number of alleles +/-SE
       - From GENALEX HFP tab
     - Ne - effective number of alleles +/-SE
       - From GENALEX HFP (HDP in macrophyllum) tab
     - % Polymorphic loci
       - From GENALEX HFP tab (HDP in macrophyllum)
+    - % Private alleles
+      - Calculated manally after counting total alleles per population from GENALEX AGL tab and private alleles per population from PAS tab.
     - Ho - observed heterozygosity
       - From GENALEX HFP tab (HDP in macrophyllum)
     - He - expected heterozygosity
       - From GENALEX HFP tab (HDP in macrophyllum)
     - I - Shannon's Information Index
       - From GENALEX HFP tab (HDP in macrophyllum)
-    - Pairwise Fst of clusters
-      - From GENALEX FstP tab (R hierfstat for macrophyllum since GENALEX doesn't report Fst for haploids)
+  * Table 3 - Pairwise Fst and uNei of clusters (from the analyis w/out admixed samples)
+      - Fst from GENALEX FstP tab (R hierfstat for macrophyllum since GENALEX doesn't report Fst for haploids)
+      - unbiased Nei from GENALEX uNeiP tab
