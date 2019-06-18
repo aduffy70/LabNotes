@@ -133,9 +133,19 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
       - Best K=2
         - Not interesting? It just splits the species, which we already saw in the pointed clade results.
 
-## Network analysis?
+## Figures and tables for manuscript
 
+Figures:
+  * Structure plots - combined into one figure to show the various subanalyses. Ingroup, pointed-leaf, round-leaf, fallax, pacificum/pseudopac, angustifolium, flexuosum.
+    - Omitted balticum and obtusum because they have so few samples, and recurvum because it has few(ish) samples and no interesting geographic patterns. Included pac/pseudopac even though it has few samples because the split between pac and pseudopac is interesting.
+    - Used the best K for each except pointed-leaf and round-leaf where I used the best K and the most interesting K.
+  * Cartoon tree
+  * Full tree (supplemental)
+  * PCA?
 
+Tables:
+  * Vouchers
+  * Diversity stats
 
 [1]: {{site.image_path}}ipyrad_branching_diagram.pdf
 [2]: {{site.baseurl}}{% post_url /2019/2019-04-04-Notes-on-RADseq-library-sequencing %}
