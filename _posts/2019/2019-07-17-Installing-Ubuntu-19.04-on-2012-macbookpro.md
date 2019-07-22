@@ -10,7 +10,13 @@ I tried to replace my Ubuntu 16.04 Gnome edition install with Ubuntu 19.04 on my
   * Downloaded iso and created startup usb.
   * Installed a minimal install over the top of 16.04.
   * Followed [instructions here][1] to get wired and wireless connections working.
-    - Joined DukeBlue and Eduroam following the manual setup instructions on the Duke IT website.
+~~~
+# After connecting to ethernet and turning on the proprietary driver on the Additional Drivers tab of Software and Updates:
+sudo apt purge bcmwl-kernel-source
+sudo apt install firmware-b43-installer
+# Then reboot and things should just work.
+~~~
+  * Joined DukeBlue and Eduroam following the manual setup instructions on the Duke IT website.
   * Installed Chrome with deb from Google.
   * Installed Dropbox from Dropbox.com, connected to my Duke Bio account, and set selective sync to not pull down everything from the shared lab files or my Data folder.
   * Installed atom from atom.io.
