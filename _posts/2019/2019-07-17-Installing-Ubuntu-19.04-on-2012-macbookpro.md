@@ -28,12 +28,13 @@ sudo apt install firmware-b43-installer
       - removed home and trash icons from desktop
     - Libreoffice
     - gimp
-    - r-base with apt
+    - r-base
   * Install RStudio and atom from the website
   * Still to install: aliview, skype, figtree
   * Adjusted bashrc, bash_aliases, nanorc, screenrc, git/config, git_ignore, ssh/config, and atom settings
   * Copied newpost script for labnotes system to /usr/local/bin
   * Plugged into wired connection while Dropbox files downloaded so it wouldn't take 3 days.
   * Generated a keypair and setup the public key on Github.
+  * Set ufw defalt to deny and enabled.
 
 [1]: https://ubuntuforums.org/showthread.php?t=2391053&page=2&s=4c29e32a6c3e5f2d82f4ed6c53f8208a
