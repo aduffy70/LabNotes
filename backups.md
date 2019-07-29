@@ -50,8 +50,8 @@ mv ~/Downloads/takeout* ~/Backups/Gmail/
 ### 3) Backup Duke Computing Cluster files and CHPC files
 
 ~~~
-rsync -qaz --delete dcc:projects/* /home/aduffy/Backups/duke_cluster/projects_rsync/
-rsync -qaz --delete dcc:work/* /home/aduffy/Backups/duke_cluster/work_rsync/
+rsync -vaz --delete dcc:projects/* /home/aduffy/Backups/duke_cluster/projects_rsync/
+rsync -vaz --delete dcc:work/* /home/aduffy/Backups/duke_cluster/work_rsync/
 ~~~
 
 ~~~
