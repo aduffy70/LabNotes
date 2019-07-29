@@ -47,11 +47,16 @@ mv ~/Downloads/drive-download* ~/Backups/GoogleDocs/
 mv ~/Downloads/takeout* ~/Backups/Gmail/
 ~~~
 
-### 3) Backup Duke Computing Cluster files
+### 3) Backup Duke Computing Cluster files and CHPC files
 
 ~~~
 rsync -qaz --delete dcc:projects/* /home/aduffy/Backups/duke_cluster/projects_rsync/
 rsync -qaz --delete dcc:work/* /home/aduffy/Backups/duke_cluster/work_rsync/
+~~~
+
+~~~
+rsync -vaz chpc:wolf-group1/duffy/C.int_GBS_ipyrad/* /home/aduffy/Backups/chpc_cluster/wolf-group1_duffy_rsync/C.int_GBS_ipyrad/
+rsync -vaz chpc:wolf-group1/duffy/S_recurvum_radseq/* /home/aduffy/Backups/chpc_cluster/wolf-group1_duffy_rsync/S_recurvum_radseq/
 ~~~
 
 ### 4) Backup to an external drive
