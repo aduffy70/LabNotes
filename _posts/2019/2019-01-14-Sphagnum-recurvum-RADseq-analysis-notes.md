@@ -16,7 +16,7 @@ Compared Blanka Aguero's ipyrad params file to my _Crepidomanes intricatum_ and 
 | max_low_quality_bases | 5 / 4  | Carol used 4 rather than the default 5. Reducing this will tend to shorten lower quality reads. I used the defaults |
 | phred_Qscore_offset | 43 / 33  | Blanka increased this to require higher quality reads to solve the "data-churn" after better removal of illumina adapters solved that. I used the default 33 with no problems. |
 | mindepth_statistical & min_depth_majority | 12 & 18 / 6 | These were both increased from the default (6). For haploids this just reduces the number of loci unnecessarily. I used the default. |
-| max_barcode_mismatch | 1 / 0 or 2  | I used 1. |
+| max_barcode_mismatch | 1 / 0 or 2  | I used 2. |
 | max_alleles_consens | 1 / 2 | I used 1 since we were expected everything but one outgroup sample to be haploid. |
 | trim_reads | 0,80,0,80 / 0,0,0,0 | Using 92 trims the 100bp and 150bp reads to the same maximum length. |
 
@@ -79,6 +79,9 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
   * A few samples could have been added back since we removed them earlier over a possible barcoding shift-error that turned out not be an error. But I didn't because they are from species and locations with other samples.
   * Fixed typos and inconsistencies in the sample names.
   * For this re-analysis, I did not rerun ipyrad from scratch to rename things. I branched the all-c90 ipyrad run from the full exploratory analysis to include the desired samples, and ran step 7 (filtering for loci with coverage in 80% or 235 of 294 samples = 6148 loci), ran RAxML and Structure, and then renamed the samples in the RAxML tree (with my rename_tree_tips.py script) and Structure output (in the R script I used to generate the plots).
+  * For the re-analysis, I also ran SVDquartets (as implemented in Paup*) and PCA, which I had not done on previous datasets.
+    - I did two runs of SVDquartets, starting with 1 million random quartets (~2% of total quartets) but moved up to 10 million (~22%) once I realized it could be completed in a reasonable amount of time on the cluster. Resulting trees are identical with very minor bootstrap differences (1-2 different on just the non-100% supported branches). I am presenting the results of the longer run in the manuscript.
+    - For the PCA I did the same sort of heirarchical subsetting that I did for the structure analysis so we can see variation in the subgroups and individual species that is hidden when we look at the full dataset.
 
 ## Miscellaneous analysis notes
 
@@ -96,6 +99,12 @@ Jon and Blanka reinspected the herbarium specimens for all samples that fell in 
   * Within S. fallax, the European samples are monophyletic with BS100. There is not support for the relationships of the NA fallax samples.
   * Within S. angustifolium, there is a strongly supported group of the European samples, the Eastern NA samples and four of the Alaskan samples. Relationships of the majority of the Alaskan samples are not clear.
   * Within S. flexuosum, the European (Norway) samples form a strongly supported monophyletic group and a strongly supported group of most (5 of 7) NY samples, but relationships with the Eastern NA samples are not clear.
+
+## SVDquartets
+
+  * Almost the same tree as RAxML. If you collapsed the branches with less than 100% bootstrap in both trees they would be identical.
+    - Places pseudopac as sister to pacificum instead of fallax/isov/brev.
+    - Places angustifolium and obtusum as sister to each other rather than forming a grade below flexuosum + recurvum.
 
 ## Structure
 
@@ -141,7 +150,7 @@ Figures:
     - Used the best K for each except pointed-leaf and round-leaf where I used the best K and the most interesting K.
   * Cartoon tree
   * Full tree (supplemental)
-  * PCA?
+  * PCA (supplemental)
 
 Tables:
   * Vouchers
