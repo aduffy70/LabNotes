@@ -17,7 +17,11 @@ sudo apt install firmware-b43-installer
 # Then reboot and things should just work.
 ~~~
   * Joined DukeBlue and Eduroam following the manual setup instructions on the Duke IT website.
-  * Made minimal appearance/settings tweaks--I'm trying to go with the defaults where possible but I can't do natural scrolling! Also, changing the audio output settings to surround sound turns off the red light in the headphone jack.
+  * Made minimal appearance/settings tweaks--I'm trying to go with the defaults where possible:
+    * I just can't do natural scrolling. It isn't natural.
+    * Changing the audio output settings to surround sound turns off the red light in the headphone jack.
+    * Changing terminal scheme to Tango Dark gets rid of the horrible purple background.
+    * Set Nautilus to default to list view.
   * Installed with apt:
     * synaptic
     * screen
