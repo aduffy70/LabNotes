@@ -17,3 +17,12 @@ Three plates of Sphagnum magellanicum samples, including:
 Differences from previous RADseq runs:
   * I am going to change the ligation thermocycle settings to include an enzyme deactivation step. The Gompert protocol includes one but we haven't been. Perhaps that explains the S. recurvum plate that had Illumina adapters ligated to reads without the cutsite?
   * I am going to run duplicate PCR reactions with two samples per reaction as specified in the current Gompert protocol. The older version our protocol was based on had duplicate PCR with only one sample, which doubles the reagents required. To save reagents, we were doing a single PCR. The new protocol gets the advantages of duplicate PCR without doubling the reagents.
+
+# Preparation
+
+  * Verified that we have reagents for 3 plates. Ordered MseI enzyme, T4 ligase enzyme, dNTPs, and iProof polymerase.
+  * Need to make new dNTP dilutions
+  * Need to make new MseI adapters--we have the oligos from IDT in the freezer
+  * Need to make new PCR premix--we have the oligos from IDT in the freezer
+  * Need to make 80% EtOH
+  
