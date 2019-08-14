@@ -25,4 +25,4 @@ Differences from previous RADseq runs:
   * Need to make new MseI adapters--we have the oligos from IDT in the freezer
   * Need to make new PCR premix--we have the oligos from IDT in the freezer
   * Need to make 80% EtOH
-  
+  * Changed the order of samples to avoid correlation between which plate a sample is on and its geographic site (while keeping as many tube strips as possible intact for simplicity).
