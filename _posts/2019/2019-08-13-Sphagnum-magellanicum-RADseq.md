@@ -9,10 +9,11 @@ categories:
 
 Three plates of Sphagnum magellanicum samples, including:
   * all of the samples from Brian Piatkowski's decomposition experiment
-  * North American, South American, and European samples
+  * North American, South American, and European samples, including samples from many of the same collections used in previous S. magellanicum studies.
   * Forest, bog, and edge samples from several sites
   * Multiple samples from some collections
   * Replicates (within and between plates) to determine expected distance between genetically identical samples (clones). I am going to run one random sample on each plate in two wells, and one random sample from plate 1 will also run on the other two plates, so I only give up a total of 5 wells to get this information.
+  * There was another run of 96 S. magellanicum samples from 2 New York sites (St. Regis Lake and Franklin Bog?) that Nico ran but it never went anywhere. That library was created using the same protocol so I could potentially combine that data with the data from these 3 plates. Brian shared the data on Dropbox.
 
 Differences from previous RADseq runs:
   * I am going to change the ligation thermocycle settings to include an enzyme deactivation step. The Gompert protocol includes one but we haven't been. Perhaps that explains the S. recurvum plate that had Illumina adapters ligated to reads without the cutsite?
