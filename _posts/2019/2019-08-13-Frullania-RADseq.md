@@ -43,3 +43,12 @@ Following my normal RADseq analysis strategy:
 ~~~
 Frullania_radseq/ipyrad_runs/frul-mf-c90-s75-droplow_outfiles/
 ~~~
+
+# Structure
+
+  * 91 samples, 6862 loci from file frul-mf-c90-s75-droplow.ustr
+  * 10 replicates at each K from 1-10. 500,000 iterations + 100,000 burnin. Admixture model. Haploid.
+
+# RAxML
+
+  * Didn't define an outgroup since one of the problems with this dataset may be misnamed samples.
