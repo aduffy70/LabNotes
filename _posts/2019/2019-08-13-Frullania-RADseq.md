@@ -19,4 +19,27 @@ According to FastQC, the raw data have fairly low quality overall, and particula
   * About 20 million (7%) seem to have an error or N in the cutsite, and 16 million of these are at the 4th base of the cutsite. This is one of the two sites in the barcode and cutsite that FastQC identifies as having worst quality.
   * We know there is a quality problem at a few bases of the barcode/cutsite that doesn't seem to extend into the rest of the read. So if we can get the reads assigned to the correct sample, the data are useable. The question is, do we have confidence in how the reads are getting assigned to samples?
     * For error barcodes with counts >5% of the correct barcode, the error is always at the 3rd (19%), 4th (33%), or 5th (48%) bp. So the errors are focused and systematic--not random. This area shows a dip in sequence quality in FastQC as well, so it isn't something that is affecting the quality of the rest of the read.
-  * The high error rate at the 4th base of the cutsite also seems to be allowing reads with just adapter sequence to slip by the filters. I demultiplexed with ipyrad (allowing 1 error in the barcode) and wrote a script to remove reads without the cutsite (allowing 2 errors in the cutsite), which will also get rid of all the pure adapter sequence reads. Then I can filter/trim in ipyrad and continue processing normally. 
+  * The high error rate at the 4th base of the cutsite also seems to be allowing reads with just adapter sequence to slip by the filters. I demultiplexed with ipyrad (allowing 1 error in the barcode) and wrote a script to remove reads without the cutsite (allowing 1 errors in the cutsite--allowing 2 errors let some specific high-depth adapter sequences through), which will also get rid of all the pure adapter sequence reads. Then I filtered/trimmed in ipyrad and continue processing normally.
+  * After all this cleaning, the FastQC report for the post-filter/trim data looks really good. No low quality regions or adapter sequence issues.
+
+# ipyrad processing
+
+Following my normal RADseq analysis strategy:
+  * Best clustering level was 0.90--0.91. I used 0.90 and minimum coverage of 75 samples (~80%)
+  * 91 samples with 6990 loci (6862 variable loci, 6559 parsimony informative loci, 47261 variable SNPs, 30310 parsimony informative SNPs).
+    * Dropped 5 samples: two that I dropped early for extremely low read counts and three I dropped in the final filtering for having >95% missing data.
+      * ASA170_19407_24_2
+      * ASA207_19329_apall
+      * ASA197_19345_10_3
+      * ASA198_19346_10_4
+      * ASA201_19367_14_1
+    * 4 samples have 67--78% missing data but I kept them. If they do anything unexpected in the analyses I may go back and remove them too.
+      * ASA203_19375_16_2
+      * ASA172_16318_ME
+      * ASA158_19391_19_4
+      * ASA127_19357_12_3
+    * Everything else has <50% missing data (mean missing data of kept samples=11%, sd=18%).
+  * Kept all output formats in:
+~~~
+Frullania_radseq/ipyrad_runs/frul-mf-c90-s75-droplow_outfiles/
+~~~
