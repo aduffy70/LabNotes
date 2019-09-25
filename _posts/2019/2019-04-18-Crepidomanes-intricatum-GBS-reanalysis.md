@@ -68,18 +68,19 @@ Based on my recent experiences analyzing RADseq datasets with ipyrad, Structure,
 
 ### What can we say about the admixed samples?
 
-There is evidence to support that some of these really do represent either extractions containing a mixture of gametophytes of 2 species or gametophytes with admixed genomes (and aren't just missing data at the loci that differentiate the species).
-    * Of 54 loci in rerun-c97-spore16 (the dataset with loci present in a sporophyte and 16 samples):
-      * 35 alleles give no info useful info about the admixed samples because they are not parsimony informative, the minor allele is rare and only in one group, or because both alleles are present in multiple species.
-      * 9 alleles are differentially fixed between Crepidomanes and Vandenboschia.
-        * At 7 of these, at least some of the suspected admixed gametophytes are heterozygous.
-        * At the other 2 we have missing data for the admixed gametophytes.
-      * 8 alleles are differentially fixed between Crepidomanes and Didymoglossum.
-        * At 3 of these, at least some of the suspected admixed gametophytes are heterozygous.
-        * At 1 of these, the admixed gametophytes have the Crepidomanes allele.
-        * At 3 of these the admixed gametophytes have the Didymoglossum allele.
-        * At the other 1 we have missing data for the admixed gametophytes.
-    * Only one of the admixed samples clearly appears to be missing so much data it couldn't be assigned correctly. S23 is suspected admixed Crepidomanes+Vandenboschia but it is simply missing data for all of the loci that are differentially fixed in those species.
+There is evidence to support that some of these really do represent either extractions containing a mixture of gametophytes of 2 species or gametophytes with admixed genomes (and aren't just missing data at the loci that differentiate the species):
+
+  * Of 54 loci in rerun-c97-spore16 (the dataset with loci present in a sporophyte and 16 samples):
+    * 35 alleles give no info useful info about the admixed samples because they are not parsimony informative, the minor allele is rare and only in one group, or because both alleles are present in multiple species.
+    * 9 alleles are differentially fixed between Crepidomanes and Vandenboschia.
+      * At 7 of these, at least some of the suspected admixed gametophytes are heterozygous.
+      * At the other 2 we have missing data for the admixed gametophytes.
+    * 8 alleles are differentially fixed between Crepidomanes and Didymoglossum.
+      * At 3 of these, at least some of the suspected admixed gametophytes are heterozygous.
+      * At 1 of these, the admixed gametophytes have the Crepidomanes allele.
+      * At 3 of these the admixed gametophytes have the Didymoglossum allele.
+      * At the other 1 we have missing data for the admixed gametophytes.
+  * Only one of the admixed samples clearly appears to be missing so much data it couldn't be assigned correctly. S23 is suspected admixed Crepidomanes+Vandenboschia but it is simply missing data for all of the loci that are differentially fixed in those species.
 
 ## Crepidomanes population genetics
 
