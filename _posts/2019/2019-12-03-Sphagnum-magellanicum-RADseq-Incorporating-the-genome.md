@@ -71,7 +71,7 @@ Most of the contaminates have top blast hits in organisms we expect to see growi
 
 __Inference:__ Even though there are many loci that we can't be positive represent Sphagnum DNA, those loci probably won't have a large affect on the results of downstream analyses. Removing loci that don't map to the genome is probably a good thing to do since we can, but not being able to do it for taxa without reference genomes doesn't worry me as much after seeing these results.
 
-# 2) Digest the genome sequence in silico to generate a virtual RADseq sample and include it in our analyses
+# 2) Digest the genome sequence _in silico_ to generate a virtual RADseq sample and include it in our analyses
 
 This will let us see which clade the genome sample is a part of (it is probably divinum, but which clade of divinum?)
 
@@ -90,21 +90,21 @@ This will let us see which clade the genome sample is a part of (it is probably 
 
 ### Where does the genome sample fall in the tree?
 
-The in silico digested S. magellanicum reference genome RADseq sample is placed within the "upper" divinum clade (NOT the "middle magni-sister" divinum clade or the "lower I-bet-$50-this-is-medium" divinum clade). It is sister (with bootstrap=85) to a SCH Quebec sample, and those two are sister (weakly, bootstrap=45) to a pair of New Hampshire "forest" samples.
+The _in silico_ digested S. magellanicum reference genome RADseq sample is placed within the "upper" divinum clade (NOT the "middle magni-sister" divinum clade or the "lower I-bet-$50-this-is-medium" divinum clade). It is sister (with bootstrap=85) to a SCH Quebec sample, and those two are sister (weakly, bootstrap=45) to a pair of New Hampshire "forest" samples.
 
-### Does this in silico method of generating a RADseq sample really seem to approximate the actual library prep and sequencing process?
+### Does this _in silico_ method of generating a RADseq sample really seem to approximate the actual library prep and sequencing process?
 
-My final filtered dataset had 3959 loci present in at least 46/57 samples. The genome sample had 3893/3959 (98.3%). Since ~2% of high-coverage loci don't map to the genome, that makes sense. We are recovering the same high-coverage loci with an in silico digest as we do in the actual RADseq library prep and sequencing process.
+My final filtered dataset had 3959 loci present in at least 46/57 samples. The genome sample had 3893/3959 (98.3%). Since ~2% of high-coverage loci don't map to the genome, that makes sense. We are recovering the same high-coverage loci with an _in silico_ digest as we do in the actual RADseq library prep and sequencing process.
 
 ### Something scary I observed in this exercise:
 
-There are ~184,767 potential RADseq loci in the in silico digested S. magellanicum genome. But after clustering the reads (at 0.90 similarity), there were only ~152,261 loci (82%). This suggests as many as 20% of loci may actually be combined paralogs, not unique loci! Some are likely filtered out in later ipyrad steps... so maybe it doesn't matter:
+There are 184,767 potential RADseq loci in the _in silico_ digested S. magellanicum genome. But after clustering the reads (at 0.90 similarity), there were only 152,261 clusters (82%). This suggests as many as 20% of loci may actually be combined paralogs, not unique loci! Some are likely filtered out in later ipyrad steps... so maybe it doesn't matter:
   * In haploids, if the minor allele frequency for a SNP seems too high to be error, the base is converted to N in the consensus sequence. And if there are too many N's in a consensus it is dropped entirely.
   * In diploids, if too many samples end up being heterozygous, the locus is dropped.
 
-Whether most of them get filtered or not, it is a reality of the de novo clustering process. I knew choosing a clustering level represented a tradeoff between not pulling alleles into a single locus vs pulling paralog loci together. I just didn't realize it was pulling THAT many paralogs together--and we are using a higher clustering level than many that just use the ipyrad default.
+Whether most of them get filtered or not, it is a reality of the _de novo_ clustering process. I knew choosing a clustering level represented a tradeoff between not pulling alleles into a single locus vs pulling paralog loci together. I just didn't realize it was pulling THAT many paralogs together--and we are using a higher clustering level than many that just use the ipyrad default.
 
- Using a genome sequence rather than clustering de novo probably helps with this, by dropping reads that map at too many locations, but that process has other drawbacks.
+ Using a genome sequence rather than clustering _de novo_ probably helps with this, by dropping reads that map at too many locations, but that process has other drawbacks.
 
 # 3) Compare the results of using ipyrad to identify loci by denovo clustering vs aligning to the genome.
 
