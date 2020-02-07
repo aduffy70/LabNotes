@@ -3,8 +3,7 @@ title:  Sphagnum magellanicum RADseq- Incorporating the genome
 date:  2019-12-03
 layout: post
 categories:
-  - sphagnum subsecunda biogeography
-  - sphagnum other
+  - sphagnum magellanicum
 ---
 
 Since we have the Sphagnum magellanicum reference genome assembly, we can do some things with the S. magellanicum RADseq dataset that we can't on other datasets:

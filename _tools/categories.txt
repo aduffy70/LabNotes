@@ -1,3 +1,4 @@
+  - sphagnum magellanicum
   - sphagnum subsecunda biogeography
   - sphagnum other
   - gsta assays

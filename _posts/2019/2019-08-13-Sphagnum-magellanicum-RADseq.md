@@ -3,7 +3,7 @@ title:  Sphagnum magellanicum RADseq
 date:  2019-08-13
 layout: post
 categories:
-  - sphagnum other
+  - sphagnum magellanicum
 ---
 # The plan
 
