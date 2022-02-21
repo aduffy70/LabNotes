@@ -29,3 +29,10 @@ Re-analyzing my independent gametophyte RADseq data.
 
   * I have PCR band-length data for some samples. Compare that to species assignments from RADseq to see if it matches.
   * Morphology. Once I have samples identified to species can I detect morphological patterns that separate them? I have a guide to algae in the data folder. See what kinds of characters they use to differentiate species of filamentous algae.
+
+## Questions:
+
+  * What is my distribution of cluster depths within samples? Is the 10000 maximum cluster depth cutoff ok or should I be lowering it?
+  * What is the optimal clustering level?
+  * What are the apparent ploidy levels of my samples?
+  
