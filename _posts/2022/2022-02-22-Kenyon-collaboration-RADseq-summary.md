@@ -22,5 +22,5 @@ I included 8 duplicate samples within each plate and 8 samples from Plate 1 are 
 
 ## Libraries
 
-Kenyon #1: 2022-02-18, 2.1ng/uL in ~120uL
-Kenyon #1: in process
+  * Kenyon #1: 2022-02-18, 2.1ng/uL in ~120uL. I ran it alone.
+  * Kenyon #2: in process. Ran with Melodie Najarro observing to learn the process.
