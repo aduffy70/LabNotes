@@ -4,6 +4,7 @@ date:  2019-09-16
 layout: post
 categories:
   - sphagnum other
+  - for others
 ---
 Extracting DNA from:
   * 10 post-1988 herbarium samples
