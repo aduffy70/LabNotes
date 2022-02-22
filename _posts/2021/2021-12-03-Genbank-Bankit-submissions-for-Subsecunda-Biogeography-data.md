@@ -1,6 +1,6 @@
 ---
 title:  Genbank Bankit submissions for Subsecunda Biogeography data
-date:  2022-02-22
+date:  2021-12-03
 layout: post
 categories:
   - sphagnum subsecunda biogeography
