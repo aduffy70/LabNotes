@@ -3,7 +3,7 @@ title: PCR Tests for BIOL3065
 date: 2011-10-20T13:06:19+00:00
 layout: post
 categories:
-
+  - for others
 ---
   * DuffyPCR0199
   * Used water from the 'RNA only' stock

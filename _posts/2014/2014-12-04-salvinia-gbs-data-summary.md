@@ -3,7 +3,7 @@ title: Salvinia GBS data summary
 date: 2014-12-04T13:26:30+00:00
 layout: post
 categories:
-
+  - for others
 ---
 Summary of Don Hauber's Salvinia GBS dataset from GBS_2014-11-24:
 

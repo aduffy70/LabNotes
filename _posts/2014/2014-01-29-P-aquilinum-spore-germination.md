@@ -3,6 +3,7 @@ title: P. aquilinum spore germination
 date: 2014-01-29T11:05:39+00:00
 layout: post
 categories:
+  - for others
 ---
   * Made Bold's Mineral Nutrient Medium in preparation for germinating S48 Pteridium aquilinum spores for Paul Wolf.
       * We had all macronutrients in the lab except K2HPO4 and NaNO3, both of which I was able to get from Kendal Morris.

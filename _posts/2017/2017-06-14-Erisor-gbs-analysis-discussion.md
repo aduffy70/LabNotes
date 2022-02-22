@@ -3,7 +3,7 @@ title:  Erisor gbs analysis discussion
 date:  2017-06-14
 layout: post
 categories:
-
+  - for others
 ---
 Troubleshooting GBS analysis with Jenessa Lemon...
 

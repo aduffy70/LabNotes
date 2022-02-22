@@ -3,7 +3,7 @@ title: DNA shipped to Ken Karol Oct. 24, 2011
 date: 2011-10-24T10:47:56+00:00
 layout: post
 categories:
-
+  - for others
 ---
 Lygodium #162    500ng/uL    10uL    5ug
 

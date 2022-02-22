@@ -3,7 +3,7 @@ title:  Bos oocyte spike-in filtering
 date:  2017-12-06
 layout: post
 categories:
-
+  - for others
 ---
 Jocelyn Cuthbert has _Bos_ oocyte miRNA-seq data with spike-in sequences that she needs to filter out.
 

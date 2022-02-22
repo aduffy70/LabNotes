@@ -3,6 +3,7 @@ title:  Frullania RADseq
 date:  2019-08-13
 layout: post
 categories:
+  - for others
 ---
 Two files of Frullania data from Blanka Aguero. There seems to be a problem with the barcodes (many reads without an exact barcode match) and she wants to know if these data can be salvaged. She also suspects there is an error in the barcode-to-samplename assignment (outgroup samples are embedded within the tree) and wants to see if I get the same confused tree.
 
