@@ -11,6 +11,9 @@ title: Project-None
   {% if post.categories contains 'sphagnum magellanicum' %}
     {% assign noproject = false %}
   {% endif %}
+  {% if post.categories contains 'for others' %}
+    {% assign noproject = false %}
+  {% endif %}
   {% if post.categories contains 'sphagnum subsecunda biogeography' %}
     {% assign noproject = false %}
   {% endif %}

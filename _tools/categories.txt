@@ -17,4 +17,5 @@
   - science ed vpcsim
   - science ed vpgsim
   - conference-travel
+  - for others
   - ideas

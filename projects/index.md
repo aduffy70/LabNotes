@@ -23,4 +23,5 @@ layout: page
 * ## [science ed vpgsim]({{ site.baseurl }}/projects/science-ed-vpgsim)
 * ## [conference-travel]({{ site.baseurl }}/projects/conference-travel)
 * ## [ideas]({{ site.baseurl }}/projects/ideas)
+* ## [for others]({{ site.baseurl }}/projects/for-others)
 * ## [none]({{ site.baseurl }}/projects/none)
