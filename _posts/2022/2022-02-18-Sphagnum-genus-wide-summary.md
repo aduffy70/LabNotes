@@ -5,6 +5,8 @@ layout: post
 categories:
   - sphagnum genus-wide
 ---
+## Datasets
+
 I have a set of datasets that differ based on:
 
   * The mapping method used to identify loci (mapped to _Sphagnum magellanicum_, _S. angustifolium_, or _de novo_)
@@ -27,3 +29,16 @@ I am not running all possible combinations and not all of the datasets I create 
 Even this many datasets is excessive and I need to prioritize.
 
 The big problem is going to be ploidy. We have conflicting information for ploidy of some samples so we need to present the best evidence we can for why I chose the ploidy I did, and if possible, demonstrate that those choices don't affect other inferences or be able to note where they do.
+
+## Questions, Notes, and Things to Try
+
+  * Which chromosome regions have fixed differences between subgenera?
+  * Can we determine parentage of polyploids?
+  * Where (geographically) was early Subsecunda diversification
+  * How many origins of tropical Acutifolia were there?
+  * Can we identify signals of introgression?
+  * Generate chloroplast a dataset--my current RADseq datasets either exclude or are biased against chloroplast loci.
+  * Use Astral trees to identify areas of tree with conflict. Use RAD loci from sliding windows (or use mdl to find recombinant breakpoints) to get "gene trees".
+  * SVDquartets, phylonetworks, splitstree, fastsimcoal, easySFS, Dsuite, Quible, Dfoil?
+  * Analyses by chromosome?
+  * STRUCTURE analysis of whole group or subsets?
