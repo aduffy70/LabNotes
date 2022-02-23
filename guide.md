@@ -19,7 +19,24 @@ permalink: /guide/
     * Use full genus-species names the first time in every post
     * When using abbreviations, spell things out the first time in every post
 
-# Adding a new project/category:
+# Workflows
+
+## Creating a new post:
+~~~
+newpost Post-title-with-dashes-between-words
+git status  # To see the path to the post
+git add <path to post>
+git commit  # Commit description = "New post"
+git push
+~~~
+
+## Updating a post:
+~~~
+git commit -a  # Commit description = "Update post"
+git push
+~~~
+
+## Adding a new project/category:
   * Create a new page for the category in ~/Dropbox/LabNotes/projects/
   * Add a link to the new page on the Projects page:
     ~~~
