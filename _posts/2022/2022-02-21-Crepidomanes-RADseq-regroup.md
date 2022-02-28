@@ -29,10 +29,14 @@ Re-analyzing my independent gametophyte RADseq data.
 
   * I have PCR band-length data for some samples. Compare that to species assignments from RADseq to see if it matches.
   * Morphology. Once I have samples identified to species can I detect morphological patterns that separate them? I have a guide to algae in the data folder. See what kinds of characters they use to differentiate species of filamentous algae.
+  * Do an analysis of quality vs sample age?
 
 ## Questions:
 
   * What is my distribution of cluster depths within samples? Is the 10000 maximum cluster depth cutoff ok or should I be lowering it?
   * What is the optimal clustering level?
-  * What are the apparent ploidy levels of my samples?
-  
+  * What are the apparent ploidy levels of my samples? I did ploidy inference on the c90 dataset and it gives ambiguouos results. Does it make a difference if I do it on the optimal clustering dataset?
+
+## Last status:
+
+I ran multiple clustering levels and it looks like the peak is around c96. I'm now running more precise clustering levels around there to find the true peak. Waiting on those to finish so I can proceed with the "best clustering" dataset.
