@@ -24,6 +24,7 @@ Re-analyzing my independent gametophyte RADseq data.
   * Keep vcf output. It shows the uncertainty in genotype calls and may allow me to do analyses treating the reads as population samples rather than individual samples.
   * Randomly re-sample reads from samples to make a "pseudo-clone" dataset to explore how different I might expect true clones to be. Try making pseudo-clones of different read-counts?
   * Mix reads from different species to see how a true mixed population sample would behave.
+  discoSnpRAD gets around the clustering level problem by using a whole other method of identifying SNPs. Try it?
 
 ## Things not to forget:
 
@@ -39,4 +40,4 @@ Re-analyzing my independent gametophyte RADseq data.
 
 ## Last status:
 
-I ran multiple clustering levels and it looks like the peak is around c96. I'm now running more precise clustering levels around there to find the true peak. Waiting on those to finish so I can proceed with the "best clustering" dataset.
+I ran multiple clustering levels and it looks like the peak is at 96. I am going to run at 0.95.
