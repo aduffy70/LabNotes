@@ -5,6 +5,8 @@ layout: post
 categories:
   - sphagnum magellanicum
 ---
+DOI:  https://doi.org/10.5061/dryad.1c59zw3xc (not active yet)
+
 I need to submit datasets from the Sphagnum magellanicum group project to Dryad so we can get a doi to reference in the manuscript.
 
 To include:
