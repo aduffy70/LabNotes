@@ -14,6 +14,7 @@ Re-analyzing my independent gametophyte RADseq data.
 I am going to run 9 different datasets to cover a range of clustering levels and sample coverages.
 
 Three clustering levels:
+
   * IG-c96 : 0.96 - At the "peak" in numbers of variable & parsimony informative loci. But beyond the recommended range and likely under-clustered.
   * IG : 0.90 - Partway down the "slope". This is a more normal setting, but may be over-clustered for these data.
   * IG-c80 : 0.80 - In the "flat" range where further reducing clustering level has little effect on numbers of variable & parsimony informative loci. Almost certainly over-clustered. Comparing these 3 datasets will show how possible over or under clustering affects our inferences.
@@ -23,6 +24,7 @@ Three clustering levels:
 Those 3 are my "base" datasets. I will use the output files from ipyrad to manually filter to get 3 different samples coverages for each.
 
 Three sample coverages:
+
   * 50p - 50% sample coverage. This dataset will bias heavily toward Crepidomanes loci and the non-Crepidomanes samples will have high levels of missing data. This is because a locus present in every non-Crepidomanes sample but no Crepidomanes samples will not meet the 50% cutoff, whereas Crepidomanes-only loci can potentially meet the cutoff. We will have loci that are present in only Crepidomanes samples but will never see loci present in only non-Crepidomanes samples.
   * 50sporo - 50% sample coverage AND present in at least one sporophyte sample. This will remove the species bias but will have fewer loci. Comparing this to the 50p dataset will show how species bias and higher missing data in non-Crepidomanes samples affects our inferences.
   * 33sporo - 33% sample coverage AND present in at least one sporophyte sample. This should give a more useful number of loci while still removing the species bias--at the cost of higher missing data. Comparing this to the 50sporo dataset will show how the trade-off of missing data vs locus counts affects our inferences.
@@ -53,16 +55,14 @@ Three sample coverages:
 
 ## Questions:
 
-  * What is my distribution of cluster depths within samples? Is the 10000 maximum cluster depth cutoff ok or should I be lowering it?
   * What is the optimal clustering level?
   * What are the apparent ploidy levels of my samples? I did ploidy inference on the c90 dataset and the c96 dataset. It gives ambiguous results. Does it make a difference if I do it on the over-clustered dataset?
 
 ## Last status:
 
-  * Running last few ipyrad jobs to complete my plot of loci by clustering level.
-  * Running ipyrad jobs to get all data formats for my chosen "base" datasets.
+  * Running iqtree on my 9 Three-species datasets.
   * Running discoSnpRAD to try to get around finding a cluster value entirely.
-  * Next: manually filter to get my datasets with different sample coverages...
+  * Next: manually filter to get my ustr datasets with different sample coverages...
 
 
 [image1]: {{site.image_path}}Crepidomanes_loci_by_cluster_level-2022-03-02.png
