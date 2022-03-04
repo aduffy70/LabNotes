@@ -60,8 +60,8 @@ Three sample coverages:
 
 ## Last status:
 
-  * Running iqtree on my 9 Three-species datasets.
-  * Running discoSnpRAD to try to get around finding a cluster value entirely.
+  * Running iqtree on my 9 Three-species datasets. Some didn't converge and are running additional cycles. Others are ready to download and make trees.
+  * Running discoSnpRAD to try to get around finding a cluster value entirely. Finished--need to evaluate.
   * Next: manually filter to get my ustr datasets with different sample coverages...
 
 
