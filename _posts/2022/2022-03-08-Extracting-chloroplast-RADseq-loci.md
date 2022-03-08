@@ -9,15 +9,15 @@ categories:
 ---
 ## Problem
 
-We want to analyze chloroplast RADseq loci separately from nuclear loci. There are not many of them--the cpgenome is small so there are few cutsites--but it would be cool to see what phylogenetic signal exists. I want to do this on the _Sphagnum_ Genus-Wide dataset and for Juan's _Sphagnum subnitens_/_subfulvum_/_incundum_ data.
+We want to analyze chloroplast RADseq loci separately from nuclear loci. There are not many of them--the cpgenome is small so there are few cutsites--but it would be cool to see what phylogenetic signal exists. I want to do this on the _Sphagnum_ Genus-Wide dataset and for Juan Jaramillo-Chico's _Sphagnum subnitens_/_subfulvum_/_incundum_ data.
 
 There are different ways this could be done:
 
-  1. Map RADseq loci to a _Sphagnum_ chloroplast genome and keep the ones that map at some minimum level.
+  * Map RADseq loci to a _Sphagnum_ chloroplast genome and keep the ones that map at some minimum level.
     * I did this for Marta's _Sphagnum majus_ dataset by mapping to _Sphagnum fallax_ cp genome. We found 8 loci.
     * Only works on RADseq loci generated using _de novo_ assembly (like Marta's _majus_ loci) or by mapping to a genome that includes the cpgenome (normally it would not but I have sometimes added the chloroplast and mitochondrial contigs to the reference genome contigs).
     * Won't work for _in silico_ RADseq samples because those are made from only nuclear genome contigs.
-  1. Use a _Sphagnum_ cpgenome as the reference genome in ipyrad.
+  * Use a _Sphagnum_ cpgenome as the reference genome in ipyrad.
     * Won't work for the _in silico_ RADseq samples. But if I take the cpgenome assemblies for the Dimensions/Diversity samples and digest them _in silico_ I can generate a set of chloroplast _in silico_ digested RADseq samples.
 
 ## Process
