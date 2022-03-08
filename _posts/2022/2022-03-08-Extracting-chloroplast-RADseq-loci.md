@@ -30,3 +30,7 @@ I don't expect this to find many loci, but it is worth a try, and the _in silico
 ## Caveat
 
 In the real RADseq samples, is possible that this will identify "chloroplast-like" loci from the nuclear genome or may combine reads from chloroplast-like loci with reads from true chloroplast loci. Those sorts of error are expected in RADseq analyses but normally we can assume the effects of errors are small compared to the true signal. With very few loci, that may not be a safe assumption.
+
+## Result
+
+209 _in silico_ digested chloroplast RADseq samples are now available in ShawLab Dropbox with the nuclear _in silico_ digested RADseq samples. This includes all of the chloroplast genomes I have for the Dimensions/Diversity projects and the _S. magellanicum_ and _S. fallax_ reference genomes.
