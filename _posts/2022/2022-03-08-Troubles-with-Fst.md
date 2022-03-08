@@ -3,21 +3,22 @@ title:  Troubles with Fst
 date:  2022-03-08
 layout: post
 categories:
+  - sphagnum subsecunda biogeography
+  - sphagnum magellanicum
   - sphagnum other
   - for others
-  - ideas
 ---
 ## Background
 
-I have used a couple different methods of generating Fst values:
+I have used different methods of generating Fst values:
 
-  * On the Recurvum project I used the pairwise.fst function in the R 'hierfstat' package. This function no longer exists, and it isn't clear what version of Fst it was actually calculating. I just called it "Fst" in the manuscript and no one questioned it.
-  * On the Eastern North American _Sphagnum_ Biogeography project I used Genalex (Blanka Aguero did it for me) for the diploids and pairwise.fst for the haploids because Genalex either doesn't do Fst for haploids (or at least it wasn't in the output Blanka gave me).
-  * For the Divinum/Magellanicum project, Bryan Piatkowski calculated the Fst from a vcf file I provided. He doesn't specify in the manuscript methods what software he used but I suspect vcftools (Marta Nieto-Lugilde uses vcftools).
+  * Recurvum project: I used the pairwise.fst function in the R 'hierfstat' package. This function no longer exists, and I don't know what version of Fst it was actually calculating. I called it "Fst" in the manuscript and no one questioned it.
+  * Eastern North American _Sphagnum_ Biogeography project: I used Genalex (Blanka Aguero did it for me) for the diploids and pairwise.fst for the haploids because Genalex doesn't do Fst for haploids (or it wasn't in the output Blanka gave me).
+  * Magellanicum/divinum project: Bryan Piatkowski calculated the Fst from a vcf file I provided. He doesn't say in the manuscript methods but I suspect vcftools (Marta Nieto-Lugilde also uses vcftools).
 
 ## The problem
 
-For Juan's _Sphagnum subnitens_/_subfulvum_/_incundum_ data I tried using pairwise.fst but found it hasn't existed in the hierfstat package for several years. It has been replaced by separate functions for Nei87 Fst and WC84 Fst. There is also now a Latter Fst available as one of the methods of the genet.dist function. I ran those on Juan's data and got similar numbers for all, but they seemed quite high compared to the values from past projects (~0.8 vs <~0.5). So I reran the Recurvum group Fst using these new functions. The new results are much higher than the old.
+For Juan's _Sphagnum subnitens_/_subfulvum_/_incundum_ data I tried using the 'hierfstat' pairwise.fst but found it no longer exists. It has been replaced by separate functions for Nei87 Fst, WC84 Fst, and a genet.dist method for Latter Fst. I ran those on Juan's data and got similar numbers for all, but they are high compared to the values from past projects (~0.8 vs <~0.5). So I reran the Recurvum group Fst using these new functions to compare. The new results are much higher than the old.
 
 ## The cause
 
@@ -38,6 +39,6 @@ I think that when I was using the old pairwise.fst function it was treating the 
 
 ## The implications
 
-The pairwise Fst values for the Recurvum and North American Biogeography projects are lower than they should be. Within each analysis the general orders of the values are still the same--anything we inferred from one being higher than another is still correct--but we should not make direct comparisons between those Fst values and Fst values calculated using other methods.
+The pairwise Fst values for the Recurvum and North American Biogeography projects are lower than they should be. Within each analysis the orders of the values are still the same--anything we inferred from one being higher than another is still correct--but we should not make direct comparisons between those Fst values and Fst values calculated using other methods.
 
 Going forward I can now generate Fst values correctly, taking ploidy into account. I still want to compare results from calculations using vcftools, but it will have to wait until the Duke cluster maintenance is complete and I can generate a vcf file for Juan's data.
