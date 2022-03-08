@@ -14,9 +14,9 @@ Submitting alignments of 6 loci through Bankit for the North American Subsecunda
   * RAPD-F
   * trn-G
 
-## Process
+# Process
 
-### LL
+## LL
 
   * Fixed line endings.
   * Swapped '?' at the start and end of reads with '-'.
@@ -27,7 +27,7 @@ Submitting alignments of 6 loci through Bankit for the North American Subsecunda
       * P10_cyclophyllum at ungapped position 459
     * Manually adjusted start codons for everything not starting at position 1. Bankit messes them up!
 
-### LS
+## LS
 
   * Fixed line endings.
   * Swapped '?' at the start and end of reads with '-'.
@@ -37,10 +37,10 @@ Submitting alignments of 6 loci through Bankit for the North American Subsecunda
       * P1_pylaesii at ungapped bases 21 and 41
     * Manually adjusted start codons for everything not starting at position 1. Bankit messes them up!
 
-### Others
+## Others
 
 RAPD-A, B, F, and trn-G were a bit simpler because they were not annotated.
 
-## Results
+# Results
 
 Genbank assessions are in the manuscript voucher table.

@@ -20,12 +20,12 @@ Originally the plan was 2 full RADseq plates with samples from transects acrosse
 
 I included 8 duplicate samples within each plate and 8 samples from Plate 1 are duplicated on plate 2 (all from James and Juan's samples). We need many duplicates to allow us to better explore clonality along these transects. In the past we have used a couple duplicates to give a rough estimate of how different clones can be but I want to do a full statistical analysis for this study.
 
-## Libraries
+# Libraries
 
   * Kenyon #1: 2022-02-18, 2.1ng/uL in ~120uL. I ran it alone.
   * Kenyon #2: 2022-02-24, 1.8ng/uL in ~120uL. Ran with Melodie Najarro observing to learn the process.
 
-## Questions and things to try
+# Questions and things to try
 
   * Analysis of variation within duplicates to allow a statistical test of how likely it is that two samples are clones?
   * Can I make a dataset of simulated siblings or some other way determine the likelihood that two samples are siblings? Can snapclust do this? It classifies samples as parental, F1, or hybrid (Beugin 2018)

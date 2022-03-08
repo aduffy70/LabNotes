@@ -9,7 +9,7 @@ categories:
 
 Re-analyzing my independent gametophyte RADseq data.
 
-## Three species analysis
+# Three species analysis
 
 I am going to run 9 different datasets to cover a range of clustering levels and sample coverages.
 
@@ -30,7 +30,7 @@ Three sample coverages:
   * 33sporo - 33% sample coverage AND present in at least one sporophyte sample. This should give a more useful number of loci while still removing the species bias--at the cost of higher missing data. Comparing this to the 50sporo dataset will show how the trade-off of missing data vs locus counts affects our inferences.
 
 
-## Things to do differently:
+# Things to do differently:
 
   * Only allow one barcode error--previously I allowed two but ipyrad now points out that some barcodes with two errors cannot be unambiguously assigned and it has been assigning the reads to the first sample (alphanumerically?).
   * No modifications from default settings to try to squeeze out more loci by allowing higher error rates or shorter reads.
@@ -40,25 +40,25 @@ Three sample coverages:
   * Compare structure to admixture since they behave differently with missing data.
   * Run PCAs since the clonality in my samples is likely violating model assumptions of structure.
 
-## Things to try:
+# Things to try:
 
   * Keep vcf output. It shows the uncertainty in genotype calls and may allow me to do analyses treating the reads as population samples rather than individual samples.
   * Randomly re-sample reads from samples to make a "pseudo-clone" dataset to explore how different I might expect true clones to be. Try making pseudo-clones of different read-counts?
   * Mix reads from different species to see how a true mixed population sample would behave.
   discoSnpRAD gets around the clustering level problem by using a whole other method of identifying SNPs. Try it?
 
-## Things not to forget:
+# Things not to forget:
 
   * I have PCR band-length data for some samples. Based on latest species inferences, there is only one sample where the band-length data contradicts my species assignments!
   * Morphology. Once I have samples identified to species can I detect morphological patterns that separate them? I have a guide to algae in the data folder. See what kinds of characters they use to differentiate species of filamentous algae.
   * Do an analysis of quality vs sample age?
 
-## Questions:
+# Questions:
 
   * What is the optimal clustering level?
   * What are the apparent ploidy levels of my samples? I did ploidy inference on the c90 dataset and the c96 dataset. It gives ambiguous results. Does it make a difference if I do it on the over-clustered dataset?
 
-## Last status:
+# Last status:
 
   * Running iqtree on my 9 Three-species datasets. Some didn't converge and are running additional cycles. Others are ready to download and make trees.
   * Running discoSnpRAD to try to get around finding a cluster value entirely. Finished--need to evaluate.

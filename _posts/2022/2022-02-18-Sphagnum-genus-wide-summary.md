@@ -5,7 +5,7 @@ layout: post
 categories:
   - sphagnum genus-wide
 ---
-## Datasets
+# Datasets
 
 I have a set of datasets that differ based on:
 
@@ -30,7 +30,7 @@ Even this many datasets is excessive and I need to prioritize.
 
 The big problem is going to be ploidy. We have conflicting information for ploidy of some samples so we need to present the best evidence we can for why I chose the ploidy I did, and if possible, demonstrate that those choices don't affect other inferences or be able to note where they do.
 
-## Questions, Notes, and Things to Try
+# Questions, Notes, and Things to Try
 
   * Which chromosome regions have fixed differences between subgenera?
   * Can we determine parentage of polyploids?

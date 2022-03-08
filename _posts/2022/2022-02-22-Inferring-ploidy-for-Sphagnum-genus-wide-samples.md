@@ -5,16 +5,16 @@ layout: post
 categories:
   - sphagnum genus-wide
 ---
-## Problem
+# Problem
 
 We need to know the ploidy of each sample in the _Sphagnum_ genus-wide analysis in order to know how to call RADseq genotypes, but ploidy information is not available for all _Sphagnum_ species and species assignments of some samples are uncertain.
 
-## Process
+# Process
 
   1. Combine ploidy information from all available sources and make a best-guess inference of ploidy for each sample. Run ipyrad with the inferred ploidy for each sample and perform downstream analyses.
   1. Run everything through ipyrad as haploid and again as diploid and see how much of an effect the choice of ploidy actually has on downstream inferences.
 
-### Information sources
+## Information sources
 
   * OOTT and Ploidy project spreadsheets (from Jon Shaw) with ploidies for many _Sphagnum_ species.
   * McVay RADseq samples have ploidy determined from microsatellites of the same samples (or same collections?)
