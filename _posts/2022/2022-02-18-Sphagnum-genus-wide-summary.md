@@ -42,3 +42,5 @@ The big problem is going to be ploidy. We have conflicting information for ploid
   * SVDquartets, phylonetworks, splitstree, fastsimcoal, easySFS, Dsuite, Quible, Dfoil?
   * Analyses by chromosome?
   * STRUCTURE analysis of whole group or subsets?
+  * What proportion of loci are in coding sequence?
+  * Report concordance factor rather than bootstrap on trees?
