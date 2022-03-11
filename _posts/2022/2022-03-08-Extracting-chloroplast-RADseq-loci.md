@@ -22,7 +22,7 @@ There are different ways this could be done:
 
 # Process
 
-  1. Generate chloroplast RADseq reads from the partial chloroplast genomes I assembled from the Dimensions/Diversity resequencing data.
+  1. Generate _in silico_ digested chloroplast RADseq reads from the partial chloroplast genomes I assembled from the Dimensions/Diversity resequencing data. Note- some of these have large gaps (hundreds to 10's of thousands of bases) marked by strings of 50 Ns. I need to be sure I don't include reads that span one of these gaps. 
   2. Run ipyrad on the chloroplast _in silico_ RADseq samples and on the real RADseq samples using the _Sphagnum fallax_ chloroplast genome as the reference.
 
 I don't expect this to find many loci, but it is worth a try, and the _in silico_ digested chloroplasts can be used on other projects as well.
