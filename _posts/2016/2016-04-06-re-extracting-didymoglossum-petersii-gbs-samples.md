@@ -62,4 +62,3 @@ Continued at 2pm the same day:
       * The gametophyte extractions have low yield but at least the sporophyte worked
       * Labeling all these with an 'a' suffix so they don't get confused with the previous extractions.
 
-<span style="color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 13.3333px; line-height: 21.3333px;"> </span>
