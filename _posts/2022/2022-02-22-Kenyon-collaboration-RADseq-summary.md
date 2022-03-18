@@ -24,6 +24,7 @@ I included 8 duplicate samples within each plate and 8 samples from Plate 1 are 
 
   * Kenyon #1: 2022-02-18, 2.1ng/uL in ~120uL. I ran it alone.
   * Kenyon #2: 2022-02-24, 1.8ng/uL in ~120uL. Ran with Melodie Najarro observing to learn the process.
+    * This library was rejected by the sequencing center for low concentration after their cleaning step. I rePCRd 13 samples with little remaining PCR product and made a new pooled library. I did not bead-clean this new pool--the sequencing center will do it.
 
 # Questions and things to try
 
