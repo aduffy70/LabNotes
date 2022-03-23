@@ -7,7 +7,7 @@ categories:
 ---
 DOI:  https://doi.org/10.5061/dryad.1c59zw3xc
 
-Status: 2022-03-07 -- The data are submitted but we have requested keeping it private until the paper is accepted. The DOI link will not work until the manuscript is accepted and we tell Dryad to release the data.
+Status: 2022-03-23 -- The data are submitted but we have requested keeping it private until the paper is accepted. The DOI link will not work until the manuscript is accepted and we tell Dryad to release the data.
 
 I prepared datasets from the Sphagnum magellanicum group project for submission to Dryad so we can get a doi to reference in the manuscript.
 
