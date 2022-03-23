@@ -7,7 +7,7 @@ categories:
 ---
 DOI:  https://doi.org/10.5061/dryad.1c59zw3xc
 
-Status: 2022-03-07 -- Data submission cannot complete until I have a manuscript number from the New Phytologist. Otherwise, all forms are completed, all data and supporting info have been uploaded, and everything is done except for pushing the SUBMIT button (which will not appear without the valid manuscript number). The link for reviewers to view the data is also not available until I can submit the data. The DOI link will not work until the manuscript is accepted and we tell Dryad to release the data.
+Status: 2022-03-07 -- The data are submitted but we have requested keeping it private until the paper is accepted. The DOI link will not work until the manuscript is accepted and we tell Dryad to release the data.
 
 I prepared datasets from the Sphagnum magellanicum group project for submission to Dryad so we can get a doi to reference in the manuscript.
 
@@ -22,9 +22,9 @@ Things I considered but we decided not to include:
   * 80% str files for the overall group: Anyone repeating this would get different results because of the random nature of how the snps were selected but that is the whole point. They are supposed to be a randomly selected snp from each locus. And there is already a column in the voucher table specifying which samples were not included over clonality.
   * 80% str files from the subset analyses of each species. We didn't use these results in the manuscript so no need to include the datasets.
   * resequenced genome vcf format files--Bryan Piatkowski suggests we already say how we generated these from the resequencing data so we don't need them here.
-  * Diversity and/or Dimensions project resequenced genome contig assemblies. According to Jon Shaw, these things are being placed in the SRA and no further action on my part is needed:
+  * Diversity and/or Dimensions project resequenced genome contig assemblies. According to Jon Shaw, these things are being placed in the SRA and no further action on my part is needed.
 
 There are several funding sources listed in the manuscript but according to Jon, only the NSF grants apply to these datasets.
 
 Next steps:
-  * Add the manuscript number to the submission form and submit. Communicate the reviewer's link to the journal.
+  * Once the paper is accepted, set the data to be released.
