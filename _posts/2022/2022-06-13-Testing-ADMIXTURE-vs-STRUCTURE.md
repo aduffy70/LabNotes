@@ -28,19 +28,17 @@ How do STRUCTURE and ADMIXTURE handle truly admixed samples with varying levels 
 
 ![STRUCTURE vs ADMIXTURE with varying admixture and missing data][image1]
 
-In the image above, gray= magni and orange = diabolicum.
-
-With low missing data, both programs correctly identified high and low admixture with little uncertainty.
-
-With high missing data, both programs called the 50% admixed sample diabolicum and the range of uncertainty does NOT include the correct admixture.
-
-With high missing data, ADMIXTURE called the 90% magni:10% diabolicum sample 100% magni, but with uncertainty that includes the true value. STRUCTURE correctly identified it as 90% magni but with uncertainty that includes everything from 100% magni to 50:50 admixture.
-
-With high missing data, ADMIXTURE called the 100% diabolicum as 100% diabolicum with little uncertainty. STRUCTURE called it >95% diabolicum with uncertainty ranging from 0-10% magni admixture. For the 100% magni, ADMIXTURE correctly called it 100% magni, but with uncertainty from 0-10% admixture. STRUCTURE called it as ~5% admixed with high uncertainty.
+In the image above, gray=magni and orange=diabolicum.
+  * With low missing data, both programs correctly identified high and low admixture with little uncertainty.
+  * With high missing data, both programs called the 50% admixed sample mostly diabolicum, and the range of uncertainty does NOT include the correct admixture.
+  * With high missing data, ADMIXTURE called the 90% magni:10% diabolicum sample 100% magni, but with uncertainty that includes the true value. STRUCTURE correctly identified it as 90% magni but with uncertainty that includes everything from 100% magni to 50:50 admixture.
+  * With high missing data, ADMIXTURE called the 100% diabolicum as 100% diabolicum with little uncertainty. STRUCTURE called it >95% diabolicum with uncertainty ranging from 0-10% magni admixture. For the 100% magni, ADMIXTURE correctly called it 100% magni, but with uncertainty from 0-10% admixture. STRUCTURE called it as ~5% admixed with high uncertainty.
 
 # Conclusions
 
-With low missing data, either program correctly identified both high (50%) and low (10%) levels of admixture. With high missing data, neither program can be relied upon to correctly identify admixed samples. ADMIXTURE is more likely to correctly identify non-admixed samples but will also call samples with low admixture as not admixed. Structure sometimes identifies admixture where there is none. In most cases, the uncertainty from each program at least included the correct admixture value, but both programs completely failed to identify the 50% admixed sample with high missing data.
-
+  * With low missing data, either program correctly identified both high (50%) and low (10%) levels of admixture.
+  * With high missing data, neither program can be relied upon to correctly identify admixed samples.
+  * ADMIXTURE is more likely to correctly identify non-admixed samples but will also call samples with low admixture as not admixed. Structure sometimes identifies admixture where there is none.
+  * In most cases, the uncertainty from each program at least included the correct admixture value, but both programs completely failed to identify the 50% admixed sample with high missing data.
 
 [image1]: {{site.image_path}}STRUCTURE_vs_ADMIXTURE_test-2022-06-13.png
