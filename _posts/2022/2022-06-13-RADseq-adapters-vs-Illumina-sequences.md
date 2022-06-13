@@ -33,11 +33,11 @@ Our sequencing has been working because even though the adapters are wrong, they
 
 ![Alignment of critical sequences to our adapters][image1]
 
-The mismatched base we see is because there is one bp difference between our adapters and the P7 flowcell oligo. It gets corrected in half of the bridge amplifications so we end up with many more corrected reads (the common T) than incorrect reads (the expected G).
+The mismatched base we see is because there is one bp difference between our adapters and the P7 flowcell oligo (highlighted column in the alignment picture below). It gets corrected in half of the bridge amplifications so we end up with many more corrected reads (the common T) than incorrect reads (the expected G).
 
-The mismatched base is the 2nd to the last base at the 3' end which seems like it should decrease priming efficiency. So I designed new MseI adapters and a new reverse PCR primer so our future libraries can have adapters that exactly match the P7 sequence.
+The mismatched base is the 2nd to the last base at the 3' end which seems like it should decrease priming efficiency. I designed new MseI adapters and a new reverse PCR primer so our future libraries can have adapters that exactly match the P7 sequence. Maybe this will result in better clusters, but it is possible it hasn't made that much difference.
 
-The recommended phosphothiolation for the PCR primers and adapters has changed from the version of the 2.3 version of the Parchman, Gompert, Buerkly protocol they were using to the more recent 2.6b version I based my protocol on. I don't know which version of the phosphothiolation our current reagents have, but I am ordering to match the current (2.6b) protocol phosphothiolation.
+The recommended phosphothiolation for the PCR primers and adapters has changed from the 2.3 version of the Parchman, Gompert, Buerkly protocol they were using to the more recent 2.6b version I based my protocol on. I don't know which version of the phosphothiolation our current reagents have, but I am ordering to match the current (2.6b) protocol phosphothiolation.
 
 ```
 v2.3 MseI-F:   5’  TACAGATCGGAAGAGCTCGTATGCCGTCTTCTGCTTG 3’
