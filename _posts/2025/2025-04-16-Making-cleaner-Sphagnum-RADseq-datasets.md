@@ -3,9 +3,6 @@ title:  Making cleaner Sphagnum RADseq datasets
 date:  2025-04-16
 layout: post
 categories:
-  - sphagnum genus-wide
-  - sphagnum magellanicum
-  - sphagnum subsecunda biogeography
   - sphagnum other
   - ideas
 ---
