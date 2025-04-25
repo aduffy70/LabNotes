@@ -3,8 +3,7 @@ title:  Section Sphagnum polyploid parentage
 date:  2025-04-25
 layout: post
 categories:
-  - sphagnum other
-  - ideas
+  - sphagnum imbricatum
 ---
 
 Hypotheses of parentage for polyploid Section Sphagnum based on assigning each of 14 haploid species to groups in STRUCTURE and asking it to find group proportions for the polyploid samples:
