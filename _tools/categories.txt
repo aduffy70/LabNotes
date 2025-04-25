@@ -1,3 +1,5 @@
+  - sphagnum strictum-compactum
+  - sphagnum imbricatum
   - sphagnum genus-wide
   - sphagnum magellanicum
   - sphagnum subsecunda biogeography

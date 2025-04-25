@@ -3,6 +3,8 @@ title: Projects
 date: 2016-08-23
 layout: page
 ---
+* ## [sphagnum strictum-compactum]({{ site.baseurl }}/projects/sphagnum-strictum-compactum)
+* ## [sphagnum imbricatum]({{ site.baseurl }}/projects/sphagnum-imbricatum)
 * ## [sphagnum genus-wide]({{ site.baseurl }}/projects/sphagnum-genus-wide)
 * ## [sphagnum magellanicum]({{ site.baseurl }}/projects/sphagnum-magellanicum)
 * ## [sphagnum subsecunda biogeography]({{ site.baseurl }}/projects/sphagnum-subsecunda-biogeography)

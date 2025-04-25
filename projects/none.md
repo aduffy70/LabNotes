@@ -5,6 +5,12 @@ title: Project-None
 <h1>Project: None</h1>
 {% for post in site.posts %}
   {% assign noproject = true %}
+  {% if post.categories contains 'sphagnum strictum-compactum' %}
+    {% assign noproject = false %}
+  {% endif %}
+  {% if post.categories contains 'sphagnum imbricatum' %}
+    {% assign noproject = false %}
+  {% endif %}
   {% if post.categories contains 'sphagnum genus-wide' %}
     {% assign noproject = false %}
   {% endif %}
