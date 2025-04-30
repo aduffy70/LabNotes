@@ -6,7 +6,7 @@ categories:
   - sphagnum other
   - for others
 ---
-Notes on the sample namimg system used for Gustaf Granath's _S. divinum_ and _S. medium_ RADseq samples:
+Notes on the sample naming system used for Gustaf Granath's _S. divinum_ and _S. medium_ RADseq samples:
 
 There are samples for three different projects:
   1. A student's morphology study. Samples from Sweden, Norway, Finland, Ireland, and Czech Republic.
