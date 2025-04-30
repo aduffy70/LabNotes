@@ -14,7 +14,7 @@ I want to better understand how R is calculating euclidean distances on allele c
 When I import genotype data into the genind (or genlight) format, it is converting genotypes to allele counts like this (assuming a locus with only 2 alleles: G or A):
 
 | Original genotype | Allele1 count | Allele2 count |
-| ***************** | ************* | ************* |
+| ----------------- | ------------- | ------------- |
 | Diploid GG | 2 | 0 |
 | Diploid AA | 0 | 2 |
 | Diploid AG | 1 | 1 |
@@ -33,7 +33,7 @@ Where the summation is over all alleles at all loci and the part under the sqrt 
 Example distances for a single locus:
 
 | Genotypes | Allele counts | Distance |
-| ********* | ************* | ******** |
+| --------- | ------------- | -------- |
 | GG / GG | 2 0 / 2 0 | 0 |
 | GG / AG | 2 0 / 1 1 | 1.414 |
 | GG / AA | 2 0 / 0 2 | 2.828 |
@@ -60,7 +60,7 @@ That all makes intuitive sense. But it seems wrong to be coding allele counts fo
 I could manually adjust the allele counts to look like this: 
 
 | Original genotype | Allele1 count | Allele2 count |
-| ***************** | ************* | ************* |
+| ----------------- | ------------- | ------------- |
 | Diploid GG | 2 | 0 |
 | Diploid AA | 0 | 2 |
 | Diploid AG | 1 | 1 |
@@ -70,8 +70,8 @@ I could manually adjust the allele counts to look like this:
 Example distances for a single locus:
   
 | Genotypes | Allele counts | Distance |
-| ********* | ************* | ******** |
-| GG / G | 2 0 / 1 0 | 0 |
+| --------- | ------------- | -------- |
+| GG / G | 2 0 / 1 0 | 1 |
 | GG / A | 2 0 / 0 1 | 2.236 |
 | AG / G | 1 1 / 1 0 | 1 |
 | G / G | 1 0 / 1 0 | 0 |
