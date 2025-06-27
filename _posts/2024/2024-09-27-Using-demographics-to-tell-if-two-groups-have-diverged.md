@@ -25,3 +25,14 @@ Two groups diverging from an ancestor but with Tdiv fixed at zero--essentially m
 
 If model two has higher likelihood than model one would that suggest that they are not actually two separate entities?
 
+I worry that that second model is a non-model. What is actually going to be simulated? Perhaps a 4 vs 3 species model comparison would be better...
+
+Model 1:
+
+Four species (medium, divinum, diabolicum, and magniae) diverging with gene flow between diabolicum and magniae after they diverge. Estimate all of the divergence time points.
+
+Model 2: 
+
+Four species (medium, divinum, diabolicum, magniae diverging but instead of gene flow between diabolicum and magniae, that divergence time is fixed to 0 (i.e., they are still one thing but the divergence is still in the model so we can use the same 4 species SFS).
+
+
