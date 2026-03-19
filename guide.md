@@ -5,7 +5,7 @@ permalink: /guide/
 ---
   * Write as if these records will become public
   * ‘Just Enough’ info
-  * Store images and static files in Dropbox/LabNotes/assets/ and link to them with \{\{site.image_path\}\}\<file_name\>
+  * Store images and static files in Dev/LabNotes/assets/ and link to them with \{\{site.image_path\}\}\<file_name\>
   * Link to google docs for dynamic files (shared so anyone with the link can view)
   * Link to papers and sources using doi's
   * Record who attended meetings
@@ -37,16 +37,16 @@ git push
 ~~~
 
 ## Adding a new project/category:
-  * Create a new page for the category in ~/Dropbox/LabNotes/projects/
+  * Create a new page for the category in ~/Dev/LabNotes/projects/
   * Add a link to the new page on the Projects page:
     ~~~
-    atom ~/Dropbox/LabNotes/projects/index.md
+    gedit ~/Dev/LabNotes/projects/index.md
     ~~~
   * Add the category to the categories file:
     ~~~
-    atom ~/Dropbox/LabNotes/_tools/categories.txt
+    gedit ~/Dev/LabNotes/_tools/categories.txt
     ~~~
   * Add the category to the tests for valid project names on the Projects/None page:
     ~~~
-    atom ~/Dropbox/LabNotes/projects/none.md
+    gedit ~/Dev/LabNotes/projects/none.md
     ~~~
