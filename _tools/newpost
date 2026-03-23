@@ -21,4 +21,4 @@ echo -e "$CATEGORIES" >> "$FILENAME"
 echo "---" >> "$FILENAME"
 
 # Open the new post file for editing
-atom "$FILENAME"
+gedit "$FILENAME"
