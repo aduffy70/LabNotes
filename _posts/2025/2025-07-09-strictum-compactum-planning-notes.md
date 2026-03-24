@@ -1,5 +1,5 @@
 ---
-title:  _Sphagnum strictum-compactum_ planning notes
+title:  Sphagnum strictum-compactum planning notes
 date:  2025-07-09
 layout: post
 categories:
