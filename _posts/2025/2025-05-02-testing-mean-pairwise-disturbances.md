@@ -1,6 +1,6 @@
 ---
 title:  testing mean pairwise disturbances
-date:  2026-03-24
+date:  2025-05-02
 layout: post
 categories:
   - sphagnum other
@@ -20,7 +20,7 @@ or more specifically:
 aa << ad < an << dd < dn < nn
 ```
 
-I want to know if the ones that are different have statistically significant differences and hoe that the ones that seem more similar are not significantly different.
+I want to know if the ones that are different have statistically significant differences and expect that the ones that seem similar are not significantly different.
 
 So I will test the following with permutations expecting a significant difference):
   * ad - aa \> 0
