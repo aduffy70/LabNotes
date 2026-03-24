@@ -1,5 +1,5 @@
 ---
-title:  testing mean pairwise disturbances
+title:  Testing mean pairwise disturbances
 date:  2025-05-02
 layout: post
 categories:
