@@ -6,7 +6,7 @@ categories:
   - sphagnum imbricatum
   - ideas
 ---
-I want to test the hypotheses of allopolyploid parentage by looking at how often allopolyploids hae heterozygosity at alleles which are differentially fixed in the hypothesized haploid parents.
+I want to test hypotheses of allopolyploid parentage by looking at how often allopolyploids have heterozygosity at alleles which are differentially fixed in the hypothesized haploid parents.
 
 # Process
 
@@ -16,7 +16,7 @@ I want to test the hypotheses of allopolyploid parentage by looking at how often
 Then ask:
   * What proportion of those fixed loci are heterozygous?
   * How does that proportion heterozygous compare when we repeat this using other species than the hypothesized parents?
-  * How doe the proportion of those loci compared to the proportion of heterozygous loci overall in the sample?
+  * How does the proportion of those loci compare to the proportion of heterozygous loci overall in the sample?
   
 ## Script output
 
