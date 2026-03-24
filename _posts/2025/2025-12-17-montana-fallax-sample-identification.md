@@ -18,17 +18,18 @@ Run a tree including:
 This will tell us if his MT samples are in or sister to one of the 2 _S. fallax_ clades or sister to both.
 
 ```
-                                              <50
-                                       100    --- fallax NA
-                                          ---|    
-                                    95   |    --- fallax/iso/brev Eu   
-                                      ---|    100 
-                                100  |   |
-                                  ---|    ------- pseudopacificum
-                             100 |   |
-                              ---|    ----------- pacificum
-                                 |
-                                  --------------- balticum
+                                    <50
+                                 ------- fallax NA
+                            100 |                       
+                         -------|
+                     95 |       |   100
+                 -------|        ------- fallax/iso/brev Eu
+            100 |       |
+         -------|        --------------- pseudopacificum
+    100 |       |
+ -------|        ----------------------- pacificum
+        |
+         ------------------------------- balticum
 ```
 
 This is the simplified topology from the Recurvum Project ML tree. Bootstraps are from RaxML. Topology is consistent with the genus-wide tree, but that tree didn't include representatives of the European _S. fallax_ clade and only included 2 samples from the NA clade. 
