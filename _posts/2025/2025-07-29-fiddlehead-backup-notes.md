@@ -4,6 +4,8 @@ date:  2025-07-29
 layout: post
 categories:
 ---
+Backing up my desktop in anticipation of an operating system upgrade that I decided against in the end...
+
 Backed up:
   * Made "weeklybackup" to CAMEL
   * /usr/local/bin
