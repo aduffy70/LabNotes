@@ -15,11 +15,11 @@ I am trying to document (in the master RADseq sample table) which RADseq samples
 
 | Code in the fastq | Method | Example plates |
 | ----------------- | ------ | -------------- |
-| \@HWI-ST1293 | HiSeq 2500 | McVay & FB/SRL |
-| \@A00257 | NovaSeq 6000 | Kenyon 1 & 2 |
-| \@NB501800 | NextSeq 500 | mag 1 & 2 |
-| \@A00201R | NovaSeq 6000 | mag 3 & 4 |
-| \@LH00373 | NovaSeq X Plus | clon 3 & 4 |
+| @HWI-ST1293 | HiSeq 2500 | McVay & FB/SRL |
+| @A00257 | NovaSeq 6000 | Kenyon 1 & 2 |
+| @NB501800 | NextSeq 500 | mag 1 & 2 |
+| @A00201R | NovaSeq 6000 | mag 3 & 4 |
+| @LH00373 | NovaSeq X Plus | clon 3 & 4 |
 
 I don't have plate info for Marta Nieto-Lugilde's runs (which samples came from which of her plates), but all of the samples of hers that I have used in my projects (50+ samples) are NovaSeq 6000 so I am assuming all of her plates are that. If that is incorrect, she can update the master table for her samples.
 
