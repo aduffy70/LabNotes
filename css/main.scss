@@ -595,7 +595,8 @@ table, td, th {
 }
 
 table {
-    margin: 0 auto;
+    margin: auto;
+    margin-left: 0px
     margin-bottom: $vertical-spacing-unit;
 }
 
