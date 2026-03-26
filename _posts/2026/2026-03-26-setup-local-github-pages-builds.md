@@ -32,7 +32,7 @@ gem install jekyll bundler
   * In terminal, navigate to the repo. If there is not already a Gemfile create one containing:
 ```
 source 'https://rubygems.org'
-gem 'github-pages'
+gem "github-pages", "~> 232", group: :jekyll_plugins
 ```
   * Then install the gems in the Gemfile:
 ```
@@ -43,4 +43,4 @@ bundle install
 bundle exec jekyll serve --baseurl=""
 ```
   * View at [localhost:4000](http://localhost:4000)
-  * Add `Gemfile` and `Gemfile.lock` and `_site/` to the .gitignore file so they don't get pushed to the Github repository.
+  * Add `Gemfile.lock` and `_site/` to the .gitignore file so they don't get pushed to the Github repository.
