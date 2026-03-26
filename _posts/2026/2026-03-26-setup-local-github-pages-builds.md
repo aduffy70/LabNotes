@@ -10,7 +10,7 @@ Having to push changes and wait for the site to rebuild to find problems in my G
 
 Tested on Ubuntu 24.04 in March 2026
 
-Once on each machine:
+## Once on each machine
   * install ruby through synaptic
   * install other prerequisites:
 ```
@@ -28,7 +28,7 @@ source ~/.bashrc
 gem install jekyll bundler
 ```
 
-Within each repository on the machine:
+## Within each repository on the machine
   * In terminal, navigate to the repo. If there is not already a Gemfile create one containing:
 ```
 source 'https://rubygems.org'
