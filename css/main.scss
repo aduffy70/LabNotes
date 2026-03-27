@@ -18,7 +18,7 @@ $vertical-spacing-unit:       12px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      #00008B; // Old paler blue #2a7ae2;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -225,8 +225,8 @@ pre {
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    border-top: 5px solid $brand-color; //$grey-color-dark;
+    border-bottom: 1px solid $brand-color; //$grey-color-light;
     min-height: 40px;
 
     // Positioning context for the mobile navigation icon
@@ -321,7 +321,7 @@ pre {
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    border-top: 1px solid $brand-color ; //$grey-color-light;
     padding: $vertical-spacing-unit 0;
 }
 
