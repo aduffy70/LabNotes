@@ -16,7 +16,7 @@
 title: eLab Notebook
 description: Research records and notes
 baseurl: "/LabNotes" # the subpath of your site, e.g. /blog
-image_path: "/LabNotes/assets/"
+image_path: "/assets/"
 
 # Build settings
 markdown: kramdown
