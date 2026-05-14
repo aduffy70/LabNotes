@@ -43,4 +43,4 @@ bundle install
 bundle exec jekyll serve
 ```
   * View at [localhost:4000](http://localhost:4000)
-  * Add `Gemfile.lock` and `_site/` to the .gitignore file so they don't get pushed to the Github repository.
+  * Add `_site/` to the .gitignore file so they don't get pushed to the Github repository.
